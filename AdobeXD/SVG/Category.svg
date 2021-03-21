@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="193" height="374" viewBox="0 0 193 374">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="194" height="338" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-Category">
+      <rect width="193" height="374"/>
+    </clipPath>
+  </defs>
+  <g id="Category" clip-path="url(#clip-Category)">
+    <rect width="193" height="374" fill="#dcedf3"/>
+    <g id="Category_list_Rec" data-name="Category list_Rec" fill="#94efc5" stroke="#707070" stroke-width="1">
+      <rect width="194" height="39" stroke="none"/>
+      <rect x="0.5" y="0.5" width="193" height="38" fill="none"/>
+    </g>
+    <g id="Repeat_Grid_12" data-name="Repeat Grid 12" transform="translate(0 39)" clip-path="url(#clip-path)">
+      <g transform="translate(0 -41)">
+        <line id="Line_39" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 -17)">
+        <line id="Line_39-2" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 7)">
+        <line id="Line_39-3" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 31)">
+        <line id="Line_39-4" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 55)">
+        <line id="Line_39-5" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 79)">
+        <line id="Line_39-6" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 103)">
+        <line id="Line_39-7" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 127)">
+        <line id="Line_39-8" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 151)">
+        <line id="Line_39-9" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 175)">
+        <line id="Line_39-10" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 199)">
+        <line id="Line_39-11" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 223)">
+        <line id="Line_39-12" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 247)">
+        <line id="Line_39-13" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 271)">
+        <line id="Line_39-14" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(0 295)">
+        <line id="Line_39-15" data-name="Line 39" x2="554" transform="translate(0 41.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+    </g>
+    <text id="Category_List" data-name="Category List" transform="translate(58.5 22.5)" fill="#6a6a6a" stroke="#707070" stroke-width="1" font-size="15" font-family="ArialMT, Arial"><tspan x="0" y="0">Category List</tspan></text>
+    <g id="Rectangle_703" data-name="Rectangle 703" transform="translate(13 303)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="169" height="24" stroke="none"/>
+      <rect x="0.5" y="0.5" width="168" height="23" fill="none"/>
+    </g>
+    <g id="Group_453" data-name="Group 453" transform="translate(-199 25)">
+      <g id="Rectangle_704" data-name="Rectangle 704" transform="translate(242 308)" fill="#94efc5" stroke="#707070" stroke-width="1">
+        <rect width="103" height="19" stroke="none"/>
+        <rect x="0.5" y="0.5" width="102" height="18" fill="none"/>
+      </g>
+      <text id="Add_Category" data-name="Add Category" transform="translate(260 322)" fill="#94efc5" stroke="#707070" stroke-width="1" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Add Category</tspan></text>
+    </g>
+    <g id="Group_443" data-name="Group 443">
+      <text id="Select_Category" data-name="Select Category" transform="translate(38 56)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_1" data-name="1" transform="translate(139 57)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">1</tspan></text>
+      <g id="Rectangle_705" data-name="Rectangle 705" transform="translate(29 39)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_445" data-name="Group 445">
+      <text id="Select_Category-2" data-name="Select Category" transform="translate(38 104)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_3" data-name="3" transform="translate(140 104)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">3</tspan></text>
+      <g id="Rectangle_706" data-name="Rectangle 706" transform="translate(29 87)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_444" data-name="Group 444">
+      <text id="Select_Category-3" data-name="Select Category" transform="translate(38 79)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_2" data-name="2" transform="translate(140 79)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">2</tspan></text>
+      <g id="Rectangle_707" data-name="Rectangle 707" transform="translate(29 62)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_446" data-name="Group 446">
+      <text id="Select_Category-4" data-name="Select Category" transform="translate(38 128)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_4" data-name="4" transform="translate(139 128)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">4</tspan></text>
+      <g id="Rectangle_708" data-name="Rectangle 708" transform="translate(29 111)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_448" data-name="Group 448">
+      <text id="_6" data-name="6" transform="translate(139 176)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">6</tspan></text>
+      <text id="Select_Category-5" data-name="Select Category" transform="translate(38 176)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <g id="Rectangle_709" data-name="Rectangle 709" transform="translate(29 159)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_447" data-name="Group 447">
+      <text id="Select_Category-6" data-name="Select Category" transform="translate(38 152)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_5" data-name="5" transform="translate(139 152)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">5</tspan></text>
+      <g id="Rectangle_710" data-name="Rectangle 710" transform="translate(29 135)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_450" data-name="Group 450">
+      <text id="Select_Category-7" data-name="Select Category" transform="translate(38 223)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_8" data-name="8" transform="translate(140 223)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">8</tspan></text>
+      <g id="Rectangle_711" data-name="Rectangle 711" transform="translate(29 208)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_449" data-name="Group 449">
+      <text id="Select_Category-8" data-name="Select Category" transform="translate(38 201)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_7" data-name="7" transform="translate(139 201)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">7</tspan></text>
+      <g id="Rectangle_712" data-name="Rectangle 712" transform="translate(29 184)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="23" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_451" data-name="Group 451">
+      <text id="Select_Category-9" data-name="Select Category" transform="translate(38 248)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_9" data-name="9" transform="translate(140 248)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">9</tspan></text>
+      <g id="Rectangle_713" data-name="Rectangle 713" transform="translate(29 231)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_452" data-name="Group 452">
+      <text id="Select_Category-10" data-name="Select Category" transform="translate(38 272)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">Select Category</tspan></text>
+      <text id="_10" data-name="10" transform="translate(140 272)" fill="#6a6a6a" font-size="13" font-family="ArialMT, Arial"><tspan x="0" y="0">10</tspan></text>
+      <g id="Rectangle_714" data-name="Rectangle 714" transform="translate(29 255)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="130" height="25" stroke="none"/>
+        <rect x="0.5" y="0.5" width="129" height="24" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

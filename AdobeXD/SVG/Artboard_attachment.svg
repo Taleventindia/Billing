@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1249" height="253" viewBox="0 0 1249 253">
+  <defs>
+    <clipPath id="clip-Artboard_attachment">
+      <rect width="1249" height="253"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_attachment" clip-path="url(#clip-Artboard_attachment)">
+    <rect width="1249" height="253" fill="#fff"/>
+    <text id="Attachments_Maximum_size:5MB" data-name="Attachments        Maximum size:5MB" transform="translate(66 56)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0" xml:space="preserve">Attachments        Maximum size:5MB</tspan></text>
+    <g id="Rectangle_683" data-name="Rectangle 683" transform="translate(37 89)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="545" height="94" stroke="none"/>
+      <rect x="0.5" y="0.5" width="544" height="93" fill="none"/>
+    </g>
+  </g>
+</svg>

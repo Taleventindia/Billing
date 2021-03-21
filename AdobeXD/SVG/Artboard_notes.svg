@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1249" height="253" viewBox="0 0 1249 253">
+  <defs>
+    <clipPath id="clip-Artboard_notes">
+      <rect width="1249" height="253"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_notes" clip-path="url(#clip-Artboard_notes)">
+    <rect width="1249" height="253" fill="#fff"/>
+    <g id="Group_400" data-name="Group 400" transform="translate(-596 -621)">
+      <rect id="Rectangle_668" data-name="Rectangle 668" width="1249" height="253" transform="translate(596 621)" fill="#fff"/>
+      <text id="_Notes" data-name="  Notes" transform="translate(596 655)" fill="#1f2020" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0" xml:space="preserve">  Notes</tspan></text>
+      <rect id="Rectangle_682" data-name="Rectangle 682" width="1198" height="194" transform="translate(617 661)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1624" height="1000" viewBox="0 0 1624 1000">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="1624.002" height="929" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_751" data-name="Rectangle 751" width="101" height="34" transform="translate(1774 362)" fill="#131523" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-Invoice_Summary">
+      <rect width="1624" height="1000"/>
+    </clipPath>
+  </defs>
+  <g id="Invoice_Summary" clip-path="url(#clip-Invoice_Summary)">
+    <rect width="1624" height="1000" fill="#dcedf3"/>
+    <g id="Path_489" data-name="Path 489" fill="#a4d6f1">
+      <path d="M 1623.5 98.51847839355469 L 0.5 98.51847839355469 L 0.5 0.5000773668289185 L 1623.5 0.5000773668289185 L 1623.5 98.51847839355469 Z" stroke="none"/>
+      <path d="M 1 1.000076293945313 L 1 98.01847839355469 L 1623 98.01847839355469 L 1623 1.000076293945313 L 1 1.000076293945313 M 0 7.62939453125e-05 L 1624 7.62939453125e-05 L 1624 99.01847839355469 L 0 99.01847839355469 L 0 7.62939453125e-05 Z" stroke="none" fill="#707070"/>
+    </g>
+    <g id="Repeat_Grid_15" data-name="Repeat Grid 15" transform="translate(-0.002 99.019)" clip-path="url(#clip-path)">
+      <g transform="translate(-0.499 -313)">
+        <line id="Line_47" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 -249)">
+        <line id="Line_47-2" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 -185)">
+        <line id="Line_47-3" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 -121)">
+        <line id="Line_47-4" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 -57)">
+        <line id="Line_47-5" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 7)">
+        <line id="Line_47-6" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 71)">
+        <line id="Line_47-7" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 135)">
+        <line id="Line_47-8" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 199)">
+        <line id="Line_47-9" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 263)">
+        <line id="Line_47-10" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 327)">
+        <line id="Line_47-11" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 391)">
+        <line id="Line_47-12" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 455)">
+        <line id="Line_47-13" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 519)">
+        <line id="Line_47-14" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+      <g transform="translate(-0.499 583)">
+        <line id="Line_47-15" data-name="Line 47" y1="3" x2="1624" transform="translate(0.5 313.5)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
+    </g>
+    <text id="_Invoice_Invoice_Data_Customer_Name_Number_Of_Items_Round_Total_Delete" data-name=" Invoice#           Invoice Data         Customer Name        Number Of Items         Round Total         Delete" transform="translate(12 61)" fill="#fff" font-size="28" font-family="Arial-Black, Arial" font-weight="800"><tspan x="0" y="0" xml:space="preserve"> Invoice#           Invoice Data         Customer Name        Number Of Items         Round Total         Delete</tspan></text>
+    <text id="_10" data-name="10" transform="translate(16 151)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">10</tspan></text>
+    <text id="_20" data-name="20" transform="translate(16 208)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">20</tspan></text>
+    <text id="_36" data-name="36" transform="translate(16 276)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">36</tspan></text>
+    <text id="_40" data-name="40" transform="translate(16 341)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">40</tspan></text>
+    <text id="_50" data-name="50" transform="translate(16 406)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">50</tspan></text>
+    <text id="_60" data-name="60" transform="translate(16 459)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">60</tspan></text>
+    <text id="_70" data-name="70" transform="translate(16 528)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">70</tspan></text>
+    <text id="_80" data-name="80" transform="translate(16 597)" fill="#4d4e54" font-size="28" font-family="ArialMT, Arial"><tspan x="0" y="0">80</tspan></text>
+    <text id="March_15_2021" data-name="March 15, 2021" transform="translate(262 151)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">March 15, 2021</tspan></text>
+    <text id="June_16_2021" data-name="June 16, 2021" transform="translate(262 208)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">June 16, 2021</tspan></text>
+    <text id="May_20_2021" data-name="May 20, 2021" transform="translate(262 276)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">May 20, 2021</tspan></text>
+    <text id="June_11_2012" data-name="June 11, 2012" transform="translate(262 341)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">June 11, 2012</tspan></text>
+    <text id="April_4_2012" data-name="April 4, 2012" transform="translate(262 406)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">April 4, 2012</tspan></text>
+    <text id="October_25_2017" data-name="October 25, 2017" transform="translate(262 460)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">October 25, 2017</tspan></text>
+    <text id="March_10_2015" data-name="March 10, 2015" transform="translate(262 529)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">March 10, 2015</tspan></text>
+    <text id="May_4_2020" data-name="May 4, 2020" transform="translate(262 597)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">May 4, 2020</tspan></text>
+    <text id="Aravind" transform="translate(596 151)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Aravind</tspan></text>
+    <text id="Aadhi_" data-name="Aadhi " transform="translate(596 208)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Aadhi </tspan></text>
+    <text id="Bala" transform="translate(596 276)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Bala</tspan></text>
+    <text id="Company_Name" data-name="Company Name" transform="translate(596 341)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Company Name</tspan></text>
+    <text id="Talevent" transform="translate(596 406)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Talevent</tspan></text>
+    <text id="Sriram" transform="translate(596 460)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Sriram</tspan></text>
+    <text id="Talevent-2" data-name="Talevent" transform="translate(596 529)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Talevent</tspan></text>
+    <text id="Bala-2" data-name="Bala" transform="translate(596 597)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Bala</tspan></text>
+    <text id="_1" data-name="1" transform="translate(952 151)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">1</tspan></text>
+    <text id="_2" data-name="2" transform="translate(952 208)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">2</tspan></text>
+    <text id="_1-2" data-name="1" transform="translate(952 276)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">1</tspan></text>
+    <text id="_5" data-name="5" transform="translate(954 341)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">5</tspan></text>
+    <text id="_7" data-name="7" transform="translate(952 406)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">7</tspan></text>
+    <text id="_6" data-name="6" transform="translate(952 460)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">6</tspan></text>
+    <text id="_8" data-name="8" transform="translate(952 529)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">8</tspan></text>
+    <text id="_4" data-name="4" transform="translate(952 597)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">4</tspan></text>
+    <text id="Rs.30_000.0" data-name="Rs.30,000.0" transform="translate(1211 151)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.30,000.0</tspan></text>
+    <text id="Rs.14_000.0" data-name="Rs.14,000.0" transform="translate(1211 597)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.14,000.0</tspan></text>
+    <text id="Rs.12_000.50" data-name="Rs.12,000.50" transform="translate(1211 529)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.12,000.50</tspan></text>
+    <text id="Rs.56_000.0" data-name="Rs.56,000.0" transform="translate(1211 460)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.56,000.0</tspan></text>
+    <text id="Rs.10_000.0" data-name="Rs.10,000.0" transform="translate(1211 406)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.10,000.0</tspan></text>
+    <text id="Rs.8_000.25" data-name="Rs.8,000.25" transform="translate(1211 341)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.8,000.25</tspan></text>
+    <text id="Rs.4_000.40" data-name="Rs.4,000.40" transform="translate(1211 276)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.4,000.40</tspan></text>
+    <text id="Rs.25_000.0" data-name="Rs.25,000.0" transform="translate(1211 208)" fill="#4d4e54" font-size="25" font-family="ArialMT, Arial"><tspan x="0" y="0">Rs.25,000.0</tspan></text>
+    <g id="Group_456" data-name="Group 456" transform="translate(-317 -242)">
+      <g id="Rectangle_750" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete" transform="translate(1776.5 365)">
+          <path id="Path_485" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-2" data-name="Delete" transform="translate(1800 382)" fill="#2a2424" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_457" data-name="Group 457" transform="translate(-317 220)">
+      <g id="Rectangle_750-2" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2-2" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete-3" data-name="delete" transform="translate(1776.5 365)">
+          <path id="Path_485-2" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486-2" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487-2" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-4" data-name="Delete" transform="translate(1800 382)" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_458" data-name="Group 458" transform="translate(-317 156)">
+      <g id="Rectangle_750-3" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2-3" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete-5" data-name="delete" transform="translate(1776.5 365)">
+          <path id="Path_485-3" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486-3" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487-3" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-6" data-name="Delete" transform="translate(1800 382)" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_459" data-name="Group 459" transform="translate(-317 85)">
+      <g id="Rectangle_750-4" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2-4" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete-7" data-name="delete" transform="translate(1776.5 365)">
+          <path id="Path_485-4" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486-4" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487-4" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-8" data-name="Delete" transform="translate(1800 382)" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_460" data-name="Group 460" transform="translate(-317 21)">
+      <g id="Rectangle_750-5" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2-5" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete-9" data-name="delete" transform="translate(1776.5 365)">
+          <path id="Path_485-5" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486-5" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487-5" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-10" data-name="Delete" transform="translate(1800 382)" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_461" data-name="Group 461" transform="translate(-317 -50)">
+      <g id="Rectangle_750-6" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2-6" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete-11" data-name="delete" transform="translate(1776.5 365)">
+          <path id="Path_485-6" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486-6" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487-6" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-12" data-name="Delete" transform="translate(1800 382)" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_462" data-name="Group 462" transform="translate(-317 -114)">
+      <g id="Rectangle_750-7" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2-7" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete-13" data-name="delete" transform="translate(1776.5 365)">
+          <path id="Path_485-7" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486-7" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487-7" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-14" data-name="Delete" transform="translate(1800 382)" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_463" data-name="Group 463" transform="translate(-317 -178)">
+      <g id="Rectangle_750-8" data-name="Rectangle 750" transform="translate(1774 358)" fill="#e34042" stroke="#707070" stroke-width="1">
+        <rect width="101" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="33" fill="none"/>
+      </g>
+      <g id="Mask_Group_2-8" data-name="Mask Group 2" transform="translate(2 -4)" clip-path="url(#clip-path-2)">
+        <g id="delete-15" data-name="delete" transform="translate(1776.5 365)">
+          <path id="Path_485-8" data-name="Path 485" d="M20.314,4.052H17.462A4.742,4.742,0,0,0,12.954,0h-1.84A4.742,4.742,0,0,0,6.606,4.052H3.753a.97.97,0,0,0-.92,1.013.97.97,0,0,0,.92,1.013h.92v13.17a4.855,4.855,0,0,0,4.6,5.065h5.52a4.855,4.855,0,0,0,4.6-5.065V6.078h.92a.97.97,0,0,0,.92-1.013A.97.97,0,0,0,20.314,4.052Zm-9.2-2.026h1.84a2.8,2.8,0,0,1,2.6,2.026H8.511a2.8,2.8,0,0,1,2.6-2.026Zm6.44,17.222a2.91,2.91,0,0,1-2.76,3.039H9.274a2.91,2.91,0,0,1-2.76-3.039V6.078H17.554Z" fill="#131523"/>
+          <path id="Path_486-8" data-name="Path 486" d="M14.167,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,14.167,25.5Z" transform="translate(-3.863 -6.054)" fill="#131523"/>
+          <path id="Path_487-8" data-name="Path 487" d="M19.833,25.5a1.417,1.417,0,0,0,1.417-1.417v-8.5a1.417,1.417,0,1,0-2.833,0v8.5A1.417,1.417,0,0,0,19.833,25.5Z" transform="translate(-6.07 -6.054)" fill="#131523"/>
+        </g>
+      </g>
+      <text id="Delete-16" data-name="Delete" transform="translate(1800 382)" stroke="rgba(15,14,14,0)" stroke-width="2" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="0">Delete</tspan></text>
+    </g>
+  </g>
+</svg>

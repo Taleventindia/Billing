@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1249" height="253" viewBox="0 0 1249 253">
+  <defs>
+    <clipPath id="clip-Artboard_tax">
+      <rect width="1249" height="253"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_tax" clip-path="url(#clip-Artboard_tax)">
+    <rect width="1249" height="253" fill="#fff"/>
+    <g id="Group_401" data-name="Group 401" transform="translate(-674 -700.558)">
+      <text id="Tax_Reg._No." data-name="Tax Reg. No." transform="translate(687 722.558)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">Tax Reg. No.</tspan></text>
+      <g id="Rectangle_669" data-name="Rectangle 669" transform="translate(674 735.558)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="464" height="45" rx="18" stroke="none"/>
+        <rect x="0.5" y="0.5" width="463" height="44" rx="17.5" fill="none"/>
+      </g>
+      <g id="Rectangle_670" data-name="Rectangle 670" transform="translate(674 897.558)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="464" height="45" rx="18" stroke="none"/>
+        <rect x="0.5" y="0.5" width="463" height="44" rx="17.5" fill="none"/>
+      </g>
+      <g id="Rectangle_671" data-name="Rectangle 671" transform="translate(674 822.558)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="464" height="45" rx="18" stroke="none"/>
+        <rect x="0.5" y="0.5" width="463" height="44" rx="17.5" fill="none"/>
+      </g>
+      <text id="CST_reg._No." data-name="CST reg. No." transform="translate(687 807.558)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">CST reg. No.</tspan></text>
+      <g id="Rectangle_672" data-name="Rectangle 672" transform="translate(1562 747.558)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="35" height="35" stroke="none"/>
+        <rect x="0.5" y="0.5" width="34" height="34" fill="none"/>
+      </g>
+      <text id="Apply_TDS_for_this_customer" data-name="Apply TDS for this customer" transform="translate(1612 769.558)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">Apply TDS for this customer</tspan></text>
+    </g>
+    <text id="PAN_No." data-name="PAN No." transform="translate(12 189)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">PAN No.</tspan></text>
+  </g>
+</svg>

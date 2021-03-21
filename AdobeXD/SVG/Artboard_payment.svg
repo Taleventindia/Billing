@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1249" height="253" viewBox="0 0 1249 253">
+  <defs>
+    <clipPath id="clip-Artboard_payment">
+      <rect width="1249" height="253"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_payment" clip-path="url(#clip-Artboard_payment)">
+    <g id="Group_398" data-name="Group 398" transform="translate(-100 -659)">
+      <rect id="Rectangle_680" data-name="Rectangle 680" width="1249" height="253" transform="translate(100 659)" fill="#fff"/>
+      <text id="Preferred_Payment_method" data-name="Preferred Payment method" transform="translate(153 686)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">Preferred Payment method</tspan></text>
+      <text id="Preferred_delivery_method" data-name="Preferred delivery method" transform="translate(152 817)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">Preferred delivery method</tspan></text>
+      <text id="Terms" transform="translate(880 686)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">Terms</tspan></text>
+      <text id="Opening_balance_" data-name="Opening balance " transform="translate(883 817)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">Opening balance </tspan></text>
+      <rect id="Rectangle_675" data-name="Rectangle 675" width="348" height="60" rx="23" transform="translate(871 707)" fill="#fff"/>
+      <rect id="Rectangle_676" data-name="Rectangle 676" width="208" height="59" rx="25" transform="translate(885 843)" fill="#fff"/>
+      <text id="as_of_" data-name="as of " transform="translate(1142 817)" fill="#1f2020" font-size="24" font-family="ArialMT, Arial"><tspan x="0" y="0">as of </tspan></text>
+      <rect id="Rectangle_677" data-name="Rectangle 677" width="208" height="59" rx="25" transform="translate(1127 842)" fill="#fff"/>
+      <g id="Group_407" data-name="Group 407">
+        <rect id="Rectangle_673" data-name="Rectangle 673" width="348" height="55" rx="23" transform="translate(152 713)" fill="#fff"/>
+        <path id="Polygon_7" data-name="Polygon 7" d="M7.5,0,15,10H0Z" transform="translate(482 753) rotate(180)" fill="#131111"/>
+      </g>
+      <rect id="Rectangle_679" data-name="Rectangle 679" width="348" height="59" rx="22" transform="translate(152 829)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

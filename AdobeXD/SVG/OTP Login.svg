@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="410" height="659" viewBox="0 0 410 659">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8597a5"/>
+      <stop offset="1" stop-color="#435769"/>
+    </linearGradient>
+    <filter id="Area_DISPLAY_ELEMENTS:DEFAULT_" x="31" y="36" width="378" height="596" filterUnits="userSpaceOnUse">
+      <feOffset dx="8" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#1e6091"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8597a5"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-21" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clip-OTP_Login">
+      <rect width="410" height="659"/>
+    </clipPath>
+  </defs>
+  <g id="OTP_Login" data-name="OTP Login" clip-path="url(#clip-OTP_Login)">
+    <g id="Sign_In" data-name="Sign In" transform="translate(-11 -63)" opacity="0.99">
+      <g id="Card_" data-name="Card " transform="translate(42 99)">
+        <g transform="matrix(1, 0, 0, 1, -31, -36)" filter="url(#Area_DISPLAY_ELEMENTS:DEFAULT_)">
+          <rect id="Area_DISPLAY_ELEMENTS:DEFAULT_2" data-name="Area [DISPLAY_ELEMENTS:DEFAULT]" width="370" height="588" rx="66" transform="translate(31 36)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <g id="Button_" data-name="Button " transform="translate(83.114 460.32)">
+        <rect id="Area_DISPLAY_ELEMENTS:Label_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE1_" data-name="Area [DISPLAY_ELEMENTS:Label][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE1]" width="280" height="48" transform="translate(-0.114 -0.32)" fill="url(#linear-gradient-2)"/>
+        <text id="Label" transform="translate(139.886 29.68)" fill="#fcfcfc" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="-22.082" y="0">SignIn</tspan></text>
+      </g>
+      <g id="Circle_Button_" data-name="Circle Button " transform="translate(279.639 585.325)">
+        <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" transform="translate(0.361 -0.324)" stroke="#3e3e3e" stroke-width="2" fill="url(#linear-gradient-3)">
+          <rect width="48" height="48" rx="24" stroke="none"/>
+          <rect x="1" y="1" width="46" height="46" rx="23" fill="none"/>
+        </g>
+        <g id="Icon_" data-name="Icon " transform="translate(14 14)">
+          <rect id="Area_ICON:feather_twitter_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_" data-name="Area [ICON:feather/twitter][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" width="20" height="20" transform="translate(0.361 -0.324)" opacity="0" fill="url(#linear-gradient-3)"/>
+          <g id="Icon" transform="translate(1.046 2.299)">
+            <path id="Path" d="M19.167,2.5A9.094,9.094,0,0,1,16.55,3.775,3.733,3.733,0,0,0,10,6.275v.833A8.884,8.884,0,0,1,2.5,3.333s-3.333,7.5,4.167,10.834A9.7,9.7,0,0,1,.833,15.833C8.333,20,17.5,15.833,17.5,6.25a3.739,3.739,0,0,0-.067-.692A6.427,6.427,0,0,0,19.167,2.5Z" transform="translate(-0.833 -2.491)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Circle_Button_2" data-name="Circle Button " transform="translate(226.312 585.325)">
+        <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_2" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" transform="translate(-0.313 -0.324)" stroke="#3e3e3e" stroke-width="2" fill="url(#linear-gradient-3)">
+          <rect width="48" height="48" rx="24" stroke="none"/>
+          <rect x="1" y="1" width="46" height="46" rx="23" fill="none"/>
+        </g>
+        <g id="Icon_2" data-name="Icon " transform="translate(14 14)">
+          <rect id="Area_ICON:feather_linkedin_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_" data-name="Area [ICON:feather/linkedin][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" width="20" height="20" transform="translate(-0.313 -0.324)" opacity="0" fill="url(#linear-gradient-3)"/>
+          <g id="Icon-2" data-name="Icon" transform="translate(1.371 1.475)">
+            <path id="Path-2" data-name="Path" d="M13.333,6.667a5,5,0,0,1,5,5V17.5H15V11.667a1.667,1.667,0,1,0-3.333,0V17.5H8.333V11.667A5,5,0,0,1,13.333,6.667Z" transform="translate(-1.667 -1.667)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+            <rect id="Rect" width="3.333" height="10" transform="translate(0 5.833)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+            <circle id="Path-3" data-name="Path" cx="1.667" cy="1.667" r="1.667" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Circle_Button_3" data-name="Circle Button " transform="translate(172.187 585.325)">
+        <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_3" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" transform="translate(-0.188 -0.324)" stroke="#3e3e3e" stroke-width="2" fill="url(#linear-gradient-3)">
+          <rect width="48" height="48" rx="24" stroke="none"/>
+          <rect x="1" y="1" width="46" height="46" rx="23" fill="none"/>
+        </g>
+        <g id="Icon_3" data-name="Icon " transform="translate(14 14)">
+          <rect id="Area_ICON:feather_facebook_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_" data-name="Area [ICON:feather/facebook][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" width="20" height="20" transform="translate(-0.188 -0.324)" opacity="0" fill="url(#linear-gradient-3)"/>
+          <g id="Icon-3" data-name="Icon" transform="translate(6.023 1.475)">
+            <path id="Path-4" data-name="Path" d="M15,1.667H12.5A4.167,4.167,0,0,0,8.333,5.833v2.5h-2.5v3.334h2.5v6.666h3.334V11.667h2.5L15,8.333H11.667v-2.5A.833.833,0,0,1,12.5,5H15Z" transform="translate(-5.833 -1.667)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Circle_Button_4" data-name="Circle Button " transform="translate(118.236 585.325)">
+        <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_4" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" transform="translate(-0.236 -0.324)" stroke="#3e3e3e" stroke-width="2" fill="url(#linear-gradient-3)">
+          <rect width="48" height="48" rx="24" stroke="none"/>
+          <rect x="1" y="1" width="46" height="46" rx="23" fill="none"/>
+        </g>
+        <g id="Icon_4" data-name="Icon " transform="translate(13.605 13.809)">
+          <rect id="Area_ICON:custom_google_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_" data-name="Area [ICON:custom/google][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" width="20" height="20" transform="translate(0.159 -0.134)" opacity="0" fill="url(#linear-gradient-3)"/>
+          <g id="Icon-4" data-name="Icon">
+            <path id="Path-5" data-name="Path" d="M23.139,11.375h-.806v-.042h-9v4h5.652a6,6,0,1,1-1.671-6.48l2.829-2.829a9.965,9.965,0,1,0,3,5.351Z" transform="translate(-3.352 -3.335)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+            <path id="Path-6" data-name="Path" d="M5.255,8.7l3.3,2.416a6.008,6.008,0,0,1,9.575-2.243l2.839-2.837A10.017,10.017,0,0,0,5.255,8.7Z" transform="translate(-4.117 -3.335)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+            <path id="Path-7" data-name="Path" d="M14.1,31.379a9.988,9.988,0,0,0,6.729-2.606l-3.107-2.627a6,6,0,0,1-9.283-2.768L5.167,25.9A10.026,10.026,0,0,0,14.1,31.379Z" transform="translate(-4.08 -11.381)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+            <path id="Path-8" data-name="Path" d="M29.84,16.708h-.808v-.041H20v4.014h5.672a6.041,6.041,0,0,1-2.051,2.8h0L26.727,26.1a9.706,9.706,0,0,0,3.307-7.43A10.066,10.066,0,0,0,29.84,16.708Z" transform="translate(-10.054 -8.711)" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667" fill="url(#linear-gradient-3)"/>
+          </g>
+        </g>
+      </g>
+      <g id="_-_Sign_in_with_-" data-name="- Sign in with -" transform="translate(84 533)">
+        <line id="Line" x2="72" transform="translate(0 9.5)" fill="none" stroke="#cfcfcf" stroke-width="2"/>
+        <line id="Line-2" data-name="Line" x2="72" transform="translate(200 9.5)" fill="none" stroke="#cfcfcf" stroke-width="2"/>
+        <text id="Typography_TAG:UI_S_" data-name="Typography [TAG:UI_S]" transform="translate(139.5 14)" fill="#3d3d3d" font-size="13" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.03em"><tspan x="-49.887" y="0">Or Sign In With</tspan></text>
+      </g>
+      <g id="Checkbox_" data-name="Checkbox " transform="translate(79.848 403.071)">
+        <rect id="Area_DISPLAY_ELEMENTS:Label_STATE:ACTIVE_" data-name="Area [DISPLAY_ELEMENTS:Label][STATE:ACTIVE]" width="32" height="32" transform="translate(0.152 -0.071)" fill="url(#linear-gradient)"/>
+        <path id="Check_DISPLAY_ELEMENTS:Label_STATE:ACTIVE_" data-name="Check [DISPLAY_ELEMENTS:Label][STATE:ACTIVE]" d="M0,0V6.359H11.607" transform="translate(9.5 16.139) rotate(-45)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text id="Label-2" data-name="Label" transform="translate(48.152 21.929)" fill="#3d3d3d" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1" font-size="16" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Remember Me</tspan></text>
+      </g>
+      <g id="Input_" data-name="Input " transform="translate(80.114 329.793)">
+        <rect id="Area_DISPLAY_ELEMENTS:Default_STATE:DEFAULT_" data-name="Area [DISPLAY_ELEMENTS:Default][STATE:DEFAULT]" width="280" height="48" transform="translate(-0.114 0.207)" fill="#fff"/>
+        <text id="Value" transform="translate(15.886 30.207)" font-size="16" font-family="SegoeUI, Segoe UI" opacity="0.6"><tspan x="0" y="0">OTP</tspan></text>
+      </g>
+      <g id="Input_2" data-name="Input " transform="translate(83.114 257.464)">
+        <rect id="Area_DISPLAY_ELEMENTS:Default_STATE:DEFAULT_2" data-name="Area [DISPLAY_ELEMENTS:Default][STATE:DEFAULT]" width="280" height="48" transform="translate(-0.114 -0.464)" fill="url(#linear-gradient-21)"/>
+        <text id="Value-2" data-name="Value" transform="translate(15.886 29.536)" fill="#3e3e3e" font-size="16" font-family="SegoeUI, Segoe UI" opacity="0.6"><tspan x="0" y="0">Enter Mobile Number</tspan></text>
+      </g>
+      <text id="Title_TAG:H4_" data-name="Title [TAG:H4]" transform="translate(80 217)" fill="#3d3d3d" font-size="32" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Sign In with OTP</tspan></text>
+      <g id="Circle_Button_5" data-name="Circle Button " transform="translate(338.84 135)">
+        <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_5" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" transform="translate(0.16)" stroke="#3e3e3e" stroke-width="2" fill="url(#linear-gradient-3)">
+          <rect width="48" height="48" rx="24" stroke="none"/>
+          <rect x="1" y="1" width="46" height="46" rx="23" fill="none"/>
+        </g>
+        <g id="Icon_5" data-name="Icon " transform="translate(14 14)">
+          <rect id="Area_ICON:feather_x_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE2_" data-name="Area [ICON:feather/x][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE2]" width="20" height="20" transform="translate(0.16)" opacity="0" fill="url(#linear-gradient-3)"/>
+          <g id="Icon-5" data-name="Icon" transform="translate(5 5)">
+            <line id="Line-3" data-name="Line" x1="10" y2="10" transform="translate(0.16 0)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667"/>
+            <line id="Line-4" data-name="Line" x2="10" y2="10" transform="translate(0.16 0)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.667"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
