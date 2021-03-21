@@ -11,13 +11,7 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
-              
-              <li><a href="">Users Online:<?php echo users_online(); ?></a></li> 
-            
-<!--
-               <li><a href="">Users Online:<span class="UsersOnline"></span></a></li>
-              
--->
+        
                <li><a href="../index.php">HOME SITE</a></li>
              
                 
@@ -25,9 +19,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
                     <?php 
                         
-                        if(isset($_SESSION['username'])){
+                        if(isset($_GET['user_firstname'])){
                             
-                           echo $_SESSION['username'];
+                           echo $_GET['user_firstname'];
                            
                         }
                        
@@ -54,6 +48,7 @@
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     
+<!--
                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#post_dropdown"><i class="fa fa-fw fa-arrows-v"></i> posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="post_dropdown" class="collapse">
@@ -65,29 +60,64 @@
                             </li>
                         </ul>
                     </li>
+-->
+                     <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-wrench"></i>Inventory<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> categories</a>
+                            </li>
+                            <li>
+                                <a href="users.php">Stock List</a>
+                            </li>
+                            <li>
+                                <a href="users.php">Add Stock</a>
+                            </li>
+                          </ul>
+                    </li>                   
+
                     
                     <li>
-                        <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> categories</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-wrench"></i>Invoice<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo1" class="collapse">
+                            <li>
+                                <a href="users.php">View All Invoices</a>
+                            </li>
+                            <li>
+                                <a href="../registration.php">Create Invoice</a>
+                            </li>
+                        </ul>
                     </li>
                     
+                    <li>
+                        <a href="users.php"><i class="fa fa-fw fa-dashboard"></i>Customer</a>
+                    </li>
+                    <li>
+                        <a href="users.php"><i class="fa fa-fw fa-dashboard"></i>Supplier</a>
+                    </li>                       
                     
+<!--
                     <li class="">
                         <a href="./comments.php"><i class="fa fa-fw fa-file"></i> Comments</a>
                     </li>
+-->
                     
                     
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-dashboard"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="users.php">View All Users</a>
                             </li>
                             <li>
-                                <a href="users.php?source=add_user">Add User</a>
+                                <a href="../registration.php">Add User</a>
                             </li>
                         </ul>
                     </li>
                     
+                    <li>
+                        <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Report</a>
+                    </li>
                     
                     <li>
                         <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> profile</a>

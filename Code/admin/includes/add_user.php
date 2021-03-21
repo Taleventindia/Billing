@@ -6,32 +6,32 @@
             $user_lastname =  $_POST['user_lastname'];
             $user_role =  $_POST['user_role'];
           
-            $user_image = $_FILES['image']['name'];
-            $user_image_tempname = $_FILES['image']['tmp_name'];
+//            $user_image = $_FILES['image']['name'];
+//            $user_image_tempname = $_FILES['image']['tmp_name'];
            
-            $username =  $_POST['username'];
+//            $username =  $_POST['username'];
             $user_email =  $_POST['user_email'];
             $user_password =  $_POST['user_password'];
 
            
-         $query = "SELECT randSalt FROM users";
-         $select_randSalt_query = mysqli_query($connection,$query);
-         
-              if(!$select_randSalt_query){
-          
-             die("QUERY FAILED" . mysqli_error($connection));
-           
-         }
-           
-         
-         $row = mysqli_fetch_array($select_randSalt_query);
-         $salt = $row['randSalt'];
-         $hashed_password = crypt($user_password,$salt);  
+//         $query = "SELECT randSalt FROM users";
+//         $select_randSalt_query = mysqli_query($connection,$query);
+//         
+//              if(!$select_randSalt_query){
+//          
+//             die("QUERY FAILED" . mysqli_error($connection));
+//           
+//         }
+//           
+//         
+//         $row = mysqli_fetch_array($select_randSalt_query);
+//         $salt = $row['randSalt'];
+//         $hashed_password = crypt($user_password,$salt);  
            
           
      $query="INSERT INTO users".
-         '(user_firstname, user_lastname, user_role, user_image, username, user_email, user_password)'.   
-    "VALUES('". $user_firstname ."', '". $user_lastname ."', '". $user_role ."', '". $user_image ."','". $username ."', '". $user_email ."','". $hashed_password ."') ";
+         '(user_firstname, user_lastname, user_role, user_email, user_password)'.   
+    "VALUES('". $user_firstname ."', '". $user_lastname ."','". $user_role ."','". $user_email ."','". $user_password ."') ";
                       
         $create_user_query=mysqli_query($connection,$query);
            
@@ -39,7 +39,7 @@
            
         echo "User Created:"." "."<a href='users.php'>View User</a>" ;   
            
-      move_uploaded_file($user_image_tempname,"../images/$user_image");
+//      move_uploaded_file($user_image_tempname,"../images/$user_image");
 
        
        }
@@ -61,17 +61,20 @@
         </div>
         
         
+
         <div class="form-group">
             <select name="user_role"id="user_role">
             
-            <option value="subscriber">select options</option>
+            <option value="User">select options</option>
             <option value="admin">admin</option>
-            <option value="subscriber">subscriber</option>
-            
+            <option value="User">User</option>
+            <option value="Customer">Customer</option>
+            <option value="Supplier">Supplier</option>
          </select> 
       </div>
         
   
+<!--
        <div class="form-group">
             <label for="user_image">Post Image</label>
             <input type="file" name="image">
@@ -81,6 +84,8 @@
             <label for="post_tags">Username</label>
             <input type="text" class="form-control" name="username">
         </div>
+-->
+
         
        <div class="form-group">
             <label for="post_content">Email</label>

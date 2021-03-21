@@ -2,23 +2,24 @@
     
 <?php
                         
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['user_firstname'])){
        
-        $username = $_SESSION['username'];
+      $user_firstname = $_SESSION['user_firstname'];
 
-     $query="SELECT * FROM users WHERE username = '{$username}' ";
+     $query="SELECT * FROM users WHERE user_firstname = '{$user_firstname}' ";
        $select_user_profile = mysqli_query($connection,$query);
 
          while($row=mysqli_fetch_array($select_user_profile)){
 
                 $user_id=$row['user_id'];
-                $username=$row['username'];
+                $user_email=$row['user_email'];
                 $user_password=$row['user_password'];
                 $user_firstname=$row['user_firstname'];
                 $user_lastname=$row['user_lastname'];
-                $user_email=$row['user_email'];
-                $user_image=$row['user_image'];
+                
 //                $user_role=$row['user_role'];
+//                $user_image=$row['user_image'];
+
 
          }
 
@@ -37,7 +38,7 @@
 //            $user_image = $_FILES['image']['name'];
 //            $user_image_tempname = $_FILES['image']['tmp_name'];
            
-            $username =  $_POST['username'];
+            
             $user_email =  $_POST['user_email'];
             $user_password =  $_POST['user_password'];
 //            $randsalt =  'random';
@@ -45,7 +46,7 @@
 //            $post_date =date('d-m-y');
            
           
-    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', username= '{$username}', user_email= '{$user_email}', user_password= '{$user_password}' WHERE username= '{$username}' ";  
+    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', user_email= '{$user_email}', user_password= '{$user_password}' WHERE user_firstname= '{$user_firstname}' ";  
                       
         $edit_user_query=mysqli_query($connection,$query);
            
@@ -88,47 +89,20 @@
             <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
         </div>
         
-        
+    
 <!--
-        <div class="form-group">
-            <select name="user_role"id="user_role">
--->
-            
-<!--
-            <option value="subscriber"><?php 
-//echo $user_role; ?>
-                </option>
-            
--->
-         <?php 
-//                if($user_role == 'admin'){
-//                    
-//                    echo "<option value='subscriber'>subscriber</option>";
-//                    
-//                }else{
-//                    
-//                    echo "<option value='admin'>admin</option>";
-//                }
-             
-            
-            ?>
-            
-<!--
-            
-         </select> 
-      </div>
-        
--->
-  
        <div class="form-group">
             <label for="user_image">Post Image</label>
             <input type="file" name="image">
        </div>
+-->
      
+<!--
        <div class="form-group"> 
             <label for="post_tags">Username</label>
-            <input type="text" value="<?php echo $username; ?>" class="form-control" name="username">
+            <input type="text" value="<?php //echo $username; ?>" class="form-control" name="username">
         </div>
+-->
         
        <div class="form-group">
             <label for="post_content">Email</label>

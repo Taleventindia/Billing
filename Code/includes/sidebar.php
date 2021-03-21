@@ -2,6 +2,7 @@
         <div class="col-md-4">
               
                 <!-- Blog Search Well -->
+<!--
                 <div class="well">
                     <h4>Blog Search</h4>
                     <form action="search.php" method="post">
@@ -13,29 +14,32 @@
                         </button>
                         </span>
                     </div>
-                    </form> <!-- search form -->
+                    </form>  search form 
+-->
                     <!-- /.input-group -->
-                </div>
+<!--                </div>-->
 
               
               <!-- Login -->
                 <div class="well">
                     <h4>Login</h4>
-                    <form action="includes/login.php" method="post" autocomplete="off">
+                    <form action="includes/login.php" method="post" autocomplete="on">
                     
                     <div class="form-group">
-                        <input name="username" type="text" class="form-control" placeholder="Enter username">
+<!--                        <input name="email" type="email" class="form-control" placeholder="Enter email">-->
+                        <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
                      </div>
                        
                        
                      <div class="input-group">
-                        <input name="password" type="text" class="form-control" placeholder="Enter password">
+<!--                        <input name="password" type="text" class="form-control" placeholder="Enter password">-->
+                         <input type="password" name="password" id="key" class="form-control" placeholder="Password">
                          <span class="input-group-btn">
                          <button class="btn btn-primary" name="login" type="submit">Submit</button>
                       </span>
                     </div>
                     
-                   </form> <!-- search form -->
+                   </form> 
                     <!-- /.form-group -->
                 </div>
 
@@ -91,6 +95,8 @@
                 </div>
 
                 <!-- Side Widget Well -->
-               <?php include "widget.php"; ?>
+               <?php 
+//            include "widget.php";
+            ?>
                
             </div>

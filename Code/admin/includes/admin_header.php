@@ -4,18 +4,18 @@
 <?php session_start(); ?>
 
 <?php
-    
- //   if(!isset($_SESSION['user_role'])){
-        
-    if($_SESSION['user_role'] !== 'admin'){
    
-      header("Location:../index.php");
-        
-    }
+//   if($_SESSION($_POST['user_role'] !== 'admin')){
+//       
+//       header("Location:../index.php");
+//       
+//   } else {
+//       
+//       header("Location:admin/index.php");
+//       
+//   }
 
-//    }
-   
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,3 +53,7 @@
 </head>
 
 <body>
+
+
+
+    
