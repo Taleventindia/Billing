@@ -69,10 +69,7 @@
                     </div>
                     
 -->
-<!--                   </form>-->
-              <!-- search form -->
-                    <!-- /.form-group -->
-<!--                </div>-->
+
                 
             </div>
           </div>
