@@ -81,10 +81,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-wrench"></i>Invoice<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo1" class="collapse">
                             <li>
-                                <a href="users.php">View All Invoices</a>
+                                <a href="../../../../billing/Code/reports.php">View All Invoices</a>
                             </li>
                             <li>
-                                <a href="../registration.php">Create Invoice</a>
+                                <a href="../../../../billing/Code/invoice.php">Create Invoice</a>
                             </li>
                         </ul>
                     </li>

@@ -31,7 +31,7 @@
       if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname)){
           
          
-         
+         echo "Inside if statement";
 //    $user_firstname = mysqli_real_escape_string($connection,$user_firstname);     
 //    $user_lastname = mysqli_real_escape_string($connection,$user_lastname);     
 //    $email = mysqli_real_escape_string($connection,$email);     

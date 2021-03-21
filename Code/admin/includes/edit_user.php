@@ -70,7 +70,7 @@
 
    ?>      
                 
-   <form action=""method="post" enctype="multipart/form-data">
+   <form action="" method="post" enctype="multipart/form-data">
           
            
        <div class="form-group">

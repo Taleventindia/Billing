@@ -19,7 +19,16 @@
              break; 
 
 
-            case 'subscriber':
+            case 'User':
+
+              $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
+              $update_to_subscriber_status = mysqli_query($connection,$query);
+
+                   confirmQuery($update_to_subscriber_status);
+
+             break; 
+            
+            case 'Customer':
 
               $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
               $update_to_subscriber_status = mysqli_query($connection,$query);
@@ -28,6 +37,14 @@
 
              break; 
 
+            case 'Supplier':
+
+              $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
+              $update_to_subscriber_status = mysqli_query($connection,$query);
+
+                   confirmQuery($update_to_subscriber_status);
+
+             break; 
 
             case 'delete':
 
@@ -56,7 +73,9 @@
                    
                 <option value="">Select Options</option>
                 <option value="admin">Admin</option>
-                <option value="subscriber">Subscriber</option>
+                <option value="User">User</option>
+                <option value="Customer">Customer</option>
+                <option value="Supplier">Supplier</option>
                 <option value="delete">Delete</option>
 <!--                <option value="clone">Clone</option>-->
                      
