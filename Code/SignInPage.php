@@ -13,6 +13,7 @@
 </head>
 <body> 
   
+    
   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container">
       <div class="card login-card">
@@ -33,6 +34,7 @@
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" name="email" class="form-control" placeholder="Email address">
                   </div>
+                    <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" name="password" class="form-control" placeholder="***********">
