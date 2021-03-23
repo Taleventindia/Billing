@@ -11,9 +11,6 @@
 //        $email=mysqli_real_escape_string($connection, $email);
 //        $password=mysqli_real_escape_string($connection, $password);
         
-//        if(preg_match(email, $db_user_email)) { 
-        
-        
         $query = "SELECT * FROM users WHERE user_email = '{$email}' ";
         $select_user_query = mysqli_query($connection, $query);
         
@@ -37,7 +34,7 @@
 //        $password = crypt($password,$db_user_password);
         
         
-        if(preg_match($email === $db_user_email && $password === $db_user_password)){
+        if($email === $db_user_email && $password === $db_user_password){
             
              $_SESSION['email'] = $db_user_email;
              $_SESSION['firstname'] = $db_user_firstname;
@@ -45,25 +42,15 @@
              $_SESSION['user_role'] = $db_user_role;
 
              header("Location: ../admin");
-        
-            }else{
            
-            $message ="Invalid E-mail";
-        
-        
-        }
-//            else{
-//            
-//            header("Location: ../SignInPage.php");
-//              
-//        }
-            
-        
-        
         }else{
-           
-            $message ="";
-    }
+            
+            header("Location: ../index.php");
+        }
+            
+              
+        }
+        
      
    ?>  
     

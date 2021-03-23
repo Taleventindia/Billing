@@ -7,21 +7,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Talevent tech</a>
+                <a class="navbar-brand" href="index.php">CMS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
         
-               <li><a href="../SignInPage.php">HOME SITE</a></li>
+               <li><a href="../index.php">HOME SITE</a></li>
              
                 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
                     <?php 
                         
-                        if(isset($_GET['user_email'])){
+                        if(isset($_GET['user_firstname'])){
                             
-                           echo $_GET['user_email'];
+                           echo $_GET['user_firstname'];
                            
                         }
                        
@@ -35,19 +35,6 @@
                         </li>
                         
                         <li class="divider"></li>
-                        
-                        <li>
-                            <a href="../registration.php"><i class="fa fa-fw fa-user"></i>Register</a>
-                        </li>
-                        
-                        <li class="divider"></li>
-                        
-                        <li>
-                            <a href="../SignInPage.php"><i class="fa fa-fw fa-user"></i>Log In</a>
-                        </li>
-                        
-                        <li class="divider"></li>
-                        
                         <li>
                             <a href="../includes/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
