@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">CMS Admin</a>
+                <a class="navbar-brand" href="index.php">Talevent tech</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -35,6 +35,19 @@
                         </li>
                         
                         <li class="divider"></li>
+                        
+                        <li>
+                            <a href="../registration.php"><i class="fa fa-fw fa-user"></i>Register</a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                        
+                        <li>
+                            <a href="../SignInPage.php"><i class="fa fa-fw fa-user"></i>Log In</a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                        
                         <li>
                             <a href="../includes/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
