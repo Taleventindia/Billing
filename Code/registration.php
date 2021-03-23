@@ -42,8 +42,11 @@
         $number    = preg_match('@[0-9]@', $password);
         $character = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $password);
             
-        if($uppercase && $lowercase && $number && $character && strlen($password) >= 8) {
+        if($uppercase && $lowercase && $number && $character) {
             
+          if(strlen($password) >= 8) {
+              
+           
         if($password == $confirmpassword){
          
             
@@ -57,14 +60,19 @@
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
 
-       $message = "Your Registration has been Submitted";
-            //          header("Location:SignInPage.php"); 
+//       $message = "Your Registration has been Submitted";
+         header("Location:SignInPage.php"); 
             
              
             
         }else{
               $message_cpassworad = "Password Mismatch!";
           }
+            
+           }else{
+              $message_strnpassworad = "password contain atleast 8 characters";
+          }
+            
             
           }else{
               $message_password = "Password must contain a special character";
@@ -114,7 +122,7 @@
               </div>
               <p class="login-card-description">Register your account</p>
                 
-            <form role="form" action="registration.php" method="post" id="login-form" autocomplete="on">
+            <form role="form" action="registration.php" method="post" id="login-form" autocomplete="Off">
 
                   
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
@@ -141,6 +149,7 @@
                 <label for="password">Password</label>
                 <input type="password" name="user_password" id="password" class="form-control" placeholder="***********">
             </div>
+                <h6 class="text-center" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message_password; ?></h6>
                 
             <div class="form-group mb-4">

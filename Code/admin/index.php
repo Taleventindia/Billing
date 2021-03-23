@@ -16,7 +16,7 @@
                            
                             Welcome to admin
                           
-                            <small> <?php echo $_SESSION['user_firstname'] ?></small>
+                            <small> <?php echo $_SESSION['user_email'] ?></small>
                             
                         </h1>
                        
