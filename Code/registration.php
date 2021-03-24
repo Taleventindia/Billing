@@ -20,40 +20,30 @@
 
      if(isset($_POST['submit'])){
          
-//         $username = $_POST['username'];
-         $email    = $_POST['user_email'];    
-         $password = $_POST['user_password'];
-         $confirmpassword =$_POST['user_password'];;
          $user_firstname=  $_POST['user_firstname'];
          $user_lastname=  $_POST['user_lastname'];
+         $user_phone =  $_POST['user_phone'];
+         $email    = $_POST['user_email'];    
+         $password = $_POST['user_password'];
+         $confirmpassword =$_POST['user_password'];
+         $user_address =  $_POST['user_address'];
+        
 //         $user_role=$_POST['role'];
          
       if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname)){
           
          
          echo "Inside if statement";
+          
 //    $user_firstname = mysqli_real_escape_string($connection,$user_firstname);     
 //    $user_lastname = mysqli_real_escape_string($connection,$user_lastname);     
 //    $email = mysqli_real_escape_string($connection,$email);     
 //    $password = mysqli_real_escape_string($connection,$password);  
 //     $confirmpassword = mysqli_real_escape_string($connection,$confirmpassword);        
           
-              
-//         $query = "SELECT randSalt FROM users";
-//         $select_randSalt_query = mysqli_query($connection,$query);
-         
-//      if(!$select_randSalt_query){
-//          
-//          die("QUERY FAILED" . mysqli_error($connection));
-//          
-//      }
-//         
-//         $row = mysqli_fetch_array($select_randSalt_query);
-//         $salt = $row['randSalt'];
-//         $password = crypt($password,$salt);  
-        
-        $query = "INSERT INTO users (user_email,user_password,user_confirmpassword,user_firstname,user_lastname,user_role) ";
-        $query .= "VALUES ('{$email}','{$password}','{$password}','{$user_firstname}','{$user_lastname}','subscriber') ";
+       
+        $query = "INSERT INTO users (user_firstname,user_lastname,user_phone,user_email,user_password,user_confirmpassword,user_address,user_role) ";
+        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','{$user_phone}','{$email}','{$password}','{$user_confirmpassword}','{$user_address}','user') ";
              
         $register_user_query = mysqli_query($connection,$query);
              

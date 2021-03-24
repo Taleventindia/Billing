@@ -85,7 +85,7 @@
        
         <div class="form-group">
             <label for="user_phone">Phone No</label>
-            <input type="integer" value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
+            <input type="varchar" value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
         </div>
         
         <div class="form-group">
