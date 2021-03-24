@@ -7,21 +7,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Talevent tech</a>
+                <a class="navbar-brand" href="index.php">CMS Admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
         
-               <li><a href="../SignInPage.php">HOME SITE</a></li>
+               <li><a href="../index.php">HOME SITE</a></li>
              
                 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
                     <?php 
                         
-                        if(isset($_GET['user_email'])){
+                        if(isset($_GET['user_firstname'])){
                             
-                           echo $_GET['user_email'];
+                           echo $_GET['user_firstname'];
                            
                         }
                        
@@ -35,19 +35,6 @@
                         </li>
                         
                         <li class="divider"></li>
-                        
-                        <li>
-                            <a href="../registration.php"><i class="fa fa-fw fa-user"></i>Register</a>
-                        </li>
-                        
-                        <li class="divider"></li>
-                        
-                        <li>
-                            <a href="../SignInPage.php"><i class="fa fa-fw fa-user"></i>Log In</a>
-                        </li>
-                        
-                        <li class="divider"></li>
-                        
                         <li>
                             <a href="../includes/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
@@ -81,10 +68,10 @@
                                 <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> categories</a>
                             </li>
                             <li>
-                                <a href="users.php">Stock List</a>
+                                <a href="inventory.php">Stock List</a>
                             </li>
                             <li>
-                                <a href="users.php">Add Stock</a>
+                                <a href="inventory.php?source=add_stock">Add Stock</a>
                             </li>
                           </ul>
                     </li>                   
@@ -94,10 +81,14 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-wrench"></i>Invoice<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo1" class="collapse">
                             <li>
+<!--<<<<<<< HEAD-->
                                 <a href="invoice.php">View All Invoices</a>
+<!--=======-->
+                                <a href="../../../../billing/Code/reports.php">View All Invoices</a>
+<!-->>>>>>> 4ed43e127381e7bf1fafd85852973810bdf04e9e-->
                             </li>
                             <li>
-                                <a href="../registration.php">Create Invoice</a>
+                                <a href="../../../../billing/Code/invoice.php">Create Invoice</a>
                             </li>
                         </ul>
                     </li>
@@ -124,6 +115,7 @@
                             </li>
                             <li>
                                 <a href="../registration.php">Add User</a>
+<!--                                 <a href="users.php?source=add_user">Add User</a>-->
                             </li>
                         </ul>
                     </li>

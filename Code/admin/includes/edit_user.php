@@ -70,7 +70,7 @@
 
    ?>      
                 
-   <form action=""method="post" enctype="multipart/form-data">
+   <form action="" method="post" enctype="multipart/form-data">
           
            
        <div class="form-group">
@@ -87,9 +87,7 @@
         <div class="form-group">
             <select name="user_role"id="user_role">
             
-            <option value="<?php echo $user_role;?>"> 
-                <?php echo $user_role; ?>
-                </option> 
+            <option value="<?php echo $user_role;?>"><?php echo $user_role; ?></option> 
             
          <?php 
                 if($user_role == 'admin'){

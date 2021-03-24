@@ -22,27 +22,27 @@
             case 'User':
 
               $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
-              $update_to_supplier_status = mysqli_query($connection,$query);
+              $update_to_subscriber_status = mysqli_query($connection,$query);
 
-                   confirmQuery($update_to_supplier_status);
+                   confirmQuery($update_to_subscriber_status);
 
              break; 
             
             case 'Customer':
 
               $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
-              $update_to_customer_status = mysqli_query($connection,$query);
+              $update_to_subscriber_status = mysqli_query($connection,$query);
 
-                   confirmQuery($update_to_customer_status);
+                   confirmQuery($update_to_subscriber_status);
 
              break; 
 
             case 'Supplier':
 
               $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
-              $update_to_supplier_status = mysqli_query($connection,$query);
+              $update_to_subscriber_status = mysqli_query($connection,$query);
 
-                   confirmQuery($update_to_supplier_status);
+                   confirmQuery($update_to_subscriber_status);
 
              break; 
 
@@ -96,11 +96,9 @@
 <!--                    <th>Username</th> -->
                         <th>Firstname</th>
                         <th>Lastname</th>
+                        <th>Phone NO</th>
                         <th>Email</th>
-                        <th>Role</th>
-                        <th>Admin</th>
-                        <th>Customer</th>
-                        <th>supplier</th>
+                        <th>Address</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -141,8 +139,7 @@
                  
                   
                     echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
-                    echo "<td><a href='users.php?change_to_customer={$user_id}'>Customer</a></td>";
-                    echo "<td><a href='users.php?change_to_sub={$user_id}'>Supplier</a></td>";
+                    echo "<td><a href='users.php?change_to_sub={$user_id}'>Subscriber</a></td>";
                     echo "<td><a class='btn btn-primary' href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";
  echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='users.php?delete={$user_id}'>Delete</a></td>";
                     echo "</tr>";
@@ -166,17 +163,10 @@
                      header("Location:users.php");
                  }
 
-                 if(isset($_GET['change_to_customer'])){
-                     $the_user_id=$_GET['change_to_cutomer'];
-                     $query="UPDATE users SET user_role='customer' WHERE user_id=$the_user_id ";
-                     $change_to_customer_query = mysqli_query($connection,$query);
-                     header("Location:users.php");
-                 }
-
 
                  if(isset($_GET['change_to_sub'])){
                      $the_user_id=$_GET['change_to_sub'];
-                     $query="UPDATE users SET user_role='supplier' WHERE user_id=$the_user_id ";
+                     $query="UPDATE users SET user_role='subscriber' WHERE user_id=$the_user_id ";
                      $change_to_sub_query = mysqli_query($connection,$query);
                      header("Location:users.php");
                  }

@@ -1,6 +1,4 @@
 <?php include "includes/db.php"; ?>
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,80 +13,6 @@
 </head>
 <body> 
   
-<?php include "db.php"; ?>
-<?php session_start(); ?>
-
-<?php
-
-    if(isset($_REQUEST['submit'])){
-        
-        $email    = $_REQUEST['email'];
-        $password = $_REQUEST['password'];
-        
-//        $email=mysqli_real_escape_string($connection, $email);
-//        $password=mysqli_real_escape_string($connection, $password);
-        
-//        if(preg_match(email, $db_user_email)) { 
-        
-        
-        $query = "SELECT * FROM users WHERE user_email = '{$email}' ";
-        $select_user_query = mysqli_query($connection, $query);
-        
-        if(!$select_user_query){
-            
-            die("Query Failed" . mysqli_error($connection));
-            
-        }
-          
-          while($row = mysqli_fetch_array($select_user_query)){
-              
-               $db_id = $row['user_id'];
-               $db_user_email = $row['user_email'];
-               $db_user_password = $row['user_password'];
-               $db_user_firstname = $row['user_firstname'];
-               $db_user_lastname = $row['user_lastname'];
-               $db_user_role = $row['user_role'];
-              
-          }
-                   
-//        $password = crypt($password,$db_user_password);
-        
-        
-        if($email === $db_user_email) {
-            if($password === $db_user_password){
-            
-             $_SESSION['email'] = $db_user_email;
-             $_SESSION['firstname'] = $db_user_firstname;
-             $_SESSION['lastname'] = $db_user_lastname;
-             $_SESSION['user_role'] = $db_user_role;
-
-             header("Location: admin");
-        
-            }else{
-           
-            $message_password ="Incorrect Password";
-        
-        }
-//            else{
-//            
-//            header("Location: ../SignInPage.php");
-//              
-//        }
-        
-        
-            }else{
-           
-            $message_email ="Invalid E-mail";
-        
-        }
-     
-        
-        }
-
-     
-   ?>  
-    
-     
   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container">
       <div class="card login-card">
@@ -104,19 +28,16 @@
               <p class="login-card-description">Sign in into your account</p>
                  
                 
-                <form action=""method="post" enctype="multipart/form-data" autocomplete="Off">
+                <form action="includes/login.php"method="post" enctype="multipart/form-data">
                   <div class="form-group">
                     <label for="email" class="sr-only">Email</label>
                     <input type="email" name="email" class="form-control" placeholder="Email address">
                   </div>
-                    <h6 class="text-center" style="color:#ff0000"><?php echo $message_email; ?></h6>
-                    
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" name="password" class="form-control" placeholder="***********">
                   </div>
-                      <h6 class="text-center" style="color:#ff0000"><?php echo $message_password; ?></h6>
-                    
+                  
                   <span class="input-group-btn">
                         <button class="btn btn-block login-btn mb-4" name="submit" type="submit" id ="submit">login</button>
                   </span>

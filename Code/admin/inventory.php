@@ -14,7 +14,7 @@
                     <div class="col-lg-12">
                     
                         <h1 class="page-header">
-                            Welcome to Invoice
+                            Welcome to Inventory
                             <small>List</small>
                         </h1>
 
@@ -32,12 +32,12 @@
                         
             switch($source) {
 
-                    case 'add_user';
-                    include "includes/add_user.php";
+                    case 'add_stock';
+                    include "includes/add_stock.php";
                     break;
 
-                    case 'edit_user';
-                    include "includes/edit_user.php";
+                    case 'edit_stock';
+                    include "includes/edit_stock.php";
                     break;
 
                     case '200';
@@ -45,7 +45,7 @@
                     break;
 
                     default:
-                        include "includes/view_all_invoices.php";
+                        include "includes/stock_list.php";
                         break;
 
                     }
