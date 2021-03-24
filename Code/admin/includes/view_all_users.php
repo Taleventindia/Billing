@@ -74,7 +74,7 @@
                 <option value="">Select Options</option>
                 <option value="admin">Admin</option>
                 <option value="User">User</option>
-                <option value="Customer">Customer</option>
+                <option value="Customer">Cus tomer</option>
                 <option value="Supplier">Supplier</option>
                 <option value="delete">Delete</option>
 <!--                <option value="clone">Clone</option>-->
@@ -96,7 +96,9 @@
 <!--                    <th>Username</th> -->
                         <th>Firstname</th>
                         <th>Lastname</th>
+                        <th>Phone No</th>
                         <th>Email</th>
+                        <th>Address</th>
                         <th>Role</th>
                         <th>Admin</th>
                         <th>Customer</th>
@@ -115,12 +117,14 @@
              while($row=mysqli_fetch_assoc($select_users)){
 
                     $user_id=$row['user_id'];
-//                    $username=$row['username'];
-                    $user_password=$row['user_password'];
+//                    $username=$row['username'];    
                     $user_firstname=$row['user_firstname'];
                     $user_lastname=$row['user_lastname'];
+                    $user_phone=$row['user_phone'];
                     $user_email=$row['user_email'];
-                    $user_image=$row['user_image'];
+                    $user_password=$row['user_password'];
+                    $user_address=$row['user_address'];
+//                    $user_image=$row['user_image'];
                     $user_role=$row['user_role'];
                    
 
@@ -136,13 +140,16 @@
 //                    echo "<td>$username</td>";
                     echo "<td>$user_firstname</td>";
                     echo "<td>$user_lastname</td>";
+                    echo "<td>$user_phone</td>";
                     echo "<td>$user_email</td>";
+                    echo "<td>$user_address</td>";
                     echo "<td>$user_role</td>";
+                    
                  
                   
                     echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
                     echo "<td><a href='users.php?change_to_customer={$user_id}'>Customer</a></td>";
-                    echo "<td><a href='users.php?change_to_sub={$user_id}'>Supplier</a></td>";
+                    echo "<td><a href='users.php?change_to_sup={$user_id}'>Supplier</a></td>";
                     echo "<td><a class='btn btn-primary' href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";
  echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='users.php?delete={$user_id}'>Delete</a></td>";
                     echo "</tr>";
@@ -167,17 +174,17 @@
                  }
 
                  if(isset($_GET['change_to_customer'])){
-                     $the_user_id=$_GET['change_to_cutomer'];
+                     $the_user_id=$_GET['change_to_customer'];
                      $query="UPDATE users SET user_role='customer' WHERE user_id=$the_user_id ";
                      $change_to_customer_query = mysqli_query($connection,$query);
                      header("Location:users.php");
                  }
 
 
-                 if(isset($_GET['change_to_sub'])){
-                     $the_user_id=$_GET['change_to_sub'];
+                 if(isset($_GET['change_to_sup'])){
+                     $the_user_id=$_GET['change_to_sup'];
                      $query="UPDATE users SET user_role='supplier' WHERE user_id=$the_user_id ";
-                     $change_to_sub_query = mysqli_query($connection,$query);
+                     $change_to_sup_query = mysqli_query($connection,$query);
                      header("Location:users.php");
                  }
 

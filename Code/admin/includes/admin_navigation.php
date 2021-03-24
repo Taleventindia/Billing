@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">CMS Admin</a>
+                <a class="navbar-brand" href="index.php">Talevent tech</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -94,10 +94,15 @@
                     </li>
                     
                     <li>
-                        <a href="users.php"><i class="fa fa-fw fa-dashboard"></i>Customer</a>
+                        <a href="customers.php"><i class="fa fa-fw fa-dashboard"></i>Customers</a>
+<!--                        <a href="customers.php?source=add_customer">Add Customer</a>-->
+                        
                     </li>
+                    
+                    
+                   
                     <li>
-                        <a href="users.php"><i class="fa fa-fw fa-dashboard"></i>Supplier</a>
+                        <a href="suppliers.php"><i class="fa fa-fw fa-dashboard"></i>Supplier</a>
                     </li>                       
                     
 <!--
@@ -116,6 +121,9 @@
                             <li>
                                 <a href="../registration.php">Add User</a>
 <!--                                 <a href="users.php?source=add_user">Add User</a>-->
+                            </li>
+                            <li>
+                                 <a href="customers.php?source=add_customer">Add Customer</a>
                             </li>
                         </ul>
                     </li>

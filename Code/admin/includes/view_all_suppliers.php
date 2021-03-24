@@ -20,10 +20,10 @@
                             
      <?php 
 
-             $query="SELECT user_id,user_firstname,user_lastname,user_phone,user_email,user_role,user_address FROM users WHERE user_role='customer' ";
-             $select_customers=mysqli_query($connection,$query);
+            $query="SELECT user_id,user_firstname,user_lastname,user_phone,user_email,user_role,user_address FROM users WHERE user_role='supplier' ";
+             $select_suppliers=mysqli_query($connection,$query);
                     
-             while($row=mysqli_fetch_assoc($select_customers)){
+             while($row=mysqli_fetch_assoc($select_suppliers)){
 
                     $user_id=$row['user_id'];
                     $user_password=$row['user_password'];
@@ -33,7 +33,6 @@
                     $user_email=$row['user_email'];
                     $user_address=$row['user_address'];
                     $user_role=$row['user_role'];
-                    
                    
 
                     echo "<tr>";
@@ -45,7 +44,6 @@
                     echo "<td>$user_email</td>";
                     echo "<td>$user_address</td>";
                     echo "<td>$user_role</td>";
-                    
                  
                   
 //                    echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
