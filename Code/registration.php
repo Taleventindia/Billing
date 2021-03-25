@@ -152,9 +152,6 @@
                <span class="input-group-btn">  
                   <input type="submit" name="submit" id="btn-login" class="btn btn-block login-btn mb-4" value="Register">
               </span>
-                
-        
-			<input type="submit" name="submit" id="btn-login" class="btn btn-block login-btn mb-4" value="Register">
         </form> 
                 <nav class="login-card-footer-nav">
                   <a href="#!">Terms of use.</a>
