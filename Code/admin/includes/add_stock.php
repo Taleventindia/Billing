@@ -44,13 +44,11 @@
             <label for="title">Product Name</label>
             <input type="text" class="form-control" name="product_name">
         </div>
-       
-         <br>
-       
+      <br>
        <div class="input-group">
             <label for="category">Product Category</label>
            <br>
-           <select name="product_category"id="product_category"> 
+           <select class="form-control" name="product_category"id="product_category"> 
                
 <?php      
 
@@ -71,44 +69,43 @@
          </select>
         </div>
        
-         <br>
+       <br>
         
         <div class="input-group">
            <label for="Product_type">Product Type</label>
             <input type="text" class="form-control" name="product_type">
-      </div>
-        
-  
+       </div>
+        <br>
        <div class="input-group">
             <label for="product_cost">Product Cost</label>
             <input type="decimal" class="form-control" name="product_cost">
        </div>
-     
+       <br>
        <div class="input-group"> 
             <label for="quantity">Quantity</label>
             <input type="decimal" class="form-control" name="quantity">
         </div>
-        
+        <br>
        <div class="input-group">
             <label for="supplier">Supplier</label>
            <input type="text" class="form-control" name="supplier">
         </div>
-        
+        <br>
         <div class="input-group">
             <label for="onhand_qty">Onhand Qty</label>
            <input type="decimal" class="form-control" name="onhand_qty">
         </div>
-       
+        <br>
        <div class="input-group">
             <label for="expiry_date">Expiry Date</label>
            <input type="date" class="form-control" name="expiry_date">
         </div>
-       
+        <br>
        <div class="input-group">
             <label for="date_arrival">Date arrival</label>
            <input type="date" class="form-control" name="date_arrival">
         </div>
-        
+        <br>
        <div class="form-group">
             <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
         </div>

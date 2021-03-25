@@ -1,6 +1,6 @@
  <?php 
      
-       if(isset($_POST['create_customer'])){
+       if(isset($_POST['create_supplier'])){
            
             $user_firstname =  $_POST['user_firstname'];
             $user_lastname =  $_POST['user_lastname'];
@@ -15,19 +15,19 @@
           
      $query="INSERT INTO users".
          '(user_firstname, user_lastname, user_phone, user_role, user_email, user_password, user_confirmpassword, user_address)'.   
-    "VALUES('". $user_firstname ."', '". $user_lastname ."', '". $user_phone ."','". customer ."','". $user_email ."','". $user_password ."','". $user_confirmpassword ."','". $user_address ."') ";
+    "VALUES('". $user_firstname ."', '". $user_lastname ."', '". $user_phone ."','". supplier ."','". $user_email ."','". $user_password ."','". $user_confirmpassword ."','". $user_address ."') ";
                       
         $create_user_query=mysqli_query($connection,$query);
            
         confirmQuery($create_user_query);
            
-        echo "User Created:"." "."<a href='customers.php'>View Customer</a>" ;   
+        echo "User Created:"." "."<a href='suppliers.php'>View supplier</a>" ;   
      
        
 //       }
 //           else {
 //          
-//          $message = "Invalid customer details";
+//          $message = "Invalid supplier details";
 //          
 //      } 
 //           
@@ -65,7 +65,7 @@
             <option value="User">select options</option>
             <option value="admin">admin</option>
             <option value="User">User</option>
-            <option value="Customer">Customer</option>
+            <option value="supplier">supplier</option>
             <option value="Supplier">Supplier</option>
          </select> 
       </div>
@@ -93,7 +93,7 @@
         </div>
        <br>
        <div class="input-group">
-            <input class="btn btn-primary" type="submit" name="create_customer" value="Add Customer">
+            <input class="btn btn-primary" type="submit" name="create_supplier" value="Add supplier">
         </div>
         
        </form>

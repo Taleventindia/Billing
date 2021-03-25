@@ -14,7 +14,7 @@
                     <div class="col-lg-12">
                     
                         <h1 class="page-header">
-                            Welcome to Users
+                            Welcome to Suppliers
                             <small>Author</small>
                         </h1>
 
@@ -32,10 +32,10 @@
                         
             switch($source) {
 
-//                    case 'add_user';
-//                    include "includes/add_user.php";
-//                    break;
-//
+                    case 'add_supplier';
+                    include "includes/add_supplier.php";
+                    break;
+
 //                    case 'edit_user';
 //                    include "includes/edit_user.php";
 //                    break;

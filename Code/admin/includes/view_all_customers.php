@@ -11,7 +11,7 @@
                         <th>Phone No</th>
                         <th>Email</th>
                         <th>Address</th>
-                        <th>Role</th>
+<!--                        <th>Role</th>-->
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -20,7 +20,7 @@
                             
      <?php 
 
-             $query="SELECT user_id,user_firstname,user_lastname,user_phone,user_email,user_role,user_address FROM users WHERE user_role='customer' ";
+             $query="SELECT user_id,user_firstname,user_lastname,user_phone,user_email,user_address FROM users WHERE user_role='customer' ";
              $select_customers=mysqli_query($connection,$query);
                     
              while($row=mysqli_fetch_assoc($select_customers)){
@@ -32,7 +32,7 @@
                     $user_phone=$row['user_phone'];
                     $user_email=$row['user_email'];
                     $user_address=$row['user_address'];
-                    $user_role=$row['user_role'];
+//                    $user_role=$row['user_role'];
                     
                    
 
@@ -44,7 +44,7 @@
                     echo "<td>$user_phone</td>";
                     echo "<td>$user_email</td>";
                     echo "<td>$user_address</td>";
-                    echo "<td>$user_role</td>";
+//                    echo "<td>$user_role</td>";
                     
                  
                   

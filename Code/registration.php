@@ -20,18 +20,16 @@
 
      if(isset($_POST['submit'])){
          
-//         $username = $_POST['username'];
+         $user_firstname=  $_POST['user_firstname'];
+         $user_lastname=  $_POST['user_lastname'];
+         $user_phone=  $_POST['user_phone'];
          $email    = $_POST['user_email'];    
          $password = $_POST['user_password'];
          $confirmpassword =$_POST['user_confirmpassword'];
-         $confirmpassword =$_POST['user_password'];;
-         $user_firstname=  $_POST['user_firstname'];
-         $user_lastname=  $_POST['user_lastname'];
-//         $user_role=$_POST['role'];
+         $user_address =$_POST['user_address'];
          
-//    echo "username accepted";
          
-      if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname)){
+      if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone)){
 
      
       if(preg_match('/^[\p{L} ]+$/u', $user_firstname)) {
@@ -46,51 +44,54 @@
             
         if($uppercase && $lowercase && $number && $character) {
 
-          if(strlen($password) >= 8) {
+        if(strlen($password) >= 8) {
 
         if($password == $confirmpassword){
         
-        $query = "INSERT INTO users (user_email,user_password,user_confirmpassword,user_firstname,user_lastname,user_role) ";
-        $query .= "VALUES ('{$email}','{$password}','{$confirmpassword}','{$user_firstname}','{$user_lastname}','subscriber') ";
-        $query .= "VALUES ('{$email}','{$password}','{$password}','{$user_firstname}','{$user_lastname}','subscriber') ";
+        $query = "INSERT INTO users (user_firstname,user_lastname,user_phone,user_email,user_password,user_confirmpassword,user_address,user_role) ";
+        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','{$user_phone}','{$email}','{$password}','{$confirmpassword}','none','user') ";
              
         $register_user_query = mysqli_query($connection,$query);
       
-            if(!$register_user_query) {
+        if(!$register_user_query) {
             
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
-
-         header("Location:SignInPage.php"); 
-
-        }
-        else{
+            header("Location:SignInPage.php"); 
+   
+        }else{
               $message_cpassworad = "Password Mismatch!";
-          }
+            
+        }
+              
           }else{
               $message_strnpassworad = "password contain atleast 8 characters";
-          }
+              
+       }
             
          }else{
               $message_password = "Password must contain a special character";
-          } 
-      }
-          else{
+            
+       } 
+            
+         }else{
             $message_Lastname ="Only Alphabets are allowed in lastname";
-        }
+            
+      }
 
-      }
-        else{
+        } else{
             $message_Firstname ="Only Alphabets are allowed in firstname";
-        }
+          
       }
-         else {
+      } else {
 			 $message = "Fields cannot be Empty";
-       }       
-     } else {
+       }  
+         
+     } 
+    
+      else {
          
          $message = ""; 
-   
     }
 
   ?>
@@ -130,11 +131,16 @@
             </div>
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message_Lastname; ?></h6> 
                 
+             <div class="form-group">
+                <label for="phone">Phone no</label>
+                <input type="phone no" class="form-control" name="user_phone">
+            </div>   
 
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" name="user_email" id="email" class="form-control" placeholder="somebody@example.com">
-                </div>
+            </div>
+                
             <div class="form-group">
                  <label for="password">Password</label>
                 <input type="password" name="user_password" id="password" class="form-control" placeholder="***********">
@@ -148,10 +154,11 @@
                 <input type="password" name="user_confirmpassword" id="password" class="form-control" placeholder="***********">
             </div>
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message_cpassword; ?></h6>
-                
+               
                <span class="input-group-btn">  
                   <input type="submit" name="submit" id="btn-login" class="btn btn-block login-btn mb-4" value="Register">
               </span>
+                
         </form> 
                 <nav class="login-card-footer-nav">
                   <a href="#!">Terms of use.</a>

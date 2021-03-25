@@ -48,21 +48,8 @@
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     
-<!--
-                   <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#post_dropdown"><i class="fa fa-fw fa-arrows-v"></i> posts <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="post_dropdown" class="collapse">
-                            <li>
-                                <a href="./posts.php">View All posts</a>
-                            </li>
-                            <li>
-                                <a href="posts.php?source=add_post">Add posts</a>
-                            </li>
-                        </ul>
-                    </li>
--->
                      <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-wrench"></i>Inventory<i class="fa fa-fw fa-caret-down"></i></a>
+                     <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-wrench"></i> Inventory<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo2" class="collapse">
                             <li>
                                 <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> categories</a>
@@ -78,53 +65,52 @@
 
                     
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-wrench"></i>Invoice<i class="fa fa-fw fa-caret-down"></i></a>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-wrench"></i> Invoice<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo1" class="collapse">
                             <li>
-<!--<<<<<<< HEAD-->
+
                                 <a href="invoice.php">View All Invoices</a>
-<!--=======-->
+
                                 <a href="../../../../billing/Code/reports.php">View All Invoices</a>
-<!-->>>>>>> 4ed43e127381e7bf1fafd85852973810bdf04e9e-->
+
                             </li>
                             <li>
                                 <a href="../../../../billing/Code/invoice.php">Create Invoice</a>
                             </li>
                         </ul>
                     </li>
-                    
                     <li>
-                        <a href="customers.php"><i class="fa fa-fw fa-dashboard"></i>Customers</a>
-<!--                        <a href="customers.php?source=add_customer">Add Customer</a>-->
-                        
-                    </li>
-                    
-                    
-                   
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo3"><i class="fa fa-fw fa-user"></i> Customers<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo3" class="collapse">
+                            <li>
+                                <a href="customers.php">View All Customers</a>
+
+                                <a href="customers.php?source=add_customer">Create New Cusotmer</a>
+                            </li>
+                      </ul>
+                    </li>                    
                     <li>
-                        <a href="suppliers.php"><i class="fa fa-fw fa-dashboard"></i>Supplier</a>
-                    </li>                       
-                    
-<!--
-                    <li class="">
-                        <a href="./comments.php"><i class="fa fa-fw fa-file"></i> Comments</a>
-                    </li>
--->
-                    
-                    
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo4"><i class="fa fa-fw fa-user"></i> Suppliers<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo4" class="collapse">
+                            <li>
+                                <a href="suppliers.php">View All Suppliers</a>
+
+                                <a href="suppliers.php?source=add_supplier">Create New Supplier</a>
+                            </li>
+                      </ul>
+                    </li>      
+
                     <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-dashboard"></i>Users<i class="fa fa-fw fa-caret-down"></i></a>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-dashboard"></i> Users<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
                                 <a href="users.php">View All Users</a>
                             </li>
                             <li>
                                 <a href="../registration.php">Add User</a>
-<!--                                 <a href="users.php?source=add_user">Add User</a>-->
+                                 
                             </li>
-                            <li>
-                                 <a href="customers.php?source=add_customer">Add Customer</a>
-                            </li>
+
                         </ul>
                     </li>
                     
