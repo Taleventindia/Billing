@@ -72,7 +72,6 @@ if(isset($_GET['inv']))
                 <div class="container-fluid">
 
 		<h3>RETAIL INVOICE</h3>
-		<div style="clear:both"></div>
         <div style="border:1px solid #000">
             <div id="customer">
                 Consignee,<br />
@@ -203,7 +202,10 @@ if(isset($_GET['inv']))
               </span>
             </div>
 		</div>
-        <br />
+        <a href="javascript:window.print()" >
+<img  class="delete" src="images/printButton.gif" style="position:center; border:none  " onclick="" />
+	</a>
+         <br />
 	
                 
                     <!-- Bootstrap Core CSS -->
@@ -218,9 +220,7 @@ if(isset($_GET['inv']))
                <link href="./css/styles.css" rel="stylesheet">
 
                <script type="text/javascript" src="./js/loader.js"></script>    
-                    	<a href="javascript:window.print()" >
-<img  class="delete" src="images/printButton.gif" style="position:fixed;  left:95px; top:12px; border:none  " onclick="" />
-	</a>
+
     </div>
 </div>
 </div>
