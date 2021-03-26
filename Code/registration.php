@@ -26,8 +26,7 @@
          $email    = $_POST['user_email'];    
          $password = $_POST['user_password'];
          $confirmpassword =$_POST['user_confirmpassword'];
-         $user_address =$_POST['user_address'];
-         
+        
          
       if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone)){
 
@@ -48,8 +47,8 @@
 
         if($password == $confirmpassword){
         
-        $query = "INSERT INTO users (user_firstname,user_lastname,user_phone,user_email,user_password,user_confirmpassword,user_address,user_role) ";
-        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','{$user_phone}','{$email}','{$password}','{$confirmpassword}','none','user') ";
+        $query = "INSERT INTO users (user_firstname,user_lastname,user_phone,user_email,user_password,user_confirmpassword,user_role) ";
+        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','{$user_phone}','{$email}','{$password}','{$confirmpassword}','user') ";
              
         $register_user_query = mysqli_query($connection,$query);
       
@@ -114,10 +113,10 @@
               <p class="login-card-description">Register your account</p>
                 
             <form role="form" action="registration.php" method="post" id="login-form" autocomplete="on">
-
-                  
+ 
+             
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
-
+            
             <div class="form-group">
                 <label for="title">Firstname</label>
                 <input type="text" class="form-control" name="user_firstname">
@@ -171,9 +170,11 @@
       </div>
     </div>
   </main> 
+<!--
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+-->
 </body>
 </html>
 

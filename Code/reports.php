@@ -1,3 +1,4 @@
+
 <?php
 error_reporting(0);
 		try 
@@ -15,13 +16,13 @@ error_reporting(0);
 		
 		$sql = $dbh->query("select * from register ORDER BY invnum DESC");
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-	
-	<title>Reports</title>
+<?php include "./admin/includes/admin_navigation.php"; ?>
+<div id="wrapper">
+            <div id="page-wrapper">
+                <div class="container-fluid">
+
+                    <h3>Invoice List</h3>
 	<style type="text/css">
 	<!--
 	@import url("style.css");
@@ -46,23 +47,7 @@ error_reporting(0);
 		}
 ?>
 
-</head>
 
-<body>
-	<a href="index.php">
-    <img class="delete" src="images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/>
-    </a>
-	<div id="page-wrap">
-
-		<div align="center" style="height:130px; border:1px solid black; font-weight:bold">
-              <img id="image" src="images/logo.jpg" alt="logo" /><br />
-            C/U - 12, New Durga Bazar,<br />
-            Himatnagar - 383001<br />
-            <br />
-            Mob. No. : 8141565779 <br />
-            Email Id : omelehmt@gmail.com
-
-        </div>
 		
     <table id="box-table-a" summary="Employee Pay Sheet" align="center">
         <thead>
@@ -86,15 +71,26 @@ error_reporting(0);
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['custname'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['numofprod'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>">Rs. <?php echo $row['rbdf'];?></a></td>
-                <td><input type="button" value="Delete" onclick="return funcdelete('<?php echo $row['invnum'];?>','<?php echo $row['custname'];?>')"/></td>
+                <td><input type="button" class="btn btm-primary" value="Delete" onclick="return funcdelete('<?php echo $row['invnum'];?>','<?php echo $row['custname'];?>')"/></td>
             </tr>
 			<?php
 		}
 		?>
         </tbody>
     </table>
-	</div>
-	
-</body>
+                <!-- Bootstrap Core CSS -->
+                <link href="./admin/css/bootstrap.min.css" rel="stylesheet">
 
-</html>
+                <!-- Custom CSS -->
+                <link href="./admin/css/sb-admin.css" rel="stylesheet">
+
+                <!-- Custom Fonts -->
+                <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+               <link href="./admin/css/styles.css" rel="stylesheet">
+
+               <script type="text/javascript" src="./admin/js/loader.js"></script>    
+
+            </div>
+        </div>
+</div>

@@ -72,7 +72,7 @@ if(isset($_POST['saveinv']))
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
@@ -93,23 +93,8 @@ if(isset($_POST['saveinv']))
 </head>
 
 <body>
-	<a href="index.php">
-    <img class="delete" src="images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/>
-    </a>
-    <a href="javascript:window.print()" >
-<img  class="delete" src="images/printButton.gif" style="position:fixed;  left:95px; top:12px; border:none  " onclick="" />
-	</a>
 	<div id="page-wrap">
 
-		<div align="center" style="height:130px; border:1px solid black; font-weight:bold">
-              <img id="image" src="images/logo.jpg" alt="logo" /><br />
-            C/U - 12, New Durga Bazar,<br />
-            Himatnagar - 383001<br />
-            <br />
-            Mob. No. : 8141565779 <br />
-            Email Id : omelehmt@gmail.com
-
-        </div>
 		
 		<h3>RETAIL INVOICE</h3>
 		<div style="clear:both"></div>

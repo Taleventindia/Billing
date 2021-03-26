@@ -11,82 +11,66 @@
                         <th>Phone No</th>
                         <th>Email</th>
                         <th>Address</th>
-                        <th>Role</th>
+                        <th>Payment and Billing</th>                
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
+                    
                             
      <?php 
-
-            $query="SELECT user_id,user_firstname,user_lastname,user_phone,user_email,user_role,user_address FROM users WHERE user_role='supplier' ";
+          
+                    
+             $query="SELECT * FROM suppliers ";
              $select_suppliers=mysqli_query($connection,$query);
                     
              while($row=mysqli_fetch_assoc($select_suppliers)){
 
-                    $user_id=$row['user_id'];
-                    $user_password=$row['user_password'];
-                    $user_firstname=$row['user_firstname'];
-                    $user_lastname=$row['user_lastname'];
-                    $user_phone=$row['user_phone'];
-                    $user_email=$row['user_email'];
-                    $user_address=$row['user_address'];
-                    $user_role=$row['user_role'];
-                   
-
+                    $supplier_id = $row['supplier_id'];
+                    $firstname =  $row['firstname'];
+                    $lastname =  $row['lastname'];
+                    $phone =  $row['phone'];
+                    $email =  $row['email'];
+                    $address =  $row['address'];
+                    $payment_and_billing =  $row['payment_and_billing'];
+                 
                     echo "<tr>";
                  
-                    echo "<td>$user_id</td>";
-                    echo "<td>$user_firstname</td>";
-                    echo "<td>$user_lastname</td>";
-                    echo "<td>$user_phone</td>";
-                    echo "<td>$user_email</td>";
-                    echo "<td>$user_address</td>";
-                    echo "<td>$user_role</td>";
+                    echo "<td>$supplier_id</td>";
+                    echo "<td>$firstname</td>";
+                    echo "<td>$lastname</td>";
+                    echo "<td>$phone</td>";
+                    echo "<td>$email</td>";
+                    echo "<td>$address</td>";
+                    echo "<td>$payment_and_billing</td>";
                  
-                  
-//                    echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
-//                    echo "<td><a href='users.php?change_to_sub={$user_id}'>Subscriber</a></td>";
-                    echo "<td><a class='btn btn-primary' href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";
- echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='users.php?delete={$user_id}'>Delete</a></td>";
+             
+                    echo "<td><a class='btn btn-primary' href='suppliers.php?source=edit_supplier&edit_supplier={$supplier_id}'>Edit</a></td>";
+ echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='suppliers.php?delete={$supplier_id}'>Delete</a></td>";
+                 
                     echo "</tr>";
 
                     }
 
                     ?>
-
-                                    
+                      
             </tbody>
         </table>
-
-</form>
+    </form>
            
             <?php
-
-//                 if(isset($_GET['change_to_admin'])){
-//                     $the_user_id=$_GET['change_to_admin'];
-//                     $query="UPDATE users SET user_role='admin' WHERE user_id=$the_user_id ";
-//                     $change_to_admin_query = mysqli_query($connection,$query);
-//                     header("Location:users.php");
-//                 }
-
-
-//                 if(isset($_GET['change_to_sub'])){
-//                     $the_user_id=$_GET['change_to_sub'];
-//                     $query="UPDATE users SET user_role='subscriber' WHERE user_id=$the_user_id ";
-//                     $change_to_sub_query = mysqli_query($connection,$query);
-//                     header("Location:users.php");
-//                 }
-
+ 
 
                  if(isset($_GET['delete'])){
-                     $the_user_id=$_GET['delete'];
-                     $query="DELETE FROM users WHERE user_id={$the_user_id}";
+                     $the_supplier_id=$_GET['delete'];
+                     $query="DELETE FROM suppliers WHERE supplier_id={$the_supplier_id}";
                      $delete_query=mysqli_query($connection,$query);
-                     header("Location:users.php");
+                     header("Location:suppliers.php");
+                     
                  }
-                  ?>   
+
+            ?>   
                      
 
                  

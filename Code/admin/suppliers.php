@@ -36,9 +36,9 @@
                     include "includes/add_supplier.php";
                     break;
 
-//                    case 'edit_user';
-//                    include "includes/edit_user.php";
-//                    break;
+                    case 'edit_supplier';
+                    include "includes/edit_supplier.php";
+                    break;
 
                     case '200';
                     echo "NICE 200";

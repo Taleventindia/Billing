@@ -36,9 +36,9 @@
                     include "includes/add_customer.php";
                     break;
 //
-//                    case 'edit_user';
-//                    include "includes/edit_user.php";
-//                    break;
+                    case 'edit_customer';
+                    include "includes/edit_customer.php";
+                    break;
 
                     case '200';
                     echo "NICE 200";

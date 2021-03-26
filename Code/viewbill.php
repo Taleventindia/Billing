@@ -44,12 +44,7 @@ if(isset($_GET['inv']))
 	
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-	
 	<title>Invoice</title>
 	
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
@@ -70,27 +65,12 @@ if(isset($_GET['inv']))
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
-</head>
 
-<body>
-	<a href="reports.php">
-    <img class="delete" src="images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/>
-    </a>
-    <a href="javascript:window.print()" >
-<img  class="delete" src="images/printButton.gif" style="position:fixed;  left:95px; top:12px; border:none  " onclick="" />
-	</a>
-	<div id="page-wrap">
+<?php include "./admin/includes/admin_navigation.php"; ?>
+<div id="wrapper">
+            <div id="page-wrapper">
+                <div class="container-fluid">
 
-		<div align="center" style="height:130px; border:1px solid black; font-weight:bold">
-              <img id="image" src="images/logo.jpg" alt="logo" /><br />
-            C/U - 12, New Durga Bazar,<br />
-            Himatnagar - 383001<br />
-            <br />
-            Mob. No. : 8141565779 <br />
-            Email Id : omelehmt@gmail.com
-
-        </div>
-		
 		<h3>RETAIL INVOICE</h3>
 		<div style="clear:both"></div>
         <div style="border:1px solid #000">
@@ -224,8 +204,23 @@ if(isset($_GET['inv']))
             </div>
 		</div>
         <br />
-	</div>
 	
-</body>
+                
+                    <!-- Bootstrap Core CSS -->
+                <link href="./admin/css/bootstrap.min.css" rel="stylesheet">
 
-</html>
+                <!-- Custom CSS -->
+                <link href="./admin/css/sb-admin.css" rel="stylesheet">
+
+                <!-- Custom Fonts -->
+                <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+               <link href="./admin/css/styles.css" rel="stylesheet">
+
+               <script type="text/javascript" src="./admin/js/loader.js"></script>    
+                    	<a href="javascript:window.print()" >
+<img  class="delete" src="images/printButton.gif" style="position:fixed;  left:95px; top:12px; border:none  " onclick="" />
+	</a>
+    </div>
+</div>
+</div>

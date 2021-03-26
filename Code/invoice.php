@@ -17,40 +17,10 @@
 		$invnum = $sql->fetchColumn();
 		$invnum+=1; 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-	
-	<title>Invoice</title>
-	
-	<link rel='stylesheet' type='text/css' href='css/style.css' />
-	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
-	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
-	<script type='text/javascript' src='js/example.js'></script>
-	<script type="text/javascript" src="js/inwords.js"></script>
-</head>
-
-<body>
-	<a href="index.php">
-    <img class="delete" src="images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/>
-    </a>
-	<div id="page-wrap">
-
-		<div align="center" style="height:130px; border:1px solid black; font-weight:bold">
-              <img id="image" src="images/logo.jpg" alt="logo" /><br />
-            C/U - 12, New Durga Bazar,<br />
-            Himatnagar - 383001<br />
-            <br />
-            Mob. No. : 8141565779 <br />
-            Email Id : omelehmt@gmail.com
-
-        </div>
-		
-		<h3>RETAIL INVOICE</h3>
-		<div style="clear:both"></div>
-		<form action="bill.php" method="post">
+    <div id="wrapper">
+            <div id="page-wrapper">
+                <div class="container-fluid">
+	<h4>RETAIL INVOICE</h4>
         <div style="border:1px solid #000">
             <div id="customer">
                 Consignee,<br />
@@ -165,9 +135,22 @@
 		</div>
         <br />
         <center><input type="submit" value="SAVE INVOICE" name="saveinv"/></center>
-        </form>
-	</div>
-	
-</body>
 
-</html>
+                <!-- Bootstrap Core CSS -->
+                <link href="./admin/css/bootstrap.min.css" rel="stylesheet">
+
+                <!-- Custom CSS -->
+                <link href="./admin/css/sb-admin.css" rel="stylesheet">
+
+                <!-- Custom Fonts -->
+                <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+               <link href="./admin/css/styles.css" rel="stylesheet">
+                <link rel='stylesheet' type='text/css' href='css/style.css' />
+                <link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+
+               <script type="text/javascript" src="./admin/js/loader.js"></script>        
+            </div>
+        </div>
+    </div>
+<?php include "./admin/includes/admin_navigation.php"; ?>
