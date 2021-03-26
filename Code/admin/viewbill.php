@@ -66,7 +66,7 @@ if(isset($_GET['inv']))
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
 
-<?php include "./admin/includes/admin_navigation.php"; ?>
+<?php include "./includes/admin_navigation.php"; ?>
 <div id="wrapper">
             <div id="page-wrapper">
                 <div class="container-fluid">
@@ -207,17 +207,17 @@ if(isset($_GET['inv']))
 	
                 
                     <!-- Bootstrap Core CSS -->
-                <link href="./admin/css/bootstrap.min.css" rel="stylesheet">
+                <link href="./css/bootstrap.min.css" rel="stylesheet">
 
                 <!-- Custom CSS -->
-                <link href="./admin/css/sb-admin.css" rel="stylesheet">
+                <link href="./css/sb-admin.css" rel="stylesheet">
 
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-               <link href="./admin/css/styles.css" rel="stylesheet">
+               <link href="./css/styles.css" rel="stylesheet">
 
-               <script type="text/javascript" src="./admin/js/loader.js"></script>    
+               <script type="text/javascript" src="./js/loader.js"></script>    
                     	<a href="javascript:window.print()" >
 <img  class="delete" src="images/printButton.gif" style="position:fixed;  left:95px; top:12px; border:none  " onclick="" />
 	</a>

@@ -69,13 +69,13 @@
                         <ul id="demo1" class="collapse">
                             <li>
 
-                                <a href="invoice.php">View All Invoices</a>
+                                <a href="invoice_new.php">View All Invoices</a>
 
-                                <a href="../../../../billing/Code/reports.php">View All Invoices</a>
+                                <a href="reports.php">View All Invoices</a>
 
                             </li>
                             <li>
-                                <a href="../../../../billing/Code/invoice.php">Create Invoice</a>
+                                <a href="invoice.php">Create Invoice</a>
                             </li>
                         </ul>
                     </li>

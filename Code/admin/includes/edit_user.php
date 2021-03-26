@@ -77,7 +77,7 @@
                     
                     echo "<option value='admin'>admin</option>";
                     echo "<option value='user'>user</option>";
-                    echo "<option value='customer'>customer</option>";
+
                 }      
 
             ?>

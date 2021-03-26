@@ -17,7 +17,7 @@ error_reporting(0);
 		$sql = $dbh->query("select * from register ORDER BY invnum DESC");
 ?>
 
-<?php include "./admin/includes/admin_navigation.php"; ?>
+<?php include "./includes/admin_navigation.php"; ?>
 <div id="wrapper">
             <div id="page-wrapper">
                 <div class="container-fluid">
@@ -79,17 +79,17 @@ error_reporting(0);
         </tbody>
     </table>
                 <!-- Bootstrap Core CSS -->
-                <link href="./admin/css/bootstrap.min.css" rel="stylesheet">
+                <link href="./css/bootstrap.min.css" rel="stylesheet">
 
                 <!-- Custom CSS -->
-                <link href="./admin/css/sb-admin.css" rel="stylesheet">
+                <link href="./css/sb-admin.css" rel="stylesheet">
 
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-               <link href="./admin/css/styles.css" rel="stylesheet">
+               <link href="./css/styles.css" rel="stylesheet">
 
-               <script type="text/javascript" src="./admin/js/loader.js"></script>    
+               <script type="text/javascript" src="./js/loader.js"></script>    
 
             </div>
         </div>
