@@ -17,10 +17,12 @@
 		$invnum = $sql->fetchColumn();
 		$invnum+=1; 
 ?>
-<?php include "./includes/admin_navigation.php"; ?>
-    <div id="wrapper">
-            <div id="page-wrapper">
-                <div class="container-fluid">
+<?php include "includes/admin_header.php"; ?>
+        <div id="wrapper">
+                <!-- Navigation -->
+                <?php include "includes/admin_navigation.php"; ?>
+                    <div id="page-wrapper">
+                        <div class="container-fluid">
 	<h4>RETAIL INVOICE</h4>
         <div style="border:1px solid #000">
             <div id="customer">
@@ -134,8 +136,10 @@
               </span>
             </div>
 		</div>
+                            
         <br />
-        <center><input type="submit" value="SAVE INVOICE" name="saveinv"/></center>
+                            
+        <center><input type="submit" class="btn btn-primary" value="SAVE INVOICE" name="saveinv"/></center>
 
                 <!-- Bootstrap Core CSS -->
                 <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -154,3 +158,4 @@
             </div>
         </div>
     </div>
+    <?php include "includes/admin_footer.php"; ?>

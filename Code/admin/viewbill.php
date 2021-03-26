@@ -45,9 +45,14 @@ if(isset($_GET['inv']))
 }
 ?>
 
-	<title>Invoice</title>
-	
-	<link rel='stylesheet' type='text/css' href='css/style.css' />
+<?php include "includes/admin_header.php"; ?>
+        <div id="wrapper">
+                <!-- Navigation -->
+                <?php include "includes/admin_navigation.php"; ?>
+                    <div id="page-wrapper">
+                        <div class="container-fluid">
+    <title>Invoice</title>
+    <link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
 	<script type='text/javascript' src='js/example.js'></script>
@@ -65,12 +70,6 @@ if(isset($_GET['inv']))
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
-
-<?php include "./includes/admin_navigation.php"; ?>
-<div id="wrapper">
-            <div id="page-wrapper">
-                <div class="container-fluid">
-
 		<h3>RETAIL INVOICE</h3>
         <div style="border:1px solid #000">
             <div id="customer">
@@ -202,11 +201,7 @@ if(isset($_GET['inv']))
               </span>
             </div>
 		</div>
-        <a href="javascript:window.print()" >
-<img  class="delete" src="images/printButton.gif" style="position:center; border:none  " onclick="" />
-	</a>
          <br />
-	
                 
                     <!-- Bootstrap Core CSS -->
                 <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -220,7 +215,9 @@ if(isset($_GET['inv']))
                <link href="./css/styles.css" rel="stylesheet">
 
                <script type="text/javascript" src="./js/loader.js"></script>    
-
+            
+                <a href="javascript:window.print()"><center><img src="images/printButton.gif"/></center></a>
+        </div>
     </div>
 </div>
-</div>
+<?php include "includes/admin_footer.php"; ?>

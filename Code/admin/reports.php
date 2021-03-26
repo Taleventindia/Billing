@@ -17,12 +17,14 @@ error_reporting(0);
 		$sql = $dbh->query("select * from register ORDER BY invnum DESC");
 ?>
 
-<?php include "./includes/admin_navigation.php"; ?>
-<div id="wrapper">
-            <div id="page-wrapper">
-                <div class="container-fluid">
+<?php include "includes/admin_header.php"; ?>
+        <div id="wrapper">
+                <!-- Navigation -->
+                <?php include "includes/admin_navigation.php"; ?>
+                    <div id="page-wrapper">
+                        <div class="container-fluid">
 
-                    <h3>Invoice List</h3>
+                    <h3>Invoice</h3>
 	<style type="text/css">
 	<!--
 	@import url("style.css");
@@ -71,7 +73,7 @@ error_reporting(0);
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['custname'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['numofprod'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>">Rs. <?php echo $row['rbdf'];?></a></td>
-                <td><input type="button" class="btn btm-primary" value="Delete" onclick="return funcdelete('<?php echo $row['invnum'];?>','<?php echo $row['custname'];?>')"/></td>
+                <td><input type="button" class="btn btn-danger" value="Delete" onclick="return funcdelete('<?php echo $row['invnum'];?>','<?php echo $row['custname'];?>')"/></td>
             </tr>
 			<?php
 		}
@@ -94,3 +96,4 @@ error_reporting(0);
             </div>
         </div>
 </div>
+<?php include "includes/admin_footer.php"; ?>

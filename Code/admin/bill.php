@@ -71,14 +71,7 @@ if(isset($_POST['saveinv']))
 	$dbh->exec($sql);
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
 
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-	
-	<title>Invoice</title>
-	
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
@@ -90,10 +83,12 @@ if(isset($_POST['saveinv']))
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
-</head>
-
-<body>
-	<div id="page-wrap">
+<?php include "includes/admin_header.php"; ?>
+        <div id="wrapper">
+                <!-- Navigation -->
+                <?php include "includes/admin_navigation.php"; ?>
+                    <div id="page-wrapper">
+                        <div class="container-fluid">
 
 		
 		<h3>RETAIL INVOICE</h3>
@@ -229,8 +224,21 @@ if(isset($_POST['saveinv']))
             </div>
 		</div>
         <br />
-	</div>
-	
-</body>
+                <!-- Bootstrap Core CSS -->
+                <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-</html>
+                <!-- Custom CSS -->
+                <link href="./css/sb-admin.css" rel="stylesheet">
+
+                <!-- Custom Fonts -->
+                <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+               <link href="./css/styles.css" rel="stylesheet">
+                <link rel='stylesheet' type='text/css' href='css/style.css' />
+                <link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+
+               <script type="text/javascript" src="js/loader.js"></script>                              
+	   </div>
+    </div>
+</div>
+<?php include "includes/admin_footer.php"; ?>

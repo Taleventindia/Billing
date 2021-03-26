@@ -56,8 +56,6 @@
                 <option value="">Select Options</option>
                 <option value="admin">Admin</option>
                 <option value="User">User</option>
-                <option value="Customer">Cus tomer</option>
-                <option value="Supplier">Supplier</option>
                 <option value="delete">Delete</option>
 <!--                <option value="clone">Clone</option>-->
                      
