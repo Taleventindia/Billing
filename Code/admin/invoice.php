@@ -17,7 +17,7 @@
 		$invnum = $sql->fetchColumn();
 		$invnum+=1; 
 ?>
-    <?php include "./includes/admin_navigation.php"; ?>
+<?php include "./includes/admin_navigation.php"; ?>
     <div id="wrapper">
             <div id="page-wrapper">
                 <div class="container-fluid">
@@ -150,7 +150,7 @@
                 <link rel='stylesheet' type='text/css' href='css/style.css' />
                 <link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 
-               <script type="text/javascript" src="./js/loader.js"></script>        
+               <script type="text/javascript" src="js/loader.js"></script>        
             </div>
         </div>
     </div>
