@@ -360,7 +360,7 @@
         ]);
 
         var options = {
-          title: 'Sales Reprt',
+          title: 'Sales Report',
           is3D: true,
         };
 
@@ -389,7 +389,7 @@
         var options = {
           title: 'Company Performance',
           curveType: 'function',
-          legend: { position: 'right' }
+          legend: { position: 'bottom' }
         };
 
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -397,8 +397,8 @@
         chart.draw(data, options);
       }
     </script>
-           <div id="curve_chart" style="width: 1250px; height: 500px; position: absolute;  top: 650px;
-  left: 275px;"></div>
+           <div id="curve_chart" style="width: 900px; height: 500px; position: absolute;  top: 650px;
+  left: 225px;"></div>
         
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
@@ -426,7 +426,7 @@
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
     </script>
-    <div id="barchart_material" style="width: 1100px; height: 450px; position: absolute;  top: 1200px;
+    <div id="barchart_material" style="width: 1000px; height: 450px; position: absolute;  top: 1200px;
   left: 400px;"></div> 
             </div>
             <!-- /.container-fluid -->

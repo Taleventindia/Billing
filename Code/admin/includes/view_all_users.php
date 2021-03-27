@@ -56,7 +56,7 @@
                 <option value="">Select Options</option>
                 <option value="admin">Admin</option>
                 <option value="User">User</option>
-<!--                <option value="clone">Clone</option>-->
+                <option value="delete">Delete</option>
                      
                </select>
             </div>  
@@ -66,7 +66,8 @@
                 <input type="submit" name="submit" class="btn btn-success" value="Apply">
                    
                </div>
-
+              
+               
                 <thead>
                     <tr>
                         <th><input id="SelectAllBoxes" type="CheckBox"></th>
@@ -76,7 +77,6 @@
                         <th>Lastname</th>
                         <th>Phone No</th>
                         <th>Email</th>
-                        <th>Address</th>
                         <th>Role</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -97,7 +97,6 @@
                     $user_phone=$row['user_phone'];
                     $user_email=$row['user_email'];
                     $user_password=$row['user_password'];
-                    $user_address=$row['user_address'];
 //                  $user_image=$row['user_image'];
                     $user_role=$row['user_role'];
                    
@@ -111,12 +110,10 @@
              <?php
                  
                     echo "<td>$user_id</td>";
-//                    echo "<td>$username</td>";
                     echo "<td>$user_firstname</td>";
                     echo "<td>$user_lastname</td>";
                     echo "<td>$user_phone</td>";
                     echo "<td>$user_email</td>";
-                    echo "<td>$user_address</td>";
                     echo "<td>$user_role</td>";
 
                     echo "<td><a class='btn btn-primary' href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";
