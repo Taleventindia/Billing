@@ -113,10 +113,6 @@
                     </li>
                     
                     <li>
-                        <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Report</a>
-                    </li>
-                    
-                    <li>
                         <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> profile</a>
                     </li>
                     
