@@ -56,7 +56,6 @@
                 <option value="">Select Options</option>
                 <option value="admin">Admin</option>
                 <option value="User">User</option>
-                <option value="delete">Delete</option>
 <!--                <option value="clone">Clone</option>-->
                      
                </select>
@@ -64,11 +63,10 @@
               
                <div class="col-xs-4">
                    
-                <input type="submit" name="submit" class="btn btn-success" value="Apply"> <a class ="btn btn-primary" href="users.php?source=add_user">Add New</a>   
+                <input type="submit" name="submit" class="btn btn-success" value="Apply">
                    
                </div>
-              
-               
+
                 <thead>
                     <tr>
                         <th><input id="SelectAllBoxes" type="CheckBox"></th>
