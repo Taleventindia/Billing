@@ -69,8 +69,6 @@
                         <ul id="demo1" class="collapse">
                             <li>
 
-                                <a href="invoice_new.php">View All Invoices</a>
-
                                 <a href="reports.php">View All Invoices</a>
 
                             </li>
