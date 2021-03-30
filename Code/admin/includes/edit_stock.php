@@ -80,7 +80,7 @@
 //        $cat_id=$row['cat_id'];
         $cat_title=$row['cat_title'];   
         
-         if($cat_title== $product_category) {
+         if($cat_title == $product_category) {
               
 //                $query="SELECT * FROM categories WHERE cat_id= '{$post_category_id}' ";
 //                $select_specific_categories=mysqli_query($connection,$query); 

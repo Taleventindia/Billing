@@ -15,6 +15,7 @@
                     $user_phone =  $row['user_phone'];
                     $user_email =  $row['user_email'];
                     $user_password =  $row['user_password'];
+                    $user_confirmpassword =  $row['user_confirmpassword'];
                     $user_role =  $row['user_role'];
                  
              }
@@ -28,17 +29,24 @@
             $user_role =  $_POST['user_role'];        
             $user_email =  $_POST['user_email'];
             $user_password =  $_POST['user_password'];      
+            $user_confirmpassword =  $_POST['user_confirmpassword'];      
           
-          
-    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', user_phone= '{$user_phone}', user_role= '{$user_role}', user_email= '{$user_email}', user_password= '{$user_password}' WHERE user_id= {$the_user_id} ";  
+         if($user_password==$user_confirmpassword){
+             
+    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', user_phone= '{$user_phone}', user_role= '{$user_role}', user_email= '{$user_email}', user_password= '{$user_password}', user_confirmpassword= '{$user_confirmpassword}' WHERE user_id= {$the_user_id} ";  
                       
         $edit_user_query=mysqli_query($connection,$query);
            
         confirmQuery($edit_user_query);
            
     
-           echo "User Updated" . "<a href='users.php'>View Users?</a>";
-
+           echo "User Updated:" . "<a href='users.php'>View Users?</a>";
+             
+        }else{
+             
+           $message="password did not match";
+             
+         }
        
        }
       
@@ -95,6 +103,12 @@
             <label for="user_password">Password</label>
            <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
         </div>
+         <br>
+       <div class="input-group">
+            <label for="user_confirmpassword">ConfirmPassword</label>
+           <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
+        </div>
+            <h4 class="" style="color:#ff0000"><?php echo $message; ?></h4>
          <br>
        <div class="input-group">
             <input class="btn btn-primary" type="submit" name="edit_user" value="Update User">

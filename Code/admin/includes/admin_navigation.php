@@ -19,9 +19,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 
                     <?php 
                         
-                        if(isset($_GET['user_firstname'])){
+                        if(isset($_SESSION['firstname'])){
                             
-                           echo $_GET['user_firstname'];
+                           echo $_SESSION['firstname'];
                            
                         }
                        

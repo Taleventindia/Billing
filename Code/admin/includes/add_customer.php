@@ -59,6 +59,7 @@
             <label for="title">Firstname</label>  
            <input type="text" class="form-control" name="firstname">
         </div>
+         
         <br>
        <div class="input-group">
             <label for="title">Lastname</label>

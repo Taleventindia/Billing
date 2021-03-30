@@ -1,5 +1,6 @@
-<?php include "db.php"; ?>
 <?php session_start(); ?>
+<?php include "db.php"; ?>
+
 
 <?php
 
@@ -45,7 +46,7 @@
            
         }else{
             
-            header("Location: ../index.php");
+            header("Location: ../SignInPage.php");
         }
             
               

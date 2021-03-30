@@ -117,7 +117,7 @@
              
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
             
-            <div class="form-group">
+          <div class="form-group">
                 <label for="title">Firstname</label>
                 <input type="text" class="form-control" name="user_firstname">
             </div>
