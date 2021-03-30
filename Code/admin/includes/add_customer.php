@@ -51,7 +51,7 @@
            
    ?>      
                 
-   <form action="" method="post" enctype="multipart/form-data">
+   <form role ="form" action="add_customer.php" method="post" id="login-form" enctype="multipart/form-data">
           
           <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
       
@@ -106,7 +106,7 @@
         
         <div class="input-group">
             <label for="address">Address</label>
-         <textarea class="form-control" name="address" id="body" cols="25" rows="4"></textarea>
+         <textarea class="form-control" name="address" id="body" cols="23" rows="4"></textarea>
         </div>
        <br>
        <div class="input-group">

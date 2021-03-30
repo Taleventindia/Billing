@@ -12,7 +12,8 @@
 
                 $user_id=$row['user_id'];
                 $email=$row['user_email'];
-//                $user_password=$row['user_password'];
+                $user_password=$row['user_password'];
+                $user_confirmpassword=$row['user_confirmpassword'];
                 $user_phone=$row['user_phone'];
                 $user_firstname=$row['user_firstname'];
                 $user_lastname=$row['user_lastname'];
@@ -40,11 +41,12 @@
             
             $email =  $_POST['user_email'];
             $user_phone = $_POST['user_phone'];
-//            $user_password =  $_POST['user_password'];
+            $user_password =  $_POST['user_password'];
+            $user_confirmpassword =  $_POST['user_confirmpassword'];
 
            
           
-    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', user_email= '{$email}', user_phone= '{$user_phone}',user_role='{$user_role}' WHERE user_firstname= '{$user_firstname}' ";  
+    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', user_email= '{$email}',user_password='{$user_password}', user_confirmpassword='{$user_confirmpassword}',user_phone= '{$user_phone}',user_role='{$user_role}' WHERE user_firstname= '{$user_firstname}' ";  
                       
         $update_profile_query=mysqli_query($connection,$query);
            
@@ -70,62 +72,83 @@
                     
                         <h1 class="page-header">
                             Profile
+                            <small>
+                        <h2  style="color:#ff0000"> 
+<?php 
+                             if(isset($_SESSION['firstname'])){ 
+                             echo $_SESSION['firstname'];   
+                             } ?></h2></small>
                            
                         </h1>
                        
                                         
-   <form action=""method="post" enctype="multipart/form-data">
+   <form action=""method="post" enctype="multipart/form-data" >
           
            
-       <div class="form-group">
+       <div class="input-group">
             <label for="title">Firstname</label>
             <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" name="user_firstname">
         </div>
+       <br>
         
-       <div class="form-group">
+       <div class="input-group">
             <label for="title">Lastname</label>
             <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
         </div>
+       <br>
         
     
 <!--
-       <div class="form-group">
+       <div class="input-group">
             <label for="user_image">Post Image</label>
             <input type="file" name="image">
        </div>
 -->
      
 <!--
-       <div class="form-group"> 
+       <div class="input-group"> 
             <label for="post_tags">Username</label>
             <input type="text" value="<?php //echo $username; ?>" class="form-control" name="username">
         </div>
 -->
         
-       <div class="form-group">
-            <label for="user_email">Email</label>
+       <div class="input-group">
+            <label for="user_email">E-mail</label>
            <input type="email" value="<?php echo $email; ?>" class="form-control" name="user_email">
         </div>
+       <br>
+       <div class="input-group">
+            <label for="password">Password</label>
+           <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
+        </div>
+       <br>
+        <div class="input-group">
+            <label for="password">Confirm</label>
+           <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
+        </div>
+       <br>
        
-        <div class="form-group">
+       
+        <div class="input-group">
             <label for="phone">phone no</label>
            <input type="phone " value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
         </div>
-       <div class="form-group">
-            <label for="role">Role no</label>
+       <br>
+       <div class="input-group">
+            <label for="role">Role </label>
            <input type="role " value="<?php echo 
         $user_role; ?>" class="form-control" name="user_role">
         </div>
-        
+        <br>
         
 <!--
-        <div class="form-group">
+        <div class="input-group">
             <label for="post_content">Password</label>
            <input type="password" value="<?php //echo $user_password; ?>" class="form-control" name="user_password">
         </div>
         
 -->
-       <div class="form-group">
+       <div class="input-group">
             <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile">
         </div>
         
