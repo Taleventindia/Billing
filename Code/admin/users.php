@@ -15,7 +15,6 @@
                     
                         <h1 class="page-header">
                             Users
-                            <small>Author</small>
                         </h1>
 
         <?php 

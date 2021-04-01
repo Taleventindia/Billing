@@ -15,7 +15,6 @@
                     
                         <h1 class="page-header">
                             Customers
-                            <small>Author</small>
                         </h1>
 
         <?php 

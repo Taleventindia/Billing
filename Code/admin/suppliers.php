@@ -15,7 +15,6 @@
                     
                         <h1 class="page-header">
                             Suppliers
-                            <small>Author</small>
                         </h1>
 
         <?php 

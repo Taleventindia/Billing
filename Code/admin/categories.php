@@ -15,7 +15,6 @@
                        
                         <h1 class="page-header">
                             Categories
-                            <small>Author</small>
                         </h1>
                         
                         <div class = "col-xs-6">
