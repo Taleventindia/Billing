@@ -40,7 +40,7 @@
         confirmQuery($edit_user_query);
            
     
-           echo "User Updated:" . "<a href='users.php'>View Users?</a>";
+           echo "<h3>User Updated:" . "<a href='users.php'>View Users?</a></h3>";
              
         }else{
              

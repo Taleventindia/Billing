@@ -63,7 +63,7 @@
         confirmQuery($edit_customer_query);
            
     
-           echo "Customer Updated" . "<a href='customers.php'>View customers?</a>";
+           echo "<h3>Customer Updated:" . "<a href='customers.php'>View customers?</a></h3>";
 
        
        }

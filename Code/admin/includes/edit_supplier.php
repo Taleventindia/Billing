@@ -63,7 +63,7 @@
         confirmQuery($edit_supplier_query);
            
     
-           echo "supplier Updated" . "<a href='suppliers.php'>View suppliers?</a>";
+           echo "<h3>supplier Updated:" . "<a href='suppliers.php'>View suppliers?</a></h3>";
 
        
        }

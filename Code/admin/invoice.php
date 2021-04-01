@@ -255,22 +255,26 @@ input[type=submit] {
 
 //     $connection=mysqli_connect('localhost','root','root','cms','3307');
      
-     
+     if(isset($_GET['myProduct'])){
+         
+    
     $product_name=$_GET['myProduct']; 
      
-      $query=["SELECT * FROM stock WHERE product_name LIKE '%$product_name%' "];
+      $query=["SELECT product_name FROM stock WHERE product_name=$product_name "];
      
       $search_product=mysqli_query($connection, $query); 
        while($row=mysqli_fetch_assoc($search_product)){
 
         $product_name=$row['product_name'];
-           
-        
-          
-       }
+         
+        }
+     }
     
 ?>       
-        autocomplete(document.getElementById("myInput"), $product_name);  
+        autocomplete(document.getElementById("myInput"), $query);
+     
+      
+      
 </script>
   
                 
