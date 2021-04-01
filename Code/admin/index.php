@@ -16,7 +16,7 @@
                            
                             Dashboard
                           
-                            <small> <?php  echo $_REQUEST['user_firstname'] ?></small>
+                            <small> <?php  echo $_REQUEST['user_email'] ?></small>
                             
                             
                         </h1>
