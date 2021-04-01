@@ -16,7 +16,7 @@
                            
                             Dashboard
                           
-                            <small> <?php  echo $_REQUEST['user_email'] ?></small>
+                            <small> <?php  echo $_SESSION['firstname'] ?></small>
                             
                             
                         </h1>
