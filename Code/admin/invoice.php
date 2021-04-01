@@ -257,10 +257,9 @@ input[type=submit] {
      
      if(isset($_GET['myProduct'])){
          
-    
     $product_name=$_GET['myProduct']; 
      
-      $query=["SELECT product_name FROM stock WHERE product_name=$product_name "];
+      $query="SELECT product_name FROM stock WHERE product_name=$product_name ";
      
       $search_product=mysqli_query($connection, $query); 
        while($row=mysqli_fetch_assoc($search_product)){
