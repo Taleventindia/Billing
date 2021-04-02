@@ -15,10 +15,8 @@
                         <h1 class="page-header">
                            
                             Dashboard
-                          
                             <small> <?php  echo $_SESSION['firstname'] ?></small>
-                            
-                            
+                           
                         </h1>
                        
                     </div>

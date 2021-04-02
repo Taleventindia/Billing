@@ -65,27 +65,7 @@
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                    
-<!--
-                        <h1 class="page-header">
-                            Profile
-                            <small>
-                        <h2  style="color:#ff0000">    
--->
-                       <?php 
-//                             if(isset($_SESSION['firstname'])){ 
-//                             echo $_SESSION['firstname'];   
-                            // } 
-                        ?>
-                        
-<!--
-                        </h2></small>
-                           
-                        </h1>
--->
-                       
-                        
-                        
+             
                         
     <div class="container">
         
@@ -124,7 +104,7 @@
                 $user_role=$row['user_role'];
                 $user_image=$row['user_image'];
                 echo "<div style='text-align: center'>
-                <img class='img-circle user_image' height=110 width=120 src='../images/".$_SESSION['image']."'>
+                <img class='img-circle profile-image' height=110 width=120 src='../images/".$_SESSION['image']."'>
                 </div>";
               
                }

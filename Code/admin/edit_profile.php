@@ -19,14 +19,11 @@
                 $user_lastname=$row['user_lastname'];
                 $user_image=$row['user_image'];
                 $user_role=$row['user_role'];
-                
+      
+             }
+           }
 
-
-         }
-
-    }
-
-  ?>
+      ?>
 
   <?php
      
