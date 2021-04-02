@@ -24,7 +24,7 @@
            }
 
       ?>
-
+	
   <?php
      
       if(isset($_POST['update_profile'])){
