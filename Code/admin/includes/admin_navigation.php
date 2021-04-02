@@ -10,6 +10,7 @@
                 <a class="navbar-brand" href="index.php">Talevent tech</a>
             </div>
             <!-- Top Menu Items -->
+            <ul class="nav navbar-top top-nav">
             <ul class="nav navbar-right top-nav">
         
                <li><a href="../index.php">HOME SITE</a></li>

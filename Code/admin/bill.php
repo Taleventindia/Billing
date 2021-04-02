@@ -40,6 +40,7 @@ if(isset($_POST['saveinv']))
 	$qty="";
 	$cost="";
 	$vat="";
+    $discount="";
 	$price="";
 	
 	while($n<$numofprod)
@@ -49,6 +50,7 @@ if(isset($_POST['saveinv']))
 		$qty.=$_POST['qty'][$n]."*#*";
 		$cost.=$_POST['cost'][$n]."*#*";
 		$vat.=$_POST['vat'][$n]."*#*";
+        $discount.=$_POST['vat'][$n]."*#*";
 		$price.=$_POST['price'][$n]."*#*";
 		$n++;
 	}
@@ -57,6 +59,7 @@ if(isset($_POST['saveinv']))
 	$qty;
 	$cost;
 	$vat;
+    $discount;
 	$price;
 	
 	$subtotal = $_POST['subtotal'];
@@ -66,7 +69,7 @@ if(isset($_POST['saveinv']))
 	$rbdf = $_POST['rbdf'];
 	$towords = $_POST['towords'];
 	
-	$sql="INSERT INTO register(invnum, custname, invdate, numofprod, item, desc, qty, cost, vat, price, subtotal, tax, total, due, rbdf) VALUES ('$invnum', '$custname', '$invdate', '$numofprod', '$item', '$desc', '$qty', '$cost', '$vat', '$price', '$subtotal', '$tax', '$total', '$due', '$rbdf')";
+	$sql="INSERT INTO register(invnum, custname, invdate, numofprod, item, desc, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf) VALUES ('$invnum', '$custname', '$invdate', '$numofprod', '$item', '$desc', '$qty', '$cost', '$vat','$discount', '$price', '$subtotal', '$tax', '$total', '$due', '$rbdf')";
 	
 	$dbh->exec($sql);
 }
@@ -121,6 +124,7 @@ if(isset($_POST['saveinv']))
                   <th width="100">Quantity</th>
                   <th width="150">Rate</th>
                   <th width="100">VAT %</th>
+                  <th width="100">Discount %</th>
                   <th width="100">Amount</th>
                   <th width="200">Price (with VAT)</th>
               </tr>
@@ -130,6 +134,7 @@ if(isset($_POST['saveinv']))
 			  $qty = explode("*#*",$qty);
 			  $cost = explode("*#*",$cost);
 			  $vat = explode("*#*",$vat);
+              $discount = explode("*#*",$discount);
 			  $price = explode("*#*",$price);
 			  
 			  $count=0;
@@ -143,6 +148,7 @@ if(isset($_POST['saveinv']))
                   <td align="right"><?php echo sprintf('%0.2f',$qty[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$cost[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$vat[$count]);?></td>
+                  <td align="right"><?php echo sprintf('%0.2f',$discount[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$cost[$count]*$qty[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$price[$count]);?>&nbsp;</td>
               </tr>
@@ -154,19 +160,19 @@ if(isset($_POST['saveinv']))
               
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">Subtotal: </td>
+                  <td colspan="4" class="total-line">Subtotal: </td>
                   <td class="total-value" align="right"><div id="subtotal"><?php echo sprintf('%0.2f',$subtotal);?></div>
                   </td>
               </tr>
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">TAX:</td>
+                  <td colspan="4" class="total-line">TAX:</td>
                   <td class="total-value" align="right"><?php echo sprintf('%0.2f',$tax);?> %
                   </td>
               </tr>
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">VAT:</td>
+                  <td colspan="4" class="total-line">VAT:</td>
                   <td class="total-value" align="right">
 				  <?php 
 				  $temp=0;
@@ -177,21 +183,34 @@ if(isset($_POST['saveinv']))
 				  
 				  ?>
                   </td>
+                <tr>
+                  <td colspan="3" class="blank"> </td>
+                  <td colspan="4" class="total-line">Discount:</td>
+                  <td class="total-value" align="right">
+				  <?php 
+				  $temp=0;
+				  foreach($price as $a)
+				  $temp+=$a;
+				  $temp-=$subtotal;
+				  echo sprintf('%0.2f',$temp);
+				  
+				  ?>
+                  </td>                
               </tr>
               <tr>
     
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">Total:</td>
+                  <td colspan="4" class="total-line">Total:</td>
                   <td class="total-value" align="right"><div id="total"><?php echo sprintf('%0.2f',$total);?></div></td>
               </tr>
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">Balance Due:</td>
+                  <td colspan="4" class="total-line">Balance Due:</td>
                   <td class="total-value" align="right"><div class="due"><?php echo sprintf('%0.2f',$due);?></div></td>
               </tr>
               <tr>
                   <td colspan="3" class="total-value" id="inwords" style="text-transform:capitalize"><?php echo $towords;?> </td>
-                  <td colspan="3" class="total-line balance">Round Total:</td>
+                  <td colspan="4" class="total-line balance">Round Total:</td>
                   <td class="total-value balance" align="right"><div class="rtot"><?php echo sprintf('%0.2f',floor($rbdf));?></div></td>
               </tr>
             
@@ -214,7 +233,7 @@ if(isset($_POST['saveinv']))
 
               <span style="display:block;height:25px;"></span>
               <span style="margin:10px 10px; display:block">
-              For, <strong>OM ELECTRICALS</strong>
+              For, <strong>Talevent Tech</strong>
               <br />
               <br />
               <br />

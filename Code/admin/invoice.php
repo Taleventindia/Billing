@@ -57,6 +57,7 @@
                   <th>Quantity</th>
                   <th>Rate</th>
                   <th>VAT %</th>
+                  <th>Discount %</th>
                   <th>Amount</th>
                   <th>Price (with VAT)</th>
               </tr>
@@ -144,6 +145,7 @@ input[type=submit] {
                       <textarea tabindex="4" class="qty" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="qty[]">0.00</textarea></td>
                   <td><textarea tabindex="5" class="cost" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="cost[]">0.00</textarea></td>
                   <td><textarea tabindex="6" class="vat" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="vat[]">0.00</textarea></td>
+                  <td><textarea tabindex="7" class="discount" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="discount[]">0.00</textarea></td>
                   <td><span class="amount">0.00</span><input type="hidden" class="pr_amt"/></td>
                   <td><span class="price">0.00</span><input type="hidden" class="pr_hid" name="price[]" /></td>
               </tr>       
@@ -284,41 +286,47 @@ input[type=submit] {
   
                 
               <tr id="hiderow">
-                <td colspan="7"><a tabindex="7" id="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
+                <td colspan="8"><a tabindex="8" id="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
               </tr>    
               
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">Subtotal: Rs.</td>
+                  <td colspan="4" class="total-line">Subtotal: Rs.</td>
                   <td class="total-value"><div id="subtotal">0.00</div>
                   <input type="hidden" id="subt_hid" name="subtotal" /></td>
               </tr>
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">TAX: %</td>
+                  <td colspan="4" class="total-line">TAX: %</td>
                   <td class="total-value"><textarea name="tax" tabindex="8" id="tax" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';">0.00</textarea>
                   </td>
               </tr>
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">VAT: </td>
+                  <td colspan="4" class="total-line">VAT: </td>
                   <td class="total-value"><div id="vattotal">0.00</div>
                   <input type="hidden" id="vattotal_h" name="vattotal" /></td>
               </tr>
               <tr>
+                  <td colspan="3" class="blank"> </td>
+                  <td colspan="4" class="total-line">Discount: </td>
+                  <td class="total-value"><div id="vattotal">0.00</div>
+                  <input type="hidden" id="discounttotal_h" name="discounttotal" /></td>
+              </tr>
+              <tr>
     
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">Total: Rs. </td>
+                  <td colspan="4" class="total-line">Total: Rs. </td>
                   <td class="total-value"><div id="total">0.00</div><input type="hidden" id="tot_hid" name="total" /></td>
               </tr>
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="3" class="total-line">Balance Due: Rs.</td>
+                  <td colspan="4" class="total-line">Balance Due: Rs.</td>
                   <td class="total-value"><div class="due">0.00</div><input type="hidden" id="due_hid" name="due" /></td>
               </tr>
               <tr>
                   <td colspan="3" class="total-value" id="inwords" style="text-transform:capitalize"> </td><input type="hidden" id="towords" name="towords" />
-                  <td colspan="3" class="total-line balance">Round Total: Rs.</td>
+                  <td colspan="4" class="total-line balance">Round Total: Rs.</td>
                   <td class="total-value balance"><div class="rtot">0.00</div><input type="hidden" id="round_hid" name="rbdf" /></td>
               </tr>
             
@@ -341,7 +349,7 @@ input[type=submit] {
 
               <span style="display:block;height:25px;"></span>
               <span style="margin:10px 10px; display:block">
-              For, <strong>OM ELECTRICALS</strong>
+              For, <strong>Talevent Tech</strong>
               <br />
               <br />
               <br />
@@ -349,24 +357,15 @@ input[type=submit] {
               &emsp;&nbsp;Authorized Signatory
               </span>
             </div>
+            <center><input type="submit" class="btn btn-primary" value="SAVE INVOICE" name="saveinv"/></center> 
 		</div>
-                            
+                 
         <br />
-                            
-        <center><input type="submit" class="btn btn-primary" value="SAVE INVOICE" name="saveinv"/></center>
-
-                <!-- Bootstrap Core CSS -->
-                <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-                <!-- Custom CSS -->
-                <link href="./css/sb-admin.css" rel="stylesheet">
 
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-               <link href="./css/styles.css" rel="stylesheet">
                 <link rel='stylesheet' type='text/css' href='css/style.css' />
-                <link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 
                <script type="text/javascript" src="js/loader.js"></script>        
             </div>
