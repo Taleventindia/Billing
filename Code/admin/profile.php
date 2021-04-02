@@ -1,62 +1,58 @@
-<?php include "includes/admin_header.php"; ?>
-<?php
-                        
-    if(isset($_SESSION['firstname'])){
-        
-       $user_firstname =  $_SESSION['firstname'];
-        
-     $query="SELECT * FROM users WHERE user_firstname = '{$user_firstname}' ";
-     $select_user_profile = mysqli_query($connection,$query);
+<?php ob_start (); ?>
+<?php session_start(); ?>
+<?php include "../includes/db.php"; ?>
+<?php include "functions.php"; ?>
 
-         while($row=mysqli_fetch_array($select_user_profile)){
+<!DOCTYPE html>
+<html lang="en">
 
-                $user_id=$row['user_id'];
-                $email=$row['user_email'];
-                $user_password=$row['user_password'];
-                $user_confirmpassword=$row['user_confirmpassword'];
-                $user_phone=$row['user_phone'];
-                $user_firstname=$row['user_firstname'];
-                $user_lastname=$row['user_lastname'];
-                $user_role=$row['user_role'];
-//                $user_image=$row['user_image'];
+<head>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-         }
+    <title>Profile</title>
 
-    }
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  ?>
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
 
-  <?php
-     
-      if(isset($_POST['update_profile'])){
-           
-            $user_firstname =  $_POST['user_firstname'];
-            $user_lastname =  $_POST['user_lastname'];
-            $user_role =  $_POST['user_role'];
-          
-//            $user_image = $_FILES['image']['name'];
-//            $user_image_tempname = $_FILES['image']['tmp_name'];
-           
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   <link href="css/styles.css" rel="stylesheet">
+   
+   <script type="text/javascript" src="../js/loader.js"></script>
+
+    <style type="text/css">
+    
+    .wrapper
+        {
+            width:700px;
+            margin: 0 auto;
+            background-color: white;
             
-            $email =  $_POST['user_email'];
-            $user_phone = $_POST['user_phone'];
-            $user_password =  $_POST['user_password'];
-            $user_confirmpassword =  $_POST['user_confirmpassword'];
-
-           
-          
-    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', user_email= '{$email}',user_password='{$user_password}', user_confirmpassword='{$user_confirmpassword}',user_phone= '{$user_phone}',user_role='{$user_role}' WHERE user_firstname= '{$user_firstname}' ";  
-                      
-        $update_profile_query=mysqli_query($connection,$query);
-           
-        confirmQuery($update_profile_query);
-           
-      }
-
-    ?>
+        }
+    
+    </style>
    
-   
+</head>
+
+<body>
+
+
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -70,103 +66,133 @@
                 <div class="row">
                     <div class="col-lg-12">
                     
+<!--
                         <h1 class="page-header">
                             Profile
                             <small>
-                        <h2  style="color:#ff0000"> 
-<?php 
-                             if(isset($_SESSION['firstname'])){ 
-                             echo $_SESSION['firstname'];   
-                             } ?></h2></small>
+                        <h2  style="color:#ff0000">    
+-->
+                       <?php 
+//                             if(isset($_SESSION['firstname'])){ 
+//                             echo $_SESSION['firstname'];   
+                            // } 
+                        ?>
+                        
+<!--
+                        </h2></small>
                            
                         </h1>
+-->
                        
-                                        
-   <form action=""method="post" enctype="multipart/form-data" >
-          
-           
-       <div class="input-group">
-            <label for="title">Firstname</label>
-            <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" name="user_firstname">
-        </div>
-       <br>
+                        
+                        
+                        
+    <div class="container">
         
-       <div class="input-group">
-            <label for="title">Lastname</label>
-            <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
-        </div>
-       <br>
-        
-    
-<!--
-       <div class="input-group">
-            <label for="user_image">Post Image</label>
-            <input type="file" name="image">
-       </div>
--->
-     
-<!--
-       <div class="input-group"> 
-            <label for="post_tags">Username</label>
-            <input type="text" value="<?php //echo $username; ?>" class="form-control" name="username">
-        </div>
--->
-        
-       <div class="input-group">
-            <label for="user_email">E-mail</label>
-           <input type="email" value="<?php echo $email; ?>" class="form-control" name="user_email">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="password">Password</label>
-           <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
-        </div>
-       <br>
-        <div class="input-group">
-            <label for="password">Confirm</label>
-           <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
-        </div>
-       <br>
-       
-       
-        <div class="input-group">
-            <label for="phone">phone no</label>
-           <input type="phone " value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="role">Role </label>
-           <input type="role " value="<?php echo 
-        $user_role; ?>" class="form-control" name="user_role">
-        </div>
-        <br>
-        
-<!--
-        <div class="input-group">
-            <label for="post_content">Password</label>
-           <input type="password" value="<?php //echo $user_password; ?>" class="form-control" name="user_password">
-        </div>
-        
--->
-       <div class="input-group">
-            <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile">
-        </div>
-        
-       </form>
-       
-      
-                    </div>
-                </div>
+            <form action="" method="post">
+                 <br>
+                <button class="btn btn-default" style="float: right; width:70px; background-color: #adff2f;" name="submit"><a href="edit_profile.php">Edit</a></button>
                 
-                <!-- /.row -->
+            </form>   
+        
+                <div class="wrapper">
+                   <br>
+                <?php
+                    
+                    if(isset($_SESSION['firstname'])){
+        
+                     $user_firstname =  $_SESSION['firstname'];       
+        
+     $query="SELECT * FROM users WHERE user_firstname = '{$user_firstname}' ";
+     $select_user_profile = mysqli_query($connection,$query);
+                        
+             ?>
+                
+            <h1 style="text-align: center;">Profile</h1>   
+                    
+        <?php            
+                        
+         while($row=mysqli_fetch_array($select_user_profile)){
 
-            </div>
-            <!-- /.container-fluid -->
+                $user_id=$row['user_id'];
+                $email=$row['user_email'];
+                $user_password=$row['user_password'];
+                $user_confirmpassword=$row['user_confirmpassword'];
+                $user_phone=$row['user_phone'];
+                $user_firstname=$row['user_firstname'];
+                $user_lastname=$row['user_lastname'];
+                $user_role=$row['user_role'];
+                $user_image=$row['user_image'];
+                echo "<div style='text-align: center'>
+                <img class='img-circle user_image' height=110 width=120 src='../images/".$_SESSION['image']."'>
+                </div>";
+              
+               }
+             }
 
-        </div>
-        <!-- /#page-wrapper -->
+      ?>
+                   
+                    
+          <div  style="text-align: center;"><b><h3>Welcome,</h3></b>
+                    
+                 <h3>  
+                     <?php echo $_SESSION['firstname']; ?>
+                 </h3>       
+            </div>      
+               
+                <?php
+                  echo "<b>";   
+                  echo "<h2><table class='table table-bordered'>";
+                    echo "<tr>";
+                        echo "<td>";
+                          echo "<b> First Name: </b>";
+                        echo "</td>";
+                        echo "<td>";
+                          echo $user_firstname;
+                        echo "</td>";
+                    echo "</tr>";
+                    
+                    echo "<tr>";
+                        echo "<td>";
+                          echo "<b> Last Name: </b>";
+                        echo "</td>";
+                        echo "<td>";
+                          echo $user_lastname;
+                        echo "</td>";
+                    echo "</tr>";
+                    
+                    echo "<tr>";
+                        echo "<td>";
+                            echo "<b> E-mail: </b>";
+                        echo "</td>";
+                        echo "<td>";
+                            echo $email;
+                        echo "</td>";
+                    echo "</tr>";
 
-    </div>
-    <!-- /#wrapper -->
-
+                    echo "<tr>";
+                      echo "<td>";
+                        echo "<b> Phone no: </b>";
+                      echo "</td>";
+                      echo "<td>";
+                        echo $user_phone;
+                      echo "</td>";
+                    echo "</tr>";
+               
+                    echo "<tr>";
+                      echo "<td>";
+                        echo "<b> Role: </b>";
+                      echo "</td>";
+                      echo "<td>";
+                        echo $user_role;
+                      echo "</td>";
+                    echo "</tr>";
+                   
+                  echo "</table></h2>";   
+                   echo "</b>"; 
+                ?>
+                
+         </div>       
+    </div>           
+ 
     <?php include "includes/admin_footer.php"; ?>

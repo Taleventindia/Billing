@@ -28,6 +28,7 @@
                $db_user_password = $row['user_password'];
                $db_user_firstname = $row['user_firstname'];
                $db_user_lastname = $row['user_lastname'];
+               $db_user_image = $row['user_image'];
                $db_user_role = $row['user_role'];
               
           }
@@ -40,6 +41,7 @@
              $_SESSION['email'] = $db_user_email;
              $_SESSION['firstname'] = $db_user_firstname;
              $_SESSION['lastname'] = $db_user_lastname;
+             $_SESSION['image'] = $db_user_image;
              $_SESSION['user_role'] = $db_user_role;
 
              header("Location: ../admin");

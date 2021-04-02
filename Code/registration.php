@@ -26,7 +26,8 @@
          $email    = $_POST['user_email'];    
          $password = $_POST['user_password'];
          $confirmpassword =$_POST['user_confirmpassword'];
-        
+//         $user_image = $_FILES['image']['name'];
+//         $user_image_tempname = $_FILES['image']['tmp_name'];
          
       if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone)){
 
@@ -47,15 +48,20 @@
 
         if($password == $confirmpassword){
         
-        $query = "INSERT INTO users (user_firstname,user_lastname,user_phone,user_email,user_password,user_confirmpassword,user_role) ";
-        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','{$user_phone}','{$email}','{$password}','{$confirmpassword}','user') ";
+        $query = "INSERT INTO users (user_firstname,user_lastname,user_image,user_phone,user_email,user_password,user_confirmpassword,user_role) ";
+        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','none','{$user_phone}','{$email}','{$password}','{$confirmpassword}','user') ";
              
         $register_user_query = mysqli_query($connection,$query);
+            
+            move_uploaded_file($user_image_tempname,"images/$user_image");
       
         if(!$register_user_query) {
             
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
+            
+             
+            
             header("Location:SignInPage.php"); 
    
         }else{
@@ -117,10 +123,11 @@
              
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
             
+      
           <div class="form-group">
                 <label for="title">Firstname</label>
                 <input type="text" class="form-control" name="user_firstname">
-            </div>
+          </div>
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message_Firstname; ?></h6>
                 
 

@@ -1,4 +1,8 @@
- <?php 
+        <h2 class="page-header">
+        New Stock
+        </h2>
+
+<?php 
  
        if(isset($_POST['create_stock'])){
            

@@ -12,6 +12,7 @@
                     $user_id =  $row['user_id'];
                     $user_firstname =  $row['user_firstname'];
                     $user_lastname =  $row['user_lastname'];
+                    $user_image=$row['user_image'];
                     $user_phone =  $row['user_phone'];
                     $user_email =  $row['user_email'];
                     $user_password =  $row['user_password'];
@@ -25,15 +26,42 @@
            
             $user_firstname =  $_POST['user_firstname'];
             $user_lastname =  $_POST['user_lastname'];
+            $user_image = $_FILES['image']['name'];
+            $user_image_tempname = $_FILES['image']['tmp_name'];
             $user_phone=$_POST['user_phone'];
             $user_role =  $_POST['user_role'];        
             $user_email =  $_POST['user_email'];
             $user_password =  $_POST['user_password'];      
-            $user_confirmpassword =  $_POST['user_confirmpassword'];      
-          
+            $user_confirmpassword =  $_POST['user_confirmpassword'];  
+           
+           
+         move_uploaded_file($user_image_tempname,"../images/$user_image");
+           
+         if(empty($user_image)){
+            
+            $query = "SELECT * FROM users WHERE user_id = $user_id ";
+            $select_image = mysqli_query($connection,$query);
+                
+            while($row = mysqli_fetch_array($select_image)){
+                
+            $user_image = $row['user_image'];
+              
+               }
+            
+          } 
+           
+            $uppercase = preg_match('@[A-Z]@', $user_password);
+            $lowercase = preg_match('@[a-z]@', $user_password);
+            $number    = preg_match('@[0-9]@', $user_password);
+            $character = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $user_password);
+
+            if($uppercase && $lowercase && $number && $character) {
+
+            if(strlen($user_password) >= 8) { 
+            
          if($user_password==$user_confirmpassword){
              
-    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}', user_phone= '{$user_phone}', user_role= '{$user_role}', user_email= '{$user_email}', user_password= '{$user_password}', user_confirmpassword= '{$user_confirmpassword}' WHERE user_id= {$the_user_id} ";  
+    $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}',user_image= '{$user_image}', user_phone= '{$user_phone}', user_role= '{$user_role}', user_email= '{$user_email}', user_password= '{$user_password}', user_confirmpassword= '{$user_confirmpassword}' WHERE user_id= {$the_user_id} ";  
                       
         $edit_user_query=mysqli_query($connection,$query);
            
@@ -44,9 +72,19 @@
              
         }else{
              
-           $message="password did not match";
+           $message_confirm="password did not match";
              
          }
+          }else{
+              $message_strnpassworad = "password contain atleast 8 characters";
+              
+       }
+            
+         }else{
+              $message_password = "Password must contain a special character";
+            
+       }    
+                
        
        }
       
@@ -54,6 +92,12 @@
    ?>      
                 
    <form action="" method="post" enctype="multipart/form-data">
+       
+       <div class="form-group">
+       <img width='100' src ='../images/<?php echo $user_image; ?>' alt="">
+
+            <input type="file" name="image">
+       </div>
        
        <div class="input-group">
             <label for="title">Firstname</label>
@@ -103,12 +147,15 @@
             <label for="user_password">Password</label>
            <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
         </div>
+          <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
+          <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
+       
          <br>
        <div class="input-group">
             <label for="user_confirmpassword">ConfirmPassword</label>
            <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
         </div>
-            <h4 class="" style="color:#ff0000"><?php echo $message; ?></h4>
+            <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
          <br>
        <div class="input-group">
             <input class="btn btn-primary" type="submit" name="edit_user" value="Update User">

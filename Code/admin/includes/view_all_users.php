@@ -9,7 +9,7 @@
           
   switch($bulk_options){
                    
-           case 'admin':
+           case 'Admin':
 
              $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
              $update_to_admin_status = mysqli_query($connection,$query);
@@ -54,7 +54,7 @@
                <select class="form-control" name="bulk_options" id="">
                    
                 <option value="">Select Options</option>
-                <option value="admin">Admin</option>
+                <option value="Admin">Admin</option>
                 <option value="User">User</option>
                 <option value="delete">Delete</option>
                      
@@ -75,6 +75,7 @@
 <!--                    <th>Username</th> -->
                         <th>Firstname</th>
                         <th>Lastname</th>
+                        <th>Image</th>
                         <th>Phone No</th>
                         <th>Email</th>
                         <th>Role</th>
@@ -94,6 +95,7 @@
                     $user_id=$row['user_id'];
                     $user_firstname=$row['user_firstname'];
                     $user_lastname=$row['user_lastname'];
+                    $user_image = $row['user_image'];
                     $user_phone=$row['user_phone'];
                     $user_email=$row['user_email'];
                     $user_password=$row['user_password'];
@@ -112,6 +114,7 @@
                     echo "<td>$user_id</td>";
                     echo "<td>$user_firstname</td>";
                     echo "<td>$user_lastname</td>";
+                    echo "<td>$user_image</td>";
                     echo "<td>$user_phone</td>";
                     echo "<td>$user_email</td>";
                     echo "<td>$user_role</td>";
@@ -131,14 +134,6 @@
 </form>
            
             <?php
-
-                 if(isset($_GET['change_to_admin'])){
-                     $the_user_id=$_GET['change_to_admin'];
-                     $query="UPDATE users SET user_role='admin' WHERE user_id=$the_user_id ";
-                     $change_to_admin_query = mysqli_query($connection,$query);
-                     header("Location:users.php");
-                 }
-
 
                  if(isset($_GET['delete'])){
                      $the_user_id=$_GET['delete'];

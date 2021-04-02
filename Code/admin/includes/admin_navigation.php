@@ -113,7 +113,7 @@
                     </li>
                     
                     <li>
-                        <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> profile</a>
+                        <a href="profile.php"><i class="fa fa-fw fa-user"></i> profile</a>
                     </li>
                     
                 </ul>

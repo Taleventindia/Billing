@@ -21,7 +21,7 @@
                 
            
 //   if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone) && !empty($user_address)){
-//          
+          
      $query="INSERT INTO suppliers".
          '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,notes,tax_info,payment_and_billing,attachments,pan_no,adhaar_no)'.   
     "VALUES('".$firstname ."', '". $lastname."', '". $phone ."','" .$email ."','". $company."','".$display_name."','".website."','".$other."' ,'".$gst_in ."','". $address."','".$notes."','".$tax_info."','".$payment_and_billing."','".$attachments."','".$pan_no."','".$adhaar_no."') ";
@@ -30,7 +30,7 @@
            
         confirmQuery($create_supplier_query);
            
-        echo "supplier Created:"." "."<a href='suppliers.php'>View supplier</a>" ;   
+        echo "supplier Created:"." "."<a href='suppliers.php'>View supplier?</a>" ;   
      
 //       
 //       }

@@ -1,3 +1,5 @@
+<?php include "db.php"; ?>
+
 <?php
 	error_reporting(0);
 		try 
@@ -131,9 +133,11 @@ input[type=submit] {
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
                       
-                <input id="myInput" type="text" name="myProduct" placeholder="Item">  
+                <input id="myInput" type="text" name="myProduct" placeholder="Item"> 
+                      
 <!--                      <textarea tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea>-->
                       </div></td>
+                  
                   <td class="description">
                       <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="desc[]">Description</textarea></td>
                   <td>
@@ -142,8 +146,8 @@ input[type=submit] {
                   <td><textarea tabindex="6" class="vat" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="vat[]">0.00</textarea></td>
                   <td><span class="amount">0.00</span><input type="hidden" class="pr_amt"/></td>
                   <td><span class="price">0.00</span><input type="hidden" class="pr_hid" name="price[]" /></td>
-              </tr>
-            </div>
+              </tr>       
+            </div>  
             </form>
               
  <script>
@@ -253,7 +257,7 @@ input[type=submit] {
 
    <?php 
 
-//     $connection=mysqli_connect('localhost','root','root','cms','3307');
+//     $connection=mysqli_connect('localhost','root','root','billing','3307');
      
      if(isset($_GET['myProduct'])){
          
@@ -265,13 +269,15 @@ input[type=submit] {
        while($row=mysqli_fetch_assoc($search_product)){
 
         $product_name=$row['product_name'];
-         
+           
         }
+         
+         
      }
     
 ?>       
-        autocomplete(document.getElementById("myInput"), $query);
-     
+        
+     autocomplete(document.getElementById("myInput"), $query);
       
       
 </script>

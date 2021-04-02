@@ -163,9 +163,7 @@ $product="SELECT * FROM stock WHERE product_name LIKE '%$search%' AND product_ca
                     }
       
                  }
-           
-                                               
-
+        
                
             ?> 
                     

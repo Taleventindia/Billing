@@ -20,8 +20,8 @@
                 $pan_no =  $_POST['pan_no'];
                 $adhaar_no =  $_POST['adhaar_no'];
 
-   if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($notes) && !empty($tax_info)&& !empty($payment_and_billing) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
-//       if(!empty($firstname)){   
+//   if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($notes) && !empty($tax_info)&& !empty($payment_and_billing) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
+  
            
      $query="INSERT INTO customers".
          '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,notes,tax_info,payment_and_billing,attachments,pan_no,adhaar_no)'.   
@@ -31,29 +31,29 @@
            
         confirmQuery($create_customer_query);
            
-        echo "customer Created:"." "."<a href='customers.php'>View Customer</a>" ;   
+        echo "customer Created:"." "."<a href='customers.php'>View Customer?</a>" ;   
      
        
-       }
-           else {
-          
-          $message = "Invalid customer details";
-          
-      } 
-           
-    } 
-    else {
-         
-         $message = "";  
+//       }
+//           else {
+//          
+//          $message = "Invalid customer details";
+//          
+//      } 
+//           
+//    } 
+//    else {
+//         
+//         $message = "";  
       
            
        }
            
    ?>      
                 
-   <form role ="form" action="add_customer.php" method="post" id="login-form" enctype="multipart/form-data">
+   <form action="" method="post" id="login-form" enctype="multipart/form-data">
           
-          <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
+<!--          <h4 class="" style="color:#ff0000"><?php //echo $message; ?></h4>-->
       
        <div class="input-group">
             <label for="title">Firstname</label>  
@@ -86,7 +86,6 @@
             <label for="Display name">Display Name</label>
            <input type="text" class="form-control" name="display_name">
         </div>
-<!--            <h6 class="text-center" style="color:#ff0000"><?php //echo $message_cpassworad; ?>-->
        <br>
        <div class="input-group">
             <label for="website">Website</label>
