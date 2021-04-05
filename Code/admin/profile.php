@@ -103,23 +103,21 @@
                 $user_lastname=$row['user_lastname'];
                 $user_role=$row['user_role'];
                 $user_image=$row['user_image'];
-                echo "<div style='text-align: center'>
-                <img class='img-circle profile-image' height=110 width=120 src='../images/".$_SESSION['image']."'>
-                </div>";
-              
+                
                }
              }
 
       ?>
-                   
                     
-          <div  style="text-align: center;"><b><h3>Welcome,</h3></b>
+       <div style='text-align: center'>          
+        <img class='img-circle profile-image' height=130 width=140 src ='../images/<?php echo $user_image; ?>' alt="">           
+          </div>          
+          <div  style="text-align: center;">
                     
                  <h3>  
                      <?php echo $_SESSION['firstname']; ?>
                  </h3>       
             </div>      
-               
                 <?php
                   echo "<b>";   
                   echo "<h2><table class='table table-bordered'>";
@@ -171,8 +169,14 @@
                   echo "</table></h2>";   
                    echo "</b>"; 
                 ?>
-                
-         </div>       
-    </div>           
- 
+
+            </div>       
+          </div>           
+        </div>
+      </div>   
+    </div>
+  </div>
+</div>         
     <?php include "includes/admin_footer.php"; ?>
+                    
+                    

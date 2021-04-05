@@ -1,4 +1,4 @@
-<?php include "db.php"; ?>
+<?php include "../includes/db.php"; ?>
 
 <?php
 	error_reporting(0);
@@ -19,6 +19,8 @@
 		$invnum = $sql->fetchColumn();
 		$invnum+=1; 
 ?>
+
+
 <?php include "includes/admin_header.php"; ?>
         <div id="wrapper">
                 <!-- Navigation -->
@@ -47,8 +49,7 @@
                 </table>
             
             </div>
-            
-           
+   
             <table id="items">
             
               <tr>
@@ -61,7 +62,7 @@
                   <th>Amount</th>
                   <th>Price (with VAT)</th>
               </tr>
-              
+                                      
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
@@ -254,34 +255,32 @@ input[type=submit] {
 //var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
             
         
-//var product =["pen","laptop","computer"];                     
-//var product ="SELECT * FROM stock WHERE product_name=$product_name" ;           
+//var product =["pen","laptop","computer","keyboard"];                     
+//var product =["SELECT * FROM stock WHERE product_name=$product_name"] ;           
+// var product ="SELECT product_name FROM stock WHERE product_name=$product_name" ;           
 
-   <?php 
-
-//     $connection=mysqli_connect('localhost','root','root','billing','3307');
+//    autocomplete(document.getElementById("myInput"), $product);
+     
+  <?php
      
      if(isset($_GET['myProduct'])){
          
-    $product_name=$_GET['myProduct']; 
-     
-      $query="SELECT product_name FROM stock WHERE product_name=$product_name ";
-     
-      $search_product=mysqli_query($connection, $query); 
+      $product_name=$_GET['myProduct']; 
+         
+      $product="SELECT product_name FROM stock WHERE product_name=$product_name ";
+  
+      $search_product=mysqli_query($connection, $product); 
+         
        while($row=mysqli_fetch_assoc($search_product)){
-
-        $product_name=$row['product_name'];
+           $product_name=$row['product_name'];
            
         }
-         
-         
-     }
-    
-?>       
-        
-     autocomplete(document.getElementById("myInput"), $query);
-      
-      
+       
+       }
+     
+    ?>
+    autocomplete(document.getElementById("myInput"), $product);
+     
 </script>
   
                 
@@ -331,7 +330,8 @@ input[type=submit] {
               </tr>
             
             </table>
-                     <?php echo $product_name;  ?>       
+                     <?php echo $product_name;  ?>    
+            
             <div id="terms" style="float:left;width:53%;border:1px solid #000; min-height:156px">
               <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Dt.: 06-Aug-2013</h4>
               <h5>Terms</h5>

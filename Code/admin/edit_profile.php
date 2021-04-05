@@ -123,7 +123,7 @@
           
        
         <div class="form-group">
-       <img width='100' src ='../images/<?php echo $user_image; ?>' alt="">
+       <img class='img-circle profile-image' height=110 width=120 src ='../images/<?php echo $user_image; ?>' alt="">
 
             <input type="file" name="image">
        </div>
@@ -180,7 +180,7 @@
         
 -->
        <div class="input-group">
-            <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile">
+           <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile">
         </div>
         
        </form>
