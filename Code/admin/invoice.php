@@ -22,11 +22,10 @@
 
 
 <?php include "includes/admin_header.php"; ?>
-        <div id="wrapper">
-                <!-- Navigation -->
-                <?php include "includes/admin_navigation.php"; ?>
-                    <div id="page-wrapper">
-                        <div class="container-fluid">
+<div class="main-panel">
+    <div class="card">
+<div class="content-wrapper">
+    
 	<h4>RETAIL INVOICE</h4>
         <div style="border:1px solid #000">
             <div id="customer">

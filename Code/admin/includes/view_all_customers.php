@@ -1,4 +1,8 @@
-        <form action=""method='post'>       
+<div class="card">
+          <div class="content-wrapper">
+
+
+              <form action=""method='post'>       
   
             <table class="table table-bordered table-hover">
               
@@ -71,7 +75,8 @@
 
             ?>   
                      
-
+    </div>
+</div>
                  
                       
                      

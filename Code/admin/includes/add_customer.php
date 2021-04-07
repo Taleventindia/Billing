@@ -50,7 +50,8 @@
        }
            
    ?>      
-                
+<div class="card">
+    <div class="content-wrapper">              
    <form action="" method="post" id="login-form" enctype="multipart/form-data">
           
 <!--          <h4 class="" style="color:#ff0000"><?php //echo $message; ?></h4>-->
@@ -144,6 +145,7 @@
    
        </form>
        
-      
+    </div>
+</div>
      
     

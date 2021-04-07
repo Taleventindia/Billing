@@ -2,14 +2,7 @@
  
   <?php include "includes/header.php"; ?>
    
-    <!-- Navigation -->
-    
-    <?php include "includes/navigation.php"; ?>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
+<div class="content-wrapper">
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
@@ -35,10 +28,10 @@
                     
                     ?>
 
-                <h1 class="page-header">
+                <h3 class="page-header">
                     Page Heading
                     <small>Secondary Text</small>
-                </h1>
+                </h3>
 
                 <!-- First Blog Post -->
                 <h2>

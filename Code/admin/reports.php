@@ -18,13 +18,11 @@ error_reporting(0);
 ?>
 
 <?php include "includes/admin_header.php"; ?>
-        <div id="wrapper">
-                <!-- Navigation -->
-                <?php include "includes/admin_navigation.php"; ?>
-                    <div id="page-wrapper">
-                        <div class="container-fluid">
+<div class="card">
+    
+<div class="content-wrapper">
 
-                    <h3>Invoice</h3>
+    <h3>Invoice</h3>
 	<style type="text/css">
 	<!--
 	@import url("style.css");
@@ -80,14 +78,7 @@ error_reporting(0);
 		?>
         </tbody>
     </table>
-                <!-- Bootstrap Core CSS -->
-                <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-                <!-- Custom CSS -->
-                <link href="./css/sb-admin.css" rel="stylesheet">
-
-                <!-- Custom Fonts -->
-                <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
                <link href="./css/styles.css" rel="stylesheet">
 
@@ -95,5 +86,4 @@ error_reporting(0);
 
             </div>
         </div>
-</div>
 <?php include "includes/admin_footer.php"; ?>

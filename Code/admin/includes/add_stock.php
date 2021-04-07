@@ -1,4 +1,6 @@
-        <h2 class="page-header">
+<div class="card">
+          <div class="content-wrapper">
+<h2 class="page-header">
         New Stock
         </h2>
 
@@ -115,6 +117,6 @@
         
        </form>
        
-      
-     
+    </div>
+</div>
     

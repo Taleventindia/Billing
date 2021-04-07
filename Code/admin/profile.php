@@ -88,7 +88,7 @@
                         
              ?>
                 
-            <h1 style="text-align: center;">Profile</h1>   
+            <h3 style="text-align: center;">Profile</h3>   
                     
         <?php            
                         

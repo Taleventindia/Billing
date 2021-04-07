@@ -1,439 +1,124 @@
 <?php include "includes/admin_header.php"; ?>
-  
-    <div id="wrapper">
-    
-        <!-- Navigation -->
-      <?php include "includes/admin_navigation.php"; ?>
-       
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                           
-                            Dashboard
-                            <small> <?php  echo $_SESSION['firstname'] ?></small>
-                           
-                        </h1>
-                       
-                    </div>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Starts-->
+            <div class="row page-title-header">
+              <div class="col-12">
+                <div class="page-header">
+                  <h4 class="page-title">Dashboard</h4>
                 </div>
-                <!-- /.row -->
-            
-                       
-                <!-- /.row -->
-<!--
-                
-<div class="row">
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-file-text fa-5x"></i>
+              </div>
+              <div class="col-md-12">
+                <div class="page-header-toolbar">
+                  <div class="btn-group toolbar-item" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-left"></i></button>
+                    <button type="button" class="btn btn-secondary">03/02/2019 - 20/08/2019</button>
+                    <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-right"></i></button>
+                  </div>
+                  <div class="filter-wrapper">
+                    <div class="dropdown toolbar-item">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownsorting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Day</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownsorting">
+                        <a class="dropdown-item" href="#">Last Day</a>
+                        <a class="dropdown-item" href="#">Last Month</a>
+                        <a class="dropdown-item" href="#">Last Year</a>
+                      </div>
                     </div>
-                    <div class="col-xs-9 text-right">
-                    
-             <?php
-                       
-                   $query = "SELECT * FROM posts ";
-                   $select_all_post = mysqli_query($connection,$query);           
-                   $post_count = mysqli_num_rows($select_all_post);  
-
-                   echo "<div class='huge'>{$post_count}</div>" ;          
-
-                        
-                ?>
-                  
-                        <div>Posts</div>
+                  </div>
+                    <div class="dropdown ml-lg-auto ml-3 toolbar-item">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownexport" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Export</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownexport">
+                        <a class="dropdown-item" href="#">Export as PDF</a>
+                        <a class="dropdown-item" href="#">Export as DOCX</a>
+                        <a class="dropdown-item" href="#">Export as CDR</a>
                     </div>
+                  </div>
                 </div>
+              </div>
+            <div class="row">
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title mb-0">Sales Statistics Overview</h4>
+                    <div class="d-flex flex-column flex-lg-row">
+                      <p>Lorem ipsum is placeholder text commonly used</p>
+                      <ul class="nav nav-tabs sales-mini-tabs ml-lg-auto mb-4 mb-md-0" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="sales-statistics_switch_1" data-toggle="tab" role="tab" aria-selected="true">1D</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="sales-statistics_switch_2" data-toggle="tab" role="tab" aria-selected="false">5D</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="sales-statistics_switch_3" data-toggle="tab" role="tab" aria-selected="false">1M</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="sales-statistics_switch_4" data-toggle="tab" role="tab" aria-selected="false">1Y</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                      <div class="data-wrapper d-flex mt-2 mt-lg-0">
+                        <div class="wrapper pr-5">
+                          <h5 class="mb-0">Total Cost</h5>
+                          <div class="d-flex align-items-center">
+                            <h4 class="font-weight-semibold mb-0">15,263</h4>
+                            <small class="ml-2 text-gray d-none d-lg-block"><b>89.5%</b> of 20,000 Total</small>
+                          </div>
+                        </div>
+                        <div class="wrapper">
+                          <h5 class="mb-0">Total Revenue</h5>
+                          <div class="d-flex align-items-center">
+                            <h4 class="font-weight-semibold mb-0">$753,098</h4>
+                            <small class="ml-2 text-gray d-none d-lg-block"><b>10.5%</b> of 20,000 Total</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ml-lg-auto" id="sales-statistics-legend"></div>
+                    </div>
+                    <canvas class="mt-5" height="120" id="sales-statistics-overview"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <div class="wrapper">
+                      <h4 class="card-title mb-0">Net Profit Margin</h4>
+                      <p>Started collecting data from February 2019</p>
+                      <div class="mb-4" id="net-profit-legend"></div>
+                    </div>
+                    <canvas class="my-auto mx-auto" height="250" id="net-profit"></canvas>
+                  </div>
+                </div>
+              </div>
             </div>
-            <a href="posts.php">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-green">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-comments fa-5x"></i>
+                  <div class="col-md-6 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body pb-0">
+                        <div class="d-flex justify-content-between">
+                          <h4 class="card-title mb-0">Total Revenue</h4>
+                          <p class="font-weight-semibold mb-0">+1.37%</p>
+                        </div>
+                        <h3 class="font-weight-medium mb-4">184.42K</h3>
+                      </div>
+                      <canvas class="mt-n4" height="90" id="total-revenue"></canvas>
                     </div>
-                    <div class="col-xs-9 text-right">
-                    
-             <?php
-                       
-                   $query = "SELECT * FROM comments ";
-                   $select_all_comments = mysqli_query($connection,$query);           
-                   $comment_count = mysqli_num_rows($select_all_comments);  
-
-                   echo "<div class='huge'>{$comment_count}</div>" ;          
-
-                        
-                ?>
-                  
-                      <div>Comments</div>
+                  </div>
+                  <div class="col-md-6 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body pb-0">
+                        <div class="d-flex justify-content-between">
+                          <h4 class="card-title mb-0">Transaction</h4>
+                          <p class="font-weight-semibold mb-0">-2.87%</p>
+                        </div>
+                        <h3 class="font-weight-medium">147.7K</h3>
+                      </div>
+                      <canvas class="mt-n3" height="90" id="total-transaction"></canvas>
                     </div>
-                </div>
-            </div>
-            <a href="comments.php">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-user fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                    
-             <?php
-                       
-                   $query = "SELECT * FROM users ";
-                   $select_all_users = mysqli_query($connection,$query);           
-                   $user_count = mysqli_num_rows($select_all_users);  
-
-                   echo "<div class='huge'>{$user_count}</div>" ;          
-
-                        
-                ?>
-                       
-                       
-                        <div> Users</div>
-                    </div>
-                </div>
-            </div>
-            <a href="users.php">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-red">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-list fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                       
-             <?php
-                       
-                   $query = "SELECT * FROM categories ";
-                   $select_all_categories = mysqli_query($connection,$query);           
-                   $category_count = mysqli_num_rows($select_all_categories);  
-
-                   echo "<div class='huge'>{$category_count}</div>" ;          
-
-                        
-                ?>
-                     
-                         <div>Categories</div>
-                    </div>
-                </div>
-            </div>
-            <a href="categories.php">
-                <div class="panel-footer">
-                    <span class="pull-left">View Details</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-                 /.row 
-                
-          <?php 
-            
-            $query = "SELECT * FROM posts WHERE post_status = 'published' ";
-            $select_all_published_post = mysqli_query($connection,$query);           
-            $post_published_count = mysqli_num_rows($select_all_published_post); 
-                
-                
-            $query = "SELECT * FROM posts WHERE post_status = 'draft' ";
-            $select_all_draft_post = mysqli_query($connection,$query);           
-            $post_draft_count = mysqli_num_rows($select_all_draft_post); 
-                
-                
-            $query = "SELECT * FROM comments WHERE comment_status = 'unapproved' ";
-            $unapproved_comment_query = mysqli_query($connection,$query);           
-            $unapproved_comment_count = mysqli_num_rows($unapproved_comment_query);  
-                
-                   
-            $query = "SELECT * FROM users WHERE user_role = 'subscriber' ";
-            $select_all_subscribers = mysqli_query($connection,$query);           
-            $subscriber_count = mysqli_num_rows($select_all_subscribers);   
-                
-                
-        ?>
-                
-                
-        <div class="row">
-            
-            <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-  
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Data', 'Count'],
-
-            
-            <?php 
-            
-              $element_text = ['All Posts', 'Active Posts','Draft Posts','Comments','Pending Comments','Users','Subscribers', 'Categories'];
-              $element_count = [$post_count, $post_published_count, $post_draft_count, $comment_count, $unapproved_comment_count, $user_count,$subscriber_count, $category_count];
-
-            
-             for($i =0; $i < 8; $i++){
-                 
-                 echo "['{$element_text[$i]}'" . "," . "{$element_count[$i]}],";
-                 
-             }
-              
-            
-            ?>
-         
-         ]);
-
-        var options = {
-          chart: {
-            title: '',
-            subtitle: '',
-          }
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      
-      }
-                
-    </script>
- 
-    <div id="columnchart_material" style="width: 'auto'; height: 0px;"></div>  
-    </div> 
--->
-    <div class="container" style="width:2000px; height:2000px">            
-    <script type="text/javascript" src="js/loader.js"></script>
-    <script>
-      google.charts.load('49', {'packages': ['vegachart']}).then(drawChart);
-
-      function drawChart() {
-        const dataTable = new google.visualization.DataTable();
-        dataTable.addColumn({type: 'string', 'id': 'category'});
-        dataTable.addColumn({type: 'number', 'id': 'amount'});
-        dataTable.addRows([
-          ['A', 28],
-          ['B', 55],
-          ['C', 43],
-          ['D', 91],
-          ['E', 81],
-          ['F', 53],
-          ['G', 19],
-          ['H', 87],
-        ]);
-
-        const options = {
-          "vega": {
-            "$schema": "https://vega.github.io/schema/vega/v4.json",
-            "width": 500,
-            "height": 200,
-            "padding": 5,
-
-            'data': [{'name': 'table', 'source': 'datatable'}],
-
-            "signals": [
-              {
-                "name": "tooltip",
-                "value": {},
-                "on": [
-                  {"events": "rect:mouseover", "update": "datum"},
-                  {"events": "rect:mouseout",  "update": "{}"}
-                ]
-              }
-            ],
-
-            "scales": [
-              {
-                "name": "xscale",
-                "type": "band",
-                "domain": {"data": "table", "field": "category"},
-                "range": "width",
-                "padding": 0.05,
-                "round": true
-              },
-              {
-                "name": "yscale",
-                "domain": {"data": "table", "field": "amount"},
-                "nice": true,
-                "range": "height"
-              }
-            ],
-
-            "axes": [
-              { "orient": "bottom", "scale": "xscale" },
-              { "orient": "left", "scale": "yscale" }
-            ],
-
-            "marks": [
-              {
-                "type": "rect",
-                "from": {"data":"table"},
-                "encode": {
-                  "enter": {
-                    "x": {"scale": "xscale", "field": "category"},
-                    "width": {"scale": "xscale", "band": 1},
-                    "y": {"scale": "yscale", "field": "amount"},
-                    "y2": {"scale": "yscale", "value": 0}
-                  },
-                  "update": {
-                    "fill": {"value": "steelblue"}
-                  },
-                  "hover": {
-                    "fill": {"value": "red"}
-                  }
-                }
-              },
-              {
-                "type": "text",
-                "encode": {
-                  "enter": {
-                    "align": {"value": "center"},
-                    "baseline": {"value": "bottom"},
-                    "fill": {"value": "#333"}
-                  },
-                  "update": {
-                    "x": {"scale": "xscale", "signal": "tooltip.category", "band": 0.5},
-                    "y": {"scale": "yscale", "signal": "tooltip.amount", "offset": -2},
-                    "text": {"signal": "tooltip.amount"},
-                    "fillOpacity": [
-                      {"test": "datum === tooltip", "value": 0},
-                      {"value": 1}
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        };
-
-        const chart = new google.visualization.VegaChart(document.getElementById('chart-div'));
-        chart.draw(dataTable, options);
-      }
-    </script>
-        <div id="chart-div" style="width: 700px; height: 250px; position: absolute;  top: 250px;
-  left: 300px;"></div>
-                
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Category', 'sales percentage'],
-          ['Categroy1',     11],
-          ['Categroy2',      2],
-          ['Categroy3',  2],
-          ['Categroy4', 2],
-          ['Categroy5',    7]
-        ]);
-
-        var options = {
-          title: 'Sales Report',
-          is3D: true,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-      }
-    </script>
-        <div id="piechart_3d" style="width: 800px; height: 500px;  position: absolute;
-  top: 150px;
-  left: 1000px;"></div>
-        
-
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
-
-        var options = {
-          title: 'Company Performance',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-           <div id="curve_chart" style="width: 900px; height: 500px; position: absolute;  top: 650px;
-  left: 225px;"></div>
-        
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'Company Performance',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-          },
-          bars: 'horizontal' // Required for Material Bar Charts.
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-    <div id="barchart_material" style="width: 1000px; height: 450px; position: absolute;  top: 1200px;
-  left: 400px;"></div> 
-            </div>
+                  </div>
             <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <?php include "includes/admin_footer.php"; ?>
+              </div>
+            </div>
+</div>
+<?php include "includes/admin_footer.php"; ?>

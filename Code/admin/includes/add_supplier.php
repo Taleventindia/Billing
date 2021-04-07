@@ -46,7 +46,9 @@
       
     }
 
-   ?>      
+   ?> 
+<div class="card">
+          <div class="content-wrapper">
                 
    <form action="" method="post" enctype="multipart/form-data">
           
@@ -139,7 +141,9 @@
         </div>
         
        </form>
-    
+    </div>
+    </div>
+
       
      
     

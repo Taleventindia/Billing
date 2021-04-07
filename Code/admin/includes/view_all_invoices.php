@@ -1,4 +1,6 @@
-    <form action=""method='post'>       
+    <div class="main-panel">
+          <div class="content-wrapper">
+              <form action=""method='post'>       
   
             <table class="table table-bordered table-hover">
               <thead>
@@ -51,6 +53,8 @@ echo "<td><a onClick=\"javascript:return confirm('Are you Sure you want to delet
         </table>
 
 </form>
+        </div>
+    </div>
            
             <?php
 

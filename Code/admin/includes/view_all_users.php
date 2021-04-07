@@ -1,4 +1,4 @@
- <?php 
+<?php 
 
    if(isset($_POST['CheckBoxArray'])){
        
@@ -45,10 +45,10 @@
    }
 
 ?>
-   
-        <form action=""method='post'>       
-  
-            <table class="table table-bordered table-hover">
+<div class="card">
+          <div class="content-wrapper">
+              
+        <table class="table table-bordered table-hover">
                
                <div id="bulkOptionContainer" class="col-xs-4">
                <select class="form-control" name="bulk_options" id="">
@@ -131,8 +131,8 @@
             </tbody>
         </table>
 
-</form>
-           
+        </div>
+    </div>
             <?php
 
                  if(isset($_GET['delete'])){

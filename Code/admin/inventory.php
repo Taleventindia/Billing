@@ -1,22 +1,15 @@
 <?php include "includes/admin_header.php"; ?>
-
-    <div id="wrapper">
-
-        <!-- Navigation -->
-      <?php include "includes/admin_navigation.php"; ?>
-       
-        <div id="page-wrapper">
-
-            <div class="container-fluid">                    
-            
+<div class="card">
+<div class="content-wrapper">
+    
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                     
-                        <h1 class="page-header">
+                        <h3 class="page-header">
                             Inventory
                             <small>List</small>
-                        </h1>
+                        </h3>
 
         <?php 
 
@@ -54,16 +47,7 @@
 
                     </div>
                 </div>
-                
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
+</div>
 
     <?php include "includes/admin_footer.php"; ?>

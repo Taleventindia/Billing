@@ -105,18 +105,18 @@
                 <div class="row">
                     <div class="col-lg-12">
                     
-                        <h1 class="page-header" style="color:#8a2be2">
+                        <h3 class="page-header" style="color:#8a2be2">
                             Profile
                             <small>
-                        <h2  style="color:#1e90ff"> 
+                        <h4  style="color:#1e90ff"> 
 <?php 
                              if(isset($_SESSION['firstname'])){ 
                              echo $_SESSION['firstname'];   
                              } 
                            
-                            ?></h2></small>
+                            ?></h4></small>
                            
-                        </h1>
+                        </h3>
                        
                                         
    <form action=""method="post" enctype="multipart/form-data" >

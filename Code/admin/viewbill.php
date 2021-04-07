@@ -46,11 +46,9 @@ if(isset($_GET['inv']))
 ?>
 
 <?php include "includes/admin_header.php"; ?>
-        <div id="wrapper">
-                <!-- Navigation -->
-                <?php include "includes/admin_navigation.php"; ?>
-                    <div id="page-wrapper">
-                        <div class="container-fluid">
+<div class="card">
+    
+<div class="content-wrapper">
     <title>Invoice</title>
     <link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
@@ -220,12 +218,6 @@ if(isset($_GET['inv']))
 		</div>
          <br />
                 
-                    <!-- Bootstrap Core CSS -->
-                <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-                <!-- Custom CSS -->
-                <link href="./css/sb-admin.css" rel="stylesheet">
-
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -236,5 +228,4 @@ if(isset($_GET['inv']))
                 <a href="javascript:window.print()"><center><img src="images/printButton.gif"/></center></a>
         </div>
     </div>
-</div>
 <?php include "includes/admin_footer.php"; ?>
