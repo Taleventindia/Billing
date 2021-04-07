@@ -1,4 +1,5 @@
 <?php include "includes/admin_header.php"; ?>
+
 <?php
                         
     if(isset($_SESSION['firstname'])){
@@ -113,16 +114,14 @@
                              if(isset($_SESSION['firstname'])){ 
                              echo $_SESSION['firstname'];   
                              } 
-                           
-                            ?></h4></small>
-                           
+                    ?>
+                                </h4></small>
                         </h3>
                        
                                         
-   <form action=""method="post" enctype="multipart/form-data" >
-          
-       
-        <div class="form-group">
+  <form action=""method="post" enctype="multipart/form-data" >
+    
+        <h5 style="color:#1e90ff">  <div class="form-group">
        <img class='img-circle profile-image' height=110 width=120 src ='../images/<?php echo $user_image; ?>' alt="">
 
             <input type="file" name="image">
@@ -143,27 +142,25 @@
        <div class="input-group">
             <label for="user_email">E-mail</label>
            <input type="email" value="<?php echo $email; ?>" class="form-control" name="user_email">
-        </div>
-       <br>
-       <div class="input-group">
+            </div></h5>
+   
+        <h5 style="color:#1e90ff"> <div class="input-group">
             <label for="password">Password</label>
            <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
-        </div>
+            </div></h5>
           <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
           <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
-       <br>
-        <div class="input-group">
+       
+       <h5 style="color:#1e90ff"> <div class="input-group">
             <label for="password">Confirm</label>
            <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
-        </div>
+           </div></h5>
           <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
-       <br>
-       
-       
-        <div class="input-group">
+      
+        <h5 style="color:#1e90ff">  <div class="input-group">
             <label for="phone">phone no</label>
            <input type="phone " value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
-        </div>
+            </div>
        <br>
        <div class="input-group">
             <label for="role">Role </label>
@@ -181,7 +178,7 @@
 -->
        <div class="input-group">
            <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile">
-        </div>
+            </div></h5>
         
        </form>
        

@@ -1,7 +1,7 @@
 <?php include "../includes/db.php"; ?>
 
 <?php
-	error_reporting(0);
+    error_reporting(0);
 		try 
 		{
 				 // connect to SQLite from PDO database
@@ -133,11 +133,9 @@ input[type=submit] {
                     
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
-                      
-                <input id="myInput" type="text" name="myProduct" placeholder="Item"> 
-                      
-<!--                      <textarea tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea>-->
-                      </div></td>
+                      <textarea id="myInput" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="myProduct">Item</textarea>
+                      </div>
+                  </td>
                   
                   <td class="description">
                       <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="desc[]">Description</textarea></td>
@@ -252,33 +250,31 @@ input[type=submit] {
 
 /*An array containing all the country names in the world:*/
 //var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
-            
         
-//var product =["pen","laptop","computer","keyboard"];                     
-//var product =["SELECT * FROM stock WHERE product_name=$product_name"] ;           
-// var product ="SELECT product_name FROM stock WHERE product_name=$product_name" ;           
+        
+var product =["Pen","Laptop","Computer","Keyboard","Tables"];                     
 
-//    autocomplete(document.getElementById("myInput"), $product);
+    autocomplete(document.getElementById("myInput"), product);
      
   <?php
      
-     if(isset($_GET['myProduct'])){
-         
-      $product_name=$_GET['myProduct']; 
-         
-      $product="SELECT product_name FROM stock WHERE product_name=$product_name ";
-  
-      $search_product=mysqli_query($connection, $product); 
-         
-       while($row=mysqli_fetch_assoc($search_product)){
-           $product_name=$row['product_name'];
-           
-        }
-       
-       }
-     
+//     if(isset($_GET['myProduct'])){
+//         
+//      $product_name=$_GET['myProduct']; 
+//         
+//      $product="SELECT product_name FROM stock WHERE product_name=$product_name ";
+//  
+//      $search_product=mysqli_query($connection, $product); 
+//         
+//       while($row=mysqli_fetch_assoc($search_product)){
+//           $product_name=$row['product_name'];
+//           
+//        }
+//       
+//       }
+//     
     ?>
-    autocomplete(document.getElementById("myInput"), $product);
+//    autocomplete(document.getElementById("myInput"), $product);      
      
 </script>
   

@@ -14,10 +14,10 @@
                         </button>
                         </span>
                     </div>
-                    </form>  search form 
+                    </form>  
 -->
                     <!-- /.input-group -->
-<!--                </div>-->
+<!--                </div>  -->
 
               
               <!-- Login -->
