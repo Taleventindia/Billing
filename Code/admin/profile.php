@@ -38,11 +38,12 @@
 
     <style type="text/css">
     
-    .wrapper
+    .container-fluid
         {
-            width:700px;
+            width:1356px;  
+            height:710px;
             margin: 0 auto;
-            background-color: white;
+            background-color:darkgrey;
             
         }
     
@@ -110,7 +111,7 @@
       ?>
                     
        <div style='text-align: center'>          
-        <img class='img-circle profile-image' height=130 width=140 src ='../images/<?php echo $user_image; ?>' alt="">           
+           <img class='img-circle profile-image' height=130 width=140 src ='../images/<?php echo $user_image; ?>' alt="">           
           </div>          
           <div  style="text-align: center;">
                     
