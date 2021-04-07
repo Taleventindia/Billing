@@ -1,11 +1,10 @@
 <div class="card">
 <div class="content-wrapper">
-<form action="" method='post'>       
+
   
         <table  cellpadding="50" cellspacing="5" class="table table-bordered table-hover">
             
-    <div class="well well-sm">
-           <div class="input-group">
+           <div class="input-group" >
            <h6>Category</h6>
             <select class="form-control" name="product_category"id="product_category"> 
                
@@ -29,11 +28,10 @@
         
          </select>  
      </div>  
-           
+       <br>    
     <div class="input-group">
                <h6>Search Stock</h6>
-            <form action="" class="input-group" method="post">
-                <div class="input-group">
+                 <div class="input-group">
                         <input name="search" type="text" class="form-control">
                         <span class="input-group-btn">
                             <button name="submit" class="btn btn-primary" type="submit">
@@ -41,9 +39,8 @@
                         </button>
                         </span>
                 </div>    
-           </form>
+
         </div>
-    </div>
            
             
                 <br>
@@ -171,7 +168,6 @@ $product="SELECT * FROM stock WHERE product_name LIKE '%$search%' AND product_ca
                     
         </tbody>       
  </table>
-</form>
            
             <?php
 

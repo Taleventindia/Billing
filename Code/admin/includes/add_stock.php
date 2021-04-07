@@ -1,8 +1,8 @@
 <div class="card">
           <div class="content-wrapper">
-<h2 class="page-header">
-        New Stock
-        </h2>
+<h4 class="page-header">
+        Add New Stock
+        </h4>
 
 <?php 
  
@@ -37,86 +37,128 @@
        }
       
 
-   ?>          
-   <form action="" method="post" enctype="multipart/form-data">
-          
-        <div class="form-group">
-            <label for="barcode_no">Barcode No</label>
-            <input type="file" name="image">
-        </div>
-       
-       <div class="input-group">
-            <label for="title">Product Name</label>
-            <input type="text" class="form-control" name="product_name">
-        </div>
-      <br>
-       <div class="input-group">
-            <label for="category">Product Category</label>
-           <br>
-           <select class="form-control" name="product_category"id="product_category"> 
-               
-<?php      
+   ?>    
+                <form class="form-sample">
+                     <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
+                            <div class="col-sm-9">
+                              <input type="file" name="image" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>            
+                     <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label for="category">Product Category</label>
+                        <select class="form-control" name="product_category"id="product_category"> 
 
-        $query="SELECT * FROM categories";
-        $select_categories=mysqli_query($connection,$query);
-                
-            confirmQuery($select_categories);  
-              
-    while($row=mysqli_fetch_assoc($select_categories)){
-//        $cat_id=$row['cat_id'];
-        $cat_title=$row['cat_title'];               
-       
-        echo "<option value='$cat_title'>$cat_title</option>";
-        } 
-                
-      ?>   
-        
-         </select>
-        </div>
-       
-       <br>
-        
-        <div class="input-group">
-           <label for="Product_type">Product Type</label>
-            <input type="text" class="form-control" name="product_type">
-       </div>
-        <br>
-       <div class="input-group">
-            <label for="product_cost">Product Cost</label>
-            <input type="decimal" class="form-control" name="product_cost">
-       </div>
-       <br>
-       <div class="input-group"> 
-            <label for="quantity">Quantity</label>
-            <input type="decimal" class="form-control" name="quantity">
-        </div>
-        <br>
-       <div class="input-group">
-            <label for="supplier">Supplier</label>
-           <input type="text" class="form-control" name="supplier">
-        </div>
-        <br>
-        <div class="input-group">
-            <label for="onhand_qty">Onhand Qty</label>
-           <input type="decimal" class="form-control" name="onhand_qty">
-        </div>
-        <br>
-       <div class="input-group">
-            <label for="expiry_date">Expiry Date</label>
-           <input type="date" class="form-control" name="expiry_date">
-        </div>
-        <br>
-       <div class="input-group">
-            <label for="date_arrival">Date arrival</label>
-           <input type="date" class="form-control" name="date_arrival">
-        </div>
-        <br>
+                        <?php      
+
+                            $query="SELECT * FROM categories";
+                            $select_categories=mysqli_query($connection,$query);
+
+                                confirmQuery($select_categories);  
+
+                            while($row=mysqli_fetch_assoc($select_categories)){
+
+                            $cat_title=$row['cat_title'];               
+
+                            echo "<option value='$cat_title'>$cat_title</option>";
+                            } 
+
+                          ?>   
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="title">Product Name</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" size="100" maxlength="100" name="product_name">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="Product_type">Product Type</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" size="100" maxlength="100" name="product_type" />
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                        <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="product_cost">Product Cost</label>
+                            <div class="col-sm-9">
+                              <input type="decimal" class="form-control" name="product_cost" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="quantity">Quantity</label>
+                            <div class="col-sm-9">
+                              <input type="decimal" class="form-control" name="quantity" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="Supplier">Supplier</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="supplier" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="onhand_qty">Onhand Qty</label>
+                            <div class="col-sm-9">
+                              <input type="decimal" class="form-control" name="onhand_qty" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
+                            <div class="col-sm-9">
+                              <input type="date" class="form-control" name="expiry_date" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="date_arrival">Date arrival</label>
+                            <div class="col-sm-9">
+                              <input type="date" class="form-control" name="date_arrival" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>
        <div class="form-group">
             <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
         </div>
         
        </form>
-       
     </div>
 </div>
     

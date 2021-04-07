@@ -10,11 +10,6 @@
               </div>
               <div class="col-md-12">
                 <div class="page-header-toolbar">
-                  <div class="btn-group toolbar-item" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-left"></i></button>
-                    <button type="button" class="btn btn-secondary">03/02/2019 - 20/08/2019</button>
-                    <button type="button" class="btn btn-secondary"><i class="mdi mdi-chevron-right"></i></button>
-                  </div>
                   <div class="filter-wrapper">
                     <div class="dropdown toolbar-item">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownsorting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Day</button>
@@ -41,7 +36,6 @@
                   <div class="card-body">
                     <h4 class="card-title mb-0">Sales Statistics Overview</h4>
                     <div class="d-flex flex-column flex-lg-row">
-                      <p>Lorem ipsum is placeholder text commonly used</p>
                       <ul class="nav nav-tabs sales-mini-tabs ml-lg-auto mb-4 mb-md-0" role="tablist">
                         <li class="nav-item">
                           <a class="nav-link active" id="sales-statistics_switch_1" data-toggle="tab" role="tab" aria-selected="true">1D</a>
@@ -85,7 +79,7 @@
                   <div class="card-body d-flex flex-column">
                     <div class="wrapper">
                       <h4 class="card-title mb-0">Net Profit Margin</h4>
-                      <p>Started collecting data from February 2019</p>
+
                       <div class="mb-4" id="net-profit-legend"></div>
                     </div>
                     <canvas class="my-auto mx-auto" height="250" id="net-profit"></canvas>

@@ -1,15 +1,17 @@
       <?php include "includes/admin_header.php"; ?>
-        <div class="main-panel">
-          <div class="content-wrapper">
-            <!-- Page Heading -->
-                    <div class="card">
-                    
-                       
-                        <h3 class="page-header">
+
+<div class="main-panel">
+    
+                            <h3 class="page-header">
                             Categories
                         </h3>
                         
                         <div class = "col-md-4 grid-margin stretch-card">
+        <div class="card">  
+          <div class="content-wrapper">
+            <!-- Page Heading -->
+
+
                         
                         
                   <?php insert_categories(); ?>
