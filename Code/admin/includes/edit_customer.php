@@ -61,113 +61,80 @@
         $edit_customer_query=mysqli_query($connection,$query);
            
         confirmQuery($edit_customer_query);
-           
-    
-           echo "<h3>Customer Updated:" . "<a href='customers.php'>View customers?</a></h3>";
-
+       
+         header("Location:./customers.php");  
+       
        
        }
       
 
    ?>      
-                
-   <form action="" method="post" enctype="multipart/form-data">
-     
-           
-       <div class="input-group">
-            <label for="title">Firstname</label>
-            <input type="text" value="<?php echo $firstname; ?>" class="form-control" name="firstname">
+
+ <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <form action="" method="post" enctype="multipart/form-data" class="form-sample">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" >First Name *</label>
+                <div class="col-sm-9">
+                  <input type="text" value="<?php echo $firstname; ?>" size="65"  maxlength="65" class="form-control" name="firstname"/>
+                </div>
+              </div>
+              </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Last Name *</label>
+                <div class="col-sm-9">
+                  <input type="text" value="<?php echo $lastname; ?>" size="65"  maxlength="65" class="form-control" name="lastname"/>
+                </div>
+              </div>
+            </div>
         </div>
-        <br>
-       <div class="input-group">
-            <label for="title">Lastname</label>
-            <input type="text" value="<?php echo $lastname; ?>" class="form-control" name="lastname">
+            <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Phone no *</label>
+                <div class="col-sm-9">
+                  <input type="phone no" value="<?php echo $phone; ?>" class="form-control" name="phone"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">E-mail *</label>
+                <div class="col-sm-9">
+                  <input type="email" value="<?php echo $email; ?>" class="form-control" name="email"/>
+                </div>
+              </div>
+            </div>
         </div>
-        <br>
-        <div class="input-group">
-            <label for="user_phone">Phone No</label>
-            <input type="varchar" value="<?php echo $phone; ?>" class="form-control" name="phone">
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="address" class="col-sm-3 col-form-label">Address</label>
+                <div class="col-sm-9">
+                  <input type="address" value="<?php echo $address; ?>" class="form-control" name="address"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label for="payment and billing" class="col-sm-3 col-form-label">Payment</label>
+                <div class="col-sm-9">
+                  <input type="text" value="<?php echo $payment_and_billing; ?>" class="form-control" name="payment_and_billing"/>
+                </div>
+              </div>
+            </div> 
         </div>
-         <br>
-        
-       <div class="input-group">
-            <label for="user_email">Email</label>
-           <input type="email" value="<?php echo $email; ?>" class="form-control" name="email">
+            <br>
+            <center><input class="btn btn-primary" type="submit" name="edit_customer" value="Update customer"></center>
+          </form>
         </div>
-         <br>
-<!--
-         <div class="input-group">
-            <label for="company">Company</label>
-           <input type="text" value="<?php //echo $company; ?>" class="form-control" name="company">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="Display name">Display Name</label>
-           <input type="text" value="<?php //echo $display_name; ?>" class="form-control" name="display_name">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="website">Website</label>
-           <input type="text" value="<?php //echo $website; ?>" class="form-control" name="website">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="other">Other</label>
-           <input type="text" value="<?php //echo $other; ?>" class="form-control" name="other">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="gstin">GST IN</label>
-           <input type="text" value="<?php //echo $gst_in; ?>" class="form-control" name="gstin">
-        </div>
-       <br>
--->
-        
-        <div class="input-group">
-            <label for="address">Address</label>
-          <input type="text" value="<?php echo $address; ?>" class="form-control" name="address">  
-<!--         <textarea type="text" value="<?php echo $address; ?>" class="form-control" name="address" id="body" cols="25" rows="4"></textarea>-->
-        </div>
-       <br>
-<!--
-       <div class="input-group">
-            <label for="notes">Notes</label>
-           <textarea type="text" value="<?php //echo $notes; ?>" class="form-control" name="notes" id="body" cols="25" rows="4"></textarea>
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="tax info">Tax Info</label>
-           <input type="text" value="<?php //echo $tax_info; ?>" class="form-control" name="notes">
-        </div>
-       <br>
--->
-       <div class="input-group">
-            <label for="payment and billing">Payment</label>
-           <input type="text" value="<?php echo $payment_and_billing; ?>" class="form-control" name="payment_and_billing">
-        </div>
-       <br>
-<!--
-       <div class="input-group">
-            <label for="attachments">Attachments</label>
-           <input type="text" value="<?php //echo $attachments; ?>" class="form-control" name="attachments">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="pan no">Pan no</label>
-           <input type="text" value="<?php //echo $pan_no; ?>" class="form-control" name="pan_no">
-        </div>
-       <br>
-       <div class="input-group">
-            <label for="adhaar no">Adhaar no</label>
-           <input type="text" value="<?php //echo $adhaar_no; ?>" class="form-control" name="adhaar_no">
-        </div>
-       <br>
--->
-       <div class="input-group">
-            <input class="btn btn-primary" type="submit" name="edit_customer" value="Update customer">
-       </div>
-       </form>
-       
-      
+    </div>
+</div>
+
+    
      
     

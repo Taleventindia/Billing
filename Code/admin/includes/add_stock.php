@@ -151,14 +151,15 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label" for="date_arrival">Date arrival</label>
                             <div class="col-sm-9">
-                              <input type="date" class="form-control" name="date_arrival" />
+                              <input type="date" class="form-control" name="date_arrival"/>
                             </div>
                           </div>
                         </div>
                     </div>
-
+                    
+             <div class="col-sm-9">
             <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
-
+            </div>
        </form>
       </div>
 </div>

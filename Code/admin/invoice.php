@@ -20,7 +20,6 @@
 		$invnum+=1; 
 ?>
 
-
 <?php include "includes/admin_header.php"; ?>
 <div class="main-panel">
     <div class="card">
@@ -61,7 +60,7 @@
                   <th>Price (with GST)</th>
               </tr>
   
-                <form autocomplete="off" action="">
+            <form autocomplete="off" action="">
                 <div class="autocomplete" style="width:300px;"> 
                     
               <tr class="item-row">
@@ -84,7 +83,7 @@
             </form>
 
               <tr id="hiderow">
-                <td colspan="8"><a tabindex="8" id="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
+                <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
               </tr>    
               
               <tr>
@@ -156,10 +155,12 @@
               &emsp;&nbsp;Authorized Signatory
               </span>
             </div>
-		</div>
-        
+       </div>
+    
         <br>
-            <center><input type="submit" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>    
+            <center><input type="submit" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
+
+       
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 

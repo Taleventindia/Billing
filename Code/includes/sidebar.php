@@ -2,7 +2,6 @@
         <div class="col-md-4">
               
                 <!-- Blog Search Well -->
-<!--
                 <div class="well">
                     <h4>Blog Search</h4>
                     <form action="search.php" method="post">
@@ -15,9 +14,8 @@
                         </span>
                     </div>
                     </form>  
--->
                     <!-- /.input-group -->
-<!--                </div>  -->
+                </div>  
 
               
               <!-- Login -->

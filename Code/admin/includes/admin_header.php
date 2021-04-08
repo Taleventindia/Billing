@@ -81,15 +81,37 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image"> </a>
+                <img class="img-xs rounded-circle" src="../images/<?php echo $_SESSION['image'] ?>" alt="Profile image"> </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                 <div class="dropdown-header text-center">
-                  <img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
-                  <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
-                  <p class="font-weight-light text-muted mb-0">allenmoreno@gmail.com</p>
+                  <img class="img-md rounded-circle" src="../images/<?php echo $_SESSION['image'] ?>" alt="Profile image">
+                  <p class="mb-1 mt-3 font-weight-semibold">
+                      <?php
+                      
+                      if(isset($_SESSION['firstname'])){
+                          
+                        echo $_SESSION['firstname']; 
+                         
+                      }
+                      
+                      ?>
+                      
+                    </p>
+                  <p class="font-weight-light text-muted mb-0">
+                      <?php
+                   
+                      if(isset($_SESSION['email'])){
+                          
+                        echo $_SESSION['email']; 
+                         
+                      }
+                      ?>
+                      
+                    </p>
                 </div>
-                <a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
-                <a class="dropdown-item">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+                <a class="dropdown-item" href="./profile.php">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
+                  
+                <a class="dropdown-item"href="../includes/logout.php">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
               </div>
             </li>
           </ul>
@@ -201,7 +223,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.php">
+              <a class="nav-link" href="./profile.php">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
                 <span class="menu-title">profile</span>
               </a>

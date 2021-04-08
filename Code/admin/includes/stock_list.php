@@ -1,40 +1,55 @@
 <div class="content-wrapper">
 <div class="row">
     <div class="col-md-6">
-    <div class="form-group row">   
+    <div class="form-group">   
            <h6>Category</h6>
-            <select class="form-control" name="product_category"id="product_category"> 
+            <select class="form-control"  name="product_category"id="product_category"> 
                    
             <?php      
-
+                       
                         $category="SELECT * FROM categories";
                         $select_categories=mysqli_query($connection,$category);
 
                         confirmQuery($select_categories);  
 
                         while($row=mysqli_fetch_assoc($select_categories)){
-                        $cat_title=$row['cat_title'];     
-                            echo "$cat_title";
-
-                        echo "<option selected value='$cat_title'>$cat_title</option>";
+                        $cat_title=$row['cat_title'];
+                  
+                        if($cat_title == $product_category) {
+                            
+                        echo "<option selected value='$cat'>$cat_title</option>";
+                       
+                        }else{
+                            
+                        echo "<option value='$cat_title'>$cat_title</option>";
+             
+                         }     
                         } 
+                       
                         $cat=$_POST['product_category'];
                         echo "<option selected value='$cat'>$cat</option>";
+                         
+                 
                 ?>   
          </select>
+       
         </div>    
             <h6>Search Stock</h6>
+            <form action="" method="post">
                 <div class="input-group">
                         <input name="search" type="text" class="form-control">
                         <span class="input-group-btn">
                             <button name="submit" class="btn btn-primary" type="submit">
+                                <span class="glyphicon glyphicon-search">Search</span>
                         </button>
                         </span>
-                        </div>    
-                </div>
+                        </div> 
+                 </form> 
+              </div>
         </div>
     </div>
-        <div class="card">
+ 
+     <div class="card">
         <table  cellpadding="50" cellspacing="5" class="table table-bordered table-hover">
               <thead>
                     <tr>
@@ -60,10 +75,9 @@
                  
             if (isset($_POST['submit'])){
                 $search=$_POST['search'];
-            
-                
-$product="SELECT * FROM stock WHERE product_name LIKE '%$search%' AND product_category='{$cat}' ";    
- $search_product=mysqli_query($connection, $product); 
+               
+              $product="SELECT * FROM stock WHERE product_name LIKE '%$search%' AND product_category='$cat' ";  
+              $search_product=mysqli_query($connection, $product); 
                 
                  if(!$search_product){
                     die("QUERY FAILED" . mysqli_error($connection));
@@ -153,12 +167,14 @@ $product="SELECT * FROM stock WHERE product_name LIKE '%$search%' AND product_ca
                     }
       
                  }
-        
-               
+                  
+              
             ?> 
                     
-        </tbody>       
+        </tbody>     
+           
  </table>
+          <?php echo $cat;?>
  </div>          
             <?php
 

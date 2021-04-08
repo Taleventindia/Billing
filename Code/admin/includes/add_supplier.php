@@ -20,7 +20,7 @@
             $adhaar_no          = $_POST['adaar_no'];
                 
            
-//   if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone) && !empty($user_address)){
+  if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($notes) && !empty($tax_info)&& !empty($payment_and_billing) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
           
      $query="INSERT INTO suppliers".
          '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,notes,tax_info,payment_and_billing,attachments,pan_no,adhaar_no)'.   
@@ -30,19 +30,18 @@
            
         confirmQuery($create_supplier_query);
            
-        echo "supplier Created:"." "."<a href='suppliers.php'>View supplier?</a>" ;   
-     
-//       
-//       }
-//           else {
-//          
-//          $message = "Invalid supplier details";
-//          
-//      } 
-//           
-//    } else {
-//         
-//         $message = "";  
+            header("Location:./customers.php");
+       }
+        
+      else {
+          
+          $message = "Invalid supplier details";
+          
+      } 
+           
+    } else {
+         
+         $message = "";  
       
     }
 
@@ -51,7 +50,10 @@
             <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <form class="form-sample">
+                    <form action="" method="post" enctype="multipart/form-data" class="form-sample">
+                        
+                        <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
+                        
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
@@ -196,7 +198,8 @@
                           </div>
                         </div>
                     </div>
-                        <input class="btn btn-primary" type="submit" name="create_supplier" value="Add supplier">
+                        <br>
+                        <center><input class="btn btn-primary" type="submit" name="create_supplier" value="Add supplier"></center>
                       </form>
                     </div>
                 </div>

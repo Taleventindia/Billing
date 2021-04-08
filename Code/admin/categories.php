@@ -1,10 +1,12 @@
-      <?php include "includes/admin_header.php"; ?>
-<div class="main-panel">
-                        <h3 class="page-header">
-                            Categories
-                        </h3>
-                        
-                        <div class = "col-md-4 grid-margin stretch-card">
+<?php include "includes/admin_header.php"; ?>
+
+ <div class="main-panel">
+        <br>
+           <h3 class="page-header">
+               Categories
+            </h3>
+
+        <div class = "col-md-4 grid-margin stretch-card">
         <div class="card">  
           <div class="content-wrapper">
             <!-- Page Heading -->

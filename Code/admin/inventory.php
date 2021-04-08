@@ -7,8 +7,7 @@
                     <div class="col-lg-12">
                     
                         <h3 class="page-header">
-                            Inventory
-                            <small>List</small>
+                            Inventory List 
                         </h3>
 
         <?php 

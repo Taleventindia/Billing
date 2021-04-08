@@ -20,7 +20,7 @@
                 $pan_no =  $_POST['pan_no'];
                 $adhaar_no =  $_POST['adhaar_no'];
 
-//   if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($notes) && !empty($tax_info)&& !empty($payment_and_billing) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
+   if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($notes) && !empty($tax_info)&& !empty($payment_and_billing) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
   
            
      $query="INSERT INTO customers".
@@ -31,165 +31,181 @@
            
         confirmQuery($create_customer_query);
            
-        echo "customer Created:"." "."<a href='customers.php'>View Customer?</a>" ;   
-       
+            header("Location:./customers.php"); 
        }
+       
+           else {
+          
+          $message = "Invalid customer details";
+          
+      } 
+           
+    } else {
+         
+         $message = "";  
+      
+    }
+
            
    ?>      
         
-            <div class="col-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <form class="form-sample">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" >First Name *</label>
-                            <div class="col-sm-9">
-                              <input type="text" size="65"  maxlength="65" class="form-control" name="firstname"/>
-                            </div>
-                          </div>
-                          </div>
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Last Name *</label>
-                            <div class="col-sm-9">
-                              <input type="text" size="65"  maxlength="65" class="form-control" name="lastname"/>
-                            </div>
-                          </div>
-                        </div>
+    <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-sample">
+                
+                <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
+                
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" >First Name *</label>
+                    <div class="col-sm-9">
+                      <input type="text" size="65"  maxlength="65" class="form-control" name="firstname"/>
                     </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Phone no *</label>
-                            <div class="col-sm-9">
-                              <input type="phone no" class="form-control" name="phone"/>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">E-mail *</label>
-                            <div class="col-sm-9">
-                              <input type="email"   class="form-control" name="email"/>
-                            </div>
-                          </div>
-                        </div>
+                  </div>
+                  </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Last Name *</label>
+                    <div class="col-sm-9">
+                      <input type="text" size="65"  maxlength="65" class="form-control" name="lastname"/>
                     </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Company</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="company"/>
-                            </div>
-                          </div>
-                        </div> 
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="Display name" class="col-sm-3 col-form-label">Display Name</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="Display name"/>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="website" class="col-sm-3 col-form-label">Website</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="website"/>
-                            </div>
-                          </div>
-                        </div> 
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="other" class="col-sm-3 col-form-label">Other</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="Other"/>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="gstin" class="col-sm-3 col-form-label">GST IN</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="gst_in"/>
-                            </div>
-                          </div>
-                        </div> 
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="address" class="col-sm-3 col-form-label">address</label>
-                            <div class="col-sm-9">
-                              <textarea class="form-control" name="address" id="body" cols="23" rows="4"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="notes" class="col-sm-3 col-form-label">Notes</label>
-                            <div class="col-sm-9">
-                              <textarea class="form-control"  name="notes" id="body" cols="25" rows="4"></textarea>
-                            </div>
-                          </div>
-                        </div> 
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="tax info" class="col-sm-3 col-form-label">Tax Info</label>
-                            <div class="col-sm-9">
-                              <input type="text"  class="form-control" name="tax_info">
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="payment and billing" class="col-sm-3 col-form-label">Payment</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="payment_and_billing"/>
-                            </div>
-                          </div>
-                        </div> 
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="attachments" class="col-sm-3 col-form-label">Attachments</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="attachments"/>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="Pan no"  class="col-sm-3 col-form-label">Pan no</label>
-                            <div class="col-sm-9">
-                              <input type="text" size="70"  maxlength="70" class="form-control" name="Pan_no"/>
-                            </div>
-                          </div>
-                        </div> 
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="adhaar no" class="col-sm-3 col-form-label">Adhaar No</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="adhaar_no"/>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <centre><input class="btn btn-primary" type="submit" name="create_customer" value="Add Customer"></centre>
-                      </form>
-                    </div>
+                  </div>
                 </div>
-       </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Phone no *</label>
+                    <div class="col-sm-9">
+                      <input type="phone no" class="form-control" name="phone"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">E-mail *</label>
+                    <div class="col-sm-9">
+                      <input type="email"   class="form-control" name="email"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Company</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="company"/>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="Display name" class="col-sm-3 col-form-label">Display Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="display_name"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="website" class="col-sm-3 col-form-label">Website</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="website"/>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="other" class="col-sm-3 col-form-label">Other</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="other"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="gstin" class="col-sm-3 col-form-label">GST IN</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="gst_in"/>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="address" class="col-sm-3 col-form-label">address</label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control" name="address" id="body" cols="23" rows="4"></textarea>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="notes" class="col-sm-3 col-form-label">Notes</label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control"  name="notes" id="body" cols="25" rows="4"></textarea>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="tax info" class="col-sm-3 col-form-label">Tax Info</label>
+                    <div class="col-sm-9">
+                      <input type="text"  class="form-control" name="tax_info"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="payment and billing" class="col-sm-3 col-form-label">Payment</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="payment_and_billing"/>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="attachments" class="col-sm-3 col-form-label">Attachments</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="attachments"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="Pan no"  class="col-sm-3 col-form-label">Pan no</label>
+                    <div class="col-sm-9">
+                      <input type="text" size="70"  maxlength="70" class="form-control" name="pan_no"/>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="adhaar no" class="col-sm-3 col-form-label">Adhaar No</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="adhaar_no"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+             <br>
+               <center><input class="btn btn-primary" type="submit" name="create_customer" value="Add Customer"></center>
+          </form>
+      </div>
+   </div>
+</div>
 
 
      

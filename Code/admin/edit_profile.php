@@ -72,6 +72,8 @@
         $update_profile_query=mysqli_query($connection,$query);
            
         confirmQuery($update_profile_query);
+            
+           header("Location:profile.php"); 
               
          }else{
              
@@ -95,9 +97,6 @@
    
     <div id="wrapper">
 
-        <!-- Navigation -->
-      <?php include "includes/admin_navigation.php"; ?>
-       
         <div id="page-wrapper">
 
             <div class="container-fluid">                    
