@@ -1,8 +1,4 @@
-<div class="card">
-          <div class="content-wrapper">
-
-
-              <form action=""method='post'>       
+<div class="card">  
   
             <table class="table table-bordered table-hover">
               
@@ -60,7 +56,6 @@
                       
             </tbody>
         </table>
-    </form>
            
             <?php
  
@@ -76,7 +71,6 @@
             ?>   
                      
     </div>
-</div>
                  
                       
                      

@@ -55,7 +55,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" >First Name</label>
+                            <label class="col-sm-3 col-form-label" >First Name *</label>
                             <div class="col-sm-9">
                               <input type="text" size="65"  maxlength="65" class="form-control" name="firstname"/>
                             </div>
@@ -63,7 +63,7 @@
                           </div>
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Last Name</label>
+                            <label class="col-sm-3 col-form-label">Last Name *</label>
                             <div class="col-sm-9">
                               <input type="text" size="65"  maxlength="65" class="form-control" name="lastname"/>
                             </div>
@@ -73,7 +73,7 @@
                         <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Phone no</label>
+                            <label class="col-sm-3 col-form-label">Phone no *</label>
                             <div class="col-sm-9">
                               <input type="phone no" class="form-control" name="phone"/>
                             </div>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">E-mail</label>
+                            <label class="col-sm-3 col-form-label">E-mail *</label>
                             <div class="col-sm-9">
                               <input type="email"   class="form-control" name="email"/>
                             </div>
@@ -196,14 +196,8 @@
                           </div>
                         </div>
                     </div>
+                        <input class="btn btn-primary" type="submit" name="create_supplier" value="Add supplier">
                       </form>
                     </div>
                 </div>
        </div>
-       <div class="input-group">
-            <input class="btn btn-primary" type="submit" name="create_supplier" value="Add supplier">
-        </div>
-
-      
-     
-    

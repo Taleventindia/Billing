@@ -1,4 +1,5 @@
 <div class="card">
+<div class="main-page">
           <div class="content-wrapper">
 <h4 class="page-header">
         Add New Stock
@@ -37,19 +38,8 @@
        }
       
 
-   ?>    
-                <form class="form-sample">
-                     <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
-                            <div class="col-sm-9">
-                              <input type="file" name="image" />
-                            </div>
-                          </div>
-                        </div>
-                    </div>            
-                     <div class="row">
+   ?>  
+                      <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label for="category">Product Category</label>
@@ -73,7 +63,19 @@
                             </select>
                         </div>
                     </div>
-                </div>
+                </div>             
+                <form class="form-sample">
+                     <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
+                            <div class="col-sm-9">
+                              <input type="file" name="image" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>            
+
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
@@ -154,11 +156,11 @@
                           </div>
                         </div>
                     </div>
-       <div class="form-group">
+
             <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
-        </div>
-        
+
        </form>
-    </div>
+      </div>
+</div>
 </div>
     

@@ -32,7 +32,7 @@ if(isset($_GET['inv']))
 	$desc=$obj->desc;
 	$qty=$obj->qty;
 	$cost=$obj->cost;
-	$vat=$obj->vat;
+	$gst=$obj->gst;
 	$price=$obj->price;
 	
 	
@@ -46,9 +46,9 @@ if(isset($_GET['inv']))
 ?>
 
 <?php include "includes/admin_header.php"; ?>
-<div class="card">
-    
+<div class="main-panel">
 <div class="content-wrapper">
+    <div class="card">
     <title>Invoice</title>
     <link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
@@ -68,7 +68,7 @@ if(isset($_GET['inv']))
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
-		<h3>RETAIL INVOICE</h3>
+		<h4>Retail Invoice</h4>
         <div style="border:1px solid #000">
             <div id="customer">
                 Consignee,<br />
@@ -96,17 +96,17 @@ if(isset($_GET['inv']))
                   <th>Description</th>
                   <th width="100">Quantity</th>
                   <th width="150">Rate</th>
-                  <th width="100">VAT %</th>
+                  <th width="100">GST %</th>
                   <th width="100">Discount %</th>
                   <th width="100">Amount</th>
-                  <th width="200">Price (with VAT)</th>
+                  <th width="200">Price (with GST)</th>
               </tr>
               <?php 
 			  $item = explode("*#*",$item);
 			  $desc = explode("*#*",$desc);
 			  $qty = explode("*#*",$qty);
 			  $cost = explode("*#*",$cost);
-			  $vat = explode("*#*",$vat);
+			  $gst = explode("*#*",$gst);
               $discount = explode("*#*",$discount);
 			  $price = explode("*#*",$price);
 			  
@@ -120,7 +120,7 @@ if(isset($_GET['inv']))
                   <td class="description"><?php echo $desc[$count];?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$qty[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$cost[$count]);?></td>
-                  <td align="right"><?php echo sprintf('%0.2f',$vat[$count]);?></td>
+                  <td align="right"><?php echo sprintf('%0.2f',$gst[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$discount[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$cost[$count]*$qty[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$price[$count]);?>&nbsp;</td>
@@ -145,7 +145,7 @@ if(isset($_GET['inv']))
               </tr>
               <tr>
                   <td colspan="3" class="blank"> </td>
-                  <td colspan="4" class="total-line">VAT:</td>
+                  <td colspan="4" class="total-line">GST:</td>
                   <td class="total-value" align="right">
 				  <?php 
 				  $temp=0;
@@ -207,7 +207,7 @@ if(isset($_GET['inv']))
 
               <span style="display:block;height:25px;"></span>
               <span style="margin:10px 10px; display:block">
-              For, <strong>OM ELECTRICALS</strong>
+              For, <strong>Talevent Tech</strong>
               <br />
               <br />
               <br />
@@ -216,16 +216,17 @@ if(isset($_GET['inv']))
               </span>
             </div>
 		</div>
-         <br />
                 
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
                <link href="./css/styles.css" rel="stylesheet">
 
-               <script type="text/javascript" src="./js/loader.js"></script>    
-            
-                <a href="javascript:window.print()"><center><img src="images/printButton.gif"/></center></a>
-        </div>
-    </div>
+               <script type="text/javascript" src="./js/loader.js"></script> 
+             
+             </div>
+    </div> 
+    <a href="javascript:window.print()"><center><img src="images/printButton.gif"/></center></a>
+</div>
+
 <?php include "includes/admin_footer.php"; ?>

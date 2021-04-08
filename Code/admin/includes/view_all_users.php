@@ -46,24 +46,24 @@
 
 ?>
 <div class="card">
-          <div class="content-wrapper">
-              
-        <table class="table table-bordered table-hover">
-               
-               <div id="bulkOptionContainer" class="col-xs-4">
-               <select class="form-control" name="bulk_options" id="">
+<div id="bulkOptionContainer" class="col-xs-4">
+    <select class="form-control" name="bulk_options" id="">
                    
                 <option value="">Select Options</option>
                 <option value="Admin">Admin</option>
                 <option value="User">User</option>
                 <option value="delete">Delete</option>
                      
-               </select>
-            </div>  
-              
+    </select>
+    <input type="submit" name="submit" class="btn btn-success" value="Apply">
+</div> 
+    </div>
+<div class="card">
+ 
+        <table class="table table-bordered table-hover">
                <div class="col-xs-4">
                    
-                <input type="submit" name="submit" class="btn btn-success" value="Apply">
+                
                    
                </div>
               
@@ -132,7 +132,6 @@
         </table>
 
         </div>
-    </div>
             <?php
 
                  if(isset($_GET['delete'])){

@@ -1,8 +1,6 @@
       <?php include "includes/admin_header.php"; ?>
-
 <div class="main-panel">
-    
-                            <h3 class="page-header">
+                        <h3 class="page-header">
                             Categories
                         </h3>
                         
@@ -11,12 +9,8 @@
           <div class="content-wrapper">
             <!-- Page Heading -->
 
-
-                        
-                        
                   <?php insert_categories(); ?>
-                            
-                       
+
                         <form action=""method="post">
                            
                             <div class="form-group">
@@ -43,7 +37,7 @@
                       </div> <!-- Add Category -->
                       
                       
-                      <div class="col-md-4 grid-margin stretch-card">
+                      <div class="card">
 
                       <table class="table table-bordered table-hover">
                           <thead>
@@ -55,16 +49,10 @@
                               </tr>
                           </thead>
                           <tbody>
-                         
-                         
-                         
-              <?php findAllCategories(); ?>
-                           
-                              
-                               
-                     <?php deleteCategories(); ?>
-                              
-                              
+
+                        <?php findAllCategories(); ?>
+                        <?php deleteCategories(); ?>
+
                       </tbody>
                       </table>
                         </div>

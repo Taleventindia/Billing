@@ -18,11 +18,13 @@ error_reporting(0);
 ?>
 
 <?php include "includes/admin_header.php"; ?>
+<div class="main-panel">
 <div class="card">
-    
-<div class="content-wrapper">
+<div class="content-wrapper">   
+    <h3 class="page-header">
+        Invoice
+    </h3>
 
-    <h3>Invoice</h3>
 	<style type="text/css">
 	<!--
 	@import url("style.css");
@@ -46,9 +48,6 @@ error_reporting(0);
 			
 		}
 ?>
-
-
-		
     <table id="box-table-a" summary="Employee Pay Sheet" align="center">
         <thead>
             <tr>
@@ -79,11 +78,11 @@ error_reporting(0);
         </tbody>
     </table>
 
-
                <link href="./css/styles.css" rel="stylesheet">
 
                <script type="text/javascript" src="./js/loader.js"></script>    
 
-            </div>
-        </div>
+</div>
+    </div>
+</div>
 <?php include "includes/admin_footer.php"; ?>
