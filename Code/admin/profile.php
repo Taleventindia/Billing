@@ -1,3 +1,4 @@
+<?php include "includes/admin_header.php"; ?>
 <?php ob_start (); ?>
 <?php session_start(); ?>
 <?php include "../includes/db.php"; ?>

@@ -102,6 +102,7 @@
     <div class="container-fluid page-body-wrapper">
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
+              <li class="nav-item nav-category">Main Menu</li>
             <li class="nav-item">
               <a class="nav-link" href="index.php">
                 <i class="menu-icon typcn typcn-document-text"></i>
