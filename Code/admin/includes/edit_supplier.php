@@ -59,9 +59,8 @@
         $edit_supplier_query=mysqli_query($connection,$query);
            
         confirmQuery($edit_supplier_query);
-     
-//     echo "<h5>supplier Updated:" . "<a href='suppliers.php'>View suppliers?</a></h5>";
-               header("Location:./suppliers.php");
+           
+         header("Location:./suppliers.php");
        
        }
       

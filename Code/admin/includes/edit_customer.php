@@ -55,9 +55,6 @@
           
     $query="UPDATE customers SET firstname= '{$firstname}', lastname= '{$lastname}', phone= '{$phone}', email= '{$email}', address= '{$address}', payment_and_billing='{$payment_and_billing}' WHERE customer_id= {$the_customer_id} ";  
        
-//        $query="UPDATE customers SET firstname= '{$firstname}', lastname= '{$lastname}', phone= '{$phone}', email= '{$email}', address= '{$address}' WHERE customer_id= {$the_customer_id} ";     
-           
-           
         $edit_customer_query=mysqli_query($connection,$query);
            
         confirmQuery($edit_customer_query);

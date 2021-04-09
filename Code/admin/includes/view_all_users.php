@@ -45,20 +45,22 @@
    }
 
 ?>
-<div class="card">
-<div id="bulkOptionContainer" class="col-xs-4">
-    <select class="form-control" name="bulk_options" id="">
+ <form action="" method='post'>
+    <div class="card">
+      <div id="bulkOptionContainer" class="col-xs-4">
+          <select class="form-control" name="bulk_options" id="">
                    
                 <option value="">Select Options</option>
                 <option value="Admin">Admin</option>
                 <option value="User">User</option>
                 <option value="delete">Delete</option>
                      
-    </select>
-    <input type="submit" name="submit" class="btn btn-success" value="Apply">
-</div> 
+          </select>
+        <input type="submit" name="submit" class="btn btn-success" value="Apply">
+       </div> 
     </div>
-<div class="card">
+
+ <div class="card">
  
         <table class="table table-bordered table-hover">
                <div class="col-xs-4">
@@ -72,7 +74,6 @@
                     <tr>
                         <th><input id="SelectAllBoxes" type="CheckBox"></th>
                         <th>Id</th>
-<!--                    <th>Username</th> -->
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>Image</th>
@@ -99,7 +100,6 @@
                     $user_phone=$row['user_phone'];
                     $user_email=$row['user_email'];
                     $user_password=$row['user_password'];
-//                  $user_image=$row['user_image'];
                     $user_role=$row['user_role'];
                    
 
@@ -126,12 +126,11 @@
                     }
 
                     ?>
-
-                                    
+                   
             </tbody>
-        </table>
-
-        </div>
+         </table>
+      </div>
+  </form>
             <?php
 
                  if(isset($_GET['delete'])){
