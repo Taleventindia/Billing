@@ -10,7 +10,7 @@
                         <th>Phone No</th>
                         <th>Email</th>
                         <th>Address</th>
-                        <th>Payment and Billing</th>                
+                        <th>Payment and Billing</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>

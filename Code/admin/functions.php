@@ -70,17 +70,53 @@
         
               if(isset($_GET['delete'])){
                                   
-                $the_cat_id=$_GET['delete'];
+               $the_cat_id=$_GET['delete'];
                                   
-                   $query="DELETE FROM categories WHERE cat_id={$the_cat_id}";
-                  $delete_query=mysqli_query($connection,$query);
-                 header("Location:categories.php");
+                 $query="DELETE FROM categories WHERE cat_id={$the_cat_id}";
+                 $delete_query=mysqli_query($connection,$query);
+                   header("Location:categories.php");
                   
-              }
-                   
-        }
+               }        
+             }
 
-   ?>
+
+        function stock(){
+         global $connection; 
+            
+           $product="SELECT * FROM stock ";
+           $search_product=mysqli_query($connection,$product);
+            
+           while($row=mysqli_fetch_assoc($search_product)){
+           
+            $product_name=$row['product_name'];
+       
+         }
+       }
+
+     ?>
+
+<!--        <select class="form-control"  name="item"id="item"> -->
+                   
+            <?php      
+//                      function stocklist(){  
+//                        $product="SELECT * FROM stock";
+//                        $search_product=mysqli_query($connection,$product);
+//
+//                        confirmQuery($search_product);  
+//
+//                        while($row=mysqli_fetch_assoc($search_product)){
+//                        $product_name=$row['item'];
+//                
+//                        echo "<option value='$product_name'>$product_name</option>";
+//             
+//                         }     
+//                        } 
+//                        
+//                      }
+                ?>   
+<!--         </select>  -->
+
+ 
                 
          
                       

@@ -49,7 +49,7 @@
         if($password == $confirmpassword){
         
         $query = "INSERT INTO users (user_firstname,user_lastname,user_image,user_phone,user_email,user_password,user_confirmpassword,user_role) ";
-        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','profile.jfif','{$user_phone}','{$email}','{$password}','{$confirmpassword}','user') ";
+        $query .= "VALUES ('{$user_firstname}','{$user_lastname}','profile.jfif','{$user_phone}','{$email}','{$password}','{$confirmpassword}','User') ";
              
         $register_user_query = mysqli_query($connection,$query);
             

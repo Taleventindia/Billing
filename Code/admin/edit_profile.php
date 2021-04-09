@@ -121,8 +121,7 @@
   <form action=""method="post" enctype="multipart/form-data" >
     
         <h5 style="color:#1e90ff">  <div class="form-group">
-       <img class='img-circle profile-image' height=110 width=120 src ='../images/<?php echo $user_image; ?>' alt="">
-
+       <img class="rounded-circle" height=110 width=120 src ='../images/<?php echo $_SESSION['image'] ?>' alt="">
             <input type="file" name="image">
        </div>
        

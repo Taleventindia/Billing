@@ -60,13 +60,12 @@
                   <th>Price (with GST)</th>
               </tr>
               
-             
             <form autocomplete="off" action="">
                 <div class="autocomplete" style="width:300px;"> 
-                    
+                 
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
-                      <textarea id="myInput" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name">Item</textarea>
+                      <textarea id="myInput" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item">Item</textarea>
                       </div>
                   </td>
                   
