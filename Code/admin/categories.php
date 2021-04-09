@@ -46,8 +46,8 @@
                               <tr>
                                   <th>ID</th>
                                   <th>Category Title</th>
-                                  <th>Delete</th>
                                   <th>Edit</th>
+                                  <th>Delete</th>
                               </tr>
                           </thead>
                           <tbody>

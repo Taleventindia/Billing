@@ -59,13 +59,14 @@
                   <th>Amount</th>
                   <th>Price (with GST)</th>
               </tr>
-  
+              
+             
             <form autocomplete="off" action="">
                 <div class="autocomplete" style="width:300px;"> 
                     
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
-                      <textarea id="myInput" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="myProduct">Item</textarea>
+                      <textarea id="myInput" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name">Item</textarea>
                       </div>
                   </td>
                   
@@ -127,8 +128,7 @@
                   <td class="total-value balance"><div class="rtot">0.00</div><input type="hidden" id="round_hid" name="rbdf" /></td>
               </tr>
             
-            </table>
-                     <?php echo $product_name;  ?>    
+            </table>   
             
             <div id="terms" style="float:left;width:53%;border:1px solid #000; min-height:156px">
               <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Dt.: 06-Aug-2013</h4>
@@ -156,7 +156,7 @@
               </span>
             </div>
        </div>
-    
+
         <br>
             <center><input type="submit" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
 

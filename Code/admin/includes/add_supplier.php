@@ -2,10 +2,11 @@
      
        if(isset($_POST['create_supplier'])){
            
-            $firstname          =  $_POST['firstname'];
-            $lastname           =  $_POST['lastname'];
-            $phone              =  $_POST['phone'];
-            $email              =  $_POST['email'];
+            $supplier_id        = $_POST['supplier_id'];
+            $firstname          = $_POST['firstname'];
+            $lastname           = $_POST['lastname'];
+            $phone              = $_POST['phone'];
+            $email              = $_POST['email'];
             $company            = $_POST['company'];
             $display_name       = $_POST['display_name'];
             $website            = $_POST['website'];
@@ -17,20 +18,20 @@
             $payment_and_billing= $_POST['payment_and_billing'];
             $attachments        = $_POST['attachments'];
             $pan_no             = $_POST['pan_no'];
-            $adhaar_no          = $_POST['adaar_no'];
+            $adhaar_no          = $_POST['adhaar_no'];
                 
            
   if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($notes) && !empty($tax_info)&& !empty($payment_and_billing) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
           
      $query="INSERT INTO suppliers".
          '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,notes,tax_info,payment_and_billing,attachments,pan_no,adhaar_no)'.   
-    "VALUES('".$firstname ."', '". $lastname."', '". $phone ."','" .$email ."','". $company."','".$display_name."','".website."','".$other."' ,'".$gst_in ."','". $address."','".$notes."','".$tax_info."','".$payment_and_billing."','".$attachments."','".$pan_no."','".$adhaar_no."') ";
+ "VALUES('".$firstname."','".$lastname."','".$phone."','".$email."','".$company."','".$display_name."','".website."','".$other."','".$gst_in."','".$address."','".$notes."','".$tax_info."','".$payment_and_billing."','".$attachments."','".$pan_no."','".$adhaar_no."') ";
                       
         $create_supplier_query=mysqli_query($connection,$query);
            
         confirmQuery($create_supplier_query);
            
-            header("Location:./customers.php");
+            header("Location:./suppliers.php");
        }
         
       else {
@@ -185,7 +186,7 @@
                           <div class="form-group row">
                             <label for="Pan no"  class="col-sm-3 col-form-label">Pan no</label>
                             <div class="col-sm-9">
-                              <input type="text" size="70"  maxlength="70" class="form-control" name="Pan_no"/>
+                              <input type="text" size="70"  maxlength="70" class="form-control" name="pan_no"/>
                             </div>
                           </div>
                         </div> 
