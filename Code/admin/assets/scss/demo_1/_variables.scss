@@ -22,14 +22,14 @@ $sidebar-width-mini: 185px;
 $sidebar-width-icon: 70px;
 $sidebar-light-bg: $white;
 $sidebar-box-shadow: 0 0 3px 1px #a7a3a3;
-$sidebar-gradient-color-1:#5768f3;
-$sidebar-gradient-color-2:#1c45ef;
+$sidebar-gradient-color-1:#707070;
+$sidebar-gradient-color-2:#2C2C29;
 $sidebar-gradient:linear-gradient(to top, $sidebar-gradient-color-1, $sidebar-gradient-color-2);
 $sidebar-light-menu-color: #fff;
 $sidebar-light-submenu-color: $sidebar-light-menu-color;
 $sidebar-light-category-color: rgba(255, 255, 255, 0.7);
 $sidebar-light-menu-icon-color: $sidebar-light-menu-color;
-$sidebar-light-menu-arrow-color: #bfccda;
+$sidebar-light-menu-arrow-color: #BFBFBF;
 $sidebar-profile-name-color: #fff !default;
 $sidebar-profile-designation-color:#fff !default;
 
@@ -49,7 +49,7 @@ $sidebar-nav-category-border-color:rgba(255, 255, 255, 0.13);
 $sidebar-nav-item-dot-color:#fff;
 
 
-$sidebar-dark-bg: #252C46;
+$sidebar-dark-bg: #2C2C29;
 $sidebar-dark-menu-color: #9F9EA3;
 $sidebar-dark-menu-active-bg: lighten($sidebar-dark-bg, 5%);
 $sidebar-dark-menu-active-color: $white;

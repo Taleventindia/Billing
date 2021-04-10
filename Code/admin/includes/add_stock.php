@@ -139,9 +139,9 @@
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
+                            <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
                             <div class="col-sm-9">
-                              <input type="date" class="form-control" name="expiry_date" />
+                              <input type="date" class="form-control" name="date_arrival"/>
                             </div>
                           </div>
                         </div>
@@ -149,9 +149,9 @@
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="date_arrival">Date arrival</label>
+                            <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
                             <div class="col-sm-9">
-                              <input type="date" class="form-control" name="date_arrival"/>
+                              <input type="date" class="form-control" name="expiry_date" />
                             </div>
                           </div>
                         </div>

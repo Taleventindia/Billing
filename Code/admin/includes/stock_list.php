@@ -3,6 +3,7 @@
     <div class="col-md-6">
     <div class="form-group">   
            <h6>Category</h6>
+                        
             <select class="form-control"  name="product_category"id="product_category"> 
                    
             <?php      
@@ -30,7 +31,7 @@
                         echo "<option selected value='$cat'>$cat</option>";
                          
                  
-                ?>   
+                ?> 
          </select>
        
         </div>    
@@ -43,11 +44,13 @@
                                 <span class="glyphicon glyphicon-search">Search</span>
                         </button>
                         </span>
-                        </div> 
+                        </div>
+                 <?php   echo "<td><a class='btn btn-primary' href='inventory.php?source=stock_list.php'>Clear</a></td>";   ?> 
                  </form> 
               </div>
         </div>
     </div>
+
  
      <div class="card">
         <table  cellpadding="50" cellspacing="5" class="table table-bordered table-hover">
@@ -152,7 +155,7 @@
                     echo "<td>$product_name</td>";
                     echo "<td>$product_category</td>";
                     echo "<td>$product_type</td>";
-                    echo "<td>$product_cost</td>";
+                    echo "<td>$product_cost INR</td>";
                     echo "<td>$quantity</td>";
                     echo "<td>$supplier</td>";
                     echo "<td>$onhand_qty</td>";
