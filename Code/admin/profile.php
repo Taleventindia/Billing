@@ -1,38 +1,27 @@
  <?php include "includes/admin_header.php"; ?>
-
-<style type="text/css">
-    
-    .container
-        {
-            width:1500px;  
-            height:810px;
-            margin: 0 auto;
-            background-color:darkgray;
-            
-        }
-    
-    </style>
-
-     <div id="wrapper">
-        <div id="page-wrapper">
-
-            <div class="container-fluid">                    
-            
+<div class="main-panel">
+<div class="card">
+    <div class="card-body">
+        <div class=content-wrapper>
                 <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-             
-                        
-    <div class="container">
-        
-           <form action="" method="post">
-                 <br>
-                <button class="btn btn-default" style="float: right; width:70px; background-color: #adff2f;" name="submit"><a href="edit_profile.php">Edit</a></button>
-                
-            </form>
-        
-                <div class="wrapper">
-                 
+                        <h3 class="page-header" style="color:#8a2be2">
+                            Profile
+                            <small>
+                        <h4  style="color:#1e90ff"> 
+<?php 
+                             if(isset($_SESSION['firstname'])){ 
+                             echo $_SESSION['firstname'];   
+                             } 
+                    ?>
+                                </h4></small>
+                        </h3>
+         
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-default" style="float: left; width:70px; background-color: #adff2f;" name="submit"><a href="edit_profile.php">Edit</a></button>
+                            </div>
+                        </div>  
+         
                 <?php
                     
                     if(isset($_SESSION['firstname'])){
@@ -43,12 +32,12 @@
      $select_user_profile = mysqli_query($connection,$query);
                         
              ?>
-              <br>  
-              <br>  
-              <br>  
-              <br>  
-            <h2 style="text-align: center;">My Profile</h2>   
-                    
+                    <div class="row">
+                        <div class="col-md-6">
+                              <br>  
+                                <h3 style="text-align: centre;">My Profile</h3>   
+                          </div>
+                        </div>                
         <?php            
                         
          while($row=mysqli_fetch_array($select_user_profile)){
@@ -67,75 +56,68 @@
              }
 
       ?>
-                    
-       <div style='text-align: center'>          
-           <img class="rounded-circle" height=200 width=210 src ='../images/<?php echo $_SESSION['image'] ?>' alt="">           
-          </div>          
-          <div  style="text-align: center;">
-                    
-                 <h3>  
-                     <?php echo $_SESSION['firstname']; ?>
-                 </h3>       
-            </div>      
-                <?php
-                  echo "<b>";   
-                  echo "<h2><table class='table table-bordered'>";
-                    echo "<tr>";
-                        echo "<td>";
-                          echo "<b> First Name: </b>";
-                        echo "</td>";
-                        echo "<td>";
-                          echo $user_firstname;
-                        echo "</td>";
-                    echo "</tr>";
-                    
-                    echo "<tr>";
-                        echo "<td>";
-                          echo "<b> Last Name: </b>";
-                        echo "</td>";
-                        echo "<td>";
-                          echo $user_lastname;
-                        echo "</td>";
-                    echo "</tr>";
-                    
-                    echo "<tr>";
-                        echo "<td>";
-                            echo "<b> E-mail: </b>";
-                        echo "</td>";
-                        echo "<td>";
-                            echo $email;
-                        echo "</td>";
-                    echo "</tr>";
+            <div class=content-wrapper>
+                    <div class="row">
+                        <div class="col-md-6"> 
+                        <img class="rounded-circle" height=150 width=150 src ='../images/<?php echo $_SESSION['image'] ?>' alt=""> </div>          
+                        </div>
+                    </div>  
+                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="title">First Name:</label>
+                            <div class="col-sm-9">
+                              <label class="col-sm-3 col-form-label" for="title"><?php echo $user_firstname ?></label>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="Product_type">Last Name:</label>
+                            <div class="col-sm-9">
+                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_lastname ?></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                    echo "<tr>";
-                      echo "<td>";
-                        echo "<b> Phone no: </b>";
-                      echo "</td>";
-                      echo "<td>";
-                        echo $user_phone;
-                      echo "</td>";
-                    echo "</tr>";
-               
-                    echo "<tr>";
-                      echo "<td>";
-                        echo "<b> Role: </b>";
-                      echo "</td>";
-                      echo "<td>";
-                        echo $user_role;
-                      echo "</td>";
-                    echo "</tr>";
-                   
-                  echo "</table></h2>";   
-                   echo "</b>"; 
-                ?>
+                        <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="Product_type">E-mail:</label>
+                            <div class="col-sm-9">
+                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_lastname ?></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="Product_type">Phone no:</label>
+                            <div class="col-sm-9">
+                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_phone ?></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="Product_type"> Role:</label>
+                            <div class="col-sm-9">
+                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_role ?></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>   
+     </div>  
 
-            </div>    
-        </div>           
-        </div>
-      </div>   
-    </div>
-  </div>
-</div>   
     <?php include "includes/admin_footer.php"; ?>
                     
                     

@@ -93,14 +93,11 @@
        }
 
     ?>
-   
-   
-    <div id="wrapper">
 
-        <div id="page-wrapper">
-
-            <div class="container-fluid">                    
-            
+<div class="main-panel">
+    <div class="card">
+        <div class="card-body">
+            <div class=content-wrapper>
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -120,60 +117,86 @@
                                         
   <form action=""method="post" enctype="multipart/form-data" >
     
-        <h5 style="color:#1e90ff">  <div class="form-group">
+        <h5 style="color:#1e90ff;align-text:centre;">  <div class="form-group">
        <img class="rounded-circle" height=110 width=120 src ='../images/<?php echo $_SESSION['image'] ?>' alt="">
             <input type="file" name="image">
        </div>
-       
-       <div class="input-group">
-            <label for="title">Firstname</label>
-            <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" name="user_firstname">
-        </div>
-       <br>
-        
-       <div class="input-group">
-            <label for="title">Lastname</label>
-            <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
-        </div>
-       <br>
-       
-       <div class="input-group">
-            <label for="user_email">E-mail</label>
-           <input type="email" value="<?php echo $email; ?>" class="form-control" name="user_email">
-            </div></h5>
-   
-        <h5 style="color:#1e90ff"> <div class="input-group">
-            <label for="password">Password</label>
-           <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
-            </div></h5>
-          <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
-          <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
-       
-       <h5 style="color:#1e90ff"> <div class="input-group">
-            <label for="password">Confirm</label>
-           <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
-           </div></h5>
-          <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
-      
-        <h5 style="color:#1e90ff">  <div class="input-group">
-            <label for="phone">phone no</label>
-           <input type="phone " value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="User_firstname"> Firstname</label>
+                            <div class="col-sm-9">
+                               <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" name="user_firstname">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="user_lastname"> Lastname</label>
+                            <div class="col-sm-9">
+                               <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="user_email">E-mail</label>
+                            <div class="col-sm-9">
+                               <input type="text" value="<?php echo $email; ?>" class="form-control" name="user_firstname">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="phone"> phone no</label>
+                            <div class="col-sm-9">
+                               <input type="phone" value="<?php echo $user_phone; ?>" class="form-control" name="phone">
+                            </div>
+                          </div>
+                      </div>
             </div>
-       <br>
-       <div class="input-group">
-            <label for="role">Role </label>
-           <input type="role " value="<?php echo 
-        $user_role; ?>" class="form-control" name="user_role">
-        </div>
-        <br>
-        
-<!--
-        <div class="input-group">
-            <label for="post_content">Password</label>
-           <input type="password" value="<?php //echo $user_password; ?>" class="form-control" name="user_password">
-        </div>
-        
--->
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="user_password"> Password</label>
+                            <div class="col-sm-9">
+                               <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
+                                <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
+                                <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="password"> Confirm</label>
+                            <div class="col-sm-9">
+                               <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
+                                    <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="phone"> phone no</label>
+                            <div class="col-sm-9">
+                               <input type="phone" value="<?php echo $user_phone; ?>" class="form-control" name="phone">
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="role">Role</label>
+                            <div class="col-sm-9">
+                               <input type="role" value="<?php echo $user_role; ?>" class="form-control" name="user_role">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
        <div class="input-group">
            <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile">
             </div></h5>
