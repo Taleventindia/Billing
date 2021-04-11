@@ -19,17 +19,23 @@
 		$invnum = $sql->fetchColumn();
 		$invnum+=1; 
 ?>
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+	<script type='text/javascript' src='js/example.js'></script>
+	<script type="text/javascript" src="js/inwords.js"></script>
 
 <?php include "includes/admin_header.php"; ?>
 <div class="main-panel">
     <div class="card">
-<div class="content-wrapper">
+<div class="card-body">
     <h4>Create Invoice</h4>
-        <div style="border:1px solid #000">
+    <div style="clear:both"></div>
+            <form action="bill.php" method="post">
+                 <div style="border:1px solid #000">
             <div id="customer">
                 Consignee,<br />
                 <textarea name="custname" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
-    
                 <table id="meta">
                     <tr>
                         <td class="meta-head">Invoice #</td>
@@ -38,17 +44,15 @@
                         </td>
                     </tr>
                     <tr>
-    
                         <td class="meta-head">Date</td>
-                        <td><textarea name="invdate" id="date">December 15, 2009</textarea></td>
+                        <td><textarea name="invdate" id="date"><?php echo date("d/m/Y");?></textarea></td>
                     </tr>
     
                 </table>
+            </div>
             
             </div>
-   
             <table id="items">
-            
               <tr>
                   <th>Item</th>
                   <th>Description</th>
@@ -59,9 +63,6 @@
                   <th>Amount</th>
                   <th>Price (with GST)</th>
               </tr>
-              
-            <form autocomplete="off" action="">
-                <div class="autocomplete" style="width:300px;"> 
                  
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
@@ -79,8 +80,6 @@
                   <td><span class="amount">0.00</span><input type="hidden" class="pr_amt"/></td>
                   <td><span class="price">0.00</span><input type="hidden" class="pr_hid" name="price[]" /></td>
               </tr>       
-            </div>  
-            </form>
 
               <tr id="hiderow">
                 <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
@@ -127,10 +126,11 @@
                   <td class="total-value balance"><div class="rtot">0.00</div><input type="hidden" id="round_hid" name="rbdf" /></td>
               </tr>
             
-            </table>   
-            
-            <div id="terms" style="float:left;width:53%;border:1px solid #000; min-height:156px">
-              <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Dt.: 06-Aug-2013</h4>
+            </table> 
+                
+                
+            <div id="terms" style="float:left;width:54%;border:1px solid #000; min-height:156px">
+              <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Date.: <?php echo date("d/m/Y");?></h4>
               <h5>Terms</h5>
               <div>
               2% CD if payment within 7 days Strictly.<br />
@@ -154,11 +154,12 @@
               &emsp;&nbsp;Authorized Signatory
               </span>
             </div>
-       </div>
-
-        <br>
+             
+            <br>
             <center><input type="submit" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
-
+            </form>
+    </div>
+    </div>
        
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -167,6 +168,4 @@
 
                <script type="text/javascript" src="js/loader.js"></script>        
             </div>
-        </div>
-    </div>
     <?php include "includes/admin_footer.php"; ?>

@@ -87,11 +87,9 @@ if(isset($_POST['saveinv']))
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
 <?php include "includes/admin_header.php"; ?>
-        <div id="wrapper">
-                <!-- Navigation -->
-                <?php include "includes/admin_navigation.php"; ?>
-                    <div id="page-wrapper">
-                        <div class="container-fluid">
+<div class="main-panel">
+    <div class="card">
+<div class="card-body">
 
 		
 		<h3>RETAIL INVOICE</h3>

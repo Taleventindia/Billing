@@ -1,6 +1,7 @@
+<div class="main-Panel">
 <div class="card">
-<div class="main-page">
-          <div class="content-wrapper">
+          <div class="card-body">
+              
 <h4 class="page-header">
         Add New Stock
         </h4>
@@ -38,7 +39,7 @@
        }
       
 
-   ?>  
+   ?> 
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">

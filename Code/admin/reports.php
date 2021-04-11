@@ -20,7 +20,7 @@ error_reporting(0);
 <?php include "includes/admin_header.php"; ?>
 <div class="main-panel">
 <div class="card">
-<div class="content-wrapper">   
+<div class="card-body">   
     <h3 class="page-header">
         Invoice
     </h3>
