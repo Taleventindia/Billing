@@ -48,10 +48,11 @@ table td, table th { border: 1px solid black; padding: 5px; }
 
 #terms { text-align: center; margin: 20px 0 0 0; }
 #terms h5 { text-transform: uppercase; font: 14px Arial, Helvetica, sans-serif; letter-spacing: 10px; border-bottom: 1px solid black; padding: 8px 0 8px 0; margin: 0 0 8px 0; font-weight:bold;}
+
 #terms textarea { width: 100%; text-align: center;}
 
-textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#EEFF88; }
-
+textarea:hover, textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover
+{background:#ebecfa; }
 .delete-wpr { position: relative; }
 .delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: 32px; left: -3px; font-family: Verdana; font-size: 12px; }
 

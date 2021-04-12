@@ -11,6 +11,7 @@
                         <th>Email</th>
                         <th>Address</th>
                         <th>Payment and Billing</th>
+                        <th>Comments</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -33,6 +34,7 @@
                     $email =  $row['email'];
                     $address =  $row['address'];
                     $payment_and_billing =  $row['payment_and_billing'];
+                    $comments =  $row['Notes'];
                  
                     echo "<tr>";
                  
@@ -43,6 +45,7 @@
                     echo "<td>$email</td>";
                     echo "<td>$address</td>";
                     echo "<td>$payment_and_billing</td>";
+                    echo "<td>$comments</td>";
                  
              
                     echo "<td><a class='btn btn-primary' href='customers.php?source=edit_customer&edit_customer={$customer_id}'>Edit</a></td>";
