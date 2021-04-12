@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
     <div class="form-group">   
            <h6>Category</h6>
             <select class="form-control"  name="product_category"id="product_category"> 
@@ -17,7 +17,7 @@
                   
                         if($cat_title == $product_category) {
                             
-                        echo "<option selected value='$cat'>$cat_title</option>";
+                        echo "<option selected value='$cat_title'>$cat_title</option>";
                        
                         }else{
                             
@@ -48,7 +48,7 @@
               </div>
         </div>
     </div>
- 
+    
      <div class="card">
         <table  cellpadding="50" cellspacing="5" class="table table-bordered table-hover">
               <thead>
@@ -84,7 +84,7 @@
                 }
                 $count=mysqli_num_rows($search_product);
                 if($count == 0){
-                echo "<h2>NO RESULT</h2>";
+                echo "<center><h3 style='color:#ffa500'>NO Stock Available</h3><center>";
                     
             } 
             else{
@@ -104,7 +104,8 @@
                     $date_arrival=$row['date_arrival'];
                  
                     echo "<tr>";
-               
+                 
+                    echo "<td>$stock_id</td>";
                     echo "<td>$barcode_no</td>";
                     echo "<td>$product_name</td>";
                     echo "<td>$product_category</td>";
@@ -175,7 +176,8 @@
            
  </table>
           <?php echo $cat;?>
- </div>          
+ </div>  
+
             <?php
 
                if(isset($_GET['delete'])){

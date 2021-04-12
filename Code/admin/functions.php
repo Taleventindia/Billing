@@ -76,50 +76,31 @@
                  $delete_query=mysqli_query($connection,$query);
                    header("Location:categories.php");
                   
-               }        
+                }        
              }
 
-
-        function stock(){
-         global $connection; 
-            
-           $product="SELECT * FROM stock ";
-           $search_product=mysqli_query($connection,$product);
-            
-           while($row=mysqli_fetch_assoc($search_product)){
-           
-            $product_name=$row['product_name'];
-       
-         }
-       }
-
-     ?>
-
-<!--        <select class="form-control"  name="item"id="item"> -->
-                   
+       ?>
+      
             <?php      
-//                      function stocklist(){  
-//                         global $connection; 
-//                          
-//                        $product="SELECT * FROM stock";
-//                        $search_product=mysqli_query($connection,$product);
-//
-//                        confirmQuery($search_product);  
-//
-//                        while($row=mysqli_fetch_assoc($search_product)){
-//                        $product_name=$row['product_name'];
-//                
-//                        echo "<option value='$product_name'>$product_name</option>";
-//             
-//                         }     
-//                        } 
-//                        
-//                      }
-                ?>   
-<!--         </select>  -->
+                      function stocklist(){  
+                         global $connection; 
+                           
+                        $product="SELECT * FROM stock";
+                        $search_product=mysqli_query($connection,$product);
 
- 
+                        confirmQuery($search_product);  
+
+                        while($row=mysqli_fetch_assoc($search_product)){
+                        $product_name=$row['product_name'];
                 
-         
+                        echo "<option value='$product_name'>$product_name</option>";
+             
+                      }         
+                    } 
+                     
+                ?>   
+
+  
+  
                       
                            

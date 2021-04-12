@@ -39,32 +39,33 @@
       
 
    ?>  
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label for="category">Product Category</label>
-                        <select class="form-control" name="product_category"id="product_category"> 
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label for="category">Product Category</label>
+                <select class="form-control" name="product_category"id="product_category"> 
 
-                        <?php      
+                    <?php      
 
-                            $query="SELECT * FROM categories";
-                            $select_categories=mysqli_query($connection,$query);
+                        $query="SELECT * FROM categories";
+                        $select_categories=mysqli_query($connection,$query);
 
-                                confirmQuery($select_categories);  
+                            confirmQuery($select_categories);  
 
-                            while($row=mysqli_fetch_assoc($select_categories)){
+                        while($row=mysqli_fetch_assoc($select_categories)){
 
-                            $cat_title=$row['cat_title'];               
+                        $cat_title=$row['cat_title'];               
 
-                            echo "<option value='$cat_title'>$cat_title</option>";
-                            } 
+                        echo "<option value='$cat_title'>$cat_title</option>";
+                        } 
 
-                          ?>   
-                            </select>
-                        </div>
-                    </div>
-                </div>             
-                <form class="form-sample">
+                      ?>   
+                    </select>
+                </div>
+            </div>
+        </div>   
+              
+        <form action="" method="post" enctype="multipart/form-data" class="form-sample">
                      <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
@@ -160,8 +161,7 @@
              <div class="col-sm-9">
             <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
             </div>
-       </form>
+        </form>       
       </div>
+   </div>
 </div>
-</div>
-    
