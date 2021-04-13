@@ -1,61 +1,83 @@
-$(document).ready(function () {
-     
-   // EDITOR CKEDITOR
-     
-    ClassicEditor
-        .create(document.querySelector('#body'))
-        .catch(error = > {
-            console.error( error );
-        } );
-             
-  
-   //REST OF THE CODE    
+$( function() {
 
-     
-$('#SelectAllBoxes').click(function (event) {
+ // Single Select
+ $( "#autocomplete" ).autocomplete({
+  source: function( request, response ) {
+   // Fetch data
+   $.ajax({
+    url: "fetchdata.php",
+    type: 'post',
+    dataType: "json",
+    data: {
+     search: request.term
+    },
+    success: function( data ) {
+     response( data );
+    }
+   });
+  },
+  select: function (event, ui) {
+     // Set selection
+     $('#autocomplete').val(ui.item.label); // display the selected text
+//     $('#selectuser_id').val(ui.item.value); // save selected id to input
+     return false;
+  },
+  focus: function(event, ui){
+     $( "#autocomplete" ).val( ui.item.label );
+//     $( "#selectuser_id" ).val( ui.item.value );
+     return false;
+   },
+ });
 
-if(this.checked){
+ // Multiple select
+ $( "#multi_autocomplete" ).autocomplete({
+    source: function( request, response ) {
+                
+      var searchText = extractLast(request.term);
+      $.ajax({
+         url: "fetchdata.php",
+         type: 'post',
+         dataType: "json",
+         data: {
+           search: searchText
+         },
+         success: function( data ) {
+           response( data );
+         }
+       });
+    },
+    select: function( event, ui ) {
+        var terms = split( $('#multi_autocomplete').val() );
+                
+        terms.pop();
+                
+        terms.push( ui.item.label );
+                
+        terms.push( "" );
+        $('#multi_autocomplete').val(terms.join( ", " ));
 
-$('.CheckBoxes').each(function () {
+        // Id
+//        terms = split( $('#selectuser_ids').val() );
+                
+        terms.pop();
+                
+        terms.push( ui.item.value );
+                
+//        terms.push( "" );
+//        $('#selectuser_ids').val(terms.join( ", " ));
 
-    $this.checked = true;
+        return false;
+     }
+           
+ });
+
 });
-
-} else {
-
-$('.CheckBoxes').each(function () {
-
-   $this.checked = false;
-    
-});
-    
+function split( val ) {
+   return val.split( /,\s*/ );
 }
-
-});
-    
-var div_box = "<div id='load-screen'><div id='loading'></div></div>";
-    
-$("body").prepend(div_box);
-    
-$('#load-screen').delay(700).fadeOut(600, function(){
-   $(this).remove(); 
-        
-});
-   
-
-});
-
-function loadUsersOnline() {
-    
-    $.get("functions.php?onlineusers=result", function (data) {
-        
-        $(".UsersOnline").text(data);
-        
-    });
-    
+function extractLast( term ) {
+   return split( term ).pop();
 }
-
-loadUsersOnline();
 
 
 
