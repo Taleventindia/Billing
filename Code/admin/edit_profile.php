@@ -11,35 +11,30 @@
 
          while($row=mysqli_fetch_array($select_user_profile)){
 
-                $user_id=$row['user_id'];
-                $email=$row['user_email'];
-                $user_password=$row['user_password'];
-                $user_confirmpassword=$row['user_confirmpassword'];
-                $user_phone=$row['user_phone'];
-                $user_firstname=$row['user_firstname'];
-                $user_lastname=$row['user_lastname'];
-                $user_image=$row['user_image'];
-                $user_role=$row['user_role'];
+                $user_id =  $row['user_id'];
+                $user_firstname =  $row['user_firstname'];
+                $user_lastname =  $row['user_lastname'];
+                $user_image =  $row['user_image'];
+                $user_phone =  $row['user_phone'];
+                $email =  $row['user_email'];
+                $user_password =  $row['user_password'];
+                $user_confirmpassword =  $row['user_confirmpassword'];
+                $user_role =  $row['user_role'];
       
              }
            }
 
-      ?>
-	
-  <?php
-     
       if(isset($_POST['update_profile'])){
            
             $user_firstname =  $_POST['user_firstname'];
             $user_lastname =  $_POST['user_lastname'];
-            $user_role =  $_POST['user_role'];
             $user_image = $_FILES['image']['name'];
             $user_image_tempname = $_FILES['image']['tmp_name'];
             $email =  $_POST['user_email'];
             $user_phone = $_POST['user_phone'];
             $user_password =  $_POST['user_password'];
             $user_confirmpassword =  $_POST['user_confirmpassword'];
-
+            $user_role =  $_POST['user_role'];
           
         move_uploaded_file($user_image_tempname,"../images/$user_image");
         
@@ -102,22 +97,22 @@
                 <div class="row">
                     <div class="col-lg-12">
                     
-                        <h3 class="page-header" style="color:#8a2be2">
+                        <h3 class="page-header" style="color:black">
                             Profile
                             <small>
-                        <h4  style="color:#1e90ff"> 
+                        <h3  style="color:#1e90ff"> 
 <?php 
                              if(isset($_SESSION['firstname'])){ 
                              echo $_SESSION['firstname'];   
                              } 
                     ?>
-                                </h4></small>
+                                </h3></small>
                         </h3>
                        
                                         
-  <form action=""method="post" enctype="multipart/form-data" >
+   <form action="" method="post" enctype="multipart/form-data">
     
-        <h5 style="color:#1e90ff;align-text:centre;">  <div class="form-group">
+      <div class="form-group">
        <img class="rounded-circle" height=110 width=120 src ='../images/<?php echo $_SESSION['image'] ?>' alt="">
             <input type="file" name="image">
        </div>
@@ -156,7 +151,7 @@
                             </div>
                           </div>
                       </div>
-            </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
@@ -179,16 +174,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="phone"> phone no</label>
-                            <div class="col-sm-9">
-                               <input type="phone" value="<?php echo $user_phone; ?>" class="form-control" name="phone">
-                            </div>
-                          </div>
-                        </div>
-                    
-                        <div class="col-md-6">
+                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label" for="role">Role</label>
                             <div class="col-sm-9">
@@ -198,8 +184,8 @@
                         </div>
                     </div>
        <div class="input-group">
-           <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile">
-            </div></h5>
+          <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile"> 
+        </div>
         
        </form>
        

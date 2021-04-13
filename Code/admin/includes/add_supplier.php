@@ -13,19 +13,22 @@
                 $other =  $_POST['other'];
                 $gst_in =  $_POST['gst_in'];
                 $address =  $_POST['address'];
-                $notes =  $_POST['notes'];
+                $comments =  $_POST['comments'];
                 $tax_info =  $_POST['tax_info'];
-                $payment_and_billing =  $_POST['payment_and_billing'];
+                $amount_paid =  $_POST['amount_paid'];
+                $amount_pending =  $_POST['amount_pending'];
+                $payment_mode =  $_POST['payment_mode'];
+                $payment_status =  $_POST['payment_status'];
                 $attachments =  $_POST['attachments'];
                 $pan_no =  $_POST['pan_no'];
                 $adhaar_no =  $_POST['adhaar_no'];
 
-   if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($notes) && !empty($tax_info)&& !empty($payment_and_billing) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
+    if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($comments) && !empty($tax_info)&& !empty($amount_paid) && !empty($amount_pending) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
   
            
      $query="INSERT INTO suppliers".
-         '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,notes,tax_info,payment_and_billing,attachments,pan_no,adhaar_no)'.   
-    "VALUES('". $firstname ."', '". $lastname ."', '". $phone ."','". $email ."','". $company ."','". $display_name ."','". $website ."','". $other ."','". $gst_in ."','". $address ."','". $notes ."','". $tax_info ."','". $payment_and_billing ."','". $attachments ."','". $pan_no ."','". $adhaar_no ."') ";
+         '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,comments,tax_info,amount_paid,amount_pending,payment_mode,payment_status,attachments,pan_no,adhaar_no)'.   
+    "VALUES('". $firstname ."', '". $lastname ."', '". $phone ."','". $email ."','". $company ."','". $display_name ."','". $website ."','". $other ."','". $gst_in ."','". $address ."','". $comments ."','". $tax_info ."','". $amount_paid ."','". $amount_pending ."','". none ."','". none ."','". $attachments ."','". $pan_no ."','". $adhaar_no ."') ";
                       
         $create_supplier_query=mysqli_query($connection,$query);
            
@@ -149,9 +152,9 @@
                 <div class="row">
                 <div class="col-md-6">
                   <div class="form-group row">
-                    <label for="notes" class="col-sm-3 col-form-label">Notes</label>
+                    <label for="comments" class="col-sm-3 col-form-label">Comments</label>
                     <div class="col-sm-9">
-                      <textarea class="form-control"  name="notes" id="body" cols="25" rows="4"></textarea>
+                      <textarea class="form-control"  name="comments" id="body" cols="25" rows="4"></textarea>
                     </div>
                   </div>
                 </div> 
@@ -167,13 +170,23 @@
                 <div class="row">
                 <div class="col-md-6">
                   <div class="form-group row">
-                    <label for="payment and billing" class="col-sm-3 col-form-label">Payment</label>
+                    <label for="amount" class="col-sm-3 col-form-label">Amount Paid</label>
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" name="payment_and_billing"/>
+                      <input type="text" class="form-control" name="amount_paid"/>
                     </div>
                   </div>
                 </div> 
                 <div class="col-md-6">
+                  <div class="form-group row">
+                    <label for="amount" class="col-sm-3 col-form-label">Amount Pending</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="amount_pending"/>
+                    </div>
+                  </div>
+                </div> 
+             </div>
+               <div class="row">
+                 <div class="col-md-6">
                   <div class="form-group row">
                     <label for="attachments" class="col-sm-3 col-form-label">Attachments</label>
                     <div class="col-sm-9">
@@ -181,8 +194,6 @@
                     </div>
                   </div>
                 </div>
-            </div>
-                <div class="row">
                 <div class="col-md-6">
                   <div class="form-group row">
                     <label for="Pan no"  class="col-sm-3 col-form-label">Pan no</label>

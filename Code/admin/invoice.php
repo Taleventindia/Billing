@@ -1,5 +1,4 @@
-<?php include "../includes/db.php"; ?>
-
+<?php include "../includes/db.php"; ?>  
 <?php
     error_reporting(0);
 		try 
@@ -19,6 +18,7 @@
 		$invnum = $sql->fetchColumn();
 		$invnum+=1; 
 ?>
+
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
@@ -132,16 +132,20 @@ input[type=submit] {
                   <th>Amount</th>
                   <th>Price (with GST)</th>
               </tr>
+                
+                
+            <form autocomplete="off" action="">
+             <div class="autocomplete" style="width:300px;">
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
                       <textarea id="myInput" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea>  
-                                       
+                      </div>             
 <!--
                       <select class="form-control" name="item[]"id="item[]">
                              <?php //stocklist(); ?>
                           </select>
 -->
-                      </div>
+                     
                   </td>
                   
                  <td class="description">
@@ -154,9 +158,11 @@ input[type=submit] {
                   <td><span class="amount">0.00</span><input type="hidden" class="pr_amt"/></td>
                   <td><span class="price">0.00</span><input type="hidden" class="pr_hid" name="price[]" /></td>
               </tr>       
+                    </div>
+                </form>
+   
+                
 
-                
-                
     <script>
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
@@ -253,38 +259,37 @@ function autocomplete(inp, arr) {
   document.addEventListener("click", function (e) {
       closeAllLists(e.target);
   });
+   
 }
-
-
+        
 // var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","America","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
-
-/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
  
+var $jsonArray=["$prod"]; 
+        
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+        
+   autocomplete(document.getElementById("myInput"), $jsonArray);
+</script>
+                
+<?php $jsonArray = array(); ?>
+<?php $prod = array(); ?>
 <?php
       
-        $product="SELECT * FROM stock";
+        $product="SELECT * FROM stock ";
         $search_product=mysqli_query($connection,$product);
 
         confirmQuery($search_product);  
 
         while($row=mysqli_fetch_assoc($search_product)){
-        $product_name=$row['product_name'];
+        $prod[]= $row['product_name'];
+        $jsonArray = $prod; 
+            
+        }       
+        echo '<div id="json">' . json_encode($jsonArray) . '</div>'; 
 
-        echo "<option value='$product_name'>$product_name</option>"; 
-        echo $product_name; 
-            
-            
-        }
-  
-?>
-        
-autocomplete(document.getElementById("myInput"), $product);
-        
-</script>
-            
                 
+?>    
              
-                
               <tr id="hiderow">
                 <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
               </tr>    

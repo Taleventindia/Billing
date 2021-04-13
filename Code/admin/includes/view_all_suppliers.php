@@ -9,7 +9,10 @@
                         <th>Phone No</th>
                         <th>Email</th>
                         <th>Address</th>
-                        <th>Payment and Billing</th>
+                        <th>Amount paid</th>
+                        <th>Amount pending</th>
+                        <th>Payment Mode</th>
+                        <th>Payment status</th>
                         <th>Comments</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -32,8 +35,11 @@
                     $phone =  $row['phone'];
                     $email =  $row['email'];
                     $address =  $row['address'];
-                    $payment_and_billing =  $row['payment_and_billing'];
-                    $comments =  $row['Notes'];
+                    $amount_paid =  $row['amount_paid'];
+                    $amount_pending =  $row['amount_pending'];
+                    $payment_mode =  $row['payment_mode'];
+                    $payment_status =  $row['payment_status'];
+                    $comments =  $row['comments'];
                  
                     echo "<tr>";
                  
@@ -43,7 +49,10 @@
                     echo "<td>$phone</td>";
                     echo "<td>$email</td>";
                     echo "<td>$address</td>";
-                    echo "<td>$payment_and_billing</td>";
+                    echo "<td>$amount_paid</td>";
+                    echo "<td>$amount_pending</td>";
+                    echo "<td>$payment_mode</td>";
+                    echo "<td>$payment_status</td>";
                     echo "<td>$comments</td>";
                  
              

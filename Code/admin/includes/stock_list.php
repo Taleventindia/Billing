@@ -18,17 +18,19 @@
                   
                         if($cat_title == $product_category) {
                             
+                           
                         echo "<option selected value='$cat_title'>$cat_title</option>";
                        
-                        }else{
-                            
+                        }else{   
                         echo "<option value='$cat_title'>$cat_title</option>";
              
-                         }     
-                        } 
-                       
+                         }
+            
+                        }
                         $cat=$_POST['product_category'];
-                        echo "<option selected value='$cat'>$cat</option>";
+                        echo "<option selected value='$cat'>$cat</option>"; 
+       
+                       
                          
                  
                 ?> 
@@ -45,6 +47,7 @@
                         </button>
                         </span>
                         </div>
+                         <br>
                  <?php   echo "<td><a class='btn btn-primary' href='inventory.php?source=stock_list.php'>Clear</a></td>";   ?> 
                  </form> 
               </div>
@@ -77,7 +80,7 @@
             if (isset($_POST['submit'])){
                 $search=$_POST['search'];
                
-              $product="SELECT * FROM stock WHERE product_name LIKE '%$search%' AND product_category='$cat' ";  
+              $product="SELECT * FROM stock WHERE product_name LIKE '%$search%' ";  
               $search_product=mysqli_query($connection, $product); 
                 
                  if(!$search_product){

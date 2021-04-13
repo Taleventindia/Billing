@@ -4,16 +4,16 @@
     <div class="card-body">
         <div class=content-wrapper>
                 <!-- Page Heading -->
-                        <h3 class="page-header" style="color:#8a2be2">
-                            Profile
+                        <h3 class="page-header" style="color:black">
+                            Profile 
                             <small>
-                        <h4  style="color:#1e90ff"> 
+                        <h3  style="color:#1e90ff"> 
 <?php 
                              if(isset($_SESSION['firstname'])){ 
                              echo $_SESSION['firstname'];   
                              } 
                     ?>
-                                </h4></small>
+                                </h3> </small>
                         </h3>
          
                     <div class="row">
@@ -89,7 +89,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label" for="Product_type">E-mail:</label>
                             <div class="col-sm-9">
-                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_lastname ?></label>
+                              <label class="col-sm-6 col-form-label" for="Product_type"><?php echo $email ?></label>
                             </div>
                           </div>
                         </div>
