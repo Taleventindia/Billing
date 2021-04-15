@@ -5,7 +5,7 @@ $( function() {
   source: function( request, response ) {
    // Fetch data
    $.ajax({
-    url: "fetchdata.php",
+    url: "invoice.php",
     type: 'post',
     dataType: "json",
     data: {
@@ -35,7 +35,7 @@ $( function() {
                 
       var searchText = extractLast(request.term);
       $.ajax({
-         url: "fetchdata.php",
+         url: "invoice.php",
          type: 'post',
          dataType: "json",
          data: {
