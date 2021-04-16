@@ -1,20 +1,21 @@
 
 <?php
-error_reporting(0);
-		try 
-		{
-				 // connect to SQLite from PDO database
-				 $dbh = new PDO("sqlite:omelec.db");
+//error_reporting(0);
+//		try 
+//		{
+//				 // connect to SQLite from PDO database
+//				 $dbh = new PDO("sqlite:omelec.db");
+//             $connection=mysqli_connect('localhost','root','root','billing','3307');
+//		}
+//		catch(PDOException $e)
+//		{
+//				 echo $e->getMessage();//this getMessage throws an exception if any 
+//			  
+//		}
+//		
+//	
+//		$sql = $connection->query("select * from register ORDER BY invnum DESC");
 
-		}
-		catch(PDOException $e)
-		{
-				 echo $e->getMessage();//this getMessage throws an exception if any 
-			  
-		}
-		
-		
-		$sql = $dbh->query("select * from register ORDER BY invnum DESC");
 ?>
 
 <?php include "includes/admin_header.php"; ?>
@@ -31,22 +32,22 @@ error_reporting(0);
 	-->
 	</style>
 	<script type="text/javascript">
-    function funcdelete(id,name){
-        var del=confirm("Are you sure you want to delete INVOICE #"+id+" of "+name+" ??");
-        if(del==true)
-        {
-            window.location="delinvoice.php?id="+id;
-            return false;
-        }
-    }
+//    function funcdelete(id,name){
+//        var del=confirm("Are you sure you want to delete INVOICE #"+id+" of "+name+" ??");
+//        if(del==true)
+//        {
+//            window.location="delinvoice.php?id="+id;
+//            return false;
+//        }
+//    }
     </script>
 <?php 		
-		if(isset($_GET['action'])) {
-			$mat=$_GET['action'];
-			if($mat=='success')
-			echo '<script type="text/javascript">alert("SUCCESSFULLY DELETED");</script>';
-			
-		}
+//		if(isset($_GET['action'])) {
+//			$mat=$_GET['action'];
+//			if($mat=='success')
+//			echo '<script type="text/javascript">alert("SUCCESSFULLY DELETED");</script>';
+//			
+//		}
 ?>
     <table id="box-table-a" summary="Employee Pay Sheet" align="center">
         <thead>
@@ -61,7 +62,36 @@ error_reporting(0);
         </thead>
         <tbody>
         <?php
-        foreach ($sql as $row)
+            
+           
+                   
+             $query="SELECT * FROM register ORDER BY invnum DESC";
+             $select_invoice=mysqli_query($connection,$query);
+                    
+             while($row=mysqli_fetch_assoc($select_invoice)){
+
+                    $invnum=$row['invnum'];
+                    $invdate=$row['invdate'];
+                    $custname=$row['custname'];
+                    $numofprod=$row['numofprod'];
+                    $total=$row['total'];
+                 
+                    echo "<tr>";
+               
+                    echo "<td>$invnum</td>";
+                    echo "<td>$invdate</td>";
+                    echo "<td>$custname</td>";
+                    echo "<td>$numofprod</td>";
+                    echo "<td>$total</td>";
+                              
+echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='report.php?delete={$invnum}'>Delete</a></td>";
+                    echo "</tr>";
+
+                    }
+
+           
+            
+        foreach ($query as $row)
         {
 			?>
             <tr>

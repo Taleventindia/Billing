@@ -140,10 +140,8 @@
               
             ?> 
                     
-        </tbody>     
-           
- </table>
-          <?php echo $cat;?>
+        </tbody>      
+    </table>
  </div>  
 
             <?php

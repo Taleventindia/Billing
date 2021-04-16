@@ -131,11 +131,14 @@
                     <a class="nav-link" href="reports.php">View All Invoices</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link" href="report.php">View Invoices</a>
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="invoice.php">Create Invoice</a>
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> 
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#auth2" aria-expanded="false" aria-controls="auth2">
                 <i class="menu-icon typcn typcn-coffee"></i>
@@ -153,6 +156,7 @@
                 </ul>
               </div>
             </li>
+              
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#auth3" aria-expanded="false" aria-controls="auth3">
                 <i class="menu-icon typcn typcn-coffee"></i>

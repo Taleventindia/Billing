@@ -80,25 +80,7 @@
              }
 
        ?>
-      
-            <?php      
-                      function stocklist(){  
-                         global $connection; 
-                           
-                        $product="SELECT * FROM stock";
-                        $search_product=mysqli_query($connection,$product);
-
-                        confirmQuery($search_product);  
-
-                        while($row=mysqli_fetch_assoc($search_product)){
-                        $product_name=$row['product_name'];
-                
-                        echo "<option value='$product_name'>$product_name</option>";
-             
-                      }         
-                    } 
-                     
-                ?>   
+       
 
   
   

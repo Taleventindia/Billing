@@ -33,11 +33,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type='text/javascript' src='js/scripts.js'></script>
 
+ <script src=
+        "https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+  
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        type="text/javascript">
+    </script>
+      
+    <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
 
 <?php include "includes/admin_header.php"; ?>
 
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -99,6 +115,7 @@ input[type=submit] {
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
+
 </style>
 
 <div class="main-panel">
@@ -110,7 +127,9 @@ input[type=submit] {
                  <div style="border:1px solid #000">
             <div id="customer">
                 Consignee,<br />
-                <textarea name="custname" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
+<!--                <textarea name="custname" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea> -->
+                
+                <input type='text' id='autocomplete' name='firstname' >
                 <table id="meta">
                     <tr>
                         <td class="meta-head">Invoice #</td>
@@ -140,22 +159,28 @@ input[type=submit] {
               </tr>
                 
                 
-            <form autocomplete="off" action="">
+            <form action="" method="post" autocomplete="off">
              <div class="autocomplete" style="width:300px;">
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
 <!--                      <textarea id="autocomplete" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name">Item</textarea>  -->
                       <input type='text' id='autocomplete' name='product_name'>
-                      </div>             
-                      
-                     
+                      </div>                
                   </td>
                   
                  <td class="description">
-                      <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="desc[]">Description</textarea></td>
+<!--                      <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="desc[]">Description</textarea>  -->
+                    <input type='text' id='autocomplete' name='product_name'>
+                  </td>  
+                     
                   <td>
                       <textarea tabindex="4" class="qty" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="qty[]">0.00</textarea></td>
-                  <td><textarea tabindex="5" class="cost" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="cost[]">0.00</textarea></td>
+                  <td>
+<!--                      <textarea tabindex="5" class="cost" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="cost[]">0.00</textarea>  -->
+                       
+                  <input type='text' id='autocomplete' name='product_cost'>
+                  </td>
+                
                   <td><textarea tabindex="6" class="gst" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="gst[]">0.00</textarea></td>
                   <td><textarea tabindex="7" class="discount" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="discount[]">0.00</textarea></td>
                   <td><span class="amount">0.00</span><input type="hidden" class="pr_amt"/></td>
@@ -164,148 +189,50 @@ input[type=submit] {
                     </div>
                 </form>
    
+          
+<?php    
                 
-
-    <script>
-//function autocomplete(inp, arr) {
-// 
-//  var currentFocus;
-// 
-//  inp.addEventListener("input", function(e) {
-//      var a, b, i, val = this.value;
-//     
-//      closeAllLists();
-//      if (!val) { return false;}
-//      currentFocus = -1;
-//     
-//      a = document.createElement("DIV");
-//      a.setAttribute("id", this.id + "autocomplete-list");
-//      a.setAttribute("class", "autocomplete-items");
-//      
-//      this.parentNode.appendChild(a);
-//     
-//      for (i = 0; i < arr.length; i++) {
-//        
-//        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-//         
-//          b = document.createElement("DIV");
-//          
-//          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-//          b.innerHTML += arr[i].substr(val.length);
-//          
-//          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-//          
-//          b.addEventListener("click", function(e) {
-//              
-//              inp.value = this.getElementsByTagName("input")[0].value;
-//              
-//              closeAllLists();
-//          });
-//          a.appendChild(b);
-//        }
-//      }
-//  });
-// 
-//  inp.addEventListener("keydown", function(e) {
-//      var x = document.getElementById(this.id + "autocomplete-list");
-//      if (x) x = x.getElementsByTagName("div");
-//      if (e.keyCode == 40) {
-//        
-//        currentFocus++;
-//        
-//        addActive(x);
-//      } else if (e.keyCode == 38) { //up
-//        
-//        currentFocus--;
-//        
-//        addActive(x);
-//      } else if (e.keyCode == 13) {
-//       
-//        e.preventDefault();
-//        if (currentFocus > -1) {
-//          
-//          if (x) x[currentFocus].click();
-//        }
-//      }
-//  });
-//  function addActive(x) {
-//    
-//    if (!x) return false;
-//    
-//    removeActive(x);
-//    if (currentFocus >= x.length) currentFocus = 0;
-//    if (currentFocus < 0) currentFocus = (x.length - 1);
-//    
-//    x[currentFocus].classList.add("autocomplete-active");
-//  }
-//  function removeActive(x) {
-//    
-//    for (var i = 0; i < x.length; i++) {
-//      x[i].classList.remove("autocomplete-active");
-//    }
-//  }
-//  function closeAllLists(elmnt) {
-//    
-//    var x = document.getElementsByClassName("autocomplete-items");
-//    for (var i = 0; i < x.length; i++) {
-//      if (elmnt != x[i] && elmnt != inp) {
-//        x[i].parentNode.removeChild(x[i]);
-//      }
-//    }
-//  }
-//  
-//  document.addEventListener("click", function (e) {
-//      closeAllLists(e.target);
-//  });
-//   
-//}
-//        
-// 
- 
-//var $jsonArray=["$prod"]; 
-        
-//   autocomplete(document.getElementById("myInput"), $jsonArray);
-</script>
-                
-<?php 
-  //$jsonArray = array();
-                ?>
-<?php 
-   // $prod = array(); 
-                ?>
-<?php
-      
-//        $product="SELECT * FROM stock ";
-//        $search_product=mysqli_query($connection,$product);
-//
-//        confirmQuery($search_product);  
-//
-//        while($row=mysqli_fetch_assoc($search_product)){
-//        $prod[]= $row['product_name'];
-//        $jsonArray = $prod; 
-//            
-//        }       
-//        echo '<div id="json">' . json_encode($jsonArray) . '</div>'; 
-
-                
-?>    
-                
-<?php            
      if(isset($_POST['search'])){
- $search = mysqli_real_escape_string($conection,$_POST['search']);
+        $search = mysqli_real_escape_string($conection,$_POST['search']);
 
- $query = "SELECT * FROM stock WHERE product_name like'%".$search."%'";
- $result = mysqli_query($connection,$query);
+        $query = "SELECT * FROM stock WHERE product_name like'%".$search."%'";
+        $result = mysqli_query($connection,$query);
 
- $response = array();
- while($row = mysqli_fetch_array($result) ){
-   $response[] = array("label"=>$row['product_name']);
- }
+        $response = array();
+        while($row = mysqli_fetch_array($result) ){
+//        $response[] = array("label"=>$row['product_name'],"label"=>$row['product_cost']);
+        $data['stock_id'] = $row['stock_id']; 
+        $data['value'] = $row['product_name'];    
+        $data['value'] = $row['product_cost'];    
+        array_push($response, $data);    
+      }
 
- echo json_encode($response);
-}           
+       echo json_encode($response);
+      }                   
+  ?>   
                 
-  ?>           
+   <?php    
+                
+     if(isset($_POST['search'])){
+        $search = mysqli_real_escape_string($conection,$_POST['search']);
+
+        $query = "SELECT * FROM customers WHERE firstname like'%".$search."%'";
+        $result = mysqli_query($connection,$query);
+
+        $response = array();
+        while($row = mysqli_fetch_array($result) ){
+        $data['customer_id'] = $row['customer_id']; 
+        $data['value'] = $row['firstname'];       
+        array_push($response, $data);    
+      }
+
+       echo json_encode($response);
+      }                   
+  ?>                 
+                
+                
+    
+                
               <tr id="hiderow">
                 <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
               </tr>    

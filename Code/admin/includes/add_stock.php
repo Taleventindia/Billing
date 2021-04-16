@@ -39,8 +39,11 @@
        }
       
    ?>  
-      <div class="row">
-        <div class="col-md-6">
+              
+<form action="" method="post" enctype="multipart/form-data" class="form-sample">         
+              
+    <div class="row">
+       <div class="col-md-6">
           <div class="form-group row">
             <label for="category">Product Category</label>
                 <select class="form-control" name="product_category"id="product_category"> 
@@ -60,105 +63,103 @@
                         } 
 
                       ?>   
-                    </select>
-                </div>
+                </select>
             </div>
-        </div>   
-              
-        <form action="" method="post" enctype="multipart/form-data" class="form-sample">
-                     <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
-                            <div class="col-sm-9">
-                              <input type="file" name="image" />
-                            </div>
-                          </div>
-                        </div>
-                    </div>            
+        </div>
+     </div>   
+    <div class="row">
+      <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
+            <div class="col-sm-9">
+              <input type="file" name="image" />
+            </div>
+          </div>
+        </div>
+    </div>            
 
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="title">Product Name</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" size="100" maxlength="100" name="product_name">
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="Product_type">Product Type</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" size="100" maxlength="100" name="product_type" />
-                            </div>
-                          </div>
-                        </div>
-                      </div> 
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="product_cost">Product Cost</label>
-                            <div class="col-sm-9">
-                              <input type="decimal" class="form-control" name="product_cost" />
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="quantity">Quantity</label>
-                            <div class="col-sm-9">
-                              <input type="decimal" class="form-control" name="quantity" />
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="Supplier">Supplier</label>
-                            <div class="col-sm-9">
-                              <input type="text" class="form-control" name="supplier" />
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="onhand_qty">Onhand Qty</label>
-                            <div class="col-sm-9">
-                              <input type="decimal" class="form-control" name="onhand_qty" />
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
-                            <div class="col-sm-9">
-                              <input type="date" class="form-control" name="date_arrival"/>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
-                            <div class="col-sm-9">
-                              <input type="date" class="form-control" name="expiry_date" />
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    
-             <div class="col-sm-9">
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="title">Product Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" size="100" maxlength="100" name="product_name">
+                </div>
+              </div>
+            </div>
+        </div>
+            <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="Product_type">Product Type</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" size="100" maxlength="100" name="product_type" />
+                </div>
+              </div>
+            </div>
+          </div> 
+            <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="product_cost">Product Cost</label>
+                <div class="col-sm-9">
+                  <input type="decimal" class="form-control" name="product_cost" />
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="quantity">Quantity</label>
+                <div class="col-sm-9">
+                  <input type="decimal" class="form-control" name="quantity" />
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="Supplier">Supplier</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="supplier" />
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="onhand_qty">Onhand Qty</label>
+                <div class="col-sm-9">
+                  <input type="decimal" class="form-control" name="onhand_qty" />
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control" name="date_arrival"/>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control" name="expiry_date" />
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <div class="col-sm-9">
             <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
             </div>
         </form>       

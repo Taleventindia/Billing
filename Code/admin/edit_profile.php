@@ -24,18 +24,17 @@
              }
            }
 
-      if(isset($_POST['update_profile'])){
+      if(isset($_POST['edit_profile'])){
            
             $user_firstname =  $_POST['user_firstname'];
             $user_lastname =  $_POST['user_lastname'];
             $user_image = $_FILES['image']['name'];
             $user_image_tempname = $_FILES['image']['tmp_name'];
+            $user_phone=$_POST['user_phone'];        
             $email =  $_POST['user_email'];
-            $user_phone = $_POST['user_phone'];
-            $user_password =  $_POST['user_password'];
+            $user_password =  $_POST['user_password'];      
             $user_confirmpassword =  $_POST['user_confirmpassword'];
-            $user_role =  $_POST['user_role'];
-          
+            $user_role =  $_POST['user_role'];          
         move_uploaded_file($user_image_tempname,"../images/$user_image");
         
         if(empty($user_image)){
@@ -68,7 +67,8 @@
            
         confirmQuery($update_profile_query);
             
-           header("Location:profile.php"); 
+          
+//           header("Location:profile.php"); 
               
          }else{
              
@@ -108,7 +108,10 @@
                     ?>
                                 </h3></small>
                         </h3>
-                       
+     <?php 
+              echo "<h3>Profile Updated:" . "<a href='profile.php'>View profile?</a></h3>";            
+                        
+                        ?>                  
                                         
    <form action="" method="post" enctype="multipart/form-data">
     
@@ -119,7 +122,7 @@
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="User_firstname"> Firstname</label>
+                            <label class="col-sm-3 col-form-label" for="firstname"> Firstname</label>
                             <div class="col-sm-9">
                                <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" name="user_firstname">
                             </div>
@@ -127,7 +130,7 @@
                         </div>
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="user_lastname"> Lastname</label>
+                            <label class="col-sm-3 col-form-label" for="lastname"> Lastname</label>
                             <div class="col-sm-9">
                                <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
                             </div>
@@ -137,9 +140,9 @@
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="user_email">E-mail</label>
+                            <label class="col-sm-3 col-form-label" for="email">E-mail</label>
                             <div class="col-sm-9">
-                               <input type="text" value="<?php echo $email; ?>" class="form-control" name="user_firstname">
+                               <input type="email" value="<?php echo $email; ?>" class="form-control" name="user_email">
                             </div>
                           </div>
                         </div>
@@ -147,7 +150,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label" for="phone"> phone no</label>
                             <div class="col-sm-9">
-                               <input type="phone" value="<?php echo $user_phone; ?>" class="form-control" name="phone">
+                               <input type="varchar" value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
                             </div>
                           </div>
                       </div>
@@ -158,20 +161,20 @@
                             <label class="col-sm-3 col-form-label" for="user_password"> Password</label>
                             <div class="col-sm-9">
                                <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
-                                <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
-                                <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
-                            </div>
+                            </div> 
                           </div>
                         </div>
+                                <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
+                                <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label" for="password"> Confirm</label>
                             <div class="col-sm-9">
-                               <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
-                                    <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
+                               <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">    
                             </div>
                           </div>
                         </div>
+                         <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
                     </div>
                     <div class="row">
                          <div class="col-md-6">
@@ -184,7 +187,7 @@
                         </div>
                     </div>
        <div class="input-group">
-          <input class="btn btn-primary" type="submit" name="update_profile" value="Update profile"> 
+          <input class="btn btn-primary" type="submit" name="edit_profile" value="Update profile">
         </div>
         
        </form>

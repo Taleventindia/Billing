@@ -1,47 +1,41 @@
-    <div class="main-panel">
-          <div class="content-wrapper">
-              <form action=""method='post'>       
-  
-            <table class="table table-bordered table-hover">
+<div class="card"> 
+  <div class="card-body">
+    <div class="main-panel"> 
+             <table  cellpadding="50" cellspacing="5" class="table table-bordered table-hover">
               <thead>
                     <tr>
-                        <th>Invoice No</th>
+                        <th>Invoice #</th>
                         <th>Invoice Date</th>
                         <th>Customer Name</th>
                         <th>Number Of Items</th>
                         <th>Round Total</th>
-                        <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                            
+                      
      <?php 
-
-             $query="SELECT * FROM invoice";
+                   
+             $query="SELECT * FROM register ORDER BY invnum DESC";
              $select_invoice=mysqli_query($connection,$query);
                     
              while($row=mysqli_fetch_assoc($select_invoice)){
 
-                    $invoice_no=$row['invoice_no'];
-                    $invoice_date=$row['invoice_date'];
-                    $customer_name=$row['customer_name'];
-                    $number_of_items=$row['number_of_items'];
-                    $round_total=$row['round_total'];
+                    $invnum=$row['invnum'];
+                    $invdate=$row['invdate'];
+                    $custname=$row['custname'];
+                    $numofprod=$row['numofprod'];
+                    $total=$row['total'];
                  
                     echo "<tr>";
                
-                    echo "<td>$invoice_no</td>";
-                    echo "<td>$invoice_date</td>";
-                    echo "<td>$customer_name</td>";
-                    echo "<td>$number_of_items</td>";
-                    echo "<td>$round_total</td>";
-                 
-//                    echo "<td><a href='users.php?change_to_admin={$user_id}'>Admin</a></td>";
-//                    echo "<td><a href='users.php?change_to_sub={$user_id}'>Subscriber</a></td>";
-                 
-                    echo "<td><a href='users.php?source=edit_user&edit_user={$user_id}'>Edit</a></td>";                 
-echo "<td><a onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='invoice.php?delete={$user_id}'>Delete</a></td>";
+                    echo "<td>$invnum</td>";
+                    echo "<td>$invdate</td>";
+                    echo "<td>$custname</td>";
+                    echo "<td>$numofprod</td>";
+                    echo "<td>$total</td>";
+                              
+echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='report.php?delete={$invnum}'>Delete</a></td>";
                     echo "</tr>";
 
                     }
@@ -50,25 +44,21 @@ echo "<td><a onClick=\"javascript:return confirm('Are you Sure you want to delet
 
                                     
             </tbody>
-        </table>
-
-</form>
-        </div>
-    </div>
+        </table> 
+     </div>
+   </div>
+</div>
            
             <?php
 
                  if(isset($_GET['delete'])){
-                     $the_invoice_no=$_GET['delete'];
-                     $query="DELETE FROM invoice WHERE invoice_no={$the_invoice_no}";
+                     $invnum=$_GET['delete'];
+                     $query="DELETE FROM register WHERE invnum={$invnum}";
                      $delete_query=mysqli_query($connection,$query);
-                     header("Location:invoice.php");
+                     header("Location:report.php");
                  }
+            
                   ?>   
-                     
-
-                 
-                      
-                     
-                    
-                   
+            
+                  
+ 

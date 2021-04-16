@@ -1,16 +1,17 @@
 <?php
-error_reporting(0);
-try 
-{
-		 // connect to SQLite from PDO database
-		 $dbh = new PDO("sqlite:omelec.db");
+//error_reporting(0);
+//try 
+//{
+//		 // connect to SQLite from PDO database
+//		 $dbh = new PDO("sqlite:omelec.db");
+//
+//}
+//catch(PDOException $e)
+//{
+//		 echo $e->getMessage();//this getMessage throws an exception if any 
+//	  
+//}
 
-}
-catch(PDOException $e)
-{
-		 echo $e->getMessage();//this getMessage throws an exception if any 
-	  
-}
 //$sql = $dbh->query("select * from register");
 //$nRows = $sql->fetchColumn();
 //echo $nRows;
@@ -19,7 +20,7 @@ catch(PDOException $e)
 if(isset($_GET['inv']))
 {
 	$invnum = $_GET['inv'];
-	
+   
 	$sql = $dbh->query("select * from register where invnum='$invnum'");
 	$obj = $sql->fetch(PDO::FETCH_OBJ);
 
