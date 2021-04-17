@@ -131,9 +131,6 @@
                     <a class="nav-link" href="reports.php">View All Invoices</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="report.php">View Invoices</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="invoice.php">Create Invoice</a>
                   </li>
                 </ul>

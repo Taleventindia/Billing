@@ -32,22 +32,22 @@
 	-->
 	</style>
 	<script type="text/javascript">
-//    function funcdelete(id,name){
-//        var del=confirm("Are you sure you want to delete INVOICE #"+id+" of "+name+" ??");
-//        if(del==true)
-//        {
-//            window.location="delinvoice.php?id="+id;
-//            return false;
-//        }
-//    }
+    function funcdelete(id,name){
+        var del=confirm("Are you sure you want to delete INVOICE #"+id+" of "+name+" ??");
+        if(del==true)
+        {
+            window.location="delinvoice.php?id="+id;
+            return false;
+        }
+    }
     </script>
 <?php 		
-//		if(isset($_GET['action'])) {
-//			$mat=$_GET['action'];
-//			if($mat=='success')
-//			echo '<script type="text/javascript">alert("SUCCESSFULLY DELETED");</script>';
-//			
-//		}
+		if(isset($_GET['action'])) {
+			$mat=$_GET['action'];
+			if($mat=='success')
+			echo '<script type="text/javascript">alert("SUCCESSFULLY DELETED");</script>';
+			
+		}
 ?>
     <table id="box-table-a" summary="Employee Pay Sheet" align="center">
         <thead>
@@ -76,34 +76,47 @@
                     $numofprod=$row['numofprod'];
                     $total=$row['total'];
                  
-                    echo "<tr>";
-               
-                    echo "<td>$invnum</td>";
-                    echo "<td>$invdate</td>";
-                    echo "<td>$custname</td>";
-                    echo "<td>$numofprod</td>";
-                    echo "<td>$total</td>";
-                              
-echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='report.php?delete={$invnum}'>Delete</a></td>";
-                    echo "</tr>";
-
-                    }
-
-           
-            
-        foreach ($query as $row)
-        {
-			?>
-            <tr>
+              
+//                    echo "<tr>";
+//               
+//                    echo "<td>$invnum</td>";
+//                    echo "<td>$invdate</td>";
+//                    echo "<td>$custname</td>";
+//                    echo "<td>$numofprod</td>";
+//                    echo "<td>$total</td>";
+//                              
+//echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='reports.php?delete={$invnum}'>Delete</a></td>";
+//                    echo "</tr>";
+?>
+                <tr>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['invnum'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['invdate'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['custname'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo $row['numofprod'];?></a></td>
                 <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>">Rs. <?php echo $row['rbdf'];?></a></td>
                 <td><input type="button" class="btn btn-danger" value="Delete" onclick="return funcdelete('<?php echo $row['invnum'];?>','<?php echo $row['custname'];?>')"/></td>
+            </tr> 
+                 
+                 
+            <?php     } ?>
+
+           <?php
+            
+//        foreach ($sql as $row)
+//        {
+			?>
+<!--
+            <tr>
+                <td><a href="viewbill.php?inv=<?php //echo $row['invnum'];?>"><?php //echo $row['invnum'];?></a></td>
+                <td><a href="viewbill.php?inv=<?php //echo $row['invnum'];?>"><?php //echo $row['invdate'];?></a></td>
+                <td><a href="viewbill.php?inv=<?php //echo $row['invnum'];?>"><?php //echo $row['custname'];?></a></td>
+                <td><a href="viewbill.php?inv=<?php //echo $row['invnum'];?>"><?php //echo $row['numofprod'];?></a></td>
+                <td><a href="viewbill.php?inv=<?php //echo $row['invnum'];?>">Rs. <?php //echo $row['rbdf'];?></a></td>
+                <td><input type="button" class="btn btn-danger" value="Delete" onclick="return funcdelete('<?php //echo $row['invnum'];?>','<?php //echo $row['custname'];?>')"/></td>
             </tr>
+-->
 			<?php
-		}
+//		}
 		?>
         </tbody>
     </table>

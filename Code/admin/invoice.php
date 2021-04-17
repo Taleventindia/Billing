@@ -1,5 +1,4 @@
-<?php include "../includes/db.php"; ?>  
-<?php
+ <?php
     error_reporting(0);
 		try 
 		{
@@ -13,8 +12,9 @@
 			  
 		}
 		
-		
 		$sql = $dbh->query("select MAX(invnum) from register");
+
+		
 		$invnum = $sql->fetchColumn();
 		$invnum+=1; 
 ?>
@@ -32,28 +32,12 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type='text/javascript' src='js/scripts.js'></script>
-
- <script src=
-        "https://code.jquery.com/jquery-3.2.1.min.js">
-    </script>
-  
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        type="text/javascript">
-    </script>
-      
-    <link rel="stylesheet" href=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    </script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <?php include "includes/admin_header.php"; ?>
 
-
 <style>
-
+     
 * {
   box-sizing: border-box;
 }
@@ -125,6 +109,7 @@ input[type=submit] {
     <div style="clear:both"></div>
             <form action="bill.php" method="post">
                  <div style="border:1px solid #000">
+                     
             <div id="customer">
                 Consignee,<br />
 <!--                <textarea name="custname" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea> -->

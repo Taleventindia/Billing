@@ -17,33 +17,34 @@
 //echo $nRows;
 //print_r($_POST);
 //echo count($_POST['item']);
-if(isset($_GET['inv']))
-{
-	$invnum = $_GET['inv'];
-   
-	$sql = $dbh->query("select * from register where invnum='$invnum'");
-	$obj = $sql->fetch(PDO::FETCH_OBJ);
 
-	$custname = $obj->custname;
-	$invdate = $obj->invdate;
-	$numofprod = $obj->numofprod;
-	
-	
-	$item=$obj->item;
-	$desc=$obj->desc;
-	$qty=$obj->qty;
-	$cost=$obj->cost;
-	$gst=$obj->gst;
-	$price=$obj->price;
-	
-	
-	$subtotal = $obj->subtotal;
-	$tax = $obj->tax;
-	$total = $obj->total;
-	$due = $obj->due;
-	$rbdf = $obj->rbdf;
-	
-}
+//if(isset($_GET['inv']))
+//{
+//	$invnum = $_GET['inv']; 
+//	$sql = $dbh->query("select * from register where invnum='$invnum'");
+//	$obj = $sql->fetch(PDO::FETCH_OBJ);
+//
+//	$custname = $obj->custname;
+//	$invdate = $obj->invdate;
+//	$numofprod = $obj->numofprod;
+//	
+//	
+//	$item=$obj->item;
+//	$desc=$obj->desc;
+//	$qty=$obj->qty;
+//	$cost=$obj->cost;
+//	$gst=$obj->gst;
+//	$price=$obj->price;
+//	
+//	
+//	$subtotal = $obj->subtotal;
+//	$tax = $obj->tax;
+//	$total = $obj->total;
+//	$due = $obj->due;
+//	$rbdf = $obj->rbdf;
+//	
+//}
+
 ?>
 
 <?php include "includes/admin_header.php"; ?>
@@ -71,6 +72,40 @@ if(isset($_GET['inv']))
 	</style>
 		<h4>Retail Invoice</h4>
         <div style="border:1px solid #000">
+            
+            <?php
+            
+            if(isset($_GET['inv']))
+                {
+                    $invnum = $_GET['inv'];
+
+                 $query="SELECT * FROM register WHERE invnum='$invnum'";
+                 $select_invoice=mysqli_query($connection,$query);
+
+                 while($row=mysqli_fetch_assoc($select_invoice)){
+                     
+                        $invnum=$row['invnum'];
+                        $invdate=$row['invdate'];
+                        $custname=$row['custname'];
+                        $numofprod=$row['numofprod'];
+                        $total=$row['total'];
+                        $item=$row['item'];
+                        $desc=$row['desc'];
+                        $qty=$row['qty'];
+                        $cost=$row['cost'];
+                        $gst=$row['gst'];
+                        $price=$row['price'];
+                        $subtotal = $row['subtotal'];
+                        $tax = $row['tax'];
+                        $due = $row['due'];
+                        $rbdf = $row['rbdf'];
+    
+                     }
+
+                 }
+            
+            ?>
+            
             <div id="customer">
                 Consignee,<br />
                 <textarea name="custname" tabindex="1" rows="4" style="font-size: 20px; float: left; " readonly="readonly"><?php echo $custname;?></textarea>
@@ -78,12 +113,12 @@ if(isset($_GET['inv']))
                 <table id="meta">
                     <tr>
                         <td class="meta-head">Invoice #</td>
-                        <td><span ><?php echo sprintf('%05d',$invnum);?></span></td>
+                     <td><span ><?php echo sprintf('%05d',$invnum);?></span></td>
                     </tr>
                     <tr>
     
                         <td class="meta-head">Date</td>
-                        <td style="font: 14px Arial, Helvetica, sans-serif;"><?php echo $invdate;?></td>
+                        <td style="font: 14px Arial, Helvetica, sans-serif;"><?php echo $invdate;?></td> 
                     </tr>
     
                 </table>
@@ -102,7 +137,9 @@ if(isset($_GET['inv']))
                   <th width="100">Amount</th>
                   <th width="200">Price (with GST)</th>
               </tr>
-              <?php 
+                
+          <?php
+                
 			  $item = explode("*#*",$item);
 			  $desc = explode("*#*",$desc);
 			  $qty = explode("*#*",$qty);
@@ -115,7 +152,9 @@ if(isset($_GET['inv']))
 			  
 			  while($count<$numofprod)
 			  {
-				?>
+                  
+          ?>   
+                
               <tr class="item-row"style="font: 14px Arial, Helvetica, sans-serif;">
                   <td class="item-name" ><?php echo $item[$count];?></td>
                   <td class="description"><?php echo $desc[$count];?></td>
