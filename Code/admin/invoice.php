@@ -1,24 +1,3 @@
- <?php
-    error_reporting(0);
-		try 
-		{
-				 // connect to SQLite from PDO database
-				 $dbh = new PDO("sqlite:omelec.db");
-
-		}
-		catch(PDOException $e)
-		{
-				 echo $e->getMessage();//this getMessage throws an exception if any 
-			  
-		}
-		
-		$sql = $dbh->query("select MAX(invnum) from register");
-
-		
-		$invnum = $sql->fetchColumn();
-		$invnum+=1; 
-?>
-
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
@@ -35,7 +14,13 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <?php include "includes/admin_header.php"; ?>
-
+ <?php
+	    $query="SELECT MAX(invnum) FROM register";
+        $select_invoice=mysqli_query($connection,$query);
+        $row=mysqli_fetch_array($select_invoice);
+        $invnum=$row[0];
+        $invnum+=1;
+?>
 <style>
      
 * {
@@ -108,9 +93,8 @@ input[type=submit] {
     <h4>Create Invoice</h4>
     <div style="clear:both"></div>
             <form action="bill.php" method="post">
-                 <div style="border:1px solid #000">
-                     
-            <div id="customer">
+                 <div style="border:1px solid #000"> 
+           <div id="customer">
                 Consignee,<br />
 <!--                <textarea name="custname" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea> -->
                 
@@ -148,7 +132,7 @@ input[type=submit] {
              <div class="autocomplete" style="width:300px;">
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
-<!--                      <textarea id="autocomplete" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name">Item</textarea>  -->
+<!--                      <textarea id="autocomplete" type="text" tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea>  -->
                       <input type='text' id='autocomplete' name='product_name'>
                       </div>                
                   </td>

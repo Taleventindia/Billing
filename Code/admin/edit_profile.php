@@ -68,7 +68,7 @@
         confirmQuery($update_profile_query);
             
           
-//           header("Location:profile.php"); 
+           header("Location:profile.php"); 
               
          }else{
              
@@ -108,10 +108,7 @@
                     ?>
                                 </h3></small>
                         </h3>
-     <?php 
-              echo "<h3>Profile Updated:" . "<a href='profile.php'>View profile?</a></h3>";            
-                        
-                        ?>                  
+                    
                                         
    <form action="" method="post" enctype="multipart/form-data">
     

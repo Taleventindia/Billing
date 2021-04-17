@@ -1,31 +1,113 @@
 <?php
-try 
-{
-		 // connect to SQLite from PDO database
-		 $dbh = new PDO("sqlite:omelec.db");
+//try 
+//{
+//		 // connect to SQLite from PDO database
+//		 $dbh = new PDO("sqlite:omelec.db");
+//
+//}
+//catch(PDOException $e)
+//{
+//		 echo $e->getMessage();//this getMessage throws an exception if any 
+//	  
+//}
 
-}
-catch(PDOException $e)
-{
-		 echo $e->getMessage();//this getMessage throws an exception if any 
-	  
-}
 //$sql = $dbh->query("select * from register");
 //$nRows = $sql->fetchColumn();
 //echo $nRows;
 //print_r($_POST);
 //echo count($_POST['item']);
-if(isset($_POST['saveinv']))
-{
+
+//if(isset($_POST['saveinv']))
+//{
+//
+//	$invnum = $_POST['invnum'];
+//
+//	$sql = $dbh->query("select invnum from register where invnum='$invnum'");
+//	$chkdup = $sql->fetchColumn();
+//	if($chkdup!=NULL)
+//	{
+//		echo "<h1>ERROR !!!! DUPLICATE INVOICE NUMBER</h1>";
+//		echo '    <a href="invoice.php"> <img class="delete" src="images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/> </a>';
+//		exit();
+//	}
+//
+//	$custname = $_POST['custname'];
+//	$invdate = $_POST['invdate'];
+//	$numofprod = count($_POST['item']);
+//	
+//	$n=0;
+//	
+//	$item="";
+//	$desc="";
+//	$qty="";
+//	$cost="";
+//	$vat="";
+//    $discount="";
+//	$price="";
+//	
+//	while($n<$numofprod)
+//	{
+//		$item.=$_POST['item'][$n]."*#*";
+//		$desc.=$_POST['desc'][$n]."*#*";
+//		$qty.=$_POST['qty'][$n]."*#*";
+//		$cost.=$_POST['cost'][$n]."*#*";
+//		$vat.=$_POST['vat'][$n]."*#*";
+//        $discount.=$_POST['vat'][$n]."*#*";
+//		$price.=$_POST['price'][$n]."*#*";
+//		$n++;
+//	}
+//	$item;
+//	$desc;
+//	$qty;
+//	$cost;
+//	$vat;
+//    $discount;
+//	$price;
+//	
+//	$subtotal = $_POST['subtotal'];
+//	$tax = $_POST['tax'];
+//	$total = $_POST['total'];
+//	$due = $_POST['due'];
+//	$rbdf = $_POST['rbdf'];
+//	$towords = $_POST['towords'];
+//	
+//	$sql="INSERT INTO register(invnum, custname, invdate, numofprod, item, desc, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf) VALUES ('$invnum', '$custname', '$invdate', '$numofprod', '$item', '$desc', '$qty', '$cost', '$vat','$discount', '$price', '$subtotal', '$tax', '$total', '$due', '$rbdf')";
+//	
+//	$dbh->exec($sql);
+//}
+?>
+
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+	<script type='text/javascript' src='js/example.js'></script>
+    <script type="text/javascript">
+		alert("BILL SAVED SUCCESSFULLY");
+	</script>
+	<style type="text/css">
+	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
+	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
+	</style>
+<?php include "includes/admin_header.php"; ?>
+
+<?php
+   if(isset($_POST['saveinv']))
+   {
 
 	$invnum = $_POST['invnum'];
+     $query="SELECT invnum FROM register WHERE invnum='$invnum'";
+     $select_invoice=mysqli_query($connection,$query);
 
-	$sql = $dbh->query("select invnum from register where invnum='$invnum'");
-	$chkdup = $sql->fetchColumn();
+//     $row=mysqli_fetch_assoc($select_invoice)
+
+//            $invnum=$row['invnum'];
+
+
+   $chkdup = $query;
 	if($chkdup!=NULL)
 	{
 		echo "<h1>ERROR !!!! DUPLICATE INVOICE NUMBER</h1>";
-		echo '    <a href="invoice.php"> <img class="delete" src="images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/> </a>';
+		echo '    <a href="invoice.php"> <img class="delete" src="/images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/> </a>';
 		exit();
 	}
 
@@ -69,24 +151,16 @@ if(isset($_POST['saveinv']))
 	$rbdf = $_POST['rbdf'];
 	$towords = $_POST['towords'];
 	
-	$sql="INSERT INTO register(invnum, custname, invdate, numofprod, item, desc, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf) VALUES ('$invnum', '$custname', '$invdate', '$numofprod', '$item', '$desc', '$qty', '$cost', '$vat','$discount', '$price', '$subtotal', '$tax', '$total', '$due', '$rbdf')";
-	
-	$dbh->exec($sql);
-}
+	$query="INSERT INTO register(invnum, custname, invdate, numofprod, item, desc, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf) VALUES ('$invnum', '$custname', '$invdate', '$numofprod', '$item', '$desc', '$qty', '$cost', '$vat','$discount', '$price', '$subtotal', '$tax', '$total', '$due', '$rbdf')";
+       
+	$create_invoice_query=mysqli_query($connection,$query);
+     confirmQuery($create_invoice_query);
+       
+//	$dbh->exec($sql);
+       
+   }
 ?>
 
-	<link rel='stylesheet' type='text/css' href='css/style.css' />
-	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
-	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
-	<script type='text/javascript' src='js/example.js'></script>
-    <script type="text/javascript">
-		alert("BILL SAVED SUCCESSFULLY");
-	</script>
-	<style type="text/css">
-	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
-	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
-	</style>
-<?php include "includes/admin_header.php"; ?>
 <div class="main-panel">
     <div class="card">
 <div class="card-body">
