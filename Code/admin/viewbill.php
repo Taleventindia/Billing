@@ -1,52 +1,3 @@
-<?php
-//error_reporting(0);
-//try 
-//{
-//		 // connect to SQLite from PDO database
-//		 $dbh = new PDO("sqlite:omelec.db");
-//
-//}
-//catch(PDOException $e)
-//{
-//		 echo $e->getMessage();//this getMessage throws an exception if any 
-//	  
-//}
-
-//$sql = $dbh->query("select * from register");
-//$nRows = $sql->fetchColumn();
-//echo $nRows;
-//print_r($_POST);
-//echo count($_POST['item']);
-
-//if(isset($_GET['inv']))
-//{
-//	$invnum = $_GET['inv']; 
-//	$sql = $dbh->query("select * from register where invnum='$invnum'");
-//	$obj = $sql->fetch(PDO::FETCH_OBJ);
-//
-//	$custname = $obj->custname;
-//	$invdate = $obj->invdate;
-//	$numofprod = $obj->numofprod;
-//	
-//	
-//	$item=$obj->item;
-//	$desc=$obj->desc;
-//	$qty=$obj->qty;
-//	$cost=$obj->cost;
-//	$gst=$obj->gst;
-//	$price=$obj->price;
-//	
-//	
-//	$subtotal = $obj->subtotal;
-//	$tax = $obj->tax;
-//	$total = $obj->total;
-//	$due = $obj->due;
-//	$rbdf = $obj->rbdf;
-//	
-//}
-
-?>
-
 <?php include "includes/admin_header.php"; ?>
 <div class="main-panel">
 <div class="content-wrapper">
@@ -90,10 +41,11 @@
                         $numofprod=$row['numofprod'];
                         $total=$row['total'];
                         $item=$row['item'];
-                        $desc=$row['desc'];
+                        $descr=$row['descr'];
                         $qty=$row['qty'];
                         $cost=$row['cost'];
-                        $gst=$row['gst'];
+                        $gst=$row['vat'];
+                        $discount=$row['discount'];
                         $price=$row['price'];
                         $subtotal = $row['subtotal'];
                         $tax = $row['tax'];
@@ -141,7 +93,7 @@
           <?php
                 
 			  $item = explode("*#*",$item);
-			  $desc = explode("*#*",$desc);
+			  $descr = explode("*#*",$descr);
 			  $qty = explode("*#*",$qty);
 			  $cost = explode("*#*",$cost);
 			  $gst = explode("*#*",$gst);
@@ -157,7 +109,7 @@
                 
               <tr class="item-row"style="font: 14px Arial, Helvetica, sans-serif;">
                   <td class="item-name" ><?php echo $item[$count];?></td>
-                  <td class="description"><?php echo $desc[$count];?></td>
+                  <td class="description"><?php echo $descr[$count];?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$qty[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$cost[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$gst[$count]);?></td>
@@ -207,7 +159,6 @@
 				  $temp+=$a;
 				  $temp-=$subtotal;
 				  echo sprintf('%0.2f',$temp);
-				  
 				  ?>
                   </td>
               </tr>
@@ -231,7 +182,7 @@
             </table>
             
             <div id="terms" style="float:left;width:53%;border:1px solid #000; min-height:156px">
-              <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Dt.: 06-Aug-2013</h4>
+              <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Dt.:<?php echo date("d/m/Y");?></h4>
               <h5>Terms</h5>
               <div>
               2% CD if payment within 7 days Strictly.<br />

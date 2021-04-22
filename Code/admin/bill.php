@@ -89,27 +89,11 @@
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
 <?php include "includes/admin_header.php"; ?>
-
 <?php
    if(isset($_POST['saveinv']))
    {
 
 	$invnum = $_POST['invnum'];
-     $query="SELECT invnum FROM register WHERE invnum='$invnum'";
-     $select_invoice=mysqli_query($connection,$query);
-
-//     $row=mysqli_fetch_assoc($select_invoice)
-
-//            $invnum=$row['invnum'];
-
-
-   $chkdup = $query;
-	if($chkdup!=NULL)
-	{
-		echo "<h1>ERROR !!!! DUPLICATE INVOICE NUMBER</h1>";
-		echo '    <a href="invoice.php"> <img class="delete" src="/images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/> </a>';
-		exit();
-	}
 
 	$custname = $_POST['custname'];
 	$invdate = $_POST['invdate'];
@@ -118,7 +102,7 @@
 	$n=0;
 	
 	$item="";
-	$desc="";
+	$descr="";
 	$qty="";
 	$cost="";
 	$vat="";
@@ -128,16 +112,16 @@
 	while($n<$numofprod)
 	{
 		$item.=$_POST['item'][$n]."*#*";
-		$desc.=$_POST['desc'][$n]."*#*";
+		$descr.=$_POST['descr'][$n]."*#*";
 		$qty.=$_POST['qty'][$n]."*#*";
 		$cost.=$_POST['cost'][$n]."*#*";
 		$vat.=$_POST['vat'][$n]."*#*";
-        $discount.=$_POST['vat'][$n]."*#*";
+        $discount.=$_POST['discount'][$n]."*#*";
 		$price.=$_POST['price'][$n]."*#*";
 		$n++;
 	}
 	$item;
-	$desc;
+	$descr;
 	$qty;
 	$cost;
 	$vat;
@@ -150,16 +134,17 @@
 	$due = $_POST['due'];
 	$rbdf = $_POST['rbdf'];
 	$towords = $_POST['towords'];
-	
-	$query="INSERT INTO register(invnum, custname, invdate, numofprod, item, desc, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf) VALUES ('$invnum', '$custname', '$invdate', '$numofprod', '$item', '$desc', '$qty', '$cost', '$vat','$discount', '$price', '$subtotal', '$tax', '$total', '$due', '$rbdf')";
-       
+     
+    $query="INSERT INTO register".
+        '(invnum, custname, invdate, numofprod, item, descr, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf)'.
+        "VALUES ('".$invnum."', '".$custname."', '".$invdate."','".$numofprod."', '".$item."', '".$descr."', '".$qty."','".$cost."','".$vat."','".$discount."','".$price."', '".$subtotal."','".$tax."','".$total."','".$due."','".$rbdf."')"; 
+  
 	$create_invoice_query=mysqli_query($connection,$query);
      confirmQuery($create_invoice_query);
        
-//	$dbh->exec($sql);
-       
    }
 ?>
+
 
 <div class="main-panel">
     <div class="card">
@@ -192,7 +177,7 @@
             
               <tr>
                   <th>Item</th>
-                  <th>Description</th>
+                  <th>description</th>
                   <th width="100">Quantity</th>
                   <th width="150">Rate</th>
                   <th width="100">VAT %</th>
@@ -202,7 +187,7 @@
               </tr>
               <?php 
 			  $item = explode("*#*",$item);
-			  $desc = explode("*#*",$desc);
+			  $descr = explode("*#*",$descr);
 			  $qty = explode("*#*",$qty);
 			  $cost = explode("*#*",$cost);
 			  $vat = explode("*#*",$vat);
@@ -214,9 +199,10 @@
 			  while($count<$numofprod)
 			  {
 				?>
+                
               <tr class="item-row"style="font: 14px Arial, Helvetica, sans-serif;">
                   <td class="item-name" ><?php echo $item[$count];?></td>
-                  <td class="description"><?php echo $desc[$count];?></td>
+                  <td class="desciption"><?php echo $descr[$count];?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$qty[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$cost[$count]);?></td>
                   <td align="right"><?php echo sprintf('%0.2f',$vat[$count]);?></td>

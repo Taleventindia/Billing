@@ -81,9 +81,8 @@ function update_total() {
 
   var tax =0;
   tax = ( Number($("#tax").val()) * total) / 100;
-
+    
   vattotal-=total;
- 
   total = roundNumber(total,2);
   //vattotal = roundNumber(vattotal,2);
 
@@ -94,6 +93,8 @@ function update_total() {
 
   $('#vattotal').html(vattotal);
   $('#vattotal_h').val(vattotal)
+    
+   
 
   //total=Number(total)+vat;  
   total=Number(total)+tax+Number(vattotal);  
@@ -118,13 +119,16 @@ function update_balance() {
   $('#due_hid').val(due);
   $('.rtot').html(rtot);
   $('#round_hid').val(due);
-  $('#inwords').html("Rs. " + words + "Only");
-  $('#towords').val("Rs. " + words + "Only");
+  $('#inwords').html("Rs." + words + "Only");
+  $('#towords').val("Rs." + words + "Only");
 }
 
 function update_price() {
+
   var row = $(this).parents('.item-row');
   var price = row.find('.cost').val() * row.find('.qty').val();
+
+    
   amount=price; 
   amount = roundNumber(amount,2);
   price += (row.find('.vat').val() * price)/100; 
@@ -133,13 +137,14 @@ function update_price() {
   isNaN(price) ? row.find('.price').html("N/A") : row.find('.price').html(price);
   isNaN(price) ? row.find('.pr_hid').val("N/A") : row.find('.pr_hid').val(price);
   update_total();
-}
+  
+};
 
 function bind() {
   $(".cost").blur(update_price);
   $(".qty").blur(update_price);
   $(".vat").blur(update_price);
-}
+};
 
 $(document).ready(function() {
 
@@ -150,9 +155,10 @@ $(document).ready(function() {
  // $("#paid").blur(update_balance);
 
   $("#tax").blur(update_total);
+
    
   $("#addrow").click(function(){
-	  var newR = "<tr class=\"item-row\"><td class=\"item-name\"><div class=\"delete-wpr\"><textarea onblur=\"if(this.value=='') this.value='Item';\" onfocus=\"if(this.value=='Item') this.value='';\" name=\"item[]\">Item</textarea><a class=\"delete\" style=\"cursor:pointer\" title=\"Remove row\">X</a></div></td><td class=\"description\"><textarea onblur=\"if(this.value=='') this.value='Description';\" onfocus=\"if(this.value=='Description') this.value='';\" name=\"desc[]\">Description</textarea></td><td><textarea class=\"qty\" onblur=\"if(this.value=='') this.value='0.00';\" onfocus=\"if(this.value=='0.00') this.value='';\" name=\"qty[]\">0.00</textarea></td><td><textarea class=\"cost\" onblur=\"if(this.value=='') this.value='0.00';\" onfocus=\"if(this.value=='0.00') this.value='';\" name=\"cost[]\">0.00</textarea></td><td><textarea class=\"vat\" onblur=\"if(this.value=='') this.value='0.00';\" onfocus=\"if(this.value=='0.00') this.value='';\" name=\"vat[]\">0.00</textarea></td> <td><span class=\"amount\">0.00</span><input type=\"hidden\" class=\"pr_amt\"/></td><td><span class=\"price\">0.00</span><input type=\"hidden\" class=\"pr_hid\" name=\"price[]\" /></td></tr>";
+	  var newR = "<tr class=\"item-row\"><td class=\"item-name\"><div class=\"delete-wpr\"><textarea onblur=\"if(this.value=='') this.value='Item';\" onfocus=\"if(this.value=='Item') this.value='';\" name=\"item[]\">Item</textarea><a id=\"delete\" class=\"delete\" name=\"delete\" style=\"cursor:pointer\" title=\"Remove row\">X</a></div></td><td class=\"description\"><textarea onblur=\"if(this.value=='') this.value='Description';\" onfocus=\"if(this.value=='Description') this.value='';\" name=\"descr[]\">Description</textarea></td><td><textarea class=\"qty\" onblur=\"if(this.value=='') this.value='0.00';\" onfocus=\"if(this.value=='0.00') this.value='';\" name=\"qty[]\">0.00</textarea></td><td><textarea class=\"cost\" onblur=\"if(this.value=='') this.value='0.00';\" onfocus=\"if(this.value=='0.00') this.value='';\" name=\"cost[]\">0.00</textarea></td><td><textarea class=\"vat\" onblur=\"if(this.value=='') this.value='0.00';\" onfocus=\"if(this.value=='0.00') this.value='';\" name=\"vat[]\">0.00</textarea></td><td><textarea class=\"discount\" onblur=\"if(this.value=='') this.value='0.00';\" onfocus=\"if(this.value=='0.00') this.value='';\" name=\"discount[]\">0.00</textarea></td><td><span class=\"amount\">0.00</span><input type=\"hidden\" class=\"pr_amt\"/></td><td><span class=\"price\">0.00</span><input type=\"hidden\" class=\"pr_hid\" name=\"price[]\" /></td></tr>";
 	  
     $(".item-row:last").after(newR);
     if ($(".delete").length > 0) $(".delete").show();
@@ -162,7 +168,7 @@ $(document).ready(function() {
   bind();
   
   $(".delete").live('click',function(){
-    $(this).parents('.item-row').remove();
+   var $row=$(this).parents('.item-row').remove();
     //update_total();
     if ($(".delete").length < 2) $(".delete").hide();
   });

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Apr 13, 2021 at 10:16 AM
+-- Generation Time: Apr 22, 2021 at 05:41 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -126,6 +126,58 @@ INSERT INTO `invoice` (`invoice_no`, `invoice_date`, `customer_name`, `number_of
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `register`
+--
+
+CREATE TABLE `register` (
+  `invnum` int(11) NOT NULL,
+  `custname` text NOT NULL,
+  `invdate` date NOT NULL,
+  `numofprod` int(11) NOT NULL,
+  `item` varchar(40) NOT NULL,
+  `descr` varchar(40) NOT NULL,
+  `qty` varchar(40) NOT NULL,
+  `cost` varchar(40) NOT NULL,
+  `vat` varchar(40) NOT NULL,
+  `discount` varchar(40) NOT NULL,
+  `price` varchar(40) NOT NULL,
+  `subtotal` varchar(40) NOT NULL,
+  `tax` varchar(40) NOT NULL,
+  `total` varchar(40) NOT NULL,
+  `due` varchar(40) DEFAULT NULL,
+  `rbdf` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`invnum`, `custname`, `invdate`, `numofprod`, `item`, `descr`, `qty`, `cost`, `vat`, `discount`, `price`, `subtotal`, `tax`, `total`, `due`, `rbdf`) VALUES
+(6, 'Techzod', '2013-09-24', 1, 'Item1*#*', 'Desc1*#*', '100*#*', '9999*#*', '2.5*#*', '', '1024897.50*#*', '1024897.5', '5.0', '1076142.38', '1076142.38', '1076142.38'),
+(7, 'Techzod', '2013-09-24', 1, 'Item2*#*', 'Desc2*#*', '10*#*', '3211*#*', '2.2*#*', '', '32816.42*#*', '32816.42', '6.0', '34785.41', '34785.41', '34785.41'),
+(8, 'Techzod', '2013-09-24', 1, 'Item3*#*', 'Desc3*#*', '50*#*', '10.5*#*', '5.5*#*', '', '553.88*#*', '553.88', '6.0', '587.11', '587.11', '587.11'),
+(9, 'Company Name', '2013-09-25', 1, 'helo*#*', 'hi*#*', '231*#*', '3*#*', '2*#*', '', '706.86*#*', '706.86*#*', '0.0', '706.86', '706.86', '706.86'),
+(10, 'def', '2013-09-25', 1, 'hi*#*', 'hi*#*', '231*#*', '321*#*', '3*#*', '', '76375.53*#*', '76375.53', '323.0', '323068.49', '323068.49', '323068.49'),
+(11, 'abc', '2013-09-25', 1, 'hello*#*', 'hi*#*', '103*#*', '10*#*', '2.6*#*', '', '1056.78*#*', '1056.78', '5.0', '1109.62', '1109.62', '1109.62'),
+(577, 'techzod', '2013-09-25', 2, 'klajsdkjl*#*skudc*#*', 'jskajljasdj*#*jhkjhdsahjd*#*', '34*#*331*#*', '212*#*21.323*#*', '321.5*#*31.2*#*', '', '30381.72*#*9259.98*#*', '39641.7', '0.0', '39641.7', '39641.7', '39641.7'),
+(578, 'Company Name', '2013-09-27', 2, 'Item*#*Item*#*', 'Description*#*Description*#*', '3*#*2*#*', '1405.71*#*1405.72*#*', '4*#*4*#*', '', '4385.82*#*2923.90*#*', '7028.57', '4.0', '7590.86', '7590.86', '7590.86'),
+(579, 'techzod', '2013-09-27', 2, 'a*#*b*#*', 'aslkdjak*#*sakdjff*#*', '3*#*2*#*', '1405.71*#*1405.72*#*', '4*#*4*#*', '', '4385.82*#*2923.90*#*', '7028.57', '1.0', '7380.01', '7380.01', '7380.01'),
+(586, 'Prithvi', '2021-04-19', 2, 'pen*#*pencil*#*', '*#**#*', '600*#*800*#*', '10*#*10*#*', '0.00*#**#*', '', 'N/A*#*8000.00*#*', '8000.00', '0.00', '8000.00', '8000.00', '8000.00'),
+(587, 'Prithvi', '2021-04-19', 1, 'pen*#*', 'Description*#*', '600*#*', '10*#*', '*#*', '', '6000.00*#*', '', '0.00', '6000.00', '6000.00', '6000.00'),
+(588, 'Mohan', '2021-04-19', 1, 'Book*#*', 'Book*#*', '800*#*', '60*#*', '*#*', '', 'N/A*#*', '0.00', '7', '0.00', '0.00', '0.00'),
+(591, 'Prithvi', '2021-04-21', 2, 'Item*#*Keyboard*#*', 'Description*#*Keyboard*#*', '0.00*#*500*#*', '0.00*#*1000*#*', '5*#*5*#*', '', '*#*525000.00*#*', '500000.00', '3', '540000.00', '540000.00', '540000.00'),
+(592, 'Rahul', '2021-04-21', 2, 'Pen*#*Laptop*#*', 'Pen*#*Laptop*#*', '200*#*500*#*', '10*#*40000*#*', '5*#**#*', '', 'N/A*#*21000000.00*#*', '20000000.00', '3', '21600000.00', '21600000.00', '21600000.00'),
+(593, 'Praveen', '2021-04-21', 2, 'Tables*#*Furnitures*#*', 'Tables*#*Furnitures*#*', '100*#*200*#*', '220*#*320*#*', '5*#*6*#*', '', '23100.00*#*67840.00*#*', '86000.00', '5', '', '', ''),
+(594, 'Rahul', '2021-04-21', 2, 'Pen*#*Pencil*#*', 'Pen*#*Pencil*#*', '400*#*300*#*', '10*#*10*#*', '4*#*3*#*', '', '4160.00*#*3090.00*#*', '7000.00', '0.00', '7250.00', '7250.00', '7250.00'),
+(595, 'John', '2021-04-21', 2, 'Modem*#*Keyboard*#*', 'Modem*#*Keyboard*#*', '40*#*100*#*', '1000*#*2500*#*', '4*#*5*#*', '2*#*3*#*', '41600.00*#*262500.00*#*', '290000.00', '4', '315700.00', '315700.00', '315700.00'),
+(596, 'Nithin', '2021-04-21', 1, 'Table*#*', 'Table*#*', '50*#*', '1200*#*', '4*#*', '1*#*', '62400.00*#*', '60000.00', '0.00', '62400.00', '62400.00', '62400.00'),
+(597, 'Company Name', '2021-04-21', 2, 'Item*#*Item*#*', 'Description*#*Description*#*', '500*#*0.00*#*', '20*#*0.00*#*', '5*#*0.00*#*', '0.00*#*0.00*#*', '10500.00*#**#*', '10000.00', '0.00', '10500.00', '10500.00', '10500.00'),
+(598, 'test', '2021-04-21', 1, 'test*#*', 'test*#*', '400*#*', '20*#*', '5*#*', '3*#*', '8400.00*#*', '8000.00', '0.00', '8400.00', '8400.00', '8400.00'),
+(599, 'test2', '2021-04-21', 1, 'test2*#*', 'test2*#*', '5*#*', '6789*#*', '6*#*', '2*#*', '35981.70*#*', '33945.00', '0.00', '35981.70', '35981.70', '35981.70');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `stock`
 --
 
@@ -152,7 +204,10 @@ INSERT INTO `stock` (`stock_id`, `barcode_no`, `product_name`, `product_category
 (2, 'barcode.png', 'Laptop', 'plastics', 'Plastic', '45,000', 60, 'Aravindh', 30, '2021-07-16', '2020-03-25'),
 (3, 'barcode.png', 'Keyboard', 'stationaries', 'Plastic', '30,000', 60, 'Shanmugam', 40, '2022-04-18', '2020-11-14'),
 (4, 'barcode.png', 'Computer', 'Steels', 'Plastic', '90,000', 40, 'Arun', 20, '2021-10-22', '2020-10-22'),
-(5, 'barcode.png', 'Tables', 'Wooden', 'Plastic', '40,000', 60, 'Rahul', 20, '2021-08-28', '2020-12-18');
+(5, 'barcode.png', 'Tables', 'Wooden', 'Plastic', '40,000', 60, 'Rahul', 20, '2021-08-28', '2020-12-18'),
+(6, 'barcode.png', 'Pencil', 'stationaries', 'wooden', '10', 500, 'Arun', 100, '2021-08-27', '2020-10-24'),
+(7, 'barcode.png', 'Modem', 'plastics', 'Plastic', '5,000', 60, 'Aravindh', 20, '2021-07-23', '2021-04-23'),
+(8, 'barcode.png', 'Speaker', 'Category 8', 'Plastic', '30,000', 60, 'Sameera', 30, '2021-07-16', '2020-11-12');
 
 -- --------------------------------------------------------
 
@@ -261,6 +316,12 @@ ALTER TABLE `invoice`
   ADD PRIMARY KEY (`invoice_no`);
 
 --
+-- Indexes for table `register`
+--
+ALTER TABLE `register`
+  ADD PRIMARY KEY (`invnum`);
+
+--
 -- Indexes for table `stock`
 --
 ALTER TABLE `stock`
@@ -301,10 +362,16 @@ ALTER TABLE `invoice`
   MODIFY `invoice_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `register`
+--
+ALTER TABLE `register`
+  MODIFY `invnum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=601;
+
+--
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `stock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `stock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `suppliers`
