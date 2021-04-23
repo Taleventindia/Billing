@@ -85,6 +85,7 @@ input[type=submit] {
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
+  
 </style>
 <div class="main-panel">
     <div class="card">
@@ -98,7 +99,7 @@ input[type=submit] {
                 Consignee,<br />
                 <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
                
-<!--                       <input class="autocomplete" name="firstname" size="10">-->
+<!--                       <input id="customer-title" style="height:90px" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';" class="autocomplete" name="firstname" size="20">-->
                
                 <table id="meta">
                     <tr>
@@ -109,7 +110,7 @@ input[type=submit] {
                     </tr>
                     <tr>
                         <td class="meta-head">Date</td>
-                        <td><textarea name="invdate" id="date"><?php echo date("Y/m/d");?></textarea></td>
+                        <td><textarea name="invdate" id="invdate"><?php echo date("Y/m/d");?></textarea></td>
                     </tr>
     
                 </table>
@@ -134,28 +135,35 @@ input[type=submit] {
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
+                
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
                       <textarea tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea> 
-<!--                      <input class="autocomplete" name="product_name" size="12">-->
+<!--                      <input style="height:50px" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name" size="13">-->
 
                       </div>                
                   </td>
                   
                  <td class="description">
                       <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="descr[]">Description</textarea>  
-<!--                    <input type='text' id='autocompletee' name='product_name'>-->
+<!--                    <input style="height:50px" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name='product_name' size="28">-->
+                     
                   </td>  
                      
                   <td><div class="demo">
-                      <textarea tabindex="4"  class="qty" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="qty[]">0.00</textarea></div></td>
+                      <textarea tabindex="4" class="qty" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="qty[]">0.00</textarea></div></td>
+                  
                   <td><div class="demo">
                       <textarea tabindex="5"  class="cost" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="cost[]">0.00</textarea></div>    
-<!--                  <input type='text' id='autocomplete' name='product_cost'>-->
+<!--                  <input type='text' id='autocomplete' name='product_cost'>  -->
                   </td>
+                  
                   <td><textarea tabindex="6" class="vat" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="vat[]">0.00</textarea></td>
+                  
                   <td><textarea tabindex="7" class="discount" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="discount[]">0.00</textarea></td>
+                  
                   <td><span class="amount">0.00</span><input type="hidden" class="pr_amt"/></td>
+                  
                   <td><span class="price">0.00</span><input type="hidden" class="pr_hid" name="price[]" /></td>
               </tr>       
 <!--             </div>        -->
