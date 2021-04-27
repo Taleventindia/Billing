@@ -70,6 +70,20 @@
                       </div>
                       <div class="ml-lg-auto" id="sales-statistics-legend"></div>
                     </div>
+
+                      <?php
+
+//                        $query = sprintf("SELECT invnum, rbdf FROM register ORDER BY invnum");
+//                        $result = mysqli_query($connection,$query);
+//                      
+//                        $data = array();
+//                        foreach ($result as $row) {
+//                          $data[] = $row;
+//                        }
+//                        print json_encode($data);
+
+                        ?>
+                      
                     <canvas class="mt-5" height="120" id="sales-statistics-overview"></canvas>
                   </div>
                 </div>
