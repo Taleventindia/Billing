@@ -172,21 +172,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#auth4" aria-expanded="false" aria-controls="auth4">
-                <i class="menu-icon typcn typcn-coffee"></i>
+              <a class="nav-link" href="users.php">
+                <i class="menu-icon typcn typcn-shopping-bag"></i>
                 <span class="menu-title">Users</span>
-                <i class="menu-arrow"></i>
               </a>
-              <div class="collapse" id="auth4">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="users.php">View All Users</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../registration.php">Add User</a>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./profile.php">
