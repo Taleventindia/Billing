@@ -63,7 +63,7 @@
                         <div class="wrapper">
                           <h5 class="mb-0">Total Revenue</h5>
                           <div class="d-flex align-items-center">
-                            <h4 class="font-weight-semibold mb-0">$753,098</h4>
+                            <h4 class="font-weight-semibold mb-0">Rs.753,098</h4>
                             <small class="ml-2 text-gray d-none d-lg-block"><b>10.5%</b> of 20,000 Total</small>
                           </div>
                         </div>
@@ -87,6 +87,66 @@
                 </div>
               </div>
             </div>
+                    <div class="col-md-12 grid-margin">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <h4 class="card-title mb-0">Invoice</h4>
+                          <a href="reports.php"><small>Show All</small></a>
+                        </div>
+                        <div class="table-responsive">
+                          <table class="table table-striped table-hover">
+                            <thead>
+                              <tr>
+                                <th>Invoice ID</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                                <th>Due Date</th>
+                                <th>Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>INV-87239</td>
+                                <td>Viola Ford</td>
+                                <td>Paid</td>
+                                <td>20 Jan 2019</td>
+                                <td>Rs.755</td>
+                              </tr>
+                              <tr>
+                                <td>INV-87239</td>
+                                <td>Dylan Waters</td>
+                                <td>Unpaid</td>
+                                <td>23 Feb 2019</td>
+                                <td>Rs.800</td>
+                              </tr>
+                              <tr>
+                                <td>INV-87239</td>
+                                <td>Louis Poole</td>
+                                <td>Unpaid</td>
+                                <td>25 Mar 2019</td>
+                                <td>R.463</td>
+                              </tr>
+                              <tr>
+                                <td>INV-87239</td>
+                                <td>Vera Howell</td>
+                                <td>Paid</td>
+                                <td>27 Mar 2019</td>
+                                <td>Rs.235</td>
+                              </tr>
+                              <tr>
+                                <td>INV-87239</td>
+                                <td>Allie Goodman</td>
+                                <td>Unpaid</td>
+                                <td>1 Apr 2019</td>
+                                <td>Rs.657</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="col-md-6 grid-margin stretch-card">
                     <div class="card">
                       <div class="card-body pb-0">

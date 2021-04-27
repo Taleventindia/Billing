@@ -52,12 +52,12 @@ body {
       color: #919aa3; }
   .login-card .login-btn {
     padding: 13px 20px 12px;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 4px;
     font-size: 17px;
     font-weight: bold;
     line-height: 20px;
-    color: #000;
+    color: #fff;
     margin-bottom: 24px; }
     .login-card .login-btn:hover {
       border: 1px solid #000;
