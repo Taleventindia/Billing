@@ -32,8 +32,8 @@
                         <th>Onhand Qty</th>
                         <th>Expiry Date</th>
                         <th>Date Arrival</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>Action</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -86,9 +86,9 @@
                     echo "<td>$date_arrival</td>";
                  
                  
-    echo "<td><a class='btn btn-primary' href='inventory.php?source=edit_stock&edit_stock={$stock_id}'>Edit</a></td>";   
+                    echo "<td><input type='image' src='assets/icons/edit.svg' width='13' height ='13'><a href='inventory.php?source=edit_stock&edit_stock={$stock_id}'>Edit</a></td>";   
                  
-    echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='inventory.php?delete={$stock_id}'>Delete</a></td>";
+                    echo "<td><input type='image' src='assets/icons/delete.svg' width='15' height ='15'><a onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='inventory.php?delete={$stock_id}'>Delete</a></td>";
                  
                     echo "</tr>";  
                     
@@ -129,8 +129,8 @@
                     echo "<td>$date_arrival</td>";
                  
                  
-                    echo "<td><a class='btn btn-primary' href='inventory.php?source=edit_stock&edit_stock={$stock_id}'>Edit</a></td>";                 
-       echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='inventory.php?delete={$stock_id}'>Delete</a></td>";
+                    echo "<td><input type='image' src='assets/icons/edit.svg' width='13' height ='13'><a href='inventory.php?source=edit_stock&edit_stock={$stock_id}'>Edit</a></td>";                 
+                    echo "<td><input type='image' src='assets/icons/delete.svg' width='15' height ='15'><a onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='inventory.php?delete={$stock_id}'>Delete</a></td>";
                     echo "</tr>";  
                     
                     }

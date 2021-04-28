@@ -190,7 +190,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./profile.php">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
-                <span class="menu-title">profile</span>
+                <span class="menu-title">Profile</span>
               </a>
             </li>
            
