@@ -73,18 +73,21 @@
 
                       <?php
 
-//                        $query = sprintf("SELECT invnum, rbdf FROM register ORDER BY invnum");
-//                        $result = mysqli_query($connection,$query);
-//                      
-//                        $data = array();
-//                        foreach ($result as $row) {
-//                          $data[] = $row;
-//                        }
-//                        print json_encode($data);
+                        $query = sprintf("SELECT invnum, rbdf FROM register ORDER BY invnum");
+                        $result = mysqli_query($connection,$query);
+                      
+                        $data = array();
+                        foreach ($result as $row) {
+                            $invnum[]=$row['invnum'];
+                            $rbdf[]=$row['rbdf'];
+                          $data[] = $row;
+                           
+                        }
+//                        echo json_encode($rbdf);
 
                         ?>
                       
-                    <canvas class="mt-5" height="120" id="sales-statistics-overview"></canvas>
+                    <canvas class="mt-5" height="120" name="rbdf" id="sales-statistics-overview"></canvas>
                   </div>
                 </div>
               </div>
@@ -188,6 +191,7 @@
             <!-- /.container-fluid -->
               </div>
             </div>
+
                       <footer class="footer">
             <div class="container-fluid clearfix">
               <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © TaleventTech.com 2021</span>

@@ -33,7 +33,10 @@
       gradientStrokeFill_2.addColorStop(0, '#14c671');
       var data_1_1 = [60, 75, 65, 130, 130, 145, 110, 145, 155, 149, 170];
       var data_1_2 = [0, 25, 20, 40, 70, 52, 49, 90, 70, 94, 110, 135];
-
+        
+      var data_5_1 = [10761.38, 26785.41, 58752.11, 70642.86, 58762.11, 70653.86, 32306.69, 1109.62, 39641.7, 7590.86];
+      var data_5_2 = [39641.7, 7590.86, 20000.01, 50000.00, 40000.00, 48000.00, 26750.00, 21600.00, 42680.26, 45260.21];
+        
       var data_2_1 = [130, 145, 155, 60, 75, 65, 130, 110, 145, 149, 170];
       var data_2_2 = [0, 70, 52, 90, 25, 20, 40, 70, 49, 94, 110, 135];
 
@@ -106,20 +109,20 @@
               drawBorder: false
             }
           }],
-          yAxes: [{
-            ticks: {
-              max: 200,
-              min: 0,
-              stepSize: 50,
-              fontColor: "#858585",
-              beginAtZero: false
-            },
-            gridLines: {
-              color: '#e2e6ec',
-              display: true,
-              drawBorder: false
-            }
-          }]
+//          yAxes: [{
+//            ticks: {
+//              max: 200,
+//              min: 0,
+//              stepSize: 50,
+//              fontColor: "#858585",
+//              beginAtZero: false
+//            },
+//            gridLines: {
+//              color: '#e2e6ec',
+//              display: true,
+//              drawBorder: false
+//            }
+//          }]
         }
       }
       var salesChart = new Chart(salesChartCanvas, {
@@ -137,8 +140,8 @@
       });
       $("#sales-statistics_switch_2").click(function () {
         var data = salesChart.data;
-        data.datasets[0].data = data_2_1;
-        data.datasets[1].data = data_2_2;
+        data.datasets[0].data = data_5_1;
+        data.datasets[1].data = data_5_2;
         salesChart.update();
       });
       $("#sales-statistics_switch_3").click(function () {
