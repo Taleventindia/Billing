@@ -135,8 +135,6 @@
               <div class="form-group row">
                 <label for="amount" class="col-sm-3 col-form-label">Payment Mode</label>
                 <div class="col-sm-9">
-<!--                  <input type="text" value="<?php echo $payment_mode; ?>" class="form-control" name="payment_mode"/>  -->
-                    
             <select class="form-control" name="payment_mode"id="payment_mode">
             
             <option value="<?php echo $payment_mode;?>"><?php echo $payment_mode; ?></option> 
@@ -177,8 +175,6 @@
               <div class="form-group row">
                 <label for="amount" class="col-sm-3 col-form-label">Payment Status</label>
                 <div class="col-sm-9">
-<!--                  <input type="text" value="<?php //echo $payment_status; ?>" class="form-control" name="payment_status"/>-->
-                    
         <select class="form-control" name="payment_status"id="payment_status">
             
             <option value="<?php echo $payment_status;?>"><?php echo $payment_status; ?></option> 

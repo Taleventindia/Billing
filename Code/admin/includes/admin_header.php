@@ -122,9 +122,23 @@
                     <span class="menu-title">categories</span>
                       </a>
                   </li>
+                    
+                    <?php
+
+                         if($_SESSION['user_role']!=="User"){
+
+                     ?> 
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="inventory.php">Stock List</a>
                   </li>
+                    
+                   <?php 
+              
+                        }
+              
+                    ?>  
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="inventory.php?source=add_stock">Add Stock</a>
                   </li>
@@ -139,9 +153,23 @@
               </a>
               <div class="collapse" id="auth1">
                 <ul class="nav flex-column sub-menu">
+                    
+                      <?php
+
+                         if($_SESSION['user_role']!=="User"){
+
+                     ?>     
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="reports.php">View All Invoices</a>
                   </li>
+                    
+                      <?php 
+              
+                      }
+              
+                  ?>  
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="invoice.php">Create Invoice</a>
                   </li>
@@ -156,9 +184,23 @@
               </a>
               <div class="collapse" id="auth2">
                 <ul class="nav flex-column sub-menu">
+                    
+                    <?php
+
+                       if($_SESSION['user_role']!=="User"){
+
+                    ?>       
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="customers.php">View All Customers</a>
                   </li>
+                    
+                   <?php 
+              
+                      }
+              
+                     ?> 
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="customers.php?source=add_customer">Add Customer</a>
                   </li>
@@ -173,9 +215,23 @@
               </a>
               <div class="collapse" id="auth3">
                 <ul class="nav flex-column sub-menu">
+                    
+                   <?php
+
+                      if($_SESSION['user_role']!=="User"){
+
+                  ?>     
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="suppliers.php">View All Suppliers</a>
                   </li>
+                    
+                  <?php 
+              
+                     }
+              
+                  ?>  
+                    
                   <li class="nav-item">
                     <a class="nav-link" href="suppliers.php?source=add_supplier">Add Suppliers</a>
                   </li>
@@ -183,11 +239,12 @@
               </div>
             </li>
               
-        <?php
+                <?php
 
-             if($_SESSION['user_role']!=="User"){
+                   if($_SESSION['user_role']!=="User"){
 
-        ?>      
+                ?> 
+              
             <li class="nav-item">
               <a class="nav-link" href="users.php">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
@@ -195,11 +252,11 @@
               </a>
             </li>
 
-        <?php 
+             <?php 
               
-              }
+                }
               
-         ?>  
+             ?>  
               
               
             <li class="nav-item">

@@ -67,9 +67,8 @@
            
         confirmQuery($edit_user_query);
            
-    
-           echo "<h3>User Updated:" . "<a href='users.php'>View Users?</a></h3>";
-             
+         header("Location:users.php");
+  
         }else{
              
            $message_confirm="password did not match";
@@ -126,9 +125,9 @@
                     echo "<option value='user'>user</option>";
                     
                 }else{
-                    
-                    echo "<option value='admin'>admin</option>";
-                    echo "<option value='user'>user</option>";
+                    echo "<option value='Super Admin'>Super Admin</option>";
+                    echo "<option value='Admin'>Admin</option>";
+                    echo "<option value='User'>User</option>";
 
                 }      
 

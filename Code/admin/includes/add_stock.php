@@ -40,11 +40,8 @@
       
    ?>  
 
-              
-<form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">         
-
    <div class="card-body">           
-<form action="" method="post" enctype="multipart/form-data" class="form-sample">         
+<form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">         
               
     <div class="row">
        <div class="col-md-6">
