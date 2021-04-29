@@ -8,6 +8,15 @@
            
           
   switch($bulk_options){
+          
+          case 'Super Admin':
+
+             $query = "UPDATE users SET user_role='{$bulk_options}' WHERE user_id={$uservalueId} " ;                  
+             $update_to_superadmin_status = mysqli_query($connection,$query);
+
+                   confirmQuery($update_to_superadmin_status);
+
+             break; 
                    
            case 'Admin':
 
@@ -51,6 +60,7 @@
           <select class="form-control" name="bulk_options" id="">
                    
                 <option value="">Select Options</option>
+                <option value="Super Admin">Super Admin</option>
                 <option value="Admin">Admin</option>
                 <option value="User">User</option>
                 <option value="delete">Delete</option>

@@ -6,6 +6,8 @@
    <?php
 
       if(!isset($_SESSION['user_role'])){
+          
+//      if($_SESSION['user_role']!=="Admin"){
 
         header("Location:../SignInPage.php");  
 
@@ -162,8 +164,7 @@
                   </li>
                 </ul>
               </div>
-            </li>
-              
+            </li> 
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#auth3" aria-expanded="false" aria-controls="auth3">
                 <i class="menu-icon typcn typcn-coffee"></i>
@@ -181,12 +182,26 @@
                 </ul>
               </div>
             </li>
+              
+        <?php
+
+             if($_SESSION['user_role']!=="User"){
+
+        ?>      
             <li class="nav-item">
               <a class="nav-link" href="users.php">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
                 <span class="menu-title">Users</span>
               </a>
             </li>
+
+        <?php 
+              
+              }
+              
+         ?>  
+              
+              
             <li class="nav-item">
               <a class="nav-link" href="./profile.php">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
