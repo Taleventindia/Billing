@@ -15,8 +15,8 @@
                         <th>Payment Mode</th>
                         <th>Payment status</th>
                         <th>Comments</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>Action</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,8 +57,8 @@
                     echo "<td>$comments</td>";
                  
              
-                    echo "<td><a class='btn btn-primary' href='customers.php?source=edit_customer&edit_customer={$customer_id}'>Edit</a></td>";
- echo "<td><a class='btn btn-danger' onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='customers.php?delete={$customer_id}'>Delete</a></td>";
+                    echo "<td><input type='image' src='assets/icons/edit.svg' width='13' height ='13'> <a href='customers.php?source=edit_customer&edit_customer={$customer_id}'>Edit</a></td>";
+                    echo "<td><input type='image' src='assets/icons/delete.svg' width='15' height ='15'><a onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='customers.php?delete={$customer_id}'>Delete</a></td>";
                  
                     echo "</tr>";
 

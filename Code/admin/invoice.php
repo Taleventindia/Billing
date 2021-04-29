@@ -87,6 +87,7 @@ input[type=submit] {
 }
   
 </style>
+
 <div class="main-panel">
     <div class="card">
 <div class="card-body">
@@ -241,12 +242,25 @@ input[type=submit] {
               </tr>
               <tr>
     
-                  <td colspan="3" class="blank"> </td>
+                  <td colspan="3" class="">
+                    <label for="billtype">Bill Type:</label>
+                    <select name="Bill Type" id="billtype">
+                        <option value="cash">Cash Bill</option>
+                        <option value="Card">Credit Bill</option> 
+                    </select></td>
                   <td colspan="4" class="total-line">Total: Rs. </td>
                   <td class="total-value"><div id="total">0.00</div><input type="hidden" id="tot_hid" name="total" /></td>
               </tr>
               <tr>
-                  <td colspan="3" class="blank"> </td>
+                  <td colspan="3" class="">
+                      <label for="paymentmode">Payment Mode</label>
+                      <select name="Select Payment Mode" id="paymentmode">
+                        <option value="cash">Cash</option>
+                        <option value="Card">Credit Card</option>
+                        <option value="Credit">Credit</option>
+                        <option value="Credit">UPI</option>  
+                    </select>
+                    </td>
                   <td colspan="4" class="total-line">Balance Due: Rs.</td>
                   <td class="total-value"><div class="due">0.00</div><input type="hidden" id="due_hid" name="due" /></td>
               </tr>
@@ -293,8 +307,6 @@ input[type=submit] {
     </div>
     </div>
        
-                <!-- Custom Fonts -->
-                <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
                 <link rel='stylesheet' type='text/css' href='css/style.css' />
 

@@ -45,9 +45,9 @@
                           <thead>
                               <tr>
                                   <th>ID</th>
-                                  <th>Category Title</th>
-                                  <th>Edit</th>
-                                  <th>Delete</th>
+                                  <th>Category Name</th>
+                                  <th>Action</th>
+                                  <th>Action</th>
                               </tr>
                           </thead>
                           <tbody>

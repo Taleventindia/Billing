@@ -39,8 +39,12 @@
        }
       
    ?>  
+
               
 <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">         
+
+   <div class="card-body">           
+<form action="" method="post" enctype="multipart/form-data" class="form-sample">         
               
     <div class="row">
        <div class="col-md-6">
@@ -83,7 +87,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label" for="title">Product Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" size="100" maxlength="100" name="product_name">
+                  <input type="text" class="form-control" size="115" maxlength="115" name="product_name">
                 </div>
               </div>
             </div>
@@ -165,4 +169,5 @@
         </form>       
       </div>
    </div>
+</div>
 </div>

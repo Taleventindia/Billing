@@ -2,7 +2,7 @@
 <div class="main-panel">
 <div class="card">
         <div class="card-body">
-        <div class=content-wrapper>
+       
                 <!-- Page Heading -->
                         <h3 class="page-header" style="color:black">
                             Profile 
@@ -13,14 +13,10 @@
                              echo $_SESSION['firstname'];   
                              } 
                     ?>
-                                </h3> </small>
+                    </h3> </small>
                         </h3>
-         
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button class="btn btn-default" style="float: left; width:70px; background-color: #adff2f;" name="submit"><a href="edit_profile.php">Edit</a></button>
-                            </div>
-                        </div>  
+            <button class="btn btn-default" style="float: right; width:70px; background-color: #adff2f;" name="submit"><a href="edit_profile.php">Edit</a></button>
+
          
                 <?php
                     
@@ -32,12 +28,7 @@
      $select_user_profile = mysqli_query($connection,$query);
                         
              ?>
-                    <div class="row">
-                        <div class="col-md-6">
-                              <br>  
-                                <h3 style="text-align: centre;">My Profile</h3>   
-                          </div>
-                        </div>                
+       
         <?php            
                         
          while($row=mysqli_fetch_array($select_user_profile)){
@@ -56,12 +47,12 @@
              }
 
       ?>
-            <div class=content-wrapper>
+            <div class="card-body">
                     <div class="row">
                         <div class="col-md-6"> 
                         <img class="rounded-circle" height=150 width=150 src ='../images/<?php echo $_SESSION['image'] ?>' alt=""> </div>          
                         </div>
-                    </div>  
+
                 </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -116,8 +107,7 @@
                       </div>
                 </div>
             </div>   
-     </div>  
-
+</div>
     <?php include "includes/admin_footer.php"; ?>
                     
                     
