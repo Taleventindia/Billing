@@ -22,7 +22,6 @@
                     
                             
      <?php 
-          
                     
              $query="SELECT * FROM suppliers ";
              $select_suppliers=mysqli_query($connection,$query);
@@ -62,8 +61,7 @@
                     echo "</tr>";
 
                     }
-
-                    ?>
+                ?>
                       
             </tbody>
         </table>

@@ -130,18 +130,22 @@
 	
 	$subtotal = $_POST['subtotal'];
 	$tax = $_POST['tax'];
+	$bill_type = $_POST['bill_type'];
+	$payment_status = $_POST['payment_status'];
+	$payment_mode = $_POST['payment_mode'];
 	$total = $_POST['total'];
 	$due = $_POST['due'];
 	$rbdf = $_POST['rbdf'];
 	$towords = $_POST['towords'];
+
      
     $query="INSERT INTO register".
-        '(invnum, custname, invdate, numofprod, item, descr, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf)'.
-        "VALUES ('".$invnum."', '".$custname."', '".$invdate."','".$numofprod."', '".$item."', '".$descr."', '".$qty."','".$cost."','".$vat."','".$discount."','".$price."', '".$subtotal."','".$tax."','".$total."','".$due."','".$rbdf."')"; 
+        '(invnum, custname, invdate, numofprod, item, descr, qty, cost, vat, discount, price, subtotal, tax, bill_type, payment_status, payment_mode, total, due, rbdf)'.
+        "VALUES ('".$invnum."','".$custname."','".$invdate."','".$numofprod."','".$item."','".$descr."','".$qty."','".$cost."','".$vat."','".$discount."','".$price."','".$subtotal."','".$tax."','".$bill_type."','".UnPaid."','".$payment_mode."','".$total."','".$due."','".$rbdf."')"; 
   
 	$create_invoice_query=mysqli_query($connection,$query);
      confirmQuery($create_invoice_query);
-       
+     
    }
 ?>
 
@@ -227,7 +231,7 @@
                   <td colspan="4" class="total-line">TAX:</td>
                   <td class="total-value" align="right"><?php echo sprintf('%0.2f',$tax);?> %
                   </td>
-              </tr>
+              </tr> 
               <tr>
                   <td colspan="3" class="blank"> </td>
                   <td colspan="4" class="total-line">VAT:</td>
@@ -254,15 +258,58 @@
 				  
 				  ?>
                   </td>                
-              </tr>
-              <tr>
-    
-                  <td colspan="3" class="blank"> </td>
+              </tr>  
+              <tr> <td colspan="3" class="">
+                    <label for="billtype">Bill Type:</label>
+<!--
+                    <select name="Bill Type" id="billtype">
+                        <option value="cash">Cash Bill</option>
+                        <option value="Card">Credit Bill</option> 
+                    </select>
+-->
+            <select name="bill_type"id="bill_type">
+            
+         <?php 
+                if($user_role == 'Cash Bill'){
+                    
+                    echo "<option value='Credit Bill'>Credit Bill</option>";
+                    
+                }else{
+                    echo "<option value='Cash Bill'>Cash Bill</option>";
+                    echo "<option value='Credit Bill'>Credit Bill</option>";
+
+                }      
+
+            ?>
+
+         </select> 
+                  
+                  
+                 </td>
+
                   <td colspan="4" class="total-line">Total:</td>
                   <td class="total-value" align="right"><div id="total"><?php echo sprintf('%0.2f',$total);?></div></td>
               </tr>
-              <tr>
+                
+<!--
+                <tr>
                   <td colspan="3" class="blank"> </td>
+                  <td colspan="4" class="total-line">Payment Status:</td>
+                  <td class="total-value"><?php //echo $payment_status;?>
+                  </td>
+              </tr>
+-->
+                <tr>                
+                  <td colspan="3" class="">
+                      <label for="paymentmode">Payment Mode</label>
+                      <select name="Select Payment Mode" id="paymentmode">
+                        <option value="cash">Cash</option>
+                        <option value="Card">Credit Card</option>
+                        <option value="Credit">Credit</option>
+                        <option value="Credit">UPI</option>  
+                    </select>
+                    </td>
+
                   <td colspan="4" class="total-line">Balance Due:</td>
                   <td class="total-value" align="right"><div class="due"><?php echo sprintf('%0.2f',$due);?></div></td>
               </tr>

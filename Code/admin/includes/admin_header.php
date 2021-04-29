@@ -12,7 +12,6 @@
         header("Location:../SignInPage.php");  
 
       }
-
     ?> 
 
 <!DOCTYPE html>
@@ -121,24 +120,10 @@
                       <i class="menu-icon typcn typcn-shopping-bag"></i>
                     <span class="menu-title">categories</span>
                       </a>
-                  </li>
-                    
-                    <?php
-
-                         if($_SESSION['user_role']!=="User"){
-
-                     ?> 
-                    
+                  </li>  
                   <li class="nav-item">
                     <a class="nav-link" href="inventory.php">Stock List</a>
-                  </li>
-                    
-                   <?php 
-              
-                        }
-              
-                    ?>  
-                    
+                  </li>  
                   <li class="nav-item">
                     <a class="nav-link" href="inventory.php?source=add_stock">Add Stock</a>
                   </li>
@@ -152,24 +137,10 @@
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="auth1">
-                <ul class="nav flex-column sub-menu">
-                    
-                      <?php
-
-                         if($_SESSION['user_role']!=="User"){
-
-                     ?>     
-                    
+                <ul class="nav flex-column sub-menu">     
                   <li class="nav-item">
                     <a class="nav-link" href="reports.php">View All Invoices</a>
-                  </li>
-                    
-                      <?php 
-              
-                      }
-              
-                  ?>  
-                    
+                  </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="invoice.php">Create Invoice</a>
                   </li>
@@ -183,24 +154,10 @@
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="auth2">
-                <ul class="nav flex-column sub-menu">
-                    
-                    <?php
-
-                       if($_SESSION['user_role']!=="User"){
-
-                    ?>       
-                    
+                <ul class="nav flex-column sub-menu">   
                   <li class="nav-item">
                     <a class="nav-link" href="customers.php">View All Customers</a>
-                  </li>
-                    
-                   <?php 
-              
-                      }
-              
-                     ?> 
-                    
+                  </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="customers.php?source=add_customer">Add Customer</a>
                   </li>
@@ -215,23 +172,9 @@
               </a>
               <div class="collapse" id="auth3">
                 <ul class="nav flex-column sub-menu">
-                    
-                   <?php
-
-                      if($_SESSION['user_role']!=="User"){
-
-                  ?>     
-                    
                   <li class="nav-item">
                     <a class="nav-link" href="suppliers.php">View All Suppliers</a>
-                  </li>
-                    
-                  <?php 
-              
-                     }
-              
-                  ?>  
-                    
+                  </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="suppliers.php?source=add_supplier">Add Suppliers</a>
                   </li>

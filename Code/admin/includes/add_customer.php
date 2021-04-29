@@ -34,7 +34,7 @@
            
         confirmQuery($create_customer_query);
            
-            header("Location:./customers.php"); 
+            header("Location:customers.php"); 
        }
        
            else {

@@ -34,7 +34,7 @@
            
         confirmQuery($create_supplier_query);
            
-            header("Location:./suppliers.php"); 
+            header("Location:suppliers.php"); 
        }
        
            else {

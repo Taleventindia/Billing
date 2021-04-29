@@ -244,22 +244,50 @@ input[type=submit] {
     
                   <td colspan="3" class="">
                     <label for="billtype">Bill Type:</label>
-                    <select name="Bill Type" id="billtype">
-                        <option value="cash">Cash Bill</option>
-                        <option value="Card">Credit Bill</option> 
-                    </select></td>
+                      
+                     <select name="bill_type"id="bill_type">
+            
+         <?php 
+                if($user_role == 'Cash Bill'){
+                    
+                    echo "<option value='Credit Bill'>Credit Bill</option>";
+                    
+                }else{
+                    echo "<option value='Cash Bill'>Cash Bill</option>";
+                    echo "<option value='Credit Bill'>Credit Bill</option>";
+
+                }      
+
+            ?>
+
+         </select>   
+                  </td>
                   <td colspan="4" class="total-line">Total: Rs. </td>
                   <td class="total-value"><div id="total">0.00</div><input type="hidden" id="tot_hid" name="total" /></td>
               </tr>
               <tr>
                   <td colspan="3" class="">
                       <label for="paymentmode">Payment Mode</label>
-                      <select name="Select Payment Mode" id="paymentmode">
-                        <option value="cash">Cash</option>
-                        <option value="Card">Credit Card</option>
-                        <option value="Credit">Credit</option>
-                        <option value="Credit">UPI</option>  
-                    </select>
+
+                      <select name="payment_mode"id="payment_mode">
+            
+         <?php 
+                if($user_role == 'Cash'){
+                    
+                    echo "<option value='Credit Card'>Credit Card</option>";
+                    
+                }else{
+                    echo "<option value='Cash'>Cash</option>";
+                    echo "<option value='Credit Card'>Credit Card</option>";
+                    echo "<option value='Credit'>Credit</option>";
+                    echo "<option value='Credit'>UPI</option>";
+
+                }      
+
+            ?>
+
+         </select>  
+                      
                     </td>
                   <td colspan="4" class="total-line">Balance Due: Rs.</td>
                   <td class="total-value"><div class="due">0.00</div><input type="hidden" id="due_hid" name="due" /></td>

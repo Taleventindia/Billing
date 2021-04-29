@@ -45,7 +45,7 @@
            
         confirmQuery($edit_supplier_query);
        
-         header("Location:./suppliers.php");  
+         header("Location:suppliers.php");  
        
        
        }
