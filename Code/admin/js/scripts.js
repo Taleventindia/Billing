@@ -24,6 +24,7 @@ $( function() {
   },
   focus: function(event, ui){
      $( "#autocomplete" ).val( ui.item.label );
+     $( "#custname" ).val( ui.item.value );
 //     $( "#selectuser_id" ).val( ui.item.value );
      return false;
    },
@@ -64,6 +65,7 @@ $( function() {
         terms.push( ui.item.value );
                 
 //        terms.push( "" );
+        $('#custname').val(terms.join( ", " ));
 //        $('#selectuser_ids').val(terms.join( ", " ));
 
         return false;
@@ -78,8 +80,6 @@ function split( val ) {
 function extractLast( term ) {
    return split( term ).pop();
 }
-
-
 
 
 

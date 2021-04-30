@@ -80,7 +80,7 @@
                         foreach ($result as $row) {
                             $invnum[]=$row['invnum'];
                             $rbdf[]=$row['rbdf'];
-                          $data[] = $row;
+                            $data[] = $row;
                            
                         }
 //                        echo json_encode($rbdf);

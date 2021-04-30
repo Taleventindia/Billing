@@ -137,16 +137,17 @@
 	$due = $_POST['due'];
 	$rbdf = $_POST['rbdf'];
 	$towords = $_POST['towords'];
-
+    
      
     $query="INSERT INTO register".
         '(invnum, custname, invdate, numofprod, item, descr, qty, cost, vat, discount, price, subtotal, tax, bill_type, payment_status, payment_mode, total, due, rbdf)'.
-        "VALUES ('".$invnum."','".$custname."','".$invdate."','".$numofprod."','".$item."','".$descr."','".$qty."','".$cost."','".$vat."','".$discount."','".$price."','".$subtotal."','".$tax."','".$bill_type."','".UnPaid."','".$payment_mode."','".$total."','".$due."','".$rbdf."')"; 
+        "VALUES ('".$invnum."','".$custname."','".$invdate."','".$numofprod."','".$item."','".$descr."','".$qty."','".$cost."','".$vat."','".$discount."','".$price."','".$subtotal."','".$tax."','".$bill_type."','".Paid."','".$payment_mode."','".$total."','".$due."','".$rbdf."')"; 
   
 	$create_invoice_query=mysqli_query($connection,$query);
      confirmQuery($create_invoice_query);
-     
+           
    }
+
 ?>
 
 
@@ -184,7 +185,7 @@
                   <th>description</th>
                   <th width="100">Quantity</th>
                   <th width="150">Rate</th>
-                  <th width="100">VAT %</th>
+                  <th width="100">GST %</th>
                   <th width="100">Discount %</th>
                   <th width="100">Amount</th>
                   <th width="200">Price (with VAT)</th>
@@ -249,14 +250,13 @@
                   <td colspan="3" class="blank"> </td>
                   <td colspan="4" class="total-line">Discount:</td>
                   <td class="total-value" align="right">
-				  <?php 
+				<?php
 				  $temp=0;
 				  foreach($price as $a)
 				  $temp+=$a;
 				  $temp-=$subtotal;
 				  echo sprintf('%0.2f',$temp);
-				  
-				  ?>
+				?>
                   </td>                
               </tr>  
               <tr> <td colspan="3" class="">

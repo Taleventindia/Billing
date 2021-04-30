@@ -10,7 +10,7 @@
              while($row=mysqli_fetch_assoc($select_customers)){
 
                 $customer_id = $row['customer_id'];
-                $firstname =  $row['firstname'];
+                $custname =  $row['custname'];
                 $lastname =  $row['lastname'];
                 $phone =  $row['phone'];
                 $email =  $row['email'];
@@ -28,7 +28,7 @@
        if(isset($_POST['edit_customer'])){
            
                 $customer_id = $_POST['customer_id'];
-                $firstname =  $_POST['firstname'];
+                $custname =  $_POST['custname'];
                 $lastname =  $_POST['lastname'];
                 $phone =  $_POST['phone'];
                 $email =  $_POST['email'];
@@ -40,7 +40,7 @@
                 $comments =  $_POST['comments'];
  
           
-    $query="UPDATE customers SET firstname= '{$firstname}', lastname= '{$lastname}', phone= '{$phone}', email= '{$email}', address= '{$address}', amount_paid='{$amount_paid}', amount_pending='{$amount_pending}', payment_mode='{$payment_mode}', payment_status='{$payment_status}', comments='{$comments}' WHERE customer_id= {$the_customer_id} ";  
+    $query="UPDATE customers SET custname= '{$custname}', lastname= '{$lastname}', phone= '{$phone}', email= '{$email}', address= '{$address}', amount_paid='{$amount_paid}', amount_pending='{$amount_pending}', payment_mode='{$payment_mode}', payment_status='{$payment_status}', comments='{$comments}' WHERE customer_id= {$the_customer_id} ";  
        
         $edit_customer_query=mysqli_query($connection,$query);
            
@@ -63,7 +63,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label" >First Name *</label>
                 <div class="col-sm-9">
-                  <input type="text" value="<?php echo $firstname; ?>" size="65"  maxlength="65" class="form-control" name="firstname"/>
+                  <input type="text" value="<?php echo $custname; ?>" size="65"  maxlength="65" class="form-control" name="custname"/>
                 </div>
               </div>
               </div>

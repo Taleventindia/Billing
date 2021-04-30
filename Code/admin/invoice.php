@@ -5,6 +5,10 @@
 	<script type="text/javascript" src="js/inwords.js"></script>
 
 
+       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- jQuery UI -->
@@ -14,7 +18,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <?php include "includes/admin_header.php"; ?>
-
  <?php
 	    $query="SELECT MAX(invnum) FROM register";
         $select_invoice=mysqli_query($connection,$query);
@@ -22,6 +25,20 @@
         $invnum=$row[0];
         $invnum+=1;
 ?>
+
+<script>
+
+  $(function() {
+    $( "#tags" ).autocomplete({
+      source: "autocomplete.php"
+    });
+ 
+//    var tags=document.getElementById("tags").name; 
+      
+  });
+
+</script>
+
 <style>
      
 * {
@@ -98,9 +115,9 @@ input[type=submit] {
 
            <div id="customer">
                 Consignee,<br />
-                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
-               
-<!--                       <input id="customer-title" style="height:90px" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';" class="autocomplete" name="firstname" size="20">-->
+<!--                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
+-->
+             <input id="tags" style="height:90px" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';" class="autocomplete" name="custname" size="20">
                
                 <table id="meta">
                     <tr>
@@ -167,9 +184,7 @@ input[type=submit] {
                   
                   <td><span class="price">0.00</span><input type="hidden" class="pr_hid" name="price[]" /></td>
               </tr>       
-<!--             </div>        -->
-
-                
+<!--             </div>        -->         
                
    <?php    
                 
@@ -194,21 +209,20 @@ input[type=submit] {
                 
    <?php    
                 
-     if(isset($_POST['search'])){
-        $search = mysqli_real_escape_string($conection,$_POST['search']);
+//        $query = "SELECT * FROM customers WHERE custname like'%".$search."%'";
+//        $result = mysqli_query($connection,$query);
+//          
+//      $data = array();
+//       foreach ($result as $row) {
+//        $customer_id[]=$row['customer_id'];
+//        $custname[]=$row['custname'];
+//        $data[] = $row;
+//
+//      }
+//        
+//       echo json_encode($custname); 
 
-        $query = "SELECT * FROM customers WHERE firstname like'%".$search."%'";
-        $result = mysqli_query($connection,$query);
-
-        $response = array();
-        while($row = mysqli_fetch_array($result) ){
-        $data['customer_id'] = $row['customer_id']; 
-        $data['value'] = $row['firstname'];       
-        array_push($response, $data);    
-      }
-
-       echo json_encode($response);
-      }                   
+                
   ?>    
                 
            
@@ -237,8 +251,8 @@ input[type=submit] {
               <tr>
                   <td colspan="3" class="blank"> </td>
                   <td colspan="4" class="total-line">Discount: </td>
-                  <td class="total-value"><div id="gsttotal">0.00</div>
-                  <input type="hidden" id="discounttotal_h" name="discounttotal" /></td>
+                  <td class="total-value"><div id="discount">0.00</div>
+                  <input type="hidden" id="discount" name="discount" /></td>
               </tr>
               <tr>
     

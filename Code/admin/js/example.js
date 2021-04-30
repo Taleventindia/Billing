@@ -66,7 +66,7 @@ function update_total() {
     price = $(this).html();
     if (!isNaN(price)) total += Number(price);
   });
-
+    
   var vattotal = 0;
   $('.price').each(function(i){
     price2 = $(this).html();
@@ -81,11 +81,15 @@ function update_total() {
 
   var tax =0;
   tax = ( Number($("#tax").val()) * total) / 100;
+  
+              var discount =0;
+              discount = ( Number($("#discount").val()) * total) / 100;
     
   vattotal-=total;
   total = roundNumber(total,2);
   //vattotal = roundNumber(vattotal,2);
-
+    
+    
   $('#subtotal').html(total);
   $('#subt_hid').val(total)
 
@@ -93,11 +97,9 @@ function update_total() {
 
   $('#vattotal').html(vattotal);
   $('#vattotal_h').val(vattotal)
-    
-   
 
   //total=Number(total)+vat;  
-  total=Number(total)+tax+Number(vattotal);  
+  total=Number(total)+tax+Number(vattotal)-discount;  
   total = roundNumber(total,2);
 
   $('#total').html(total);
