@@ -341,7 +341,7 @@ input[type=submit] {
                             <span id="custname"></span>       
 -->
                
-             <input id="search_data" style="height:90px" class="input_control" name="custname" size="20" />
+             <input id="search_data" style="height:90px" class="input-control" name="custname" size="20" />
                
                 <table id="meta">
                     <tr>

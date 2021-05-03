@@ -1,12 +1,3 @@
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">   
-   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script> 
-
-
 <link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
@@ -109,7 +100,7 @@ input[type=submit] {
                 Consignee,<br />
 <!--                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>-->
                        
-                        <input id="search_data" placeholder="" class="form-control " size="20" />
+                        <input id="search_data" style="height:90px" placeholder="" class="input-control" size="20" />
                                   
                
 <!--             <input id="searchBox" style="height:90px" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';" class="" name="custname" size="20" />-->
