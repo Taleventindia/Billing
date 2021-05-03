@@ -1,23 +1,28 @@
-	<link rel='stylesheet' type='text/css' href='css/style.css' />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">   
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>    
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script> 
+
+
+<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
 	<script type='text/javascript' src='js/example.js'></script>
 	<script type="text/javascript" src="js/inwords.js"></script>
-
-
-       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- jQuery UI -->
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script type='text/javascript' src='js/scripts.js'></script>
+<!--<script type='text/javascript' src='js/scripts.js'></script>  -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <?php include "includes/admin_header.php"; ?>
+
  <?php
 	    $query="SELECT MAX(invnum) FROM register";
         $select_invoice=mysqli_query($connection,$query);
@@ -25,19 +30,6 @@
         $invnum=$row[0];
         $invnum+=1;
 ?>
-
-<script>
-
-  $(function() {
-    $( "#tags" ).autocomplete({
-      source: "autocomplete.php"
-    });
- 
-//    var tags=document.getElementById("tags").name; 
-      
-  });
-
-</script>
 
 <style>
      
@@ -104,7 +96,7 @@ input[type=submit] {
 }
   
 </style>
-
+ 
 <div class="main-panel">
     <div class="card">
 <div class="card-body">
@@ -115,9 +107,12 @@ input[type=submit] {
 
            <div id="customer">
                 Consignee,<br />
-<!--                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
--->
-             <input id="tags" style="height:90px" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';" class="autocomplete" name="custname" size="20">
+<!--                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>-->
+                       
+                        <input id="search_data" placeholder="" class="form-control " size="20" />
+                                  
+               
+<!--             <input id="searchBox" style="height:90px" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';" class="" name="custname" size="20" />-->
                
                 <table id="meta">
                     <tr>
@@ -147,7 +142,7 @@ input[type=submit] {
                   <th>Price (with GST)</th>
               </tr>
             
-            <form action="" method="post" autocomplete="off">
+            <form action="" method="post" >
 <!--             <div class="autocomplete" style="width:300px;">-->
                 	<style type="text/css">
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
@@ -156,8 +151,8 @@ input[type=submit] {
                 
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
-                      <textarea tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea> 
-<!--                      <input style="height:50px" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name" size="13">-->
+<!--                      <textarea tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea> -->
+                      <input style="height:50px" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name" size="13">
 
                       </div>                
                   </td>
@@ -188,43 +183,25 @@ input[type=submit] {
                
    <?php    
                 
-     if(isset($_POST['search'])){
-        $search = mysqli_real_escape_string($conection,$_POST['search']);
-
-        $query = "SELECT * FROM stock WHERE product_name like'%".$search."%'";
-        $result = mysqli_query($connection,$query);
-
-        $response = array();
-        while($row = mysqli_fetch_array($result) ){
-//        $response[] = array("label"=>$row['product_name'],"label"=>$row['product_cost']);
-        $data['stock_id'] = $row['stock_id']; 
-        $data['value'] = $row['product_name'];    
-        $data['value'] = $row['product_cost'];    
-        array_push($response, $data);    
-      }
-
-       echo json_encode($response);
-      }                   
-  ?>   
-                
-   <?php    
-                
-//        $query = "SELECT * FROM customers WHERE custname like'%".$search."%'";
-//        $result = mysqli_query($connection,$query);
-//          
-//      $data = array();
-//       foreach ($result as $row) {
-//        $customer_id[]=$row['customer_id'];
-//        $custname[]=$row['custname'];
-//        $data[] = $row;
+//     if(isset($_POST['search'])){
+//        $search = mysqli_real_escape_string($conection,$_POST['search']);
 //
+//        $query = "SELECT * FROM stock WHERE product_name like'%".$search."%'";
+//        $result = mysqli_query($connection,$query);
+//
+//        $response = array();
+//        while($row = mysqli_fetch_array($result) ){
+////        $response[] = array("label"=>$row['product_name'],"label"=>$row['product_cost']);
+//        $data['stock_id'] = $row['stock_id']; 
+//        $data['value'] = $row['product_name'];    
+//        $data['value'] = $row['product_cost'];    
+//        array_push($response, $data);    
 //      }
-//        
-//       echo json_encode($custname); 
-
-                
-  ?>    
-                
+//
+//       echo json_encode($response);
+//      }                   
+  ?>   
+          
            
             <tr id="hiderow"> 
                   <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
@@ -355,3 +332,29 @@ input[type=submit] {
                <script type="text/javascript" src="js/loader.js"></script>        
             </div>
     <?php include "includes/admin_footer.php"; ?>
+
+<script>
+  $(document).ready(function(){
+     $('#search_data').tokenfield({
+         autocomplete :{
+             source: function(request, response)
+             {
+                 jQuery.get('fetch.php', {
+                    query : request.term 
+                 }, function(data){
+                     data = JSON.parse(data);
+                     response(data);
+                 });
+             },
+             delay: 100
+         }
+     }); 
+      
+    $('#search').click(function(){
+       $('#custname').text($('#search_data').val());
+    });  
+      
+  });
+
+</script>
+

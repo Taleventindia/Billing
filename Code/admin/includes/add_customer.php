@@ -55,7 +55,7 @@
     <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <form action="" method="post" enctype="multipart/form-data" class="form-sample">
+            <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">
                 
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
                 
