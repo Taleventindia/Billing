@@ -31,7 +31,7 @@
              while($row=mysqli_fetch_assoc($select_customers)){
                  
                     $customer_id = $row['customer_id'];
-                    $custname =  $row['custname'];
+                    $firstname =  $row['firstname'];
                     $lastname =  $row['lastname'];
                     $phone =  $row['phone'];
                     $email =  $row['email'];
@@ -45,7 +45,7 @@
                     echo "<tr>";
                  
                     echo "<td>$customer_id</td>";
-                    echo "<td>$custname</td>";
+                    echo "<td>$firstname</td>";
                     echo "<td>$lastname</td>";
                     echo "<td>$phone</td>";
                     echo "<td>$email</td>";

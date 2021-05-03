@@ -606,7 +606,7 @@ input[type=submit] {
      }); 
       
     $('#search').click(function(){
-       $('#custname').text($('#search_data').val());
+       $('#firstname').text($('#search_data').val());
     });  
       
   });

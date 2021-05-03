@@ -3,7 +3,7 @@
        if(isset($_POST['create_customer'])){
            
                 $customer_id = $_POST['customer_id'];
-                $custname =  $_POST['custname'];
+                $firstname =  $_POST['firstname'];
                 $lastname =  $_POST['lastname'];
                 $phone =  $_POST['phone'];
                 $email =  $_POST['email'];
@@ -23,12 +23,12 @@
                 $pan_no =  $_POST['pan_no'];
                 $adhaar_no =  $_POST['adhaar_no'];
 
-   if(!empty($custname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($comments) && !empty($tax_info)&& !empty($amount_paid) && !empty($amount_pending) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
+   if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($comments) && !empty($tax_info)&& !empty($amount_paid) && !empty($amount_pending) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
   
            
      $query="INSERT INTO customers".
-         '(custname,lastname,phone,email,company,display_name,website,other,gst_in,address,comments,tax_info,amount_paid,amount_pending,payment_mode,payment_status,attachments,pan_no,adhaar_no)'.   
-    "VALUES('". $custname ."', '". $lastname ."', '". $phone ."','". $email ."','". $company ."','". $display_name ."','". $website ."','". $other ."','". $gst_in ."','". $address ."','". $comments ."','". $tax_info ."','". $amount_paid ."','". $amount_pending ."','". none ."','". none ."','". $attachments ."','". $pan_no ."','". $adhaar_no ."') ";
+         '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,comments,tax_info,amount_paid,amount_pending,payment_mode,payment_status,attachments,pan_no,adhaar_no)'.   
+    "VALUES('". $firstname ."', '". $lastname ."', '". $phone ."','". $email ."','". $company ."','". $display_name ."','". $website ."','". $other ."','". $gst_in ."','". $address ."','". $comments ."','". $tax_info ."','". $amount_paid ."','". $amount_pending ."','". none ."','". none ."','". $attachments ."','". $pan_no ."','". $adhaar_no ."') ";
                       
         $create_customer_query=mysqli_query($connection,$query);
            
@@ -64,7 +64,7 @@
                   <div class="form-group row">
                     <label class="col-sm-3 col-form-label" >First Name *</label>
                     <div class="col-sm-9">
-                      <input type="text" size="65"  maxlength="65" class="form-control" name="custname"/>
+                      <input type="text" size="65"  maxlength="65" class="form-control" name="firstname"/>
                     </div>
                   </div>
                   </div>
