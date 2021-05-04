@@ -39,7 +39,6 @@
                         $invdate=$row['invdate'];
                         $custname=$row['custname'];
                         $numofprod=$row['numofprod'];
-                        $total=$row['total'];
                         $item=$row['item'];
                         $descr=$row['descr'];
                         $qty=$row['qty'];
@@ -49,6 +48,10 @@
                         $price=$row['price'];
                         $subtotal = $row['subtotal'];
                         $tax = $row['tax'];
+                        $bill_type = $row['bill_type'];
+                        $payment_status = $row['payment_status'];
+                        $payment_mode = $row['payment_mode'];
+                        $total=$row['total'];
                         $due = $row['due'];
                         $rbdf = $row['rbdf'];
     
@@ -162,14 +165,21 @@
 				  ?>
                   </td>
               </tr>
-              <tr>
-    
-                  <td colspan="3" class="blank"> </td>
+               <tr> 
+                  <td colspan="3" class=""><div id="total">
+                    <label for="billtype">Bill Type:</label>
+                      <?php echo $bill_type;?></div>
+                  </td>
+
                   <td colspan="4" class="total-line">Total:</td>
                   <td class="total-value" align="right"><div id="total"><?php echo sprintf('%0.2f',$total);?></div></td>
               </tr>
-              <tr>
-                  <td colspan="3" class="blank"> </td>
+               <tr>                
+                  <td colspan="3" class=""><div id="total">
+                      <label for="paymentmode">Payment Mode:</label>
+                        <?php echo $payment_mode;?></div>
+                  </td>   
+
                   <td colspan="4" class="total-line">Balance Due:</td>
                   <td class="total-value" align="right"><div class="due"><?php echo sprintf('%0.2f',$due);?></div></td>
               </tr>

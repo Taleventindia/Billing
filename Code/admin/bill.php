@@ -259,32 +259,9 @@
 				?>
                   </td>                
               </tr>  
-              <tr> <td colspan="3" class="">
+              <tr> <td colspan="3" class=""><div id="total">
                     <label for="billtype">Bill Type:</label>
-<!--
-                    <select name="Bill Type" id="billtype">
-                        <option value="cash">Cash Bill</option>
-                        <option value="Card">Credit Bill</option> 
-                    </select>
--->
-            <select name="bill_type"id="bill_type">
-            
-         <?php 
-                if($user_role == 'Cash Bill'){
-                    
-                    echo "<option value='Credit Bill'>Credit Bill</option>";
-                    
-                }else{
-                    echo "<option value='Cash Bill'>Cash Bill</option>";
-                    echo "<option value='Credit Bill'>Credit Bill</option>";
-
-                }      
-
-            ?>
-
-         </select> 
-                  
-                  
+                      <?php echo $bill_type;?></div>
                  </td>
 
                   <td colspan="4" class="total-line">Total:</td>
@@ -300,14 +277,9 @@
               </tr>
 -->
                 <tr>                
-                  <td colspan="3" class="">
-                      <label for="paymentmode">Payment Mode</label>
-                      <select name="Select Payment Mode" id="paymentmode">
-                        <option value="cash">Cash</option>
-                        <option value="Card">Credit Card</option>
-                        <option value="Credit">Credit</option>
-                        <option value="Credit">UPI</option>  
-                    </select>
+                  <td colspan="3" class=""><div id="total">
+                      <label for="paymentmode">Payment Mode:</label>
+                         <?php echo $payment_mode;?></div>
                     </td>
 
                   <td colspan="4" class="total-line">Balance Due:</td>

@@ -102,7 +102,7 @@
 
     // Create a new input
     var id = this.$element.prop('id') || new Date().getTime() + '' + Math.floor((1 + Math.random()) * 100)
-    this.$input = $('<input type="text" class="token-input" autocomplete="off" />')
+    this.$input = $('<input type="" class="token-input" autocomplete="off" />')
                     .appendTo( this.$wrapper )
                     .prop( 'placeholder',  this.$element.prop('placeholder') )
                     .prop( 'id', id + '-tokenfield' )
@@ -115,7 +115,7 @@
     }
 
     // Set up a copy helper to handle copy & paste
-    this.$copyHelper = $('<input type="text" />').css('position', 'absolute').css(hidingPosition, '-10000px').prop('tabindex', -1).prependTo( this.$wrapper )
+    this.$copyHelper = $('<input type="" />').css('position', 'absolute').css(hidingPosition, '-10000px').prop('tabindex', -1).prependTo( this.$wrapper )
     
     // Set wrapper width
     if (elStyleWidth) {

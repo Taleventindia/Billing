@@ -1,20 +1,238 @@
-<link rel='stylesheet' type='text/css' href='css/style.css' />
-	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
-	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
-	<script type='text/javascript' src='js/example.js'></script>
-	<script type="text/javascript" src="js/inwords.js"></script>
+<?php ob_start (); ?>
+<?php session_start(); ?>
+<?php include "../includes/db.php"; ?>
+<?php include "functions.php"; ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <?php
 
-<!-- jQuery UI -->
+      if(!isset($_SESSION['user_role'])){
+
+        header("Location:../SignInPage.php");  
+
+      }
+    ?> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Talevent Tech</title>
+    <!-- plugins:css --> 
+    <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/iconfonts/ionicons/dist/css/ionicons.css">
+    <link rel="stylesheet" href="assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.addons.css">
+    
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->        
+    <link rel="stylesheet" href="assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/demo_1/style.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    
+    
+
+   <link rel='stylesheet' type='text/css' href='css/style.css' />
+   <link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
+   <script type="text/javascript" src="js/inwords.js"></script>
+
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<!--<script type='text/javascript' src='js/scripts.js'></script>  -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ 
+    <script type='text/javascript' src='js/jquery-3.1.0.min.js'></script>
+	<script type="text/javascript" src="js/bootstrap-3.3.7.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tokenfield.js"></script>
+    <script type='text/javascript' src='js/example.js'></script>
+    <script type='text/javascript' src='js/scripts.js'></script>
+    
+    <link rel='stylesheet' type='text/css' href='css/bootstrapcdn-3.3.6.min.css' />  
+    <link rel='stylesheet' type='text/css' href='css/bootstrap-tokenfield.css' />
+    <link rel='stylesheet' type='text/css' href='css/jquery-ui.min.css' />
 
-<?php include "includes/admin_header.php"; ?>
+</head>
 
- <?php
+<body>
+      
+    
+    <div class="container-scroller">  
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.php">
+            <img src="assets/images/logo.svg" alt="logo" /> </a>
+          <a class="navbar-brand brand-logo-mini" href="index.php">
+            <img src="assets/images/logo-mini.svg" alt="logo" /> </a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
+              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <img class="img-xs rounded-circle" src="../images/<?php echo $_SESSION['image'] ?>" alt="Profile image"> </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                <div class="dropdown-header text-center">
+                  <img class="img-md rounded-circle" src="../images/<?php echo $_SESSION['image'] ?>" alt="Profile image">
+                  <p class="mb-1 mt-3 font-weight-semibold">
+                      <?php
+                      
+                      if(isset($_SESSION['firstname'])){
+                          
+                        echo $_SESSION['firstname']; 
+                         
+                      }
+                      
+                      ?>
+                      
+                    </p>
+                  <p class="font-weight-light text-muted mb-0">
+                      <?php
+                   
+                      if(isset($_SESSION['email'])){
+                          
+                        echo $_SESSION['email']; 
+                         
+                      }
+                      ?>
+                      
+                    </p>
+                </div>
+                <a class="dropdown-item" href="./profile.php">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
+                  
+                <a class="dropdown-item"href="../includes/logout.php">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+        </nav>
+        
+    <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+              <li class="nav-item nav-category">Main Menu</li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Inventory</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                      <a class="nav-link" href="./categories.php">
+                      <i class="menu-icon typcn typcn-shopping-bag"></i>
+                    <span class="menu-title">categories</span>
+                      </a>
+                  </li>  
+                  <li class="nav-item">
+                    <a class="nav-link" href="inventory.php">Stock List</a>
+                  </li>  
+                  <li class="nav-item">
+                    <a class="nav-link" href="inventory.php?source=add_stock">Add Stock</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth1" aria-expanded="false" aria-controls="auth1">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Invoice</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth1">
+                <ul class="nav flex-column sub-menu">     
+                  <li class="nav-item">
+                    <a class="nav-link" href="reports.php">View All Invoices</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="invoice.php">Create Invoice</a>
+                  </li>
+                </ul>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth2" aria-expanded="false" aria-controls="auth2">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Customers</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth2">
+                <ul class="nav flex-column sub-menu">   
+                  <li class="nav-item">
+                    <a class="nav-link" href="customers.php">View All Customers</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="customers.php?source=add_customer">Add Customer</a>
+                  </li>
+                </ul>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth3" aria-expanded="false" aria-controls="auth3">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Supplier</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth3">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="suppliers.php">View All Suppliers</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="suppliers.php?source=add_supplier">Add Suppliers</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+              
+                <?php
+
+                   if($_SESSION['user_role']!=="User"){
+
+                ?> 
+              
+            <li class="nav-item">
+              <a class="nav-link" href="users.php">
+                <i class="menu-icon typcn typcn-shopping-bag"></i>
+                <span class="menu-title">Users</span>
+              </a>
+            </li>
+
+             <?php 
+              
+                }
+              
+             ?>  
+              
+              
+            <li class="nav-item">
+              <a class="nav-link" href="./profile.php">
+                <i class="menu-icon typcn typcn-shopping-bag"></i>
+                <span class="menu-title">Profile</span>
+              </a>
+            </li>
+           
+          </ul>
+        </nav>   
+  
+  
+        
+        <?php
 	    $query="SELECT MAX(invnum) FROM register";
         $select_invoice=mysqli_query($connection,$query);
         $row=mysqli_fetch_array($select_invoice);
@@ -99,11 +317,8 @@ input[type=submit] {
            <div id="customer">
                 Consignee,<br />
 <!--                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>-->
-                       
-                        <input id="search_data" style="height:90px" placeholder="" class="input-control" size="20" />
-                                  
-               
-<!--             <input id="searchBox" style="height:90px" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';" class="" name="custname" size="20" />-->
+         
+             <input id="search_data" style="height:90px" class="input-control" name="custname" size="13" />
                
                 <table id="meta">
                     <tr>
@@ -134,7 +349,6 @@ input[type=submit] {
               </tr>
             
             <form action="" method="post" >
-<!--             <div class="autocomplete" style="width:300px;">-->
                 	<style type="text/css">
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
@@ -143,14 +357,16 @@ input[type=submit] {
               <tr class="item-row">
                   <td class="item-name"><div class="delete-wpr">
 <!--                      <textarea tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea> -->
-                      <input style="height:50px" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="product_name" size="13">
+                      
+                      <input id="search_product" style="height:50px" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]" size="13">
 
                       </div>                
                   </td>
                   
                  <td class="description">
-                      <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="descr[]">Description</textarea>  
-<!--                    <input style="height:50px" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name='product_name' size="28">-->
+<!--                      <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="descr[]">Description</textarea>  -->
+                     
+                    <input id="search_name" style="height:50px" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name='descr[]' size="28">
                      
                   </td>  
                      
@@ -159,7 +375,6 @@ input[type=submit] {
                   
                   <td><div class="demo">
                       <textarea tabindex="5"  class="cost" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="cost[]">0.00</textarea></div>    
-<!--                  <input type='text' id='autocomplete' name='product_cost'>  -->
                   </td>
                   
                   <td><textarea tabindex="6" class="vat" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="vat[]">0.00</textarea></td>
@@ -169,31 +384,9 @@ input[type=submit] {
                   <td><span class="amount">0.00</span><input type="hidden" class="pr_amt"/></td>
                   
                   <td><span class="price">0.00</span><input type="hidden" class="pr_hid" name="price[]" /></td>
-              </tr>       
-<!--             </div>        -->         
-               
-   <?php    
+              </tr>                            
                 
-//     if(isset($_POST['search'])){
-//        $search = mysqli_real_escape_string($conection,$_POST['search']);
-//
-//        $query = "SELECT * FROM stock WHERE product_name like'%".$search."%'";
-//        $result = mysqli_query($connection,$query);
-//
-//        $response = array();
-//        while($row = mysqli_fetch_array($result) ){
-////        $response[] = array("label"=>$row['product_name'],"label"=>$row['product_cost']);
-//        $data['stock_id'] = $row['stock_id']; 
-//        $data['value'] = $row['product_name'];    
-//        $data['value'] = $row['product_cost'];    
-//        array_push($response, $data);    
-//      }
-//
-//       echo json_encode($response);
-//      }                   
-  ?>   
-          
-           
+                
             <tr id="hiderow"> 
                   <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
               </tr>    
@@ -249,7 +442,7 @@ input[type=submit] {
               </tr>
               <tr>
                   <td colspan="3" class="">
-                      <label for="paymentmode">Payment Mode</label>
+                      <label for="paymentmode">Payment Mode:</label>
 
                       <select name="payment_mode"id="payment_mode">
             
@@ -322,30 +515,17 @@ input[type=submit] {
 
                <script type="text/javascript" src="js/loader.js"></script>        
             </div>
-    <?php include "includes/admin_footer.php"; ?>
+ 
+        
+           <script src="assets/js/shared/off-canvas.js"></script>
+           <script src="assets/js/shared/misc.js"></script>
+           <script src="assets/js/demo_1/dashboard.js"></script>
 
-<script>
-  $(document).ready(function(){
-     $('#search_data').tokenfield({
-         autocomplete :{
-             source: function(request, response)
-             {
-                 jQuery.get('fetch.php', {
-                    query : request.term 
-                 }, function(data){
-                     data = JSON.parse(data);
-                     response(data);
-                 });
-             },
-             delay: 100
-         }
-     }); 
-      
-    $('#search').click(function(){
-       $('#custname').text($('#search_data').val());
-    });  
-      
-  });
+        </div>
+        
+    </div>
+        
+</body>
 
-</script>
+</html>
 
