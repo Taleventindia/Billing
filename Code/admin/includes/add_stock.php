@@ -39,46 +39,20 @@
        }
       
    ?>  
-
-   <div class="card-body">           
-<form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">         
               
-    <div class="row">
-       <div class="col-md-6">
-          <div class="form-group row">
-            <label for="category">Product Category</label>
-                <select class="form-control" name="product_category"id="product_category"> 
-
-                    <?php      
-
-                        $query="SELECT * FROM categories";
-                        $select_categories=mysqli_query($connection,$query);
-
-                            confirmQuery($select_categories);  
-
-                        while($row=mysqli_fetch_assoc($select_categories)){
-
-                        $cat_title=$row['cat_title'];               
-
-                        echo "<option value='$cat_title'>$cat_title</option>";
-                        } 
-
-                      ?>   
-                </select>
+<div class="card-body">           
+  <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">                       
+     
+        <div class="row">
+          <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
+                <div class="col-sm-9">
+                  <input type="file" name="image" />
+                </div>
+              </div>
             </div>
-        </div>
-     </div>   
-    <div class="row">
-      <div class="col-md-6">
-          <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
-            <div class="col-sm-9">
-              <input type="file" name="image" />
-            </div>
-          </div>
-        </div>
-    </div>            
-
+        </div>            
         <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
@@ -89,82 +63,110 @@
               </div>
             </div>
         </div>
-            <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="Product_type">Product Type</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" size="100" maxlength="100" name="product_type" />
-                </div>
-              </div>
-            </div>
-          </div> 
-            <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="product_cost">Product Cost</label>
-                <div class="col-sm-9">
-                  <input type="decimal" class="form-control" name="product_cost" />
-                </div>
-              </div>
-            </div>
-        </div>
         <div class="row">
-            <div class="col-md-6">
+           <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="quantity">Quantity</label>
-                <div class="col-sm-9">
-                  <input type="decimal" class="form-control" name="quantity" />
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="Supplier">Supplier</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" name="supplier" />
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="onhand_qty">Onhand Qty</label>
-                <div class="col-sm-9">
-                  <input type="decimal" class="form-control" name="onhand_qty" />
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
-                <div class="col-sm-9">
-                  <input type="date" class="form-control" name="date_arrival"/>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
-                <div class="col-sm-9">
-                  <input type="date" class="form-control" name="expiry_date" />
-             </div>
-          </div>
-       </div>
-    </div>
+                <label class="col-sm-3 col-form-label" for="category">Product Category</label>
+                  <div class="col-sm-9">
+                    <select class="form-control" name="product_category"id="product_category"> 
 
-    <div class="col-sm-9">
-            <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
+                        <?php      
+
+                            $query="SELECT * FROM categories";
+                            $select_categories=mysqli_query($connection,$query);
+
+                                confirmQuery($select_categories);  
+
+                            while($row=mysqli_fetch_assoc($select_categories)){
+
+                            $cat_title=$row['cat_title'];               
+
+                            echo "<option value='$cat_title'>$cat_title</option>";
+                            } 
+
+                          ?>   
+                    </select>
+                  </div>
+                </div>
             </div>
-        </form>       
+         </div>  
+        <div class="row">
+           <div class="col-md-6">
+              <div class="form-group row">
+                 <label class="col-sm-3 col-form-label" for="Product_type">Product Type</label>
+                 <div class="col-sm-9">
+                    <input type="text" class="form-control" size="100" maxlength="100" name="product_type" />
+                 </div>
+              </div>
+           </div>
+        </div> 
+        <div class="row">
+           <div class="col-md-6">
+              <div class="form-group row">
+                 <label class="col-sm-3 col-form-label" for="product_cost">Product Cost</label>
+                 <div class="col-sm-9">
+                    <input type="decimal" class="form-control" name="product_cost" />
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+               <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="quantity">Quantity</label>
+                  <div class="col-sm-9">
+                     <input type="decimal" class="form-control" name="quantity" />
+                  </div>
+               </div>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-md-6">
+              <div class="form-group row">
+                 <label class="col-sm-3 col-form-label" for="Supplier">Supplier</label>
+                 <div class="col-sm-9">
+                    <input type="text" class="form-control" name="supplier" />
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-6">
+              <div class="form-group row">
+                 <label class="col-sm-3 col-form-label" for="onhand_qty">Onhand Qty</label>
+                 <div class="col-sm-9">
+                    <input type="decimal" class="form-control" name="onhand_qty" />
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-6">
+              <div class="form-group row">
+                 <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
+                 <div class="col-sm-9">
+                    <input type="date" class="form-control" name="date_arrival"/>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="row">
+           <div class="col-md-6">
+              <div class="form-group row">
+                 <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
+                 <div class="col-sm-9">
+                    <input type="date" class="form-control" name="expiry_date" />
+                 </div>
+              </div>
+           </div>
+        </div>
+        <br>
+               <div class="col-sm-9">
+                  <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
+               </div>
+      
+            </form>       
+         </div>
       </div>
    </div>
-</div>
 </div>

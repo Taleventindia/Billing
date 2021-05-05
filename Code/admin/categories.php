@@ -13,7 +13,7 @@
 
                   <?php insert_categories(); ?>
 
-                        <form action=""method="post">
+                        <form action=""method="post" autocomplete="off">
                            
                             <div class="form-group">
                                <label for="cat_title">Add Category</label>

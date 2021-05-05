@@ -23,9 +23,6 @@
         $email    = $_REQUEST['email'];
         $password = $_REQUEST['password'];
         
-//        $email=mysqli_real_escape_string($connection, $email);
-//        $password=mysqli_real_escape_string($connection, $password);
-        
         $query = "SELECT * FROM users WHERE user_email = '{$email}' ";
         $select_user_query = mysqli_query($connection, $query);
         
@@ -61,7 +58,6 @@
            
         }else{
             
-//            header("Location: ../SignInPage.php");
             $message_password = "Incorrect password";
         }
          
@@ -116,58 +112,11 @@
                 <nav class="login-card-footer-nav">
                   <a href="#!">Terms of use.</a>
                   <a href="#!">Privacy policy</a>
-                </nav>
-                
-<!--
-                 <div class="well">
-                    <h4>Login</h4>
-                    <form action="includes/login.php" method="post" autocomplete="on">
-                    
-                    <div class="form-group">
-                         <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
-                     </div>
-                       
-                       
-                     <div class="input-group">
-                       <input type="password" name="password" id="key" class="form-control" placeholder="Password">
-                         <span class="input-group-btn">
-                         <button class="btn btn-primary" name="login" type="submit">Submit</button>
-                      </span>
-                    </div>
-                    
--->
-
-                
+                </nav>      
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="card login-card">
-        <img src="assets/images/login.jpg" alt="login" class="login-card-img">
-        <div class="card-body">
-          <h2 class="login-card-title">Login</h2>
-          <p class="login-card-description">Sign in to your account to continue.</p>
-          <form action="#!">
-            <div class="form-group">
-              <label for="email" class="sr-only">Email</label>
-              <input type="email" name="email" id="email" class="form-control" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <label for="password" class="sr-only">Password</label>
-              <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-            </div>
-            <div class="form-prompt-wrapper">
-              <div class="custom-control custom-checkbox login-card-check-box">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember me</label>
-              </div>              
-              <a href="#!" class="text-reset">Forgot password?</a>
-            </div>
-            <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
-          </form>
-          <p class="login-card-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>
-        </div>
-      </div> -->
     </div>
   </main>
     

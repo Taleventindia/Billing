@@ -12,7 +12,6 @@
                 <a class="navbar-brand" href="index.php">Home Page</a>
             </div>            
 
-            
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->

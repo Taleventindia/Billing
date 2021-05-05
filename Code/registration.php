@@ -26,8 +26,6 @@
          $email    = $_POST['user_email'];    
          $password = $_POST['user_password'];
          $confirmpassword =$_POST['user_confirmpassword'];
-//         $user_image = $_FILES['image']['name'];
-//         $user_image_tempname = $_FILES['image']['tmp_name'];
          
       if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone)){
 
@@ -181,9 +179,5 @@
 </body>
 </html>
 
-				
-				
-				
-				
-				
+		
 

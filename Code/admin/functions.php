@@ -19,8 +19,12 @@
           $cat_title=$_POST['cat_title'];
 
           if($cat_title == "" || empty($cat_title)){
-            echo "This field should not be empty";
+              ?>
 
+    <h4 class="text-center" style="color:#ff0000"><?php echo "This field should not be empty";?></h4>
+
+        <?php
+              
             }else{
 
            $query="INSERT INTO categories".

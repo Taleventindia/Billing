@@ -140,8 +140,8 @@
       });
       $("#sales-statistics_switch_2").click(function () {
         var data = salesChart.data;
-        data.datasets[0].data = data_5_1;
-        data.datasets[1].data = data_5_2;
+        data.datasets[0].data = data_2_1;
+        data.datasets[1].data = data_2_2;
         salesChart.update();
       });
       $("#sales-statistics_switch_3").click(function () {

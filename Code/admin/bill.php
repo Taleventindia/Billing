@@ -1,88 +1,9 @@
-<?php
-//try 
-//{
-//		 // connect to SQLite from PDO database
-//		 $dbh = new PDO("sqlite:omelec.db");
-//
-//}
-//catch(PDOException $e)
-//{
-//		 echo $e->getMessage();//this getMessage throws an exception if any 
-//	  
-//}
-
-//$sql = $dbh->query("select * from register");
-//$nRows = $sql->fetchColumn();
-//echo $nRows;
-//print_r($_POST);
-//echo count($_POST['item']);
-
-//if(isset($_POST['saveinv']))
-//{
-//
-//	$invnum = $_POST['invnum'];
-//
-//	$sql = $dbh->query("select invnum from register where invnum='$invnum'");
-//	$chkdup = $sql->fetchColumn();
-//	if($chkdup!=NULL)
-//	{
-//		echo "<h1>ERROR !!!! DUPLICATE INVOICE NUMBER</h1>";
-//		echo '    <a href="invoice.php"> <img class="delete" src="images/goback.jpg" width="79" height="40" style="position:fixed; background:#CCC; left:0px; top:0px; border:5px solid #000;z-index:111"/> </a>';
-//		exit();
-//	}
-//
-//	$custname = $_POST['custname'];
-//	$invdate = $_POST['invdate'];
-//	$numofprod = count($_POST['item']);
-//	
-//	$n=0;
-//	
-//	$item="";
-//	$desc="";
-//	$qty="";
-//	$cost="";
-//	$vat="";
-//    $discount="";
-//	$price="";
-//	
-//	while($n<$numofprod)
-//	{
-//		$item.=$_POST['item'][$n]."*#*";
-//		$desc.=$_POST['desc'][$n]."*#*";
-//		$qty.=$_POST['qty'][$n]."*#*";
-//		$cost.=$_POST['cost'][$n]."*#*";
-//		$vat.=$_POST['vat'][$n]."*#*";
-//        $discount.=$_POST['vat'][$n]."*#*";
-//		$price.=$_POST['price'][$n]."*#*";
-//		$n++;
-//	}
-//	$item;
-//	$desc;
-//	$qty;
-//	$cost;
-//	$vat;
-//    $discount;
-//	$price;
-//	
-//	$subtotal = $_POST['subtotal'];
-//	$tax = $_POST['tax'];
-//	$total = $_POST['total'];
-//	$due = $_POST['due'];
-//	$rbdf = $_POST['rbdf'];
-//	$towords = $_POST['towords'];
-//	
-//	$sql="INSERT INTO register(invnum, custname, invdate, numofprod, item, desc, qty, cost, vat, discount, price, subtotal, tax, total, due, rbdf) VALUES ('$invnum', '$custname', '$invdate', '$numofprod', '$item', '$desc', '$qty', '$cost', '$vat','$discount', '$price', '$subtotal', '$tax', '$total', '$due', '$rbdf')";
-//	
-//	$dbh->exec($sql);
-//}
-?>
-
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
 	<script type='text/javascript' src='js/example.js'></script>
-    <script type="text/javascript">
-		alert("BILL SAVED SUCCESSFULLY");
+     <script type="text/javascript">
+		alert("INVOICE CREATED");
 	</script>
 	<style type="text/css">
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
@@ -92,7 +13,7 @@
 <?php
    if(isset($_POST['saveinv']))
    {
-
+ 
 	$invnum = $_POST['invnum'];
 
 	$custname = $_POST['custname'];
@@ -148,8 +69,8 @@
            
    }
 
-?>
 
+?>
 
 <div class="main-panel">
     <div class="card">

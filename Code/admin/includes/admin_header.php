@@ -6,8 +6,6 @@
    <?php
 
       if(!isset($_SESSION['user_role'])){
-          
-//      if($_SESSION['user_role']!=="Admin"){
 
         header("Location:../SignInPage.php");  
 

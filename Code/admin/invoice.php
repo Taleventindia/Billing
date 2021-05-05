@@ -479,7 +479,7 @@ input[type=submit] {
                 
                 
             <div id="terms" style="float:left;width:54%;border:1px solid #000; min-height:156px">
-              <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Date.: <?php echo date("d/m/Y");?></h4>
+              <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Date : <?php echo date("d/m/Y");?></h4>
               <h5>Terms</h5>
               <div>
               2% CD if payment within 7 days Strictly.<br />

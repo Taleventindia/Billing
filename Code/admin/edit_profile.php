@@ -90,50 +90,54 @@
     ?>
 
 <div class="main-panel">
-    <div class="card">
-        <div class="card-body">
-            <div class=content-wrapper>
+   <div class="card">
+      <div class="card-body">
+         <div class=content-wrapper>
                 <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
+            <div class="row">
+               <div class="col-lg-12">
                     
-                        <h3 class="page-header" style="color:black">
-                            Profile
-                            <small>
-                        <h3  style="color:#1e90ff"> 
-<?php 
-                             if(isset($_SESSION['firstname'])){ 
-                             echo $_SESSION['firstname'];   
-                             } 
-                    ?>
-                                </h3></small>
-                        </h3>
+                  <h3 class="page-header" style="color:black">
+                        Profile
+                     <small>
+                         <h3  style="color:#1e90ff"> 
+                        
+                            <?php 
+                        
+                                if(isset($_SESSION['firstname'])){ 
+                                  echo $_SESSION['firstname'];   
+                                } 
+                             ?>
+                             
+                         </h3>
+                      </small>
+                   </h3>
                     
                                         
-   <form action="" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
     
       <div class="form-group">
-       <img class="rounded-circle" height=110 width=120 src ='../images/<?php echo $_SESSION['image'] ?>' alt="">
+         <img class="rounded-circle" height=110 width=120 src ='../images/<?php echo $_SESSION['image'] ?>' alt="">
             <input type="file" name="image">
-       </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="firstname"> Firstname</label>
+               </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group row">
+                           <label class="col-sm-3 col-form-label" for="firstname"> Firstname</label>
                             <div class="col-sm-9">
                                <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" name="user_firstname">
                             </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="lastname"> Lastname</label>
-                            <div class="col-sm-9">
-                               <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
-                            </div>
-                          </div>
-                        </div>
+                         </div>
                       </div>
+                      <div class="col-md-6">
+                         <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="lastname"> Lastname</label>
+                               <div class="col-sm-9">
+                                  <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-group row">
@@ -190,18 +194,18 @@
        </form>
        
       
-                    </div>
                 </div>
+                    
+            </div> 
+             <!-- /.row -->
                 
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container-fluid -->
-
         </div>
-        <!-- /#page-wrapper -->
-
+            <!-- /.container-fluid -->
+            
     </div>
+        <!-- /#page-wrapper -->
+        
+</div>
     <!-- /#wrapper -->
 
     <?php include "includes/admin_footer.php"; ?>

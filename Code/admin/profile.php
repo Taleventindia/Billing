@@ -1,7 +1,7 @@
  <?php include "includes/admin_header.php"; ?>
 <div class="main-panel">
-<div class="card">
-        <div class="card-body">
+   <div class="card">
+      <div class="card-body">
        
                 <!-- Page Heading -->
                         <h3 class="page-header" style="color:black">
@@ -48,65 +48,64 @@
 
       ?>
             <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6"> 
-                        <img class="rounded-circle" height=150 width=150 src ='../images/<?php echo $_SESSION['image'] ?>' alt=""> </div>          
-                        </div>
-
-                </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="title">First Name:</label>
-                            <div class="col-sm-9">
-                              <label class="col-sm-3 col-form-label" for="title"><?php echo $user_firstname ?></label>
-                            </div>
-                          </div>
-                        </div>
+               <div class="row">
+                  <div class="col-md-6"> 
+                     <img class="rounded-circle" height=150 width=150 src ='../images/<?php echo $_SESSION['image'] ?>' alt="">
+                  </div>          
+               </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="title">First Name:</label>
+                    <div class="col-sm-9">
+                      <label class="col-sm-3 col-form-label" for="title"><?php echo $user_firstname ?></label>
                     </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="Product_type">Last Name:</label>
-                            <div class="col-sm-9">
-                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_lastname ?></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="Product_type">E-mail:</label>
-                            <div class="col-sm-9">
-                              <label class="col-sm-6 col-form-label" for="Product_type"><?php echo $email ?></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="Product_type">Phone no:</label>
-                            <div class="col-sm-9">
-                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_phone ?></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label" for="Product_type"> Role:</label>
-                            <div class="col-sm-9">
-                              <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_role ?></label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  </div>
                 </div>
-            </div>   
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label class="col-sm-3 col-form-label" for="Product_type">Last Name:</label>
+                     <div class="col-sm-9">
+                        <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_lastname ?></label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label class="col-sm-3 col-form-label" for="Product_type">E-mail:</label>
+                     <div class="col-sm-9">
+                        <label class="col-sm-6 col-form-label" for="Product_type"><?php echo $email ?></label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label class="col-sm-3 col-form-label" for="Product_type">Phone no:</label>
+                     <div class="col-sm-9">
+                        <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_phone ?></label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label class="col-sm-3 col-form-label" for="Product_type"> Role:</label>
+                     <div class="col-sm-9">
+                        <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_role ?></label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+    </div>   
 </div>
     <?php include "includes/admin_footer.php"; ?>
                     

@@ -1,26 +1,28 @@
-
-<?php
-//error_reporting(0);
-//		try 
-//		{
-//				 // connect to SQLite from PDO database
-//				 $dbh = new PDO("sqlite:omelec.db");
-//             $connection=mysqli_connect('localhost','root','root','billing','3307');
-//		}
-//		catch(PDOException $e)
-//		{
-//				 echo $e->getMessage();//this getMessage throws an exception if any 
-//			  
-//		}
-//		
-//	
-//		$sql = $connection->query("select * from register ORDER BY invnum DESC");
-
-?>
-
 <?php include "includes/admin_header.php"; ?>
+
 <div class="main-panel">
 <div class="card">
+    
+ <div class="content-wrapper">
+<div class="row">
+    <div class="col-md-4">
+            <h6>Search Stock</h6>
+            <form action="" method="post" autocomplete="off">
+                <div class="input-group">
+                        <input name="search" type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button name="submit" class="btn btn-primary" type="submit">
+                                <span class="glyphicon glyphicon-search">Search</span>
+                        </button>
+                        </span>
+                        </div>
+                         <br>
+                 <?php   echo "<td><a class='btn btn-primary' href='reports.php'>Clear</a></td>";   ?> 
+                 </form> 
+              </div>
+        </div>
+    </div>
+    
 <div class="card-body">   
     <h3 class="page-header">
         Invoice
@@ -76,6 +78,50 @@
         <tbody>
         <?php
   
+            if (isset($_POST['submit'])){
+              $search=$_POST['search'];
+               
+              $sql="SELECT * FROM register WHERE custname LIKE '%$search%' ";  
+              $select_sql=mysqli_query($connection, $sql); 
+                
+                 if(!$select_sql){
+                    die("QUERY FAILED" . mysqli_error($connection));
+                }
+                $count=mysqli_num_rows($select_sql);
+                if($count == 0){
+                echo "<center><h3 style='color:#ffa500'>NO Invoices Are Available</h3><center>";
+                    
+            } 
+            else{
+            
+             while($row=mysqli_fetch_assoc($select_sql)){
+
+                    $invnum=$row['invnum'];
+                    $invdate=$row['invdate'];
+                    $custname=$row['custname'];
+                    $numofprod=$row['numofprod'];
+                    $total=$row['total'];
+                 
+       ?>
+                <tr>
+                <td><a href="viewbill.php?inv=<?php echo $row['invnum'];?>"><?php echo 'INV-';?><?php echo $row['invnum'];?></a></td>
+                <td><?php echo $row['custname'];?></td>
+                <td><?php echo $row['numofprod'];?></td>
+                <td><?php echo $row['invdate'];?></td>
+                <td><?php echo 'Paid';?></td>
+                <td><?php echo 'Cash';?></td>
+                <td><?php echo $row['invdate'];?></td>
+                <td>Rs. <?php echo $row['rbdf'];?></td>
+                <td><input type="image" src="assets/icons/delete.svg" width="15" height ="15" onclick="return funcdelete('<?php echo $row['invnum'];?>','<?php echo $row['custname'];?>')"/>
+                    </td>
+            </tr> 
+
+            <?php  } } }
+            
+
+                 else{
+
+            
              $query="SELECT * FROM register ORDER BY invnum DESC";
              $select_invoice=mysqli_query($connection,$query);
                     
@@ -101,7 +147,7 @@
                     </td>
             </tr> 
 
-            <?php     } ?>
+            <?php  } } ?>
 
         </tbody>
     </table>
