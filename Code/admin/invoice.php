@@ -303,6 +303,12 @@ input[type=submit] {
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
+    
+#saveinv{padding: 10px 20px;background: #0000ff	;border: 0;color: #FFF;display:inline-block;margin-top:20px;cursor: pointer;}
+#saveinv:disabled{padding: 10px 20px;background: #CCC;border: 0;color: #FFF;display:inline-block;margin-top:20px;cursor: no-drop;}
+.validation-error {color:#FF0000;}
+.input-control{padding:10px;}
+.input-group{margin-top:10px;}    
   
 </style>
  
@@ -318,8 +324,8 @@ input[type=submit] {
                 Consignee,<br />
 <!--                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>-->
          
-             <input id="search_data" style="height:90px" class="input-control" name="custname" size="13" />
-               
+<!--             <input id="search_data" style="height:90px" class="input-control" onblur="validate()" name="custname" size="13" />-->
+               <input name="custname" id="search_data" class="input-control" onblur="validate()" />
                 <table id="meta">
                     <tr>
                         <td class="meta-head">Invoice #</td>
@@ -358,7 +364,7 @@ input[type=submit] {
                   <td class="item-name"><div class="delete-wpr">
 <!--                      <textarea tabindex="2" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]">Item</textarea> -->
                       
-                      <input id="search_product" style="height:50px" onblur="if(this.value=='') this.value='Item';" onfocus="if(this.value=='Item') this.value='';" name="item[]" size="13">
+                      <input id="search_product" style="height:50px" onblur="validate()" onfocus="if(this.value=='Item') this.value='';" name="item[]" size="13">
 
                       </div>                
                   </td>
@@ -505,7 +511,7 @@ input[type=submit] {
             </div>
              
             <br>
-            <center><input type="submit" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
+            <center><input type="submit" id="" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
             </form>
     </div>
     </div>
@@ -529,3 +535,28 @@ input[type=submit] {
 
 </html>
 
+<script>
+function validate() {
+	
+	var valid = true;
+	valid = checkEmpty($("#search_data"));
+	
+    $("#saveinv").attr("disabled",true);
+	if(valid) {
+		$("#saveinv").attr("disabled",false);
+	}	
+}
+function checkEmpty(obj) {
+	var name = $(obj).attr("custname");
+	$("."+name+"-validation").html("");	
+	$(obj).css("border","");
+	if($(obj).val() == "") {
+		$(obj).css("border","#FF0000 1px solid");
+		$("."+name+"-validation").html("Required");
+		return false;
+	}
+	
+	return true;	
+}
+
+</script>		

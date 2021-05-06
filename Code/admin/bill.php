@@ -1,16 +1,18 @@
-	<link rel='stylesheet' type='text/css' href='css/style.css' />
+<?php include "includes/admin_header.php"; ?> 
+
+    <link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
 	<script type='text/javascript' src='js/example.js'></script>
-     <script type="text/javascript">
-		alert("INVOICE CREATED");
-	</script>
+
 	<style type="text/css">
 	textarea:hover,textarea:focus, #items td.total-value textarea:hover, #items td.total-value textarea:focus, .delete:hover { background-color:#fff; }
 	.item-row td{min-height:100px;border:1px solid #000!important; vertical-align:middle }
 	</style>
-<?php include "includes/admin_header.php"; ?>
+  
+
 <?php
+
    if(isset($_POST['saveinv']))
    {
  
@@ -66,21 +68,20 @@
   
 	$create_invoice_query=mysqli_query($connection,$query);
      confirmQuery($create_invoice_query);
-           
+     
+ 
    }
 
 
 ?>
-
-<div class="main-panel">
-    <div class="card">
-<div class="card-body">
-
-		
+     <div class="main-panel">
+      <div class="card">
+      <div class="card-body">
+    <h3 class="text-center" style="color:blue"><?php echo "INVOICE CREATED"; ?></h3>
 		<h3>RETAIL INVOICE</h3>
-		<div style="clear:both"></div>
         <div style="border:1px solid #000">
-            <div id="customer">
+		   <div style="clear:both"></div>
+              <div id="customer">
                 Consignee,<br />
                 <textarea name="custname" tabindex="1" rows="4" style="font-size: 20px; float: left; " readonly="readonly"><?php echo $custname;?></textarea>
     
@@ -239,13 +240,15 @@
               &emsp;&nbsp;Authorized Signatory
               </span>
             </div>
+             
 		</div>
+    <center><button class="btn btn-primary" name="submit"><a href="viewbill.php?inv=<?php echo $invnum;?>"><h5 style="color:white">View Bill</h5></a></button></center>
         <br />
                 <!-- Bootstrap Core CSS -->
-                <link href="./css/bootstrap.min.css" rel="stylesheet">
+<!--                <link href="./css/bootstrap.min.css" rel="stylesheet">-->
 
                 <!-- Custom CSS -->
-                <link href="./css/sb-admin.css" rel="stylesheet">
+<!--                <link href="./css/sb-admin.css" rel="stylesheet">-->
 
                 <!-- Custom Fonts -->
                 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

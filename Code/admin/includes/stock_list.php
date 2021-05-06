@@ -21,19 +21,19 @@
         <table  cellpadding="50" cellspacing="5" class="table table-bordered table-hover">
               <thead>
                     <tr>
-                        <th>SNo</th>
-                        <th>Barcode No</th>
-                        <th>Product Name</th>
-                        <th>Product Category</th>
-                        <th>Product Type</th>
-                        <th>Product Cost</th>
-                        <th>Quantity</th>
-                        <th>Supplier</th>
-                        <th>Onhand Qty</th>
-                        <th>Expiry Date</th>
-                        <th>Date Arrival</th>
-                        <th>Action</th>
-                        <th>Action</th>
+                        <th style="color:blue">SNo</th>
+                        <th style="color:blue">Barcode No</th>
+                        <th style="color:blue">Product Name</th>
+                        <th style="color:blue">Product Category</th>
+                        <th style="color:blue">Product Type</th>
+                        <th style="color:blue">Product Cost</th>
+                        <th style="color:blue">Quantity</th>
+                        <th style="color:blue">Supplier</th>
+                        <th style="color:blue">Onhand Qty</th>
+                        <th style="color:blue">Expiry Date</th>
+                        <th style="color:blue">Date Arrival</th>
+                        <th style="color:blue">Action</th>
+                        <th style="color:blue">Action</th>
                     </tr>
                 </thead>
                 <tbody>

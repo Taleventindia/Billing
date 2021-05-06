@@ -64,15 +64,15 @@
         <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Invoice#</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">No.of Items</th>
-                <th scope="col">Invoice Date</th>
-                <th scope="col">Payment Status</th>
-                <th scope="col">Payment Mode</th>
-                <th scope="col">Due Date</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Action</th>
+                <th scope="col" style="color:blue">Invoice#</th>
+                <th scope="col" style="color:blue">Customer Name</th>
+                <th scope="col" style="color:blue">No.of Items</th>
+                <th scope="col" style="color:blue">Invoice Date</th>
+                <th scope="col" style="color:blue">Payment Status</th>
+                <th scope="col" style="color:blue">Payment Mode</th>
+                <th scope="col" style="color:blue">Due Date</th>
+                <th scope="col" style="color:blue">Amount</th>
+                <th scope="col" style="color:blue">Action</th>
             </tr>
         </thead>
         <tbody>

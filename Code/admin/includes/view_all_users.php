@@ -69,7 +69,6 @@
         <input type="submit" name="submit" class="btn btn-success" value="Apply">
        </div> 
     </div>
-
  <div class="card">
  
         <table class="table table-bordered table-hover">
@@ -83,15 +82,15 @@
                 <thead>
                     <tr>
                         <th><input id="SelectAllBoxes" type="CheckBox"></th>
-                        <th>Id</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Image</th>
-                        <th>Phone No</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Action</th>
-                        <th>Action</th>
+                        <th style="color:blue">Id</th>
+                        <th style="color:blue">Firstname</th>
+                        <th style="color:blue">Lastname</th>
+                        <th style="color:blue">Image</th>
+                        <th style="color:blue">Phone No</th>
+                        <th style="color:blue">Email</th>
+                        <th style="color:blue">Role</th>
+                        <th style="color:blue">Action</th>
+                        <th style="color:blue">Action</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -226,8 +226,12 @@
                <script type="text/javascript" src="./js/loader.js"></script> 
              
              </div>
+          <br>
+         <br>
+         <a href="javascript:window.print()"><center><img src="images/printButton.gif"/></center></a>
+    
     </div> 
-    <a href="javascript:window.print()"><center><img src="images/printButton.gif"/></center></a>
+    
 </div>
 
 <?php include "includes/admin_footer.php"; ?>

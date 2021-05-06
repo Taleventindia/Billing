@@ -44,10 +44,10 @@
                       <table class="table table-bordered table-hover">
                           <thead>
                               <tr>
-                                  <th>ID</th>
-                                  <th>Category Name</th>
-                                  <th>Action</th>
-                                  <th>Action</th>
+                                  <th style="color:blue">ID</th>
+                                  <th style="color:blue">Category Name</th>
+                                  <th style="color:blue">Action</th>
+                                  <th style="color:blue">Action</th>
                               </tr>
                           </thead>
                           <tbody>

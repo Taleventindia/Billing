@@ -4,19 +4,19 @@
               
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Phone No</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        <th>Amount paid</th>
-                        <th>Amount pending</th>
-                        <th>Payment Mode</th>
-                        <th>Payment status</th>
-                        <th>Comments</th>
-                        <th>Action</th>
-                        <th>Action</th>
+                        <th style="color:blue">Id</th>
+                        <th style="color:blue">Firstname</th>
+                        <th style="color:blue">Lastname</th>
+                        <th style="color:blue">Phone No</th>
+                        <th style="color:blue">Email</th>
+                        <th style="color:blue">Address</th>
+                        <th style="color:blue">Amount paid</th>
+                        <th style="color:blue">Amount pending</th>
+                        <th style="color:blue">Payment Mode</th>
+                        <th style="color:blue">Payment status</th>
+                        <th style="color:blue">Comments</th>
+                        <th style="color:blue">Action</th>
+                        <th style="color:blue">Action</th>
                     </tr>
                 </thead>
                 <tbody>
