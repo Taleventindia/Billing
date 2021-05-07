@@ -1,27 +1,24 @@
-<div class="main-Panel">
-<div class="card">
-          <div class="card-body">
-              
-<h4 class="page-header">
-        Add New Stock
-        </h4>
+<div class="card-body">            
+      <h4 class="page-header">
+         Add New Stock
+      </h4>
 
-<?php 
+     <?php 
  
-       if(isset($_POST['create_stock'])){
+          if(isset($_POST['create_stock'])){
            
-            $barcode_no=$_FILES['image']['name'];
-            $barcode_no_tempname = $_FILES['image']['tmp_name'];
-            $product_name =  $_POST['product_name'];
-            $product_category =  $_POST['product_category'];
-            $product_type =  $_POST['product_type'];
-            $product_cost =  $_POST['product_cost'];
-            $quantity =  $_POST['quantity'];
-            $supplier =  $_POST['supplier'];
-            $onhand_qty =  $_POST['onhand_qty'];
-            $expiry_date =  $_POST['expiry_date'];
-            $date_arrival =  $_POST['date_arrival'];
-        
+                $barcode_no=$_FILES['image']['name'];
+                $barcode_no_tempname = $_FILES['image']['tmp_name'];
+                $product_name =  $_POST['product_name'];
+                $product_category =  $_POST['product_category'];
+                $product_type =  $_POST['product_type'];
+                $product_cost =  $_POST['product_cost'];
+                $quantity =  $_POST['quantity'];
+                $supplier =  $_POST['supplier'];
+                $onhand_qty =  $_POST['onhand_qty'];
+                $expiry_date =  $_POST['expiry_date'];
+                $date_arrival =  $_POST['date_arrival'];
+
           
     $query="INSERT into stock".
     '(barcode_no, product_name, product_category, product_type, product_cost,quantity, supplier, onhand_qty, expiry_date, date_arrival)'.
@@ -39,7 +36,7 @@
        }
       
    ?>  
-              
+
 <div class="card-body">           
   <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">                       
      
@@ -168,5 +165,4 @@
             </form>       
          </div>
       </div>
-   </div>
-</div>
+

@@ -1,4 +1,12 @@
- <?php 
+<div class="main-Panel">
+   <div class="card-body">             
+      <h4 class="page-header">
+        Update Stock
+        </h4>
+
+
+
+<?php 
      
        if(isset($_GET['edit_stock'])){
            
@@ -52,8 +60,7 @@
       
 
    ?>      
-<div class="main-Panel">
-   <div class="card">
+
       <div class="card-body">           
         <form action="" method="post" class="form-sample" enctype="multipart/form-data">
           
@@ -182,10 +189,9 @@
             <input class="btn btn-primary" type="submit" name="edit_stock" value="Update Stock">
        </div>
         
-       </form>
+        </form>
+      </div>
+    </div>
 </div>
-     </div>
-</div>
-      
      
     

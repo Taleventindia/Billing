@@ -1,14 +1,6 @@
 <?php include "includes/admin_header.php"; ?>
+<div class="main-panel">
 <div class="card">
-<div class="content-wrapper">
-    
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                    
-                        <h3 class="page-header">
-                            Inventory List 
-                        </h3>
 
         <?php 
 
@@ -46,7 +38,6 @@
 
                     </div>
                 </div>
-    </div>
-</div>
+
 
     <?php include "includes/admin_footer.php"; ?>

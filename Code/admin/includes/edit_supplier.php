@@ -1,4 +1,10 @@
- <?php 
+ <div class="card-body">            
+      <h3 class="page-header">
+         Update Supplier
+      </h3>
+
+
+<?php 
      
        if(isset($_GET['edit_supplier'])){
            
@@ -54,7 +60,6 @@
    ?>      
 
  <div class="col-12 grid-margin">
-    <div class="card">
       <div class="card-body">
         <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">
           <div class="row">
@@ -75,6 +80,7 @@
               </div>
             </div>
         </div>
+            <br>
             <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
@@ -93,6 +99,7 @@
               </div>
             </div>
         </div>
+            <br>
         <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
@@ -111,6 +118,7 @@
               </div>
             </div> 
          </div>
+            <br>
         <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
@@ -129,6 +137,7 @@
               </div>
             </div>
         </div>
+            <br>
         <div class="row">
             <div class="col-md-6">
               <div class="form-group row">

@@ -17,8 +17,15 @@
               </div>
         </div>
     </div>
-     <div class="card">
-        <table  cellpadding="50" cellspacing="5" class="table table-bordered table-hover">
+    <div class="card-body"> 
+       <div class="row">
+          <div class="col-lg-12">
+             <h3 class="page-header">
+                 Inventory List 
+             </h3>
+
+    <div class="table-responsive">
+        <table   class="table table-bordered table-hover">
               <thead>
                     <tr>
                         <th style="color:blue">SNo</th>
@@ -141,7 +148,11 @@
                     
         </tbody>      
     </table>
- </div>  
+ </div> 
+</div>
+</div>
+</div>
+
 
             <?php
 

@@ -1,30 +1,27 @@
 <?php include "includes/admin_header.php"; ?>
 
- <div class="main-panel">
-        <br>
-           <h3 class="page-header">
+ <div class="main-panel">     
+    <div class="card">  
+       <div class="card-body">    
+          <h3 class="page-header">
                Categories
             </h3>
 
-        <div class = "col-md-4 grid-margin stretch-card">
-        <div class="card">  
-          <div class="content-wrapper">
-            <!-- Page Heading -->
-
-                  <?php insert_categories(); ?>
-
-                        <form action=""method="post" autocomplete="off">
-                           
-                            <div class="form-group">
-                               <label for="cat_title">Add Category</label>
-                                <input type="text" class="form-control" name="cat_title">
-                            </div>
-                            
-                            <div class="form-group">
-                                <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
-                              </div>
+                 
+        <div class="row">
+           <div class="col-md-4">
+              <h6>Add Category</h6>
+                <?php insert_categories(); ?>
+                 <form action=""method="post" autocomplete="off">
+                    <div class="input-group">
+                       <input type="text" class="form-control" name="cat_title">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                       <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
+                    </div>
                               
-                        </form>
+               </form>
                         
                         <?php 
                             //UPDATE AND INCLUDE QUERY
@@ -37,9 +34,6 @@
                            ?>
                     
                       </div> <!-- Add Category -->
-                      
-                      
-                      <div class="card">
 
                       <table class="table table-bordered table-hover">
                           <thead>
@@ -55,12 +49,12 @@
                         <?php findAllCategories(); ?>
                         <?php deleteCategories(); ?>
 
-                      </tbody>
-                      </table>
-                        </div>
-                        
-                    </div>
-                </div>
-    </div>
+               </tbody>
+            </table>
+         </div>             
+      </div>
+   </div>
+</div>
+
 
  <?php include "includes/admin_footer.php"; ?>

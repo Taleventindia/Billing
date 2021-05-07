@@ -21,7 +21,7 @@
           if($cat_title == "" || empty($cat_title)){
               ?>
 
-    <h4 class="text-center" style="color:#ff0000"><?php echo "This field should not be empty";?></h4>
+    <h5 class="" style="color:#ff0000"><?php echo "This field should not be empty";?></h5>
 
         <?php
               

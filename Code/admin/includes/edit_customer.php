@@ -1,4 +1,9 @@
- <?php 
+<div class="card-body">            
+      <h3 class="page-header">
+         Update Customer
+      </h3>
+
+<?php 
      
        if(isset($_GET['edit_customer'])){
            
@@ -55,7 +60,6 @@
    ?>      
 
  <div class="col-12 grid-margin">
-    <div class="card">
       <div class="card-body">
         <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">
           <div class="row">
@@ -76,7 +80,8 @@
               </div>
             </div>
         </div>
-            <div class="row">
+            <br>
+        <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Phone no *</label>
@@ -94,6 +99,7 @@
               </div>
             </div>
         </div>
+         <br>   
         <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
@@ -112,7 +118,8 @@
               </div>
             </div> 
          </div>
-        <div class="row">
+            <br>
+         <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
                 <label for="amount" class="col-sm-3 col-form-label">Amount Paid</label>
@@ -122,56 +129,56 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-group row">
-                <label for="amount" class="col-sm-3 col-form-label">Amount Pending</label>
-                <div class="col-sm-9">
-                  <input type="text" value="<?php echo $amount_pending; ?>" class="form-control" name="amount_pending"/>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label for="amount" class="col-sm-3 col-form-label">Payment Mode</label>
-                <div class="col-sm-9">
-            <select class="form-control" name="payment_mode"id="payment_mode">
+               <div class="form-group row">
+                  <label for="amount" class="col-sm-3 col-form-label">Amount Pending</label>
+                  <div class="col-sm-9">
+                     <input type="text" value="<?php echo $amount_pending; ?>" class="form-control" name="amount_pending"/>
+                  </div>
+               </div>
+             </div>
+          </div>
+            <br>
+          <div class="row">
+             <div class="col-md-6">
+                <div class="form-group row">
+                   <label for="amount" class="col-sm-3 col-form-label">Payment Mode</label>
+                   <div class="col-sm-9">
+                      <select class="form-control" name="payment_mode"id="payment_mode">
             
-            <option value="<?php echo $payment_mode;?>"><?php echo $payment_mode; ?></option> 
+                      <option value="<?php echo $payment_mode;?>"><?php echo $payment_mode; ?></option> 
             
-         <?php 
-                if($payment_mode == 'Cash'){
+                     <?php 
+                            if($payment_mode == 'Cash'){
 
-                    echo "<option value='Card'>Card</option>";
-                    echo "<option value='Credit'>Credit</option>";
-                    
-                }elseif($payment_mode == 'Card'){
-                    
-                    echo "<option value='Cash'>Cash</option>";
-                    echo "<option value='Credit'>Credit</option>";
-                    
-                }elseif($payment_mode == 'Credit'){
-                    
-                    echo "<option value='Cash'>Cash</option>";
-                    echo "<option value='Card'>Card</option>";
-                    
-                }
-                 else{
-                    
-                    echo "<option value='Cash'>Cash</option>";
-                    echo "<option value='Card'>Card</option>";
-                    echo "<option value='Credit'>Credit</option>";
+                                echo "<option value='Card'>Card</option>";
+                                echo "<option value='Credit'>Credit</option>";
 
-                }      
+                            }elseif($payment_mode == 'Card'){
 
-            ?>
+                                echo "<option value='Cash'>Cash</option>";
+                                echo "<option value='Credit'>Credit</option>";
 
-         </select>   
-                    
+                            }elseif($payment_mode == 'Credit'){
+
+                                echo "<option value='Cash'>Cash</option>";
+                                echo "<option value='Card'>Card</option>";
+
+                            }
+                             else{
+
+                                echo "<option value='Cash'>Cash</option>";
+                                echo "<option value='Card'>Card</option>";
+                                echo "<option value='Credit'>Credit</option>";
+
+                            }      
+
+                        ?>
+
+                      </select>    
+                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6">
+             </div>
+             <div class="col-md-6">
               <div class="form-group row">
                 <label for="amount" class="col-sm-3 col-form-label">Payment Status</label>
                 <div class="col-sm-9">

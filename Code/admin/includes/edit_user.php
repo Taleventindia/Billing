@@ -1,4 +1,8 @@
- <?php 
+<div class="card-body">            
+      <h3 class="page-header">
+         Update User
+      </h3>
+<?php 
      
        if(isset($_GET['edit_user'])){
            
@@ -90,77 +94,114 @@
 
    ?>      
                 
-   <form action="" method="post" enctype="multipart/form-data">
-       
+   <form action="" method="post" enctype="multipart/form-data">      
        <div class="form-group">
-       <img width='100' src ='../images/<?php echo $user_image; ?>' alt="">
-
-            <input type="file" name="image">
+          <img width='100' src ='../images/<?php echo $user_image; ?>' alt="">
+          <input type="file" name="image">
        </div>
-       
-       <div class="input-group">
-            <label for="title">Firstname</label>
-            <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" name="user_firstname">
-        </div>
-        <br>
-       <div class="input-group">
-            <label for="title">Lastname</label>
-            <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
-        </div>
-        <br>
-        <div class="input-group">
-            <label for="user_phone">Phone No</label>
-            <input type="varchar" value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
-        </div>
-         <br>
-        <div class="input-group">
-            <label for="user_role">Role</label>
-            <select class="form-control" name="user_role"id="user_role">
-            
-            <option value="<?php echo $user_role;?>"><?php echo $user_role; ?></option> 
-            
-         <?php 
-                if($user_role == 'admin'){
-                    
-                    echo "<option value='user'>user</option>";
-                    
-                }else{
-                    echo "<option value='Super Admin'>Super Admin</option>";
-                    echo "<option value='Admin'>Admin</option>";
-                    echo "<option value='User'>User</option>";
-
-                }      
-
-            ?>
-
-         </select> 
-      </div>
-        <br>
-     
-       <div class="input-group">
-            <label for="user_email">Email</label>
-           <input type="email" value="<?php echo $user_email; ?>" class="form-control" name="user_email">
-        </div>
-         <br>
-        <div class="input-group">
-            <label for="user_password">Password</label>
-           <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
-        </div>
-          <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
-          <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
-       
-         <br>
-       <div class="input-group">
-            <label for="user_confirmpassword">ConfirmPassword</label>
-           <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
-        </div>
-            <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
-         <br>
-       <div class="input-group">
-            <input class="btn btn-primary" type="submit" name="edit_user" value="Update User">
-       </div>
-       </form>
-       
       
+       <div class="row">
+          <div class="col-md-6">
+             <div class="form-group row">
+                <label  class="col-sm-3 col-form-label" for="title">Firstname</label>
+                 <div class="col-sm-9">
+                   <input type="text" value="<?php echo $user_firstname; ?>" class="form-control" size="115" name="user_firstname">
+                 </div>
+              </div>
+           </div>
+        </div>
+         <br>
+        <div class="row">
+           <div class="col-md-6">
+              <div class="form-group row">
+                 <label  class="col-sm-3 col-form-label" for="title">Lastname</label>
+                  <div class="col-sm-9">
+                     <input type="text" value="<?php echo $user_lastname; ?>" class="form-control" name="user_lastname">
+                  </div>
+               </div>
+            </div>
+         </div>
+          <br>
+         <div class="row">
+            <div class="col-md-6">
+               <div class="form-group row">
+                  <label  class="col-sm-3 col-form-label" for="user_phone">Phone No</label>
+                   <div class="col-sm-9">
+                      <input type="varchar" value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
+                   </div>
+                </div>
+             </div>
+          </div>
+           <br>
+          <div class="row">
+             <div class="col-md-6">
+                <div class="form-group row">
+                   <label  class="col-sm-3 col-form-label" for="user_role">Role</label>
+                    <div class="col-sm-9">  
+                       <select class="form-control" name="user_role"id="user_role">
+            
+                       <option value="<?php echo $user_role;?>"><?php echo $user_role; ?></option> 
+            
+                     <?php 
+                            if($user_role == 'admin'){
+
+                                echo "<option value='user'>user</option>";
+
+                            }else{
+                                echo "<option value='Super Admin'>Super Admin</option>";
+                                echo "<option value='Admin'>Admin</option>";
+                                echo "<option value='User'>User</option>";
+
+                            }      
+
+                        ?>
+
+                       </select> 
+                    </div>
+                 </div>
+              </div>
+           </div>
+            <br>
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="form-group row">
+                    <label  class="col-sm-3 col-form-label" for="user_email">Email</label>
+                     <div class="col-sm-9">
+                        <input type="email" value="<?php echo $user_email; ?>" class="form-control" name="user_email">
+                     </div>
+                  </div>
+               </div>
+            </div>
+             <br>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label  class="col-sm-3 col-form-label" for="user_password">Password</label>
+                      <div class="col-sm-9">
+                         <input type="password" value="<?php echo $user_password; ?>" class="form-control" name="user_password">
+                      </div>
+                   </div>
+                </div>
+             </div>         
+                <h6 class="" style="color:#ff0000"><?php echo $message_strnpassworad; ?></h6>
+                <h6 class="" style="color:#ff0000"><?php echo $message_password; ?></h6>
+              <br>
+             <div class="row">
+                <div class="col-md-6">
+                   <div class="form-group row">
+                      <label  class="col-sm-3 col-form-label" for="user_confirmpassword">ConfirmPassword</label>
+                       <div class="col-sm-9">
+                          <input type="password" value="<?php echo $user_confirmpassword; ?>" class="form-control" name="user_confirmpassword">
+                       </div>
+                    </div>
+                 </div>
+              </div>
+                 <h6 class="" style="color:#ff0000"><?php echo $message_confirm; ?></h6>
+               <br>
+              <div class="input-group">
+                 <input class="btn btn-primary" type="submit" name="edit_user" value="Update User">
+              </div>
+          </form>       
+   </div>  
      
     

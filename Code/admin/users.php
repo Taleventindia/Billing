@@ -1,18 +1,6 @@
 <?php include "includes/admin_header.php"; ?>
-
-    <div id="wrapper">
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">                    
-            
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                    <br>
-                        <h3 class="page-header">
-                            Users
-                        </h3>
+<div class="main-panel">
+<div class="card">
 
         <?php 
 

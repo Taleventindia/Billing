@@ -54,6 +54,12 @@
    }
 
 ?>
+<div class="card-body">  
+   <div class="row">
+      <div class="col-lg-12">
+         <h3 class="page-header">
+             Users
+         </h3>
  <form action="" method='post'>
     <div class="card">
       <div id="bulkOptionContainer" class="col-xs-4">
@@ -70,7 +76,7 @@
        </div> 
     </div>
  <div class="card">
- 
+  <div class="table-responsive">
         <table class="table table-bordered table-hover">
                <div class="col-xs-4">
                    
@@ -139,7 +145,11 @@
             </tbody>
          </table>
       </div>
+     </div>
   </form>
+</div>  
+    </div>
+</div>
             <?php
 
                  if(isset($_GET['delete'])){

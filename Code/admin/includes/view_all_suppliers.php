@@ -1,4 +1,10 @@
-<div class="card">
+<div class="card-body">  
+   <div class="row">
+      <div class="col-lg-12">
+         <h3 class="page-header">
+             Suppliers
+         </h3>
+   <div class="table-responsive">
             <table class="table table-bordered table-hover">
               
                 <thead>
@@ -79,6 +85,9 @@
 
             ?>   
                      
+            </div>
+        </div>
+    </div>
 </div>
                  
                       

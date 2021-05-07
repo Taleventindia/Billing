@@ -1,4 +1,9 @@
- <?php 
+ <div class="card-body">            
+      <h4 class="page-header">
+        New Customer
+      </h4>
+
+<?php 
      
        if(isset($_POST['create_customer'])){
            
@@ -53,7 +58,7 @@
    ?>      
         
     <div class="col-12 grid-margin">
-        <div class="card">
+<!--        <div class="card">-->
           <div class="card-body">
             <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">
                 

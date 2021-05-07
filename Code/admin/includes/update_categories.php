@@ -1,9 +1,10 @@
-            <form action="" method="post" autocomplete="off">
-              <div class="form-group">
-               <label for="cat-title">Edit Category</label>
-                                  
+      <h6>Edit Category</h6>
+       <form action="" method="post" autocomplete="off">
+        <div class="input-group">
+                                
            <?php
-                                      
+                 //Fetch Categories    
+                  
                 if(isset($_GET['edit'])){
                 $cat_id=$_GET['edit'];
                     
@@ -18,12 +19,11 @@
                                   
              <input value="<?php if(isset($cat_title)){echo $cat_title ;} ?>" type="text" class="form-control" name="cat_title">
                                    
-                  <?php }} ?>
-                                    
-                                    
+                  <?php }} ?>                     
                                      
-      <?php 
-                       //UPDATE QUERY
+           <?php 
+                  
+                //UPDATE QUERY
                                   
              if(isset($_POST['update_category'])){
              $the_cat_title=$_POST['cat_title'];
@@ -43,11 +43,11 @@
         ?>
                                       
             </div>
-                                       
+              <br>                         
                <div class="form-group">
                   <input class="btn btn-primary" type="submit" name="update_category" value="Update Category">
                </div>
-                
+            
           </form>
                           
                           

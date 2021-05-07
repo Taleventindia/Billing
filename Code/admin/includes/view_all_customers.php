@@ -1,5 +1,10 @@
-<div class="card">  
-  
+<div class="card-body">  
+   <div class="row">
+      <div class="col-lg-12">
+         <h3 class="page-header">
+             Customers
+         </h3>
+   <div class="table-responsive">
             <table class="table table-bordered table-hover">
               
                 <thead>
@@ -69,21 +74,23 @@
             </tbody>
         </table>
            
-            <?php
+               <?php
  
 
-                 if(isset($_GET['delete'])){
-                     $the_customer_id=$_GET['delete'];
-                     $query="DELETE FROM customers WHERE customer_id={$the_customer_id}";
-                     $delete_query=mysqli_query($connection,$query);
-                     header("Location:customers.php");
+                    if(isset($_GET['delete'])){
+                        $the_customer_id=$_GET['delete'];
+                        $query="DELETE FROM customers WHERE customer_id={$the_customer_id}";
+                        $delete_query=mysqli_query($connection,$query);
+                        header("Location:customers.php");
                      
-                 }
+                    }
 
-            ?>   
-                     
+                 ?> 
+       
+            </div>               
+        </div>
     </div>
-                 
+</div>
                       
                      
                     
