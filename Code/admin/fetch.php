@@ -6,13 +6,13 @@ $data = array();
 
 if(isset($_GET["query"])){
     
-    $query = "SELECT firstname FROM customers WHERE firstname LIKE '%".$_GET["query"]."%' ";
+    $query = "SELECT firstname,lastname FROM customers WHERE firstname LIKE '%".$_GET["query"]."%' ";
     
     $statement=mysqli_query($connection,$query);
     
     while($row=mysqli_fetch_assoc($statement)){
-        
         $data[] = $row["firstname"];
+        $data[] = $row["lastname"];
         
     }
     

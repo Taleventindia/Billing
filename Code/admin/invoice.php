@@ -307,8 +307,10 @@ input[type=submit] {
 #saveinv{padding: 10px 20px;background: #0000ff	;border: 0;color: #FFF;display:inline-block;margin-top:20px;cursor: pointer;}
 #saveinv:disabled{padding: 10px 20px;background: #CCC;border: 0;color: #FFF;display:inline-block;margin-top:20px;cursor: no-drop;}
 .validation-error {color:#FF0000;}
+/*
 .input-control{padding:10px;}
 .input-group{margin-top:10px;}    
+*/
   
 </style>
  
@@ -370,17 +372,18 @@ input[type=submit] {
                   </td>
                   
                  <td class="description">
-<!--                      <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="descr[]">Description</textarea>  -->
+                      <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="descr[]">Description</textarea>  
                      
-                    <input id="search_name" style="height:50px" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name='descr[]' size="28">
+<!--                    <input  style="height:50px" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name='descr[]' size="28">-->
                      
                   </td>  
                      
                   <td><div class="demo">
-                      <textarea tabindex="4" class="qty" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="qty[]">0.00</textarea></div></td>
-                  
+                  <textarea tabindex="4" class="qty" id="qty" onblur="validate()" onfocus="if(this.value=='0.00') this.value='';" name="qty[]">0.00</textarea></div></td>
+
                   <td><div class="demo">
-                      <textarea tabindex="5"  class="cost" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="cost[]">0.00</textarea></div>    
+                      <textarea tabindex="5"  class="cost" id="cost" onblur="validate()" onfocus="if(this.value=='0.00') this.value='';" name="cost[]">0.00</textarea></div>
+
                   </td>
                   
                   <td><textarea tabindex="6" class="vat" onblur="if(this.value=='') this.value='0.00';" onfocus="if(this.value=='0.00') this.value='';" name="vat[]">0.00</textarea></td>
@@ -478,11 +481,11 @@ input[type=submit] {
                   <input type="hidden" id="towords" name="towords" />
                   <td colspan="4" class="total-line balance">Round Total: Rs.</td>
                   <td class="total-value balance"><div class="rtot">0.00</div><input type="hidden" id="round_hid" name="rbdf" /></td>
-              </tr>
+                      </tr>
                             
                 </form> 
             </table> 
-                
+                 
                 
             <div id="terms" style="float:left;width:54%;border:1px solid #000; min-height:156px">
               <h4 style="border-bottom: 1px solid black; text-align:left; padding:5px 7px; font-weight:normal">TIN No. : <strong>24050704200</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Date : <?php echo date("d/m/Y");?></h4>
@@ -511,7 +514,7 @@ input[type=submit] {
             </div>
              
             <br>
-            <center><input type="submit" id="" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
+            <center><input type="submit" id="saveinv" class="btn btn-primary" value="Save Invoice" name="saveinv" disabled="disabled"/></center>  
             </form>
     </div>
     </div>
@@ -539,7 +542,8 @@ input[type=submit] {
 function validate() {
 	
 	var valid = true;
-	valid = checkEmpty($("#search_data"));
+	valid = checkEmpty($("#qty"));
+	valid = valid &&  checkCost($("#cost"));
 	
     $("#saveinv").attr("disabled",true);
 	if(valid) {
@@ -547,7 +551,7 @@ function validate() {
 	}	
 }
 function checkEmpty(obj) {
-	var name = $(obj).attr("custname");
+	var name = $(obj).attr("qty");
 	$("."+name+"-validation").html("");	
 	$(obj).css("border","");
 	if($(obj).val() == "") {
@@ -558,5 +562,21 @@ function checkEmpty(obj) {
 	
 	return true;	
 }
-
+function checkCost(obj) {
+	var result = true;
+	
+	var name = $(obj).attr("qty");
+	$("."+name+"-validation").html("");	
+	$(obj).css("border","");
+	
+	result = checkEmpty(obj);
+	
+	if(!result) {
+		$(obj).css("border","#FF0000 1px solid");
+		$("."+name+"-validation").html("Required");
+		return false;
+	}
+	
+	return result;	
+}
 </script>		
