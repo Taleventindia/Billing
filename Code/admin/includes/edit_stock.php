@@ -53,7 +53,7 @@
            
         confirmQuery($edit_stock_query);
            
-    echo "<h3>Stock Updated:" . "<a href='inventory.php'>View Stock list?</a></h3>";
+             header("Location:inventory.php"); 
 
        
        }

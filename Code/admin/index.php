@@ -81,7 +81,7 @@
                             $data[] = $row;
                                            
                           }
-
+//                           echo json_encode($data);
                         ?>
                       
                     <canvas class="mt-5" height="120" name="rbdf" id="sales-statistics-overview"></canvas>

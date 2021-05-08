@@ -44,6 +44,7 @@
                 $payment_status =  $_POST['payment_status'];
                 $comments =  $_POST['comments'];
  
+    if(preg_match("/^[0-9]{10}$/", $phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $phone)) {
           
     $query="UPDATE customers SET firstname= '{$firstname}', lastname= '{$lastname}', phone= '{$phone}', email= '{$email}', address= '{$address}', amount_paid='{$amount_paid}', amount_pending='{$amount_pending}', payment_mode='{$payment_mode}', payment_status='{$payment_status}', comments='{$comments}' WHERE customer_id= {$the_customer_id} ";  
        
@@ -51,8 +52,11 @@
            
         confirmQuery($edit_customer_query);
        
-         header("Location:customers.php");  
-       
+         header("Location:customers.php"); 
+        
+       }else{
+              $message_phone = "Invalid Phone No";        
+       }
        
        }
       
@@ -87,9 +91,10 @@
                 <label class="col-sm-3 col-form-label">Phone no *</label>
                 <div class="col-sm-9">
                   <input type="phone no" value="<?php echo $phone; ?>" class="form-control" name="phone"/>
+                    <h6 class="" style="color:#ff0000"><?php echo $message_phone; ?></h6>
                 </div>
               </div>
-            </div>
+            </div>    
             <div class="col-md-6">
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">E-mail *</label>

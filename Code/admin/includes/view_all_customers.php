@@ -63,7 +63,7 @@
                  
              
                     echo "<td><input type='image' src='assets/icons/edit.svg' width='13' height ='13'> <a href='customers.php?source=edit_customer&edit_customer={$customer_id}'>Edit</a></td>";
-                    echo "<td><input type='image' src='assets/icons/delete.svg' width='15' height ='15'><a onClick=\"javascript:return confirm('Are you Sure you want to delete');\"href='customers.php?delete={$customer_id}'>Delete</a></td>";
+                    echo "<td><input type='image' src='assets/icons/delete.svg' width='15' height ='15'><a onClick=\"javascript:return confirm('Are you Sure you want to delete CUSTOMER ??');\"href='customers.php?delete={$customer_id}'>Delete</a></td>";
                  
                     echo "</tr>";
 

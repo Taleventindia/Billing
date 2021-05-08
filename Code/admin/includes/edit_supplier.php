@@ -44,7 +44,9 @@
                 $payment_status =  $_POST['payment_status'];
                 $comments =  $_POST['comments'];
 
-          
+    if(preg_match("/^[0-9]{10}$/", $phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $phone)) {
+        
+              
     $query="UPDATE suppliers SET firstname= '{$firstname}', lastname= '{$lastname}', phone= '{$phone}', email= '{$email}', address= '{$address}', amount_paid='{$amount_paid}', amount_pending='{$amount_pending}', payment_mode='{$payment_mode}', payment_status='{$payment_status}', comments='{$comments}' WHERE supplier_id= {$the_supplier_id} ";  
        
         $edit_supplier_query=mysqli_query($connection,$query);
@@ -53,6 +55,9 @@
        
          header("Location:suppliers.php");  
        
+        }else{
+              $message_phone = "Invalid Phone No";        
+       }
        
        }
       
@@ -62,64 +67,65 @@
  <div class="col-12 grid-margin">
       <div class="card-body">
         <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label" >First Name *</label>
-                <div class="col-sm-9">
-                  <input type="text" value="<?php echo $firstname; ?>" size="65"  maxlength="65" class="form-control" name="firstname"/>
-                </div>
-              </div>
-              </div>
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Last Name *</label>
-                <div class="col-sm-9">
-                  <input type="text" value="<?php echo $lastname; ?>" size="65"  maxlength="65" class="form-control" name="lastname"/>
-                </div>
-              </div>
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" >First Name *</label>
+                     <div class="col-sm-9">
+                        <input type="text" value="<?php echo $firstname; ?>" size="65"  maxlength="65" class="form-control" name="firstname"/>
+                     </div>
+                 </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label class="col-sm-3 col-form-label">Last Name *</label>
+                      <div class="col-sm-9">
+                         <input type="text" value="<?php echo $lastname; ?>" size="65"  maxlength="65" class="form-control" name="lastname"/>
+                      </div>
+                  </div>
+               </div>
             </div>
-        </div>
             <br>
             <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Phone no *</label>
-                <div class="col-sm-9">
-                  <input type="phone no" value="<?php echo $phone; ?>" class="form-control" name="phone"/>
-                </div>
-              </div>
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label class="col-sm-3 col-form-label">Phone no *</label>
+                      <div class="col-sm-9">
+                         <input type="phone no" value="<?php echo $phone; ?>" class="form-control" name="phone"/>
+                          <h6 class="" style="color:#ff0000"><?php echo $message_phone; ?></h6>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label class="col-sm-3 col-form-label">E-mail *</label>
+                      <div class="col-sm-9">
+                         <input type="email" value="<?php echo $email; ?>" class="form-control" name="email"/>
+                      </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label class="col-sm-3 col-form-label">E-mail *</label>
-                <div class="col-sm-9">
-                  <input type="email" value="<?php echo $email; ?>" class="form-control" name="email"/>
-                </div>
-              </div>
+             <br>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label for="address" class="col-sm-3 col-form-label">Address</label>
+                      <div class="col-sm-9">
+                         <input type="address" value="<?php echo $address; ?>" class="form-control" name="address"/>
+                      </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group row">
+                     <label for="comments" class="col-sm-3 col-form-label">Comments</label>
+                      <div class="col-sm-9">
+                         <input type="text" value="<?php echo $comments; ?>" class="form-control" name="comments"/>
+                      </div>
+                  </div>
+               </div> 
             </div>
-        </div>
-            <br>
-        <div class="row">
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label for="address" class="col-sm-3 col-form-label">Address</label>
-                <div class="col-sm-9">
-                  <input type="address" value="<?php echo $address; ?>" class="form-control" name="address"/>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group row">
-                <label for="comments" class="col-sm-3 col-form-label">Comments</label>
-                <div class="col-sm-9">
-                  <input type="text" value="<?php echo $comments; ?>" class="form-control" name="comments"/>
-                </div>
-              </div>
-            </div> 
-         </div>
-            <br>
-        <div class="row">
+             <br>
+            <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
                 <label for="amount" class="col-sm-3 col-form-label">Amount Paid</label>

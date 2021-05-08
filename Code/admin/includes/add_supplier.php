@@ -30,6 +30,7 @@
 
     if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($comments) && !empty($tax_info)&& !empty($amount_paid) && !empty($amount_pending) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
   
+    if(preg_match("/^[0-9]{10}$/", $phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $phone)) {
            
      $query="INSERT INTO suppliers".
          '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,comments,tax_info,amount_paid,amount_pending,payment_mode,payment_status,attachments,pan_no,adhaar_no)'.   
@@ -40,15 +41,18 @@
         confirmQuery($create_supplier_query);
            
             header("Location:suppliers.php"); 
+        
+        }else{
+              $message_phone = "Invalid Phone No";        
        }
-       
-           else {
+        
+       }else {
           
           $message = "Invalid supplier details";
           
-      } 
+       } 
            
-    } else {
+       }else{
          
          $message = "";  
       
@@ -81,12 +85,13 @@
                   </div>
                 </div>
             </div>
-                <div class="row">
+            <div class="row">
                 <div class="col-md-6">
                   <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Phone no *</label>
                     <div class="col-sm-9">
                       <input type="phone no" class="form-control" name="phone"/>
+                         <h6 class="" style="color:#ff0000"><?php echo $message_phone; ?></h6>
                     </div>
                   </div>
                 </div>
@@ -95,10 +100,10 @@
                     <label class="col-sm-3 col-form-label">E-mail *</label>
                     <div class="col-sm-9">
                       <input type="email"   class="form-control" name="email"/>
-                    </div>
+                    </div>                  
                   </div>
                 </div>
-            </div>
+             </div>                
                 <div class="row">
                 <div class="col-md-6">
                   <div class="form-group row">

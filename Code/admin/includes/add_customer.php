@@ -30,6 +30,7 @@
 
    if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($comments) && !empty($tax_info)&& !empty($amount_paid) && !empty($amount_pending) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
   
+   if(preg_match("/^[0-9]{10}$/", $phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $phone)) {
            
      $query="INSERT INTO customers".
          '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,comments,tax_info,amount_paid,amount_pending,payment_mode,payment_status,attachments,pan_no,adhaar_no)'.   
@@ -40,15 +41,18 @@
         confirmQuery($create_customer_query);
            
             header("Location:customers.php"); 
-       }
+           
+          }else{
+              $message_phone = "Invalid Phone No";        
+     }
        
-           else {
+         }else {
           
           $message = "Invalid customer details";
           
-      } 
+     } 
            
-    } else {
+       }else{
          
          $message = "";  
       
@@ -60,7 +64,7 @@
     <div class="col-12 grid-margin">
 <!--        <div class="card">-->
           <div class="card-body">
-            <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">
+            <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="">
                 
                 <h6 class="text-center" style="color:#ff0000"><?php echo $message; ?></h6>
                 
@@ -88,9 +92,10 @@
                     <label class="col-sm-3 col-form-label">Phone no *</label>
                     <div class="col-sm-9">
                       <input type="phone no" class="form-control" name="phone"/>
+                         <h6 class="" style="color:#ff0000"><?php echo $message_phone; ?></h6>
                     </div>
                   </div>
-                </div>
+                </div>   
                 <div class="col-md-6">
                   <div class="form-group row">
                     <label class="col-sm-3 col-form-label">E-mail *</label>

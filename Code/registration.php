@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--  <meta http-equiv="refresh" content="40; url=SignInPage.php">  -->
   <title>Talevent Tech</title>
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
@@ -46,6 +47,8 @@
 
         if($password == $confirmpassword){
         
+        if(preg_match("/^[0-9]{10}$/", $user_phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $user_phone)) {   
+        
         $query = "INSERT INTO users (user_firstname,user_lastname,user_image,user_phone,user_email,user_password,user_confirmpassword,user_role) ";
         $query .= "VALUES ('{$user_firstname}','{$user_lastname}','profile.jfif','{$user_phone}','{$email}','{$password}','{$confirmpassword}','User') ";
              
@@ -61,8 +64,13 @@
              
             
             header("Location:SignInPage.php"); 
+            
+          }else{
+              $message_phone = "Invalid Phone No";
+            
+        }
    
-        }else{
+          }else{
               $message_cpassworad = "Password Mismatch!";
             
         }
@@ -72,30 +80,28 @@
               
        }
             
-         }else{
+          }else{
               $message_password = "Password must contain a special character";
             
        } 
             
-         }else{
-            $message_Lastname ="Only Alphabets are allowed in lastname";
+          }else{
+              $message_Lastname ="Only Alphabets are allowed in lastname";
             
-      }
+       }
 
-        } else{
-            $message_Firstname ="Only Alphabets are allowed in firstname";
+          }else{
+              $message_Firstname ="Only Alphabets are allowed in firstname";
           
-      }
-      } else {
-			 $message = "Fields cannot be Empty";
+       }
+          
+          }else{
+			  $message = "Fields cannot be Empty";
        }  
          
-     } 
-    
-      else {
-         
-         $message = ""; 
-    }
+          }else {         
+              $message = ""; 
+       }
 
   ?>
   
@@ -139,7 +145,7 @@
                 <label for="phone">Phone no</label>
                 <input type="phone no" class="form-control" name="user_phone">
             </div>   
-
+                 <h6 class="text-center" style="color:#ff0000"><?php echo $message_phone; ?></h6> 
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" name="user_email" id="email" class="form-control" placeholder="somebody@example.com">

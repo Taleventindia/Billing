@@ -67,7 +67,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="form-group row">
-                     <label class="col-sm-3 col-form-label" for="Product_type">Last Name:</label>
+                     <label class="col-sm-3 col-form-label" for="title">Last Name:</label>
                      <div class="col-sm-9">
                         <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_lastname ?></label>
                      </div>
@@ -77,7 +77,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="form-group row">
-                     <label class="col-sm-3 col-form-label" for="Product_type">E-mail:</label>
+                     <label class="col-sm-3 col-form-label" for="email">E-mail:</label>
                      <div class="col-sm-9">
                         <label class="col-sm-6 col-form-label" for="Product_type"><?php echo $email ?></label>
                      </div>
@@ -87,7 +87,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="form-group row">
-                     <label class="col-sm-3 col-form-label" for="Product_type">Phone no:</label>
+                     <label class="col-sm-3 col-form-label" for="Phone no">Phone no:</label>
                      <div class="col-sm-9">
                         <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_phone ?></label>
                      </div>
@@ -97,7 +97,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="form-group row">
-                     <label class="col-sm-3 col-form-label" for="Product_type"> Role:</label>
+                     <label class="col-sm-3 col-form-label" for="role"> Role:</label>
                      <div class="col-sm-9">
                         <label class="col-sm-3 col-form-label" for="Product_type"><?php echo $user_role ?></label>
                      </div>

@@ -5,7 +5,7 @@
 <div class="content-wrapper">
 <div class="row">
     <div class="col-md-4">
-            <h6>Search Invoice</h6>
+            <h6>Search Customer</h6>
             <form action="" method="post" autocomplete="off">
                 <div class="input-group">
                         <input name="search" type="text" class="form-control">

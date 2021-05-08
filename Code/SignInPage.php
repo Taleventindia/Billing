@@ -17,7 +17,7 @@
 
 
 <?php
-
+    
     if(isset($_REQUEST['submit'])){
          
         $email    = $_REQUEST['email'];
@@ -67,7 +67,6 @@
         }
         
         }
-     
    ?>  
     
      
@@ -84,6 +83,7 @@
                 <img src="assets/images/logo.svg" alt="logo" class="logo">
               </div>
               <p class="login-card-description">Sign in into your account</p>
+<!--                <h5 class="" style="color:#006400"><?php //echo $registration; ?></h5> -->
                 
                 <form action=""method="post" enctype="multipart/form-data">
                   <div class="form-group">
