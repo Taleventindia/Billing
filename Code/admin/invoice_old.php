@@ -330,10 +330,8 @@ input[type=submit] {
 
            <div id="customer">
                 Consignee,<br />
-                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="demoA" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
-         
-<!--             <input id="search_data" style="height:90px" class="input-control" onblur="validate()" name="custname" size="13" />-->
-<!--               <input type="text" id="demoA" name="custname"/>-->
+                <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>
+
                 <table id="meta">
                     <tr>
                         <td class="meta-head">Invoice #</td>

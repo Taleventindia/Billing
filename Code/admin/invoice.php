@@ -27,7 +27,6 @@
 <style>
 
      
-/*
 
 * {
   box-sizing: border-box;
@@ -90,7 +89,6 @@ input[type=submit] {
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
-*/
 
 
   
@@ -101,13 +99,14 @@ input[type=submit] {
 <div class="card-body">
     <h4>Create Invoice</h4>
     <div style="clear:both"></div>
-            <form action="bill.php" method="post" autocomplete="off">
+            <form action="bill.php" method="post" autocomplete="">
                  <div style="border:1px solid #000"> 
 
            <div id="customer">
+           
                 Consignee,<br />
-      <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>            
-<!--               <input type="text" name="custname" class="" id="customer-title"/>-->
+                       <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>        
+
                 <table id="meta">
                     <tr>
                         <td class="meta-head">Invoice #</td>
@@ -122,8 +121,8 @@ input[type=submit] {
     
                 </table>
             </div>
-            
             </div>
+                
             <table id="items">
               <tr>
                   <th>Item</th>
@@ -290,6 +289,7 @@ input[type=submit] {
             <br>
             <center><input type="submit" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
             </form>
+                
     </div>
     </div>
        
