@@ -30,7 +30,6 @@
                   </div>
                 </div>
               </div>
-            <div class="row">
               <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -70,7 +69,6 @@
                       </div>
                       <div class="ml-lg-auto" id="sales-statistics-legend"></div>
                     </div>
-
                       <?php
 
                         $query = sprintf("SELECT invnum, rbdf FROM register ORDER BY invnum");
@@ -102,7 +100,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+
                     <div class="col-md-12 grid-margin">
                     <div class="card">
                       <div class="card-body">
