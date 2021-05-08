@@ -315,7 +315,7 @@ input[type=submit] {
 </style>
  
 <div class="main-panel">
-    <div class="card">
+<div class="card">
 <div class="card-body">
     <h4>Create Invoice</h4>
     <div style="clear:both"></div>

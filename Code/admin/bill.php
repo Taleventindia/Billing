@@ -77,7 +77,7 @@
      <div class="main-panel">
       <div class="card">
       <div class="card-body">
-    <h3 class="text-center" style="color:blue"><?php echo "INVOICE CREATED"; ?></h3>
+    <h5 class="text-center" style="color:blue"><?php echo "Invoice Created Succesfully"; ?></h5>
 		<h3>RETAIL INVOICE</h3>
         <div style="border:1px solid #000">
 		   <div style="clear:both"></div>
