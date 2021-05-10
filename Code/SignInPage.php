@@ -15,7 +15,6 @@
   <?php session_start(); ?>
 <?php include "db.php"; ?>
 
-
 <?php
     
     if(isset($_REQUEST['submit'])){
