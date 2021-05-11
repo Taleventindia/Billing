@@ -242,6 +242,7 @@
             </div>
              
 		</div>
+   <br>
     <center><button class="btn btn-primary" name="submit"><a href="viewbill.php?inv=<?php echo $invnum;?>"><h5 style="color:white">View Bill</h5></a></button></center>
         <br />
                 <!-- Bootstrap Core CSS -->

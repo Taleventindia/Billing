@@ -142,7 +142,13 @@
                     
                     }
       
-                 }
+                 }    
+               $update="UPDATE stock set quantity=(quantity- new.qty) WHERE product_name =new.item";
+                $select_update=mysqli_query($connection,$update);
+                if(!$select_update){
+               die("Query Failed" . mysqli_error($connection)); 
+                                
+             }    
 
             ?> 
                     

@@ -28,18 +28,25 @@
          $password = $_POST['user_password'];
          $confirmpassword =$_POST['user_confirmpassword'];
          
+//      echo  $password;
+         
       if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone)){
-
+          
+      $password = mysqli_real_escape_string($connection,$password);
+//        $hashFormat = "$2y$10$";
+//        $salt = "iusesomecrazystrings22";
+//        $hashF_and_salt = $hashFormat . $salt; 
+//        $password =crypt($password,$hashF_and_salt);  
      
       if(preg_match('/^[\p{L} ]+$/u', $user_firstname)) {
           
         if(preg_match('/^[\p{L} ]+$/u', $user_lastname)) {
             
             
-        $uppercase = preg_match('@[A-Z]@', $password);
-        $lowercase = preg_match('@[a-z]@', $password);
-        $number    = preg_match('@[0-9]@', $password);
-        $character = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $password);
+        $uppercase  = preg_match('@[A-Z]@', $password);
+        $lowercase  = preg_match('@[a-z]@', $password);
+        $number     = preg_match('@[0-9]@', $password);
+        $character  = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $password);
             
         if($uppercase && $lowercase && $number && $character) {
 
@@ -47,7 +54,7 @@
 
         if($password == $confirmpassword){
         
-        if(preg_match("/^[0-9]{10}$/", $user_phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $user_phone)) {   
+        if(preg_match("/^[0-9]{10}$/", $user_phone)) {   
         
         $query = "INSERT INTO users (user_firstname,user_lastname,user_image,user_phone,user_email,user_password,user_confirmpassword,user_role) ";
         $query .= "VALUES ('{$user_firstname}','{$user_lastname}','profile.jfif','{$user_phone}','{$email}','{$password}','{$confirmpassword}','User') ";

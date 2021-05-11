@@ -30,7 +30,7 @@
 
     if(!empty($firstname) && !empty($lastname) && !empty($phone) && !empty($email) && !empty($company) && !empty($display_name) && !empty($website) && !empty($other) && !empty($gst_in) && !empty($address) && !empty($comments) && !empty($tax_info)&& !empty($amount_paid) && !empty($amount_pending) && !empty($attachments) && !empty($pan_no) && !empty($adhaar_no)){
   
-    if(preg_match("/^[0-9]{10}$/", $phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $phone)) {
+    if(preg_match("/^[0-9]{10}$/", $phone)) {
            
      $query="INSERT INTO suppliers".
          '(firstname,lastname,phone,email,company,display_name,website,other,gst_in,address,comments,tax_info,amount_paid,amount_pending,payment_mode,payment_status,attachments,pan_no,adhaar_no)'.   

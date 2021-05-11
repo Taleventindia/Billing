@@ -65,7 +65,7 @@
             
          if($user_password==$user_confirmpassword){
              
-        if(preg_match("/^[0-9]{10}$/", $user_phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $user_phone)) {    
+        if(preg_match("/^[0-9]{10}$/", $user_phone)) {    
              
     $query="UPDATE users SET user_firstname= '{$user_firstname}', user_lastname= '{$user_lastname}',user_image= '{$user_image}', user_phone= '{$user_phone}', user_role= '{$user_role}', user_email= '{$user_email}', user_password= '{$user_password}', user_confirmpassword= '{$user_confirmpassword}' WHERE user_id= {$the_user_id} ";  
                       
@@ -134,11 +134,11 @@
                   <label  class="col-sm-3 col-form-label" for="user_phone">Phone No</label>
                    <div class="col-sm-9">
                       <input type="no" value="<?php echo $user_phone; ?>" class="form-control" name="user_phone">
+                         <h6 class="" style="color:#ff0000"><?php echo $message_phone; ?></h6>
                    </div>
                 </div>
              </div>
-          </div>
-                <h6 class="" style="color:#ff0000"><?php echo $message_phone; ?></h6>  
+          </div>  
            <br>
           <div class="row">
              <div class="col-md-6">

@@ -44,7 +44,7 @@
                 $payment_status =  $_POST['payment_status'];
                 $comments =  $_POST['comments'];
  
-    if(preg_match("/^[0-9]{10}$/", $phone) || preg_match("/^[0-9]{3}-[0-9]{10}$/", $phone)) {
+    if(preg_match("/^[0-9]{10}$/", $phone)) {
           
     $query="UPDATE customers SET firstname= '{$firstname}', lastname= '{$lastname}', phone= '{$phone}', email= '{$email}', address= '{$address}', amount_paid='{$amount_paid}', amount_pending='{$amount_pending}', payment_mode='{$payment_mode}', payment_status='{$payment_status}', comments='{$comments}' WHERE customer_id= {$the_customer_id} ";  
        
