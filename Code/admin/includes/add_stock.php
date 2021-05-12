@@ -19,7 +19,9 @@
                 $expiry_date =  $_POST['expiry_date'];
                 $date_arrival =  $_POST['date_arrival'];
 
-          
+         if(!preg_match('/^[0-9 +-]*$/', $product_cost)){
+     //variable contains char not allowed 
+
     $query="INSERT into stock".
     '(barcode_no, product_name, product_category, product_type, product_cost,quantity, supplier, onhand_qty, expiry_date, date_arrival)'.
 "VALUES('".$barcode_no."','".$product_name."','".$product_category."','".$product_type."','".$product_cost."','".$quantity."','".$supplier."','".$onhand_qty."','".$expiry_date."','".$date_arrival."') ";       
@@ -32,13 +34,16 @@
     echo "Stock Created:"." "."<a href='inventory.php'>View Stock?</a>";
           
             move_uploaded_file($barcode_no_tempname,"../images/$barcode_no");
-       
+             
+       }else{
+           $message="only numbers accepted";
+} 
        }
       
    ?>  
 
 <div class="card-body">           
-  <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="off">                       
+  <form action="" method="post" enctype="multipart/form-data" class="form-sample" autocomplete="">                       
      
         <div class="row">
           <div class="col-md-6">
@@ -101,63 +106,64 @@
            <div class="col-md-6">
               <div class="form-group row">
                  <label class="col-sm-3 col-form-label" for="product_cost">Product Cost*</label>
-                 <div class="col-sm-9">
-                    <input type="decimal" class="form-control" name="product_cost" />
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-               <div class="form-group row">
-                  <label class="col-sm-3 col-form-label" for="quantity">Quantity*</label>
                   <div class="col-sm-9">
-                     <input type="decimal" class="form-control" name="quantity" />
+                     <input type="decimal" class="form-control" name="product_cost" />
+                      <h6 class="" style="color:#ff0000"><?php echo $message; ?></h6>
                   </div>
                </div>
             </div>
-        </div>
-        <div class="row">
-           <div class="col-md-6">
-              <div class="form-group row">
-                 <label class="col-sm-3 col-form-label" for="Supplier">Supplier*</label>
-                 <div class="col-sm-9">
-                    <input type="text" class="form-control" name="supplier" />
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="quantity">Quantity*</label>
+                   <div class="col-sm-9">
+                      <input type="decimal" class="form-control" name="quantity" />
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="row">
+             <div class="col-md-6">
+                <div class="form-group row">
+                   <label class="col-sm-3 col-form-label" for="Supplier">Supplier*</label>
+                    <div class="col-sm-9">
+                       <input type="text" class="form-control" name="supplier" />
+                    </div>
+                </div>
+             </div>
+          </div>
+          <div class="row">
+             <div class="col-md-6">
+                <div class="form-group row">
+                   <label class="col-sm-3 col-form-label" for="onhand_qty">Onhand Qty</label>
+                    <div class="col-sm-9">
+                       <input type="decimal" class="form-control" name="onhand_qty" />
+                    </div>
+                </div>
+             </div>
+          </div>
+          <div class="row">
+             <div class="col-md-6">
+                <div class="form-group row">
+                   <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
+                    <div class="col-sm-9">
+                       <input type="date" class="form-control" name="date_arrival"/>
+                    </div>
                  </div>
               </div>
            </div>
-        </div>
-        <div class="row">
-           <div class="col-md-6">
-              <div class="form-group row">
-                 <label class="col-sm-3 col-form-label" for="onhand_qty">Onhand Qty</label>
-                 <div class="col-sm-9">
-                    <input type="decimal" class="form-control" name="onhand_qty" />
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
+                     <div class="col-sm-9">
+                        <input type="date" class="form-control" name="expiry_date" />
+                     </div>
                  </div>
               </div>
            </div>
-        </div>
-        <div class="row">
-           <div class="col-md-6">
-              <div class="form-group row">
-                 <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
-                 <div class="col-sm-9">
-                    <input type="date" class="form-control" name="date_arrival"/>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="row">
-           <div class="col-md-6">
-              <div class="form-group row">
-                 <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
-                 <div class="col-sm-9">
-                    <input type="date" class="form-control" name="expiry_date" />
-                 </div>
-              </div>
-           </div>
-        </div>
-        <br>
+             <br>
                <div class="col-sm-9">
                   <input class="btn btn-primary" type="submit" name="create_stock" value="Add Stock">
                </div>

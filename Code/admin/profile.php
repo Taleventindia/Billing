@@ -4,8 +4,8 @@
       <div class="card-body">
        
                 <!-- Page Heading -->
-                        <h3 class="page-header" style="color:black">
-                            Profile 
+                        <h3 class="page-header" style="color:black"> 
+                           Profile:
                             <small>
                         <h3  style="color:#1e90ff"> 
 <?php 

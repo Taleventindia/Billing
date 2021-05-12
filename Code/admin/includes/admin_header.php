@@ -116,7 +116,7 @@
                   <li class="nav-item">
                       <a class="nav-link" href="./categories.php">
                       <i class="menu-icon typcn typcn-shopping-bag"></i>
-                    <span class="menu-title">categories</span>
+                    <span class="menu-title">Categories</span>
                       </a>
                   </li>  
                   <li class="nav-item">
