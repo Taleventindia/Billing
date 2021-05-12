@@ -228,7 +228,7 @@
              </div>
           <br>
          <br>
-         <a href="javascript:window.print()"><center><img src="images/printButton.gif"/></center></a>
+         <a href="javascript:window.print()"><center><img src="images/printButton.gif" widht=130 height =40/></center></a>
     
     </div> 
     
