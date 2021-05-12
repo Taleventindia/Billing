@@ -43,7 +43,7 @@
         <div class="row">
           <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="barcode_no">Barcode</label>
+                <label class="col-sm-3 col-form-label" for="barcode_no">Barcode*</label>
                 <div class="col-sm-9">
                   <input type="file" name="image" />
                 </div>
@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="title">Product Name</label>
+                <label class="col-sm-3 col-form-label" for="title">Product Name*</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" size="115" maxlength="115" name="product_name">
                 </div>
@@ -63,7 +63,7 @@
         <div class="row">
            <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label" for="category">Product Category</label>
+                <label class="col-sm-3 col-form-label" for="category">Product Category*</label>
                   <div class="col-sm-9">
                     <select class="form-control" name="product_category"id="product_category"> 
 
@@ -100,7 +100,7 @@
         <div class="row">
            <div class="col-md-6">
               <div class="form-group row">
-                 <label class="col-sm-3 col-form-label" for="product_cost">Product Cost</label>
+                 <label class="col-sm-3 col-form-label" for="product_cost">Product Cost*</label>
                  <div class="col-sm-9">
                     <input type="decimal" class="form-control" name="product_cost" />
                  </div>
@@ -110,7 +110,7 @@
         <div class="row">
             <div class="col-md-6">
                <div class="form-group row">
-                  <label class="col-sm-3 col-form-label" for="quantity">Quantity</label>
+                  <label class="col-sm-3 col-form-label" for="quantity">Quantity*</label>
                   <div class="col-sm-9">
                      <input type="decimal" class="form-control" name="quantity" />
                   </div>
@@ -120,7 +120,7 @@
         <div class="row">
            <div class="col-md-6">
               <div class="form-group row">
-                 <label class="col-sm-3 col-form-label" for="Supplier">Supplier</label>
+                 <label class="col-sm-3 col-form-label" for="Supplier">Supplier*</label>
                  <div class="col-sm-9">
                     <input type="text" class="form-control" name="supplier" />
                  </div>
