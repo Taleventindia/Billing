@@ -14,9 +14,9 @@
                     <div class="dropdown toolbar-item">
                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownsorting" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Day</button>
                       <div class="dropdown-menu" aria-labelledby="dropdownsorting">
-                        <a class="dropdown-item" href="#">Last Day</a>
-                        <a class="dropdown-item" href="#">Last Month</a>
-                        <a class="dropdown-item" href="#">Last Year</a>
+                        <a class="dropdown-item" href="#">Weekly</a>
+                        <a class="dropdown-item" href="#">Montly</a>
+                        <a class="dropdown-item" href="#">Yearly</a>
                       </div>
                     </div>
                   </div>
@@ -392,7 +392,7 @@
         }]
       };
 
-      var chartOptions = {
+      var   = {
         scale: {
           ticks: {
             beginAtZero: true,
