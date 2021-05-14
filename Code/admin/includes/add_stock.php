@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>     
+
 <div class="card-body">            
       <h4 class="page-header">
          Add New Stock
@@ -148,7 +150,7 @@
                 <div class="form-group row">
                    <label class="col-sm-3 col-form-label" for="date_arrival">Arrival Date</label>
                     <div class="col-sm-9">
-                       <input type="date" class="form-control" name="date_arrival"/>
+                       <input type="date" id="futDate" class="form-control" name="date_arrival"/>
                     </div>
                  </div>
               </div>
@@ -158,7 +160,7 @@
                  <div class="form-group row">
                     <label class="col-sm-3 col-form-label" for="expiry_date">Expiry Date</label>
                      <div class="col-sm-9">
-                        <input type="date" class="form-control" name="expiry_date" />
+                        <input type="date" id="txtDate" class="form-control" name="expiry_date" />
                      </div>
                  </div>
               </div>
@@ -171,4 +173,37 @@
             </form>       
          </div>
       </div>
+<script>
+$(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var minDate= year + '-' + month + '-' + day;
+    
+    $('#txtDate').attr('min', minDate);
+});
+    
+    $(function(){
+    var dtToday = new Date();
 
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+
+    var maxDate = year + '-' + month + '-' + day;    
+    $('#futDate').attr('max', maxDate);
+});
+    
+</script>

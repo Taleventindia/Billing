@@ -170,7 +170,7 @@ input[type=submit] {
           
            
             <tr id="hiderow"> 
-                  <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add a row</a></td>
+                  <td colspan="8"><a tabindex="8" id="addrow" name="addrow" title="Add a row" onblur="return false;" style="color:#06F; text-decoration:underline; cursor:pointer">Add Item</a></td>
               </tr>    
               
               <tr>
