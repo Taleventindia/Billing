@@ -1,8 +1,9 @@
     <link rel='stylesheet' type='text/css' href='css/style.css' />
-    <link rel="stylesheet" type='text/css' href="css/autocomplete.css">
+    <link rel="stylesheet" type='text/css' href="css/autocomplete.css">  
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
-	<script type='text/javascript' src='js/example.js'></script>
+	<script type='text/javascript' src='js/jquery-3.1.0.min.js'></script>  
+	<script type='text/javascript' src='js/example.js'></script> 
 	<script type="text/javascript" src="js/inwords.js"></script>
     <script type='text/javascript' src='js/autocomplete.js'></script>
 
@@ -148,7 +149,7 @@ input[type=submit] {
                   </td>
                   
                  <td class="description">
-                      <textarea tabindex="3"  onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="descr[]">Description</textarea>
+                      <textarea tabindex="3" onblur="if(this.value=='') this.value='Description';" onfocus="if(this.value=='Description') this.value='';" name="descr[]">Description</textarea>
                      
                   </td>  
                      
@@ -320,5 +321,3 @@ input[type=submit] {
     </script>
 
     <?php include "includes/admin_footer.php"; ?>
-
-
