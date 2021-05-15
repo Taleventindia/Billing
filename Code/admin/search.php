@@ -20,17 +20,19 @@ switch ($_POST['type']) {
          break;
     case "product_name":
         
-     $query = "SELECT * FROM stock  WHERE product_name LIKE '%" . $_POST['search'] . "%' ";
+     $query = "SELECT product_name FROM stock  WHERE product_name LIKE '%" . $_POST['search'] . "%' ";
     
     $statement=mysqli_query($pdo,$query);
     
     while($row=mysqli_fetch_assoc($statement)){
         
-        $data[] = [
-        "D" => $row['product_name'],
-        "cost" => $row['product_cost'],
-        "qty" => $row['quantity']
-      ];     
+        $data[] = $row["product_name"];
+        
+//        $data[] = [
+//        "D" => $row['product_name'],
+//        "cost" => $row['product_cost'],
+//        "qty" => $row['quantity']
+//      ];     
     }
          break;
 }

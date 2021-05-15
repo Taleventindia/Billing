@@ -291,13 +291,13 @@ input[type=submit] {
             </form>
                 
     </div>
+    </div>      
+               
+        <link rel='stylesheet' type='text/css' href='css/style.css' />
+
+        <script type="text/javascript" src="js/loader.js"></script>  
+                 
     </div>
-       
-
-                <link rel='stylesheet' type='text/css' href='css/style.css' />
-
-               <script type="text/javascript" src="js/loader.js"></script>        
-            </div>
 
 <script>
     // (C) ATTACH AUTOCOMPLETE TO INPUT FIELDS
@@ -313,8 +313,8 @@ input[type=submit] {
         data: "search.php",
         post: { type: "product_name" },
         // OPTIONAL
-        delay : 100,
-        min : 1
+//        delay : 100,
+//        min : 1
       });
     });
     </script>
