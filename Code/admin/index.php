@@ -392,7 +392,7 @@
         }]
       };
 
-      var chartOptions  = {
+      var = {
         scale: {
           ticks: {
             beginAtZero: true,
