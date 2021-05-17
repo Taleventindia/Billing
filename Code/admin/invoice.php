@@ -101,12 +101,11 @@ input[type=submit] {
     <h4>Create Invoice</h4>
     <div style="clear:both"></div>
             <form action="bill.php" method="post" autocomplete="">
+                 
                  <div style="border:1px solid #000"> 
-
-           <div id="customer">
-           
+<!--           <div id="customer">-->
                 Consignee,<br />
-                       <textarea name="custname" class="autocomplete" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>        
+                       <textarea name="custname" tabindex="1" rows="4" id="customer-title" onblur="if(this.value=='') this.value='Company Name';" onfocus="if(this.value=='Company Name') this.value='';"></textarea>        
 
                 <table id="meta">
                     <tr>
@@ -121,8 +120,8 @@ input[type=submit] {
                     </tr>
     
                 </table>
-            </div>
-            </div>
+<!--            </div>-->
+        </div> 
                 
             <table id="items">
               <tr>
@@ -286,7 +285,6 @@ input[type=submit] {
               &emsp;&nbsp;Authorized Signatory
               </span>
             </div>
-             
             <br>
             <center><input type="submit" class="btn btn-primary" value="Save Invoice" name="saveinv"/></center>  
             </form>
