@@ -1,4 +1,5 @@
 <?php include "includes/db.php"; ?>
+<?php session_start(); ?>
 
 
 <!DOCTYPE html>
@@ -68,7 +69,7 @@
             die("Query Failed" . mysqli_error($connection) .' '. mysqli_error($connection));
         }
             
-             
+          $_SESSION['status'] = "Registration Was Successful Please Sign In";   
             
             header("Location:SignInPage.php"); 
             
@@ -128,7 +129,7 @@
 
               </div>
               <p class="login-card-description">Register your account</p>
-                
+        
             <form role="form" action="registration.php" method="post" id="login-form" autocomplete="on">
  
              
