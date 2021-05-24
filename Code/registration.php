@@ -29,15 +29,13 @@
          $password = $_POST['user_password'];
          $confirmpassword =$_POST['user_confirmpassword'];
          
-//      echo  $password;
          
       if(!empty($email) && !empty($password) && !empty($confirmpassword) && !empty($user_firstname) && !empty($user_lastname) && !empty($user_phone)){
           
-      $password = mysqli_real_escape_string($connection,$password);
-//        $hashFormat = "$2y$10$";
-//        $salt = "iusesomecrazystrings22";
-//        $hashF_and_salt = $hashFormat . $salt; 
-//        $password =crypt($password,$hashF_and_salt);  
+      $password = mysqli_real_escape_string($connection,$_POST['user_password']);
+      $confirmpassword = mysqli_real_escape_string($connection,$_POST['user_confirmpassword']);
+      $password = md5($password);      
+      $confirmpassword = md5($confirmpassword);        
      
       if(preg_match('/^[\p{L} ]+$/u', $user_firstname)) {
           
@@ -49,10 +47,10 @@
         $number     = preg_match('@[0-9]@', $password);
         $character  = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $password);
             
-        if($uppercase && $lowercase && $number && $character) {
+//        if($uppercase && $lowercase && $number && $character) {
 
-        if(strlen($password) >= 8) {
-
+//        if(strlen($password) >= 8) {
+//
         if($password == $confirmpassword){
         
         if(preg_match("/^[0-9]{10}$/", $user_phone)) {   
@@ -82,16 +80,18 @@
               $message_cpassworad = "Password Mismatch!";
             
         }
-              
-          }else{
-              $message_strnpassworad = "password contain atleast 8 characters";
-              
-       }
+//              
+//          }else{
+//              $message_strnpassworad = "password contain atleast 8 characters";
+//              
+//       }
             
-          }else{
-              $message_password = "Password must contain a special character";
-            
-       } 
+
+//          }else{
+//              $message_password = "Password must contain a special character";
+//            
+//       } 
+
             
           }else{
               $message_Lastname ="Only Alphabets are allowed in lastname";

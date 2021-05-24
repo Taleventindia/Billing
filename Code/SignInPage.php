@@ -21,7 +21,10 @@
          
         $email    = $_REQUEST['email'];
         $password = $_REQUEST['password'];
-        
+                        
+        $password = mysqli_real_escape_string($connection,$_POST['password']);
+        $password = md5($password);  
+    
         $query = "SELECT * FROM users WHERE user_email = '{$email}' ";
         $select_user_query = mysqli_query($connection, $query);
         
@@ -46,6 +49,7 @@
         
         if($email === $db_user_email){
         if($password === $db_user_password){
+     
             
              $_SESSION['email'] = $db_user_email;
              $_SESSION['firstname'] = $db_user_firstname;
