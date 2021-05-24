@@ -49,8 +49,8 @@
             
 //        if($uppercase && $lowercase && $number && $character) {
 
-//        if(strlen($password) >= 8) {
-//
+        if(strlen($password) >= 8) {
+
         if($password == $confirmpassword){
         
         if(preg_match("/^[0-9]{10}$/", $user_phone)) {   
@@ -80,11 +80,11 @@
               $message_cpassworad = "Password Mismatch!";
             
         }
-//              
-//          }else{
-//              $message_strnpassworad = "password contain atleast 8 characters";
-//              
-//       }
+              
+          }else{
+              $message_strnpassworad = "password contain atleast 8 characters";
+              
+       }
             
 
 //          }else{

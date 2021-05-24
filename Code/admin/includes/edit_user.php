@@ -38,6 +38,10 @@
             $user_password =  $_POST['user_password'];      
             $user_confirmpassword =  $_POST['user_confirmpassword'];  
            
+            $user_password = mysqli_real_escape_string($connection,$_POST['user_password']);
+            $user_confirmpassword = mysqli_real_escape_string($connection,$_POST['user_confirmpassword']);
+            $user_password = md5($user_password);      
+            $user_confirmpassword = md5($user_confirmpassword); 
            
          move_uploaded_file($user_image_tempname,"../images/$user_image");
            
@@ -52,14 +56,14 @@
               
                }
             
-          } 
+          }        
            
             $uppercase = preg_match('@[A-Z]@', $user_password);
             $lowercase = preg_match('@[a-z]@', $user_password);
             $number    = preg_match('@[0-9]@', $user_password);
             $character = preg_match('/[\'^£!$%&*()}{@#~?><>,|=_+-]/', $user_password);
 
-            if($uppercase && $lowercase && $number && $character) {
+//            if($uppercase && $lowercase && $number && $character) {
 
             if(strlen($user_password) >= 8) { 
             
@@ -89,10 +93,10 @@
               
        }
             
-         }else{
-              $message_password = "Password must contain a special character";
-            
-       }    
+//         }else{
+//              $message_password = "Password must contain a special character";
+//            
+//       }    
                 
        
        }
